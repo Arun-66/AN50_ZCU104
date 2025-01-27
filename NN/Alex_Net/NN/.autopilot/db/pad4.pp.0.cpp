@@ -1,4 +1,4 @@
-# 1 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp"
+# 1 "Files/Pad4/src/pad4.cpp"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 376 "<built-in>" 3
@@ -152,7 +152,7 @@ extern "C" {
 
 }
 # 2 "<built-in>" 2
-# 1 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 1 "Files/Pad4/src/pad4.cpp" 2
 
 
 
@@ -912,7 +912,7 @@ typedef union
 
 
 }
-# 9 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 9 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/usr/include/x86_64-linux-gnu/sys/stat.h" 1
 # 99 "/usr/include/x86_64-linux-gnu/sys/stat.h"
 extern "C" {
@@ -1378,7 +1378,7 @@ int statx (int __dirfd, const char *__restrict __path, int __flags,
 
 
 }
-# 10 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 10 "Files/Pad4/src/pad4.cpp" 2
 
 # 1 "/usr/include/unistd.h" 1 3 4
 # 27 "/usr/include/unistd.h" 3 4
@@ -2791,7 +2791,7 @@ extern __pid_t gettid (void) noexcept (true);
 # 1222 "/usr/include/unistd.h" 2 3 4
 
 }
-# 12 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 12 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/stdlib.h" 1 3
 # 36 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/stdlib.h" 3
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstdlib" 1 3
@@ -3908,7 +3908,7 @@ using std::system;
 
 using std::wcstombs;
 using std::wctomb;
-# 13 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 13 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/usr/include/stdio.h" 1 3 4
 # 28 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -4607,7 +4607,7 @@ extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 983 "/usr/include/stdio.h" 3 4
 }
-# 14 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 14 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstring" 1 3
 # 40 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstring" 3
 
@@ -5058,7 +5058,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
   using ::strstr;
 # 121 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cstring" 3
 }
-# 15 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 15 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iostream" 1 3
 # 37 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iostream" 3
 
@@ -30855,7 +30855,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 16 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 16 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iomanip" 1 3
 # 37 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/iomanip" 3
 
@@ -39149,7 +39149,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 17 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 17 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/math.h" 1 3
 # 36 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/math.h" 3
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath" 1 3
@@ -43580,7 +43580,7 @@ using std::scalbln;
 using std::scalbn;
 using std::tgamma;
 using std::trunc;
-# 18 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 18 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/fstream" 1 3
 # 37 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/fstream" 3
 
@@ -45411,15 +45411,15 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 1170 "/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/fstream" 2 3
-# 19 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
-# 1 "../AlexNet-FPGA-implementation/Pad4/src/pad4.h" 1
-# 14 "../AlexNet-FPGA-implementation/Pad4/src/pad4.h"
+# 19 "Files/Pad4/src/pad4.cpp" 2
+# 1 "Files/Pad4/src/pad4.h" 1
+# 14 "Files/Pad4/src/pad4.h"
 typedef float DataType;
 
 
 void pad4(DataType inp_img[13 * 13 * 384],
              DataType out_img[15 * 15 * 384]);
-# 20 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 20 "Files/Pad4/src/pad4.cpp" 2
 # 1 "/work/Xilinx/Vitis/2024.2/common/technology/autopilot/ap_fixed.h" 1
 
 
@@ -47531,7 +47531,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_676_1: for (unsigned i = low; i != high+1; ++i) {
+    for (unsigned i = low; i != high+1; ++i) {
 
 #pragma HLS unroll
 
@@ -47545,7 +47545,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_690_1: for (unsigned i = low; i != high+1; ++i) {
+    for (unsigned i = low; i != high+1; ++i) {
 
 #pragma HLS unroll
 
@@ -47559,7 +47559,7 @@ struct ap_range_ref {
     bool reverse = l_index > h_index;
     unsigned low = reverse ? h_index : l_index;
     unsigned high = reverse ? l_index : h_index;
-    VITIS_LOOP_704_1: for (unsigned i = low; i != high+1; ++i) {
+    for (unsigned i = low; i != high+1; ++i) {
 
 #pragma HLS unroll
 
@@ -49181,7 +49181,7 @@ struct ap_fixed_base : ssdm_int<_AP_W, _AP_S> {
       int NZeros = 0;
       int i = 0;
       bool hitNonZero = false;
-      VITIS_LOOP_1248_1: for (i = 0; i < __N - 1; ++i) {
+      for (i = 0; i < __N - 1; ++i) {
         ap_int_base<64, false> t;
         t.range(0, 63) = this->range(_AP_W - i * 64 - 64, _AP_W - i * 64 - 1);
         NZeros += hitNonZero ? 0 : (t.V == 0 ? 64 : __builtin_clzll(t.V));
@@ -50958,7 +50958,7 @@ inline __attribute__((nodebug)) bool operator!=(
 
 }
 # 370 "/work/Xilinx/Vitis/2024.2/common/technology/autopilot/ap_fixed.h" 2
-# 21 "../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp" 2
+# 21 "Files/Pad4/src/pad4.cpp" 2
 
 
 
@@ -50972,9 +50972,9 @@ void pad4(DataType inp_img[13 * 13 * 384],
       DataType out_img[15 * 15 * 384])
 
 {
- VITIS_LOOP_34_1: for (int c = 0; c < 384; c++){
-   VITIS_LOOP_35_2: for (int i = 0; i < 15; i++){
-            VITIS_LOOP_36_3: for (int j = 0; j < 15; j++){
+ for (int c = 0; c < 384; c++){
+   for (int i = 0; i < 15; i++){
+            for (int j = 0; j < 15; j++){
 #pragma HLS PIPELINE
 
  if ((i<1) || (i>=15 -1) || (j<1) || (j>=15 -1))
