@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Jan 25 15:58:19 2025
+# Process ID         : 22487
+# Current directory  : /primary/HLS/Alex_Net/Conv1/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /primary/HLS/Alex_Net/Conv1/impl/ip/vivado.log
+# Journal file       : /primary/HLS/Alex_Net/Conv1/impl/ip/vivado.jou
+# Running On         : arix8
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.1 LTS
+# Processor Detail   : AMD Ryzen 7 3700U with Radeon Vega Mobile Gfx
+# CPU Frequency      : 3549.990 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 6119 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 8267 MB
+# Available Virtual  : 2817 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

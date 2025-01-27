@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "NN",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "NN"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/primary/HLS/NN/NN.tcl",
+    "sourceLine": 40,
+    "success": true
+  }
+]

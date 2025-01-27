@@ -1,0 +1,38 @@
+{
+  "0": {
+    "basicblocks": 286,
+    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "norm2.cpp",
+    "fileloc": 31,
+    "instructions": 2800,
+    "loads": {
+      "L": 270
+    },
+    "name": "norm2",
+    "stores": {
+      "L": 256
+    },
+    "total_instructions": 13504
+  },
+  "1": {
+    "basicblocks": 31,
+    "calls": "2 2 2 2 2 2 2 2 2",
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 392,
+    "loads": {
+      "G": 7
+    },
+    "name": "pow_generic<float>",
+    "total_instructions": 446
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 6,
+    "name": "to_ieee",
+    "total_instructions": 6
+  }
+}

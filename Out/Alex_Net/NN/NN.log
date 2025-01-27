@@ -1,0 +1,20 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+Tool Version Limit: 2024.11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-i 
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-40] Cannot find source file NN.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 493.055 MB.
+INFO: [HLS 200-10] Analyzing design file '../NN/NN.cpp' ... 
+WARNING: [HLS 207-5570] unexpected pragma argument 'fmul', expects function/operation (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)
+ERROR: [HLS 207-3777] use of undeclared identifier 'Pad2_out_img'; did you mean 'Pad1_out_img'? (../NN/NN.cpp:98:24)
+INFO: [HLS 207-4436] 'Pad1_out_img' declared here (../NN/NN.cpp:50:14)
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:02; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: source NN.tcl
+INFO: [HLS 200-1510] Running: source NN.tcl
+INFO: [HLS 200-1510] Running: open_project Alex_Net 

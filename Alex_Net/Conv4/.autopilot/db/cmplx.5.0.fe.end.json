@@ -1,0 +1,200 @@
+{
+    "1": {
+        "name": "conv4_Pipeline_VITIS_LOOP_174_7",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "174",
+        "instructions": "1197",
+        "total_instructions": "1197",
+        "calls": "",
+        "basicblocks": "174",
+        "loads": {
+            "L": "170"
+        },
+        "stores": {
+            "L": "340"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "conv4_Pipeline_C2_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "66",
+        "instructions": "4898",
+        "total_instructions": "4898",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "573"
+        },
+        "stores": {
+            "L": "340"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "conv4_Pipeline_C1_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "66",
+        "instructions": "4898",
+        "total_instructions": "4898",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "573"
+        },
+        "stores": {
+            "L": "340"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "conv4_Pipeline_F1_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "81",
+        "instructions": "63",
+        "total_instructions": "63",
+        "calls": "",
+        "basicblocks": "14",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "15"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "conv4_Pipeline_VITIS_LOOP_87_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "87",
+        "instructions": "1197",
+        "total_instructions": "1197",
+        "calls": "",
+        "basicblocks": "174",
+        "loads": {
+            "L": "170"
+        },
+        "stores": {
+            "L": "340"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "6": {
+        "name": "conv4_Pipeline_L2_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "157",
+        "instructions": "111",
+        "total_instructions": "111",
+        "calls": "",
+        "basicblocks": "30",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "31"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "7": {
+        "name": "conv4_Pipeline_L1_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "71",
+        "instructions": "111",
+        "total_instructions": "111",
+        "calls": "",
+        "basicblocks": "30",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "31"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "conv4",
+        "file": "conv4.cpp",
+        "fileloc": "30",
+        "instructions": "2680",
+        "total_instructions": "15906",
+        "calls": "7 4 5 3 8 6 9 1 2 10",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1018"
+        },
+        "stores": {
+            "L": "515"
+        },
+        "loops": {
+            "L": "2"
+        }
+    },
+    "8": {
+        "name": "conv4_Pipeline_M1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "78",
+        "instructions": "344",
+        "total_instructions": "344",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "9": {
+        "name": "conv4_Pipeline_F2_1",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "168",
+        "instructions": "63",
+        "total_instructions": "63",
+        "calls": "",
+        "basicblocks": "14",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "15"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "conv4_Pipeline_M2",
+        "file": "AlexNet-FPGA-implementation\/Conv4\/src\/conv4.cpp",
+        "fileloc": "165",
+        "instructions": "344",
+        "total_instructions": "344",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

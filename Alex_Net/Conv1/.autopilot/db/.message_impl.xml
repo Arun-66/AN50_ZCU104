@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file Alex_Net/Conv1/impl/export.zip" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2161]" key="HLS 200-2161" tag="" content="Finished Command export_design Elapsed time: 00:01:20; Allocated memory: 8.188 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: remove_files AlexNet-FPGA-implementation/Conv1/src/conv1.cpp AlexNet-FPGA-implementation/Conv1/src/conv1.h AlexNet-FPGA-implementation/Conv1/src/testbench.cpp" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-1998]" key="HLS 200-1998" tag="" content="cannot find relative file path &apos;../../&apos;/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp&apos;&apos; in directory(s): /primary/HLS/Alex_Net/solution /primary/HLS" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: remove_files ../../&apos;/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp&apos; /primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: add_files /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding design file &apos;/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp&apos; to the project" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: add_files /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding design file &apos;/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h&apos; to the project" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: add_files -tb /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding test bench file &apos;/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp&apos; to the project" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: set_top conv2" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: open_solution -reset Conv2" resolution=""/>
+</Messages>

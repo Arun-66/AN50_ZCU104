@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "pad2.cpp",
+    "fileloc": 30,
+    "instructions": 64,
+    "loads": {
+      "T": 1
+    },
+    "name": "pad2",
+    "stores": {
+      "T": 2
+    },
+    "total_instructions": 64
+  }
+}

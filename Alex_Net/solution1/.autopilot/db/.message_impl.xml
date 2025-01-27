@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file Alex_Net/solution1/impl/export.zip" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2161]" key="HLS 200-2161" tag="" content="Finished Command export_design Elapsed time: 00:01:17; Allocated memory: 5.523 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: source AN_scripts.tcl" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: source AN_script.tcl" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: open_project Alex_Net" resolution=""/>
+</Messages>

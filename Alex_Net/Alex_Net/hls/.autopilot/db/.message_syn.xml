@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 4.87 seconds. CPU system time: 0.57 seconds. Elapsed time: 5.14 seconds; current allocated memory: 327.113 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;Wrap_up.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;FILTER_BATCH&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;FILTER_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:13:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:12:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;STRIDE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:14:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:13:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;STRIDE_NEW&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:15:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:14:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;FILTER_BATCH&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;FILTER_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:13:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:13:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;STRIDE_NEW&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:15:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:15:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;FILTER_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:12:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:12:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;FILTER_BATCH&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMAGE_CHANNEL&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h:11:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMG_CHAN&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (./NN.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMG_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (./NN.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMG_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (./NN.h:11:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;STRIDE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:12:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:14:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMG_CHAN&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:8:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:8:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMG_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMG_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;INP_IMG_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h:9:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:9:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-910]" key="HLS 207-910" tag="" content="&apos;OUT_IMG_SIZE&apos; macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h:10:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-71]" key="HLS 207-71" tag="" content="previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:10:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5570]" key="HLS 207-5570" tag="" content="unexpected pragma argument &apos;fmul&apos;, expects function/operation (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5292]" key="HLS 207-5292" tag="" content="unused parameter &apos;out_img&apos; (Wrap_up.cpp:34:12)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pool5/src/pool5.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pool2/src/pool2.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pool1/src/pool1.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pad3/src/pad3.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pad2/src/pad2.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Norm2/src/norm2.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Norm1/src/norm1.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Pad1/src/pad1.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Conv4/src/conv4.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Conv3/src/conv3.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Conv2/src/conv2.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5570]" key="HLS 207-5570" tag="" content="unexpected pragma argument &apos;fmul&apos;, expects function/operation (../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 100.86 seconds. CPU system time: 17.34 seconds. Elapsed time: 118.5 seconds; current allocated memory: 339.816 MB." resolution=""/>
+</Messages>

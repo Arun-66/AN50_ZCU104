@@ -1,0 +1,2033 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.5
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.16
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 39, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.17
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 62, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.18
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 88, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.82
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.83
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 232, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.84
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 307, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.148
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 379, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.149
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 454, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.213
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 529, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.277
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 604, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.341
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 679, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.428
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 868, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.474
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 1041, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.497
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 1115, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1010
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 1634, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1268
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2420, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1300
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2459, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powrfloat.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1556
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2726, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powrfloat.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powrfloat.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isinfIfEiT_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isinf<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isnanIfEiT_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isnan<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 326, Column: 17 }
+Function:        _ZNK9fp_structIfE8to_floatEv
+Args:            
+  - Callee:          'fp_struct<float>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 347, Column: 16 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<float>::to_float() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 135, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 39, 41>(ap_ufixed<39, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<41, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 141, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 44, 39>(ap_ufixed<44, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<39, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 138, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 41, 44>(ap_ufixed<41, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<44, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 295, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 659, Column: 16 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 305, Column: 20 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 612, Column: 66 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'pow_reduce::pow_traits<float>::exp_Z1P_m_1(ap_ufixed<18, -9, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 156, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 344, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isinf<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 346, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isnan<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                   Line: 8, Column: 12 }
+Function:        powf
+Args:            
+  - Callee:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          powf
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 67, Column: 15 }
+Function:        _Z5norm1PfS_
+Args:            
+  - Callee:          powf
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 126, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L17
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 113, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L14
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 98, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L11
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 80, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 65, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L17
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:126:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        L17
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:126:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L14
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:113:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        L14
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:113:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:98:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        L11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:98:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L7
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:80:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        L7
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:80:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L4
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:65:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        L4
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:65:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          norm1
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isinfIfEiT_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isinf<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isnanIfEiT_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isnan<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 326, Column: 17 }
+Function:        _ZNK9fp_structIfE8to_floatEv.59.69.79.112
+Args:            
+  - Callee:          'fp_struct<float>::data() const (.62.72.82.115)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_float() const (.59.69.79.112)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 347, Column: 16 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<float>::to_float() const (.59.69.79.112)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 135, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 39, 41>(ap_ufixed<39, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<41, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 138, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 41, 44>(ap_ufixed<41, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<44, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 141, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 44, 39>(ap_ufixed<44, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<39, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 295, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 305, Column: 20 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 344, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isinf<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 346, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isnan<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 383, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 612, Column: 66 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'pow_reduce::pow_traits<float>::exp_Z1P_m_1(ap_ufixed<18, -9, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 156, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                   Line: 8, Column: 12 }
+Function:        powf
+Args:            
+  - Callee:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          powf
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 67, Column: 15 }
+Function:        _Z5norm1PfS_
+Args:            
+  - Callee:          powf
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_norm1_ir
+Args:            
+  - Callee:          'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_norm1_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 16, Column: 0 }
+Function:        _Z13generic_isinfIfEiT_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_isinf<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 16, Column: 0 }
+Function:        _Z13generic_isnanIfEiT_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_isnan<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 322, Column: 0 }
+Function:        _ZNK9fp_structIfE8to_floatEv.59.69.79.112
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::data() const (.62.72.82.115)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 309, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_float() const (.59.69.79.112)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 346, Column: 0 }
+Function:        _ZNK9fp_structIfE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::to_float() const (.59.69.79.112)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 322, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 130, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 39, 41>(ap_ufixed<39, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<41, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 130, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 41, 44>(ap_ufixed<41, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<44, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 130, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIfE19log_range_reductionILi39EEE9ap_ufixedILi39ELin17EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi65ELi9ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 44, 39>(ap_ufixed<44, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<39, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::fp_struct(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 283, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<float>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 316, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_isinf<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_isnan<float>(float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_ufixed<39, -17, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<float>::log_range_reduction<39>(ap_ufixed<39, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<65, 9, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 130, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pow_reduce::pow_traits<float>::exp_Z1P_m_1(ap_ufixed<18, -9, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 156, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 33, Column: 0 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          powf
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                       Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 42, Column: 11 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          inp_image
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 49, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '69984'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        inp_img374seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:49:5'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 53, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.102
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 59, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        out_img375seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L2
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:59:7'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 70, Column: 27 }
+  - OrigDirection:   write
+  - OrigID:          L4.store.28
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 74, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L5
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:74:7'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 83, Column: 35 }
+  - OrigDirection:   write
+  - OrigID:          L7.store.33
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 89, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '67068'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep376seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L8
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:89:5'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 101, Column: 34 }
+  - OrigDirection:   write
+  - OrigID:          L11.store.225
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 107, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep377seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L12
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:107:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 116, Column: 41 }
+  - OrigDirection:   write
+  - OrigID:          L14.store.33
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 120, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep378seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L15
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:120:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 130, Column: 41 }
+  - OrigDirection:   write
+  - OrigID:          L17.store.28
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 120, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 120, Column: 6 }
+  - OrigDirection:   write
+  - OrigID:          scevgep378seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L16
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:123:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 107, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 107, Column: 6 }
+  - OrigDirection:   write
+  - OrigID:          scevgep377seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L13
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:110:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 89, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 89, Column: 5 }
+  - OrigDirection:   write
+  - OrigID:          scevgep376seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L10
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:95:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 74, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 74, Column: 7 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L6
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:77:7'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 59, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 59, Column: 7 }
+  - OrigDirection:   write
+  - OrigID:          out_img375seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L3
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:62:7'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 49, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 49, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          inp_img374seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_51_2
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:51:21'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 49, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '69984'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:49:5'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 49, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '69984'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L1
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:49:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 59, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L2
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:59:7'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 59, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L2
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:59:7'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 74, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L5
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:74:7'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 74, Column: 7 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L5
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:74:7'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 89, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '67068'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L8
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:89:5'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 89, Column: 5 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '67068'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L8
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:89:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 107, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L12
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:107:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 107, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L12
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:107:6'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 120, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L15
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:120:6'
+  - String:          ' '
+  - Function:        'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                   Line: 120, Column: 6 }
+Function:        _Z5norm1PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '729'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L15
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:120:6'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 383, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIfEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<float>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 346, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp, 
+                   Line: 8, Column: 12 }
+Function:        _Z5norm1PfS_
+Args:            
+  - Callee:          'float pow_reduce::pow_generic<float>(float, float)'
+    DebugLoc:        { File: /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'norm1(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Norm1/src/norm1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

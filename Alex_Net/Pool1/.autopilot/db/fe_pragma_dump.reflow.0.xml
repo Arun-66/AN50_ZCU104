@@ -1,0 +1,15 @@
+<pragmas>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="59" pragmaType="pipeline" parentfunction="pool1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="73" pragmaType="pipeline" parentfunction="pool1" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="28" pragmaType="interface" parentfunction="pool1" mode="m_axi" port="inp_img" bundle="gmem" offset="slave" name="" depth="290400" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="29" pragmaType="interface" parentfunction="pool1" mode="m_axi" port="out_img" bundle="gmem" offset="slave" name="" depth="69984" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="31" pragmaType="interface" parentfunction="pool1" mode="s_axilite" port="inp_img" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="32" pragmaType="interface" parentfunction="pool1" mode="s_axilite" port="out_img" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="34" pragmaType="interface" parentfunction="pool1" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="37" pragmaType="array_partition" parentfunction="pool1" dim="0" factor="0" mode="complete" dynamic="0" variable="window_2D"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="39" pragmaType="array_partition" parentfunction="pool1" dim="0" factor="0" mode="complete" dynamic="0" variable="right_col_2D"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="41" pragmaType="array_partition" parentfunction="pool1" dim="0" factor="0" mode="complete" dynamic="0" variable="right_col_2D_l"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="43" pragmaType="array_partition" parentfunction="pool1" dim="0" factor="0" mode="complete" dynamic="0" variable="line_buffer_2D"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="45" pragmaType="array_partition" parentfunction="pool1" dim="0" factor="0" mode="complete" dynamic="0" variable="new_pixels"/>
+<pragma file="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp" line="47" pragmaType="array_partition" parentfunction="pool1" dim="0" factor="0" mode="complete" dynamic="0" variable="new_pixels_l"/>
+</pragmas>

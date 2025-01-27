@@ -1,0 +1,67 @@
+---
+MainSourceFile:  /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          1524197
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          1524663
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          1525130
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          1808172
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_23_1:  '
+    FileOffset:      23
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          2175967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_23_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_24_2:  '
+    FileOffset:      24
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          2176005
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_24_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_25_3:  '
+    FileOffset:      25
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad2.pp.0.cpp
+        Offset:          2176044
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_25_3: '
+...

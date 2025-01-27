@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv3'" level="0">
+<item name = "Date">Sun Jan 26 21:39:54 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">Alex_Net</item>
+<item name = "Solution">NN (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.016 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1265284, 1265284, 12.653 ms, 12.653 ms, 1265284, 1265284, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv3_Pipeline_L1_1_fu_2269">conv3_Pipeline_L1_1, 57602, 57602, 0.576 ms, 0.576 ms, 57601, 57601, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv3_Pipeline_F1_1_fu_2325">conv3_Pipeline_F1_1, 2306, 2306, 23.060 us, 23.060 us, 2305, 2305, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv3_Pipeline_VITIS_LOOP_91_1_fu_2341">conv3_Pipeline_VITIS_LOOP_91_1, 171, 171, 1.710 us, 1.710 us, 170, 170, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv3_Pipeline_C1_1_fu_2683">conv3_Pipeline_C1_1, 813, 813, 8.130 us, 8.130 us, 771, 771, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv3_Pipeline_M1_fu_3059">conv3_Pipeline_M1, 20, 20, 0.200 us, 0.200 us, 14, 14, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- L4">1207680, 1207680, 3145, -, -, 384, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

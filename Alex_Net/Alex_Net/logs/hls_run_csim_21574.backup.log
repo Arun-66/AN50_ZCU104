@@ -1,0 +1,36 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir /primary/HLS/Alex_Net/Alex_Net 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h' from /primary/HLS/Alex_Net/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h' from /primary/HLS/Alex_Net/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h' from /primary/HLS/Alex_Net/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding test bench file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=conv1' from /primary/HLS/Alex_Net/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /primary/HLS/Alex_Net/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu7ev-fbvb900-3-e' from /primary/HLS/Alex_Net/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-fbvb900-3-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from /primary/HLS/Alex_Net/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /primary/HLS/Alex_Net/hls_config.cfg(5)
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+INFO: [HLS 211-200] Compiling source code /primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp as test bench code with instrumentation
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp:52:42: error: use of undeclared identifier 'i'
+  cout << "inp_image[i] = " << inp_image[i] << endl;
+                                         ^
+1 error generated.
+slxcmd:0:0: warning: Non-zero exit code: 1 returned by 'INFO: [HLS 211-200] Compiling source code /primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp as test bench code with instrumentation'
+ERROR: [SIM 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
+ERROR: Problem running csim: child process exited abnormally
+INFO: [HLS 200-112] Total CPU user time: 11.86 seconds. Total CPU system time: 1.13 seconds. Total elapsed time: 13.88 seconds; peak allocated memory: 326.801 MB.

@@ -1,0 +1,1300 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 111, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L15
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 120, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L16
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 123, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L17
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 132, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L18
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 134, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L19
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 141, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L20
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 143, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L21
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 78, Column: 5 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L8
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 86, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L10
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 88, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L11
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 98, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L12
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 100, Column: 6 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        L13
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 152, Column: 22 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_152_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 154, Column: 27 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_154_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L15
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:111:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L16
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:120:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L17
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:123:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L17
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:123:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L18
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:132:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L19
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:134:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L19
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:134:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L19
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:134:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '1'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L20
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:141:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L21
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:143:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L21
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:143:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L21
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:143:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L8
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:78:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L10
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:86:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:88:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:88:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L12
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:98:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L13
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:100:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L13
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:100:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        L13
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:100:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_152_2
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:152:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_154_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:154:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_154_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:154:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 26, Column: 0 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_154_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:154:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          pool2
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_pool2_ir
+Args:            
+  - Callee:          'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_pool2_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 42, Column: 11 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          line_buffer_2D
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 57, Column: 5 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '27'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L4
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:57:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 63, Column: 25 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.32
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep372seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L6
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:71:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 126, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          L15.load.8
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 126, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          L15.load.11
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep373seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L6
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:71:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 126, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          L15.load.18
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 126, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          L15.load.21
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep374seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L6
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:71:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.inc42.load.5
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.inc42.load.6
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.inc42.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep375seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L6
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:71:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.inc42.load.13
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.inc42.load.14
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          for.inc42.load.15
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 51, Column: 19 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '43264'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        out_img376seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_51_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:51:19'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 160, Column: 56 }
+  - OrigDirection:   write
+  - OrigID:          for.body232.store.92
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 57, Column: 5 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 57, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_51_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:51:19'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 51, Column: 19 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 51, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          out_img376seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L6
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:71:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          scevgep374seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 91, Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          scevgep375seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 126, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          scevgep372seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 126, Column: 39 }
+  - OrigDirection:   read
+  - OrigID:          scevgep373seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 57, Column: 5 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 57, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L4
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:57:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 51, Column: 19 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '43264'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_51_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:51:19'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 51, Column: 19 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '43264'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_51_1
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:51:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 57, Column: 5 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '27'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        L4
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:57:5'
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 57, Column: 5 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '27'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L4
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:57:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 91, Column: 38 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '3'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'pool2(float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                       Line: 26, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Pool2/src/pool2.cpp, 
+                   Line: 126, Column: 39 }
+Function:        _Z5pool2PfS_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

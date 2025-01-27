@@ -1,0 +1,7 @@
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:51:1)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:53:1)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:55:1)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:57:1)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:59:1)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:61:1)
+parallelismSelector::WARNG: WARNING: [SIM 211-206] Code Analyzer does not display the impact of the partition pragma for dataflow channels (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:63:1)

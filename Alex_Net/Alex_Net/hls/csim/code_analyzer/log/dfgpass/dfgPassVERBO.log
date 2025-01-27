@@ -1,0 +1,1507 @@
+dfgPass::INFOR: DFG Pass going to run on Module: /primary/HLS/Alex_Net/Alex_Net/hls/csim/code_analyzer/.internal/instrument/app_0/project.symbols.bc
+dfgPass::INFOR:     Parsing the provided input trace files...
+dfgPass::INFOR:     Initializing InstructionCounter...
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 fails R.hasBlockSchema
+dfgPass::VERBO:     +2 fails R.hasBlockSchema
+dfgPass::VERBO:     +3 fails R.hasBlockSchema
+dfgPass::VERBO:     +4 fails R.hasBlockSchema
+dfgPass::VERBO:     +5 fails R.hasBlockSchema
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:     +2 is not an innermost loop
+dfgPass::VERBO:     +3 is not an innermost loop
+dfgPass::VERBO:     +4 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond142
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body144
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc168
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +6 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond179
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body181
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc220
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal of :n:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +8 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond231
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body233
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc247
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +10 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond258
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body260
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc274
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +12 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond36
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body38
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc58
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :ii:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +14 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond67
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body69
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :n:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc106
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :m:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +16 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond116
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body118
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc131
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +18 is not an innermost loop
+dfgPass::VERBO:     +19 is not an innermost loop
+dfgPass::VERBO:     +20 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond297
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body299
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc321
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond328
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body330
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc345
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond349
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body351
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc366
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond370
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body372
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc387
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond391
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body393
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc408
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond412
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body414
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc429
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond433
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body435
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc450
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +28 is not an innermost loop
+dfgPass::VERBO:     +29 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond4
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body6
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond6
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body8
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc15
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond18
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body20
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc23
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +4 is not an innermost loop
+dfgPass::VERBO:     +5 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond32
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body34
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc46
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +7 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond57
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body59
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc71
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +9 is not an innermost loop
+dfgPass::VERBO:     +10 is not an innermost loop
+dfgPass::VERBO:     +11 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond87
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body89
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc103
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +13 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond114
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body116
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc130
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +15 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond141
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body143
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc149
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +17 is not an innermost loop
+dfgPass::VERBO:     +18 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond230
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body232
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc241
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond245
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body247
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc250
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +4 is not an innermost loop
+dfgPass::VERBO:     +5 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond262
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body264
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc276
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +7 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond287
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body289
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc301
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +9 is not an innermost loop
+dfgPass::VERBO:     +10 is not an innermost loop
+dfgPass::VERBO:     +11 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond320
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body322
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc337
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +13 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond348
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body350
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc364
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +15 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond375
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body377
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc383
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +17 is not an innermost loop
+dfgPass::VERBO:     +18 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond214
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body216
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc222
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +20 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond6
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body8
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc15
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond18
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body20
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc23
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +23 is not an innermost loop
+dfgPass::VERBO:     +24 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond32
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body34
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc46
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +26 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond57
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body59
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc71
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +28 is not an innermost loop
+dfgPass::VERBO:     +29 is not an innermost loop
+dfgPass::VERBO:     +30 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond87
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body89
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc103
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +32 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond114
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body116
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc130
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +34 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond141
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body143
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc149
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +36 is not an innermost loop
+dfgPass::VERBO:     +37 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond230
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body232
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc241
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond245
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body247
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc250
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +4 is not an innermost loop
+dfgPass::VERBO:     +5 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond262
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body264
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc276
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +7 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond287
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body289
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc301
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +9 is not an innermost loop
+dfgPass::VERBO:     +10 is not an innermost loop
+dfgPass::VERBO:     +11 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond320
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body322
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc337
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +13 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond348
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body350
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc364
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +15 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond375
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body377
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc383
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +17 is not an innermost loop
+dfgPass::VERBO:     +18 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond214
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body216
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc222
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +20 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond6
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body8
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc15
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond18
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body20
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc23
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +23 is not an innermost loop
+dfgPass::VERBO:     +24 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond32
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body34
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc46
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +26 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond57
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body59
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc71
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +28 is not an innermost loop
+dfgPass::VERBO:     +29 is not an innermost loop
+dfgPass::VERBO:     +30 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond87
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body89
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc103
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +32 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond114
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body116
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc130
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +34 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond141
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body143
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc149
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +36 is not an innermost loop
+dfgPass::VERBO:     +37 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:     +2 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond264
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body266
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :x:0
+dfgPass::VERBO:         - memlocal of :y:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +4 is not an innermost loop
+dfgPass::VERBO:     +5 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond208
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body210
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :x:0
+dfgPass::VERBO:         - memlocal of :y:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +7 is not an innermost loop
+dfgPass::VERBO:     +8 is not an innermost loop
+dfgPass::VERBO:     +9 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond145
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body147
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :x:0
+dfgPass::VERBO:         - memlocal of :y:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +11 is not an innermost loop
+dfgPass::VERBO:     +12 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond85
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body87
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :x:0
+dfgPass::VERBO:         - memlocal of :y:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +14 is not an innermost loop
+dfgPass::VERBO:     +15 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond33
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body35
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :x:0
+dfgPass::VERBO:         - memlocal of :y:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - invalid TR:4:0
+dfgPass::VERBO:     +17 is not an innermost loop
+dfgPass::VERBO:     +18 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond4
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body6
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :m:0
+dfgPass::VERBO:         - memlocal of :m:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:     +2 is not an innermost loop
+dfgPass::VERBO:     +3 fails R.hasBlockSchema
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +0 is not a loop
+dfgPass::VERBO:     +1 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond230
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body232
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc241
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond245
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body247
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc250
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +4 is not an innermost loop
+dfgPass::VERBO:     +5 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond262
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body264
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc276
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +7 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond287
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body289
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc301
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +9 is not an innermost loop
+dfgPass::VERBO:     +10 is not an innermost loop
+dfgPass::VERBO:     +11 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond320
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body322
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc337
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +13 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond348
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body350
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc364
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +15 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond375
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body377
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc383
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +17 is not an innermost loop
+dfgPass::VERBO:     +18 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond214
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body216
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc222
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +20 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond6
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body8
+dfgPass::VERBO:         - memlocal of :filter:0
+dfgPass::VERBO:         - memlocal of :batch:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc15
+dfgPass::VERBO:         - memlocal of :h:0
+dfgPass::VERBO:         - memlocal of :h:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond18
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body20
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc23
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :i:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +23 is not an innermost loop
+dfgPass::VERBO:     +24 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond32
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body34
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc46
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +26 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond57
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body59
+dfgPass::VERBO:         - memlocal of :chan:0
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc71
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +28 is not an innermost loop
+dfgPass::VERBO:     +29 is not an innermost loop
+dfgPass::VERBO:     +30 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond87
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body89
+dfgPass::VERBO:         - memlocal of :row:0
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :col:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc103
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +32 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond114
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body116
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :ii:0
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc130
+dfgPass::VERBO:         - memlocal of :jj:0
+dfgPass::VERBO:         - memlocal of :jj:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +34 is not an innermost loop
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond141
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body143
+dfgPass::VERBO:         - memlocal of :i:0
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:         - memlocal of :lm:0
+dfgPass::VERBO:         - memlocal of :lm:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc149
+dfgPass::VERBO:         - memlocal of :j:0
+dfgPass::VERBO:         - memlocal of :j:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:     +36 is not an innermost loop
+dfgPass::VERBO:     +37 fails R.hasBlockSchema
+dfgPass::VERBO:       - BEFORE BREAK
+dfgPass::VERBO:       - for.cond
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - LCV conditional branch 6:48
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.body
+dfgPass::VERBO:         - memlocal of :inp_img:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal offset is invalid:0:4
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::VERBO:       - for.inc
+dfgPass::VERBO:         - memlocal of :c:0
+dfgPass::VERBO:         - memlocal of :c:1
+dfgPass::VERBO:       - AFTER BREAK
+dfgPass::INFOR:     Parsing trace...
+dfgPass::INFOR:     End of the trace parse

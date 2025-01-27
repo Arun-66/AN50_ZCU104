@@ -1,0 +1,17 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../AlexNet-FPGA-implementation/Pad4/src/testbench.cpp in debug mode
+   Compiling ../../../../AlexNet-FPGA-implementation/Pad3/src/pad3.cpp in debug mode
+   Compiling ../../../../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp in debug mode
+   Generating csim.exe
+csim.mk:93: warning: overriding recipe for target 'obj/testbench.o'
+csim.mk:87: warning: ignoring old recipe for target 'obj/testbench.o'
+ld.lld: error: duplicate symbol: main
+>>> defined at testbench.cpp:38 (../../../../AlexNet-FPGA-implementation/Pad4/src/testbench.cpp:38)
+>>>            obj/testbench.o:(main)
+>>> defined at testbench.cpp:38 (../../../../AlexNet-FPGA-implementation/Pad4/src/testbench.cpp:38)
+>>>            obj/testbench.o:(.text+0x0)
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.rules:350: csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************

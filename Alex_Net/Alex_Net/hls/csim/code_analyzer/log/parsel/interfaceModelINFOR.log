@@ -1,0 +1,4 @@
+interfaceModel::INFOR: interfaceModel:0:0: note: Applying interface constraints on the variable inp_img which has the interface type axi
+interfaceModel::INFOR: interfaceModel:0:0: note: Applying interface constraints on the variable out_img which has the interface type axi
+interfaceModel::INFOR: interfaceModel:0:0: note: Applying interface constraints on the variable filter which has the interface type axi
+interfaceModel::INFOR: interfaceModel:0:0: note: Applying interface constraints on the variable bias which has the interface type axi

@@ -1,0 +1,181 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir /primary/HLS/Alex_Net/Alex_Net 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h' from /primary/HLS/Alex_Net/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h' from /primary/HLS/Alex_Net/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h' from /primary/HLS/Alex_Net/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h' from /primary/HLS/Alex_Net/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h' from /primary/HLS/Alex_Net/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h' from /primary/HLS/Alex_Net/hls_config.cfg(21)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(22)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h' from /primary/HLS/Alex_Net/hls_config.cfg(23)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(24)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h' from /primary/HLS/Alex_Net/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(26)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h' from /primary/HLS/Alex_Net/hls_config.cfg(27)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(28)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h' from /primary/HLS/Alex_Net/hls_config.cfg(29)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(30)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.h' from /primary/HLS/Alex_Net/hls_config.cfg(31)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(32)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h' from /primary/HLS/Alex_Net/hls_config.cfg(33)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(34)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h' from /primary/HLS/Alex_Net/hls_config.cfg(35)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(36)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h' from /primary/HLS/Alex_Net/hls_config.cfg(37)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=Wrap_up.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(38)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/Alex_Net/Wrap_up.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=NN.h' from /primary/HLS/Alex_Net/hls_config.cfg(39)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/Alex_Net/NN.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=NN' from /primary/HLS/Alex_Net/hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /primary/HLS/Alex_Net/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu7ev-fbvb900-3-e' from /primary/HLS/Alex_Net/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-fbvb900-3-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from /primary/HLS/Alex_Net/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /primary/HLS/Alex_Net/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 4.87 seconds. CPU system time: 0.57 seconds. Elapsed time: 5.14 seconds; current allocated memory: 327.113 MB.
+INFO: [HLS 200-10] Analyzing design file 'Wrap_up.cpp' ... 
+WARNING: [HLS 207-910] 'INP_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:10:9)
+WARNING: [HLS 207-910] 'FILTER_BATCH' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:11:9)
+WARNING: [HLS 207-910] 'FILTER_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:13:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:12:9)
+WARNING: [HLS 207-910] 'STRIDE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:14:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:13:9)
+WARNING: [HLS 207-910] 'STRIDE_NEW' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:15:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:14:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:10:9)
+WARNING: [HLS 207-910] 'FILTER_BATCH' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:11:9)
+WARNING: [HLS 207-910] 'FILTER_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:13:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:13:9)
+WARNING: [HLS 207-910] 'STRIDE_NEW' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:15:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:15:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:9:9)
+WARNING: [HLS 207-910] 'FILTER_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:12:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:12:9)
+WARNING: [HLS 207-910] 'FILTER_BATCH' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:11:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:10:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:10:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:11:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:10:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:11:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:10:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:11:9)
+WARNING: [HLS 207-910] 'INP_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMAGE_CHANNEL' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h:11:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:11:9)
+WARNING: [HLS 207-910] 'INP_IMG_CHAN' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:8:9)
+INFO: [HLS 207-71] previous definition is here (./NN.h:9:9)
+WARNING: [HLS 207-910] 'INP_IMG_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:9:9)
+INFO: [HLS 207-71] previous definition is here (./NN.h:10:9)
+WARNING: [HLS 207-910] 'OUT_IMG_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:10:9)
+INFO: [HLS 207-71] previous definition is here (./NN.h:11:9)
+WARNING: [HLS 207-910] 'STRIDE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:12:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:14:9)
+WARNING: [HLS 207-910] 'INP_IMG_CHAN' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:8:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:8:9)
+WARNING: [HLS 207-910] 'INP_IMG_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMG_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:10:9)
+WARNING: [HLS 207-910] 'INP_IMG_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h:9:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:9:9)
+WARNING: [HLS 207-910] 'OUT_IMG_SIZE' macro redefined (/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h:10:9)
+INFO: [HLS 207-71] previous definition is here (/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:10:9)
+WARNING: [HLS 207-5570] unexpected pragma argument 'fmul', expects function/operation (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)
+WARNING: [HLS 207-5292] unused parameter 'out_img' (Wrap_up.cpp:34:12)
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pool5/src/pool5.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pool2/src/pool2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pool1/src/pool1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pad4/src/pad4.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pad3/src/pad3.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pad2/src/pad2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Norm2/src/norm2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Norm1/src/norm1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Pad1/src/pad1.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Conv4/src/conv4.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Conv3/src/conv3.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Conv2/src/conv2.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file '../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' ... 
+WARNING: [HLS 207-5570] unexpected pragma argument 'fmul', expects function/operation (../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 100.86 seconds. CPU system time: 17.34 seconds. Elapsed time: 118.5 seconds; current allocated memory: 339.816 MB.
+ERROR: Linking globals named '_Z5pool5PfS_': symbol multiply defined!
+ERROR: Error in llvm-link
+INFO: [HLS 200-112] Total CPU user time: 105.76 seconds. Total CPU system time: 17.95 seconds. Total elapsed time: 123.72 seconds; peak allocated memory: 339.918 MB.

@@ -1,0 +1,14 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../AlexNet-FPGA-implementation/Conv1/src/testbench.cpp in debug mode
+   Compiling ../../../../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp in debug mode
+   Generating csim.exe
+can open the text file
+inp_image[0] = -59.763
+Start calling the conv1 HW function
+After calling the conv1 HW function
+out_image[0] = 2.31028
+Done Writing
+Functionality pass
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

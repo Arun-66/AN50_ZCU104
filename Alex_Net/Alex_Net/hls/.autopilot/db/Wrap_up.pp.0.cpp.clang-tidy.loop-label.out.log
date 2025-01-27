@@ -1,0 +1,360 @@
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:47518:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:47518:5: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:47532:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:47532:5: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:47546:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:47546:5: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:49168:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:49168:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86105:7: warning: Added loop label VITIS_LOOP_216_1:   [xilinx-label-all-loops]
+      for (int chan = 0; chan < 3; chan++)
+      ^~~
+      VITIS_LOOP_216_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86105:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86250:3: warning: Added loop label VITIS_LOOP_85_1:   [xilinx-label-all-loops]
+  for(int i=0; i<27*27; i++)
+  ^~~
+  VITIS_LOOP_85_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86250:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86283:6: warning: Added loop label VITIS_LOOP_118_2:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 5; ii++){
+     ^~~
+     VITIS_LOOP_118_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86283:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86284:7: warning: Added loop label VITIS_LOOP_119_3:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 5; jj++){
+      ^~~
+      VITIS_LOOP_119_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86284:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86289:6: warning: Added loop label VITIS_LOOP_124_4:   [xilinx-label-all-loops]
+     for (int i=0; i<5; i++){
+     ^~~
+     VITIS_LOOP_124_4: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86289:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86290:7: warning: Added loop label VITIS_LOOP_125_5:   [xilinx-label-all-loops]
+      for (int j=0; j<5; j++){
+      ^~~
+      VITIS_LOOP_125_5: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86290:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86303:2: warning: Added loop label VITIS_LOOP_138_6:   [xilinx-label-all-loops]
+ for (int j=0; j<27; j++){
+ ^~~
+ VITIS_LOOP_138_6: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86303:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86338:3: warning: Added loop label VITIS_LOOP_173_7:   [xilinx-label-all-loops]
+  for(int i=0; i<27*27; i++)
+  ^~~
+  VITIS_LOOP_173_7: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86338:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86370:6: warning: Added loop label VITIS_LOOP_205_8:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 5; ii++){
+     ^~~
+     VITIS_LOOP_205_8: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86370:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86371:7: warning: Added loop label VITIS_LOOP_206_9:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 5; jj++){
+      ^~~
+      VITIS_LOOP_206_9: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86371:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86376:9: warning: Added loop label VITIS_LOOP_211_10:   [xilinx-label-all-loops]
+        for (int i=0; i<5; i++){
+        ^~~
+        VITIS_LOOP_211_10: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86376:9: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86377:10: warning: Added loop label VITIS_LOOP_212_11:   [xilinx-label-all-loops]
+         for (int j=0; j<5; j++){
+         ^~~
+         VITIS_LOOP_212_11: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86377:10: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86388:2: warning: Added loop label VITIS_LOOP_223_12:   [xilinx-label-all-loops]
+ for (int j=0; j<27; j++){
+ ^~~
+ VITIS_LOOP_223_12: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86388:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86494:3: warning: Added loop label VITIS_LOOP_91_1:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_91_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86494:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86527:6: warning: Added loop label VITIS_LOOP_124_2:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_124_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86527:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86528:7: warning: Added loop label VITIS_LOOP_125_3:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_125_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86528:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86535:6: warning: Added loop label VITIS_LOOP_132_4:   [xilinx-label-all-loops]
+     for (int i=0; i<3; i++){
+     ^~~
+     VITIS_LOOP_132_4: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86535:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86536:7: warning: Added loop label VITIS_LOOP_133_5:   [xilinx-label-all-loops]
+      for (int j=0; j<3; j++){
+      ^~~
+      VITIS_LOOP_133_5: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86536:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86549:2: warning: Added loop label VITIS_LOOP_146_6:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_146_6: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86549:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86650:3: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_87_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86650:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86681:6: warning: Added loop label VITIS_LOOP_118_2:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_118_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86681:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86682:7: warning: Added loop label VITIS_LOOP_119_3:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_119_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86682:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86688:6: warning: Added loop label VITIS_LOOP_125_4:   [xilinx-label-all-loops]
+     for (int i=0; i<3; i++){
+     ^~~
+     VITIS_LOOP_125_4: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86688:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86689:7: warning: Added loop label VITIS_LOOP_126_5:   [xilinx-label-all-loops]
+      for (int j=0; j<3; j++){
+      ^~~
+      VITIS_LOOP_126_5: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86689:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86701:2: warning: Added loop label VITIS_LOOP_138_6:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_138_6: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86701:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86737:3: warning: Added loop label VITIS_LOOP_174_7:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_174_7: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86737:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86774:6: warning: Added loop label VITIS_LOOP_211_8:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_211_8: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86774:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86775:7: warning: Added loop label VITIS_LOOP_212_9:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_212_9: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86775:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86782:9: warning: Added loop label VITIS_LOOP_219_10:   [xilinx-label-all-loops]
+        for (int i=0; i<3; i++){
+        ^~~
+        VITIS_LOOP_219_10: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86782:9: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86783:10: warning: Added loop label VITIS_LOOP_220_11:   [xilinx-label-all-loops]
+         for (int j=0; j<3; j++){
+         ^~~
+         VITIS_LOOP_220_11: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86783:10: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86794:2: warning: Added loop label VITIS_LOOP_231_12:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_231_12: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86794:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86892:3: warning: Added loop label VITIS_LOOP_85_1:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_85_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86892:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86923:6: warning: Added loop label VITIS_LOOP_116_2:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_116_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86923:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86924:7: warning: Added loop label VITIS_LOOP_117_3:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_117_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86924:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86930:6: warning: Added loop label VITIS_LOOP_123_4:   [xilinx-label-all-loops]
+     for (int i=0; i<3; i++){
+     ^~~
+     VITIS_LOOP_123_4: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86930:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86931:7: warning: Added loop label VITIS_LOOP_124_5:   [xilinx-label-all-loops]
+      for (int j=0; j<3; j++){
+      ^~~
+      VITIS_LOOP_124_5: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86931:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86944:2: warning: Added loop label VITIS_LOOP_137_6:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_137_6: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86944:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86979:3: warning: Added loop label VITIS_LOOP_172_7:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_172_7: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:86979:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87010:6: warning: Added loop label VITIS_LOOP_203_8:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_203_8: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87010:6: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87011:7: warning: Added loop label VITIS_LOOP_204_9:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_204_9: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87011:7: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87017:9: warning: Added loop label VITIS_LOOP_210_10:   [xilinx-label-all-loops]
+        for (int i=0; i<3; i++){
+        ^~~
+        VITIS_LOOP_210_10: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87017:9: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87018:10: warning: Added loop label VITIS_LOOP_211_11:   [xilinx-label-all-loops]
+         for (int j=0; j<3; j++){
+         ^~~
+         VITIS_LOOP_211_11: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87018:10: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87029:2: warning: Added loop label VITIS_LOOP_222_12:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_222_12: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87029:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87093:3: warning: Added loop label VITIS_LOOP_50_1:   [xilinx-label-all-loops]
+  for(int j=0; j<27; j++){
+  ^~~
+  VITIS_LOOP_50_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87093:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87094:4: warning: Added loop label VITIS_LOOP_51_2:   [xilinx-label-all-loops]
+   for(int m=0; m<27; m++){
+   ^~~
+   VITIS_LOOP_51_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87094:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87223:3: warning: Added loop label VITIS_LOOP_50_1:   [xilinx-label-all-loops]
+  for(int j=0; j<13; j++){
+  ^~~
+  VITIS_LOOP_50_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87223:3: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87224:4: warning: Added loop label VITIS_LOOP_51_2:   [xilinx-label-all-loops]
+   for(int m=0; m<13; m++){
+   ^~~
+   VITIS_LOOP_51_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87224:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87338:2: warning: Added loop label VITIS_LOOP_34_1:   [xilinx-label-all-loops]
+ for (int c = 0; c < 96; c++){
+ ^~~
+ VITIS_LOOP_34_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87338:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87339:4: warning: Added loop label VITIS_LOOP_35_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 31; i++){
+   ^~~
+   VITIS_LOOP_35_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87339:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87340:13: warning: Added loop label VITIS_LOOP_36_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 31; j++){
+            ^~~
+            VITIS_LOOP_36_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87340:13: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87385:2: warning: Added loop label VITIS_LOOP_34_1:   [xilinx-label-all-loops]
+ for (int c = 0; c < 256; c++){
+ ^~~
+ VITIS_LOOP_34_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87385:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87386:4: warning: Added loop label VITIS_LOOP_35_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 15; i++){
+   ^~~
+   VITIS_LOOP_35_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87386:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87387:13: warning: Added loop label VITIS_LOOP_36_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 15; j++){
+            ^~~
+            VITIS_LOOP_36_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87387:13: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87432:2: warning: Added loop label VITIS_LOOP_34_1:   [xilinx-label-all-loops]
+ for (int c = 0; c < 384; c++){
+ ^~~
+ VITIS_LOOP_34_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87432:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87433:4: warning: Added loop label VITIS_LOOP_35_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 15; i++){
+   ^~~
+   VITIS_LOOP_35_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87433:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87434:13: warning: Added loop label VITIS_LOOP_36_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 15; j++){
+            ^~~
+            VITIS_LOOP_36_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87434:13: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87479:2: warning: Added loop label VITIS_LOOP_34_1:   [xilinx-label-all-loops]
+ for (int c = 0; c < 384; c++){
+ ^~~
+ VITIS_LOOP_34_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87479:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87480:4: warning: Added loop label VITIS_LOOP_35_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 15; i++){
+   ^~~
+   VITIS_LOOP_35_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87480:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87481:13: warning: Added loop label VITIS_LOOP_36_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 15; j++){
+            ^~~
+            VITIS_LOOP_36_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87481:13: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87543:2: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
+ for(int c=0; c<96; c++)
+ ^~~
+ VITIS_LOOP_51_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87543:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87644:4: warning: Added loop label VITIS_LOOP_152_2:   [xilinx-label-all-loops]
+   for (int i=0; i< 3; i++)
+   ^~~
+   VITIS_LOOP_152_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87644:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87646:9: warning: Added loop label VITIS_LOOP_154_3:   [xilinx-label-all-loops]
+        for (int j=0; j<3; j++)
+        ^~~
+        VITIS_LOOP_154_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87646:9: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87707:2: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
+ for(int c=0; c<256; c++)
+ ^~~
+ VITIS_LOOP_51_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87707:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87808:4: warning: Added loop label VITIS_LOOP_152_2:   [xilinx-label-all-loops]
+   for (int i=0; i< 3; i++)
+   ^~~
+   VITIS_LOOP_152_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87808:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87810:9: warning: Added loop label VITIS_LOOP_154_3:   [xilinx-label-all-loops]
+        for (int j=0; j<3; j++)
+        ^~~
+        VITIS_LOOP_154_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87810:9: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87871:2: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
+ for(int c=0; c<256; c++)
+ ^~~
+ VITIS_LOOP_51_1: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87871:2: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87972:4: warning: Added loop label VITIS_LOOP_152_2:   [xilinx-label-all-loops]
+   for (int i=0; i< 3; i++)
+   ^~~
+   VITIS_LOOP_152_2: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87972:4: note: FIX-IT applied suggested code changes
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87974:9: warning: Added loop label VITIS_LOOP_154_3:   [xilinx-label-all-loops]
+        for (int j=0; j<3; j++)
+        ^~~
+        VITIS_LOOP_154_3: 
+/primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp:87974:9: note: FIX-IT applied suggested code changes

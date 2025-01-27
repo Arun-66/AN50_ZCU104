@@ -1,0 +1,1517 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv1'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 25 13:42:12 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Alex_Net
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-------------+--------------+---------------+-----+
+    |           Modules          | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |             |              |               |     |
+    |           & Loops          | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |     DSP     |      FF      |      LUT      | URAM|
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-------------+--------------+---------------+-----+
+    |+ conv1                     |     -|  0.00|   909365|  9.094e+06|         -|   909366|     -|        no|  19 (3%)|  1836 (106%)|  184241 (39%)|  314285 (136%)|    -|
+    | + conv1_Pipeline_L2_L3_L4  |     -|  0.00|     4778|  4.778e+04|         -|     4778|     -|        no|        -|      1 (~0%)|     367 (~0%)|      469 (~0%)|    -|
+    |  o L2_L3_L4                |     -|  7.30|     4776|  4.776e+04|        11|        1|  4767|       yes|        -|            -|             -|              -|    -|
+    | o L5                       |     -|  7.30|   904585|  9.046e+06|     16447|        -|    55|        no|        -|            -|             -|              -|    -|
+    |  o L6                      |     -|  7.30|    16445|  1.644e+05|       299|        -|    55|        no|        -|            -|             -|              -|    -|
+    |   + conv1_Pipeline_L7      |     -|  0.00|      143|  1.430e+03|         -|      143|     -|        no|        -|            -|    15759 (3%)|      8039 (3%)|    -|
+    |    o L7                    |    II|  7.30|      141|  1.410e+03|        54|       44|     3|       yes|        -|            -|             -|              -|    -|
+    |   + conv1_Pipeline_L1      |     -|  0.00|      152|  1.520e+03|         -|      152|     -|        no|  1 (~0%)|  1835 (106%)|  166817 (36%)|  303850 (131%)|    -|
+    |    o L1                    |     -|  7.30|      150|  1.500e+03|        56|        1|    96|       yes|        -|            -|             -|              -|    -|
+    +----------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+-------------+--------------+---------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | inp_img_1 | 0x10   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | inp_img_2 | 0x14   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | out_img_1 | 0x1c   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | out_img_2 | 0x20   | 32    | W      | Data signal of out_img           |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| inp_img  | inout     | float*   |
+| out_img  | inout     | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| inp_img  | m_axi_gmem    | interface |          | channel=0                           |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_1 offset=0x10 range=32 |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_2 offset=0x14 range=32 |
+| out_img  | m_axi_gmem    | interface |          | channel=0                           |
+| out_img  | s_axi_control | register  | offset   | name=out_img_1 offset=0x1c range=32 |
+| out_img  | s_axi_control | register  | offset   | name=out_img_2 offset=0x20 range=32 |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+------+------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop | Loop Location                                        |
++--------------+-----------+--------+-------+------+------------------------------------------------------+
+| m_axi_gmem   | read      | 1589   | 32    | L3   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5 |
+| m_axi_gmem   | read      | 3      | 32    |      |                                                      |
+| m_axi_gmem   | read      | 7      | 32    |      |                                                      |
++--------------+-----------+--------+-------+------+------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------------------------------------------+-----------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                        | Direction | Burst Status | Length | Loop | Loop Location                                         | Resolution | Problem                                                                                                 |
++--------------+----------+--------------------------------------------------------+-----------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:98:28  | read      | Widen Fail   |        | L4   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:95:5  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:98:28  | read      | Fail         |        | L2   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:91:5  | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:98:28  | read      | Inferred     | 1589   | L3   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5  |            |                                                                                                         |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122:6  | read      | Widen Fail   |        |      |                                                       | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122:6  | read      | Inferred     | 3      | L7   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:114:5 |            |                                                                                                         |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144:44 | read      | Widen Fail   |        |      |                                                       | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144:44 | read      | Fail         |        | L7   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:114:5 | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144:44 | read      | Inferred     | 7      | L7   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:114:5 |            |                                                                                                         |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:181:45 | read      | Fail         |        | L7   | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:114:5 | 214-230    | Stride is incompatible                                                                                  |
++--------------+----------+--------------------------------------------------------+-----------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+| Name                                   | DSP  | Pragma | Variable          | Op        | Impl                     | Latency |
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+| + conv1                                | 1836 |        |                   |           |                          |         |
+|   add_ln107_2_fu_2438_p2               |      |        | add_ln107_2       | add       | fabric                   | 0       |
+|   icmp_ln107_fu_2444_p2                |      |        | icmp_ln107        | seteq     | auto                     | 0       |
+|   add_ln107_1_fu_2450_p2               |      |        | add_ln107_1       | add       | fabric                   | 0       |
+|   empty_fu_2460_p2                     |      |        | empty             | add       | fabric                   | 0       |
+|   mul_6ns_7ns_12_1_1_U1945             |      |        | empty_38          | mul       | auto                     | 0       |
+|   mul_8ns_9ns_16_1_1_U1946             |      |        | empty_39          | mul       | auto                     | 0       |
+|   icmp_ln110_fu_2492_p2                |      |        | icmp_ln110        | seteq     | auto                     | 0       |
+|   add_ln110_1_fu_2498_p2               |      |        | add_ln110_1       | add       | fabric                   | 0       |
+|   empty_40_fu_2513_p2                  |      |        | empty_40          | add       | fabric                   | 0       |
+|   empty_41_fu_2520_p2                  |      |        | empty_41          | add       | fabric                   | 0       |
+|   empty_42_fu_2527_p2                  |      |        | empty_42          | add       | fabric                   | 0       |
+|   empty_43_fu_2534_p2                  |      |        | empty_43          | add       | fabric                   | 0       |
+|   add_ln110_fu_2550_p2                 |      |        | add_ln110         | add       | fabric                   | 0       |
+|   add_ln107_fu_2556_p2                 |      |        | add_ln107         | add       | fabric                   | 0       |
+|  + conv1_Pipeline_L2_L3_L4             | 1    |        |                   |           |                          |         |
+|    icmp_ln91_fu_268_p2                 |      |        | icmp_ln91         | seteq     | auto                     | 0       |
+|    add_ln91_2_fu_274_p2                |      |        | add_ln91_2        | add       | fabric                   | 0       |
+|    add_ln91_1_fu_289_p2                |      |        | add_ln91_1        | add       | fabric                   | 0       |
+|    icmp_ln93_fu_295_p2                 |      |        | icmp_ln93         | seteq     | auto                     | 0       |
+|    select_ln91_fu_301_p3               |      |        | select_ln91       | select    | auto_sel                 | 0       |
+|    first_iter_129_fu_309_p2            |      |        | first_iter_129    | seteq     | auto                     | 0       |
+|    or_ln91_fu_315_p2                   |      |        | or_ln91           | or        | auto                     | 0       |
+|    xor_ln91_fu_321_p2                  |      |        | xor_ln91          | xor       | auto                     | 0       |
+|    icmp_ln95_fu_327_p2                 |      |        | icmp_ln95         | seteq     | auto                     | 0       |
+|    and_ln91_fu_333_p2                  |      |        | and_ln91          | and       | auto                     | 0       |
+|    select_ln91_1_fu_339_p3             |      |        | select_ln91_1     | select    | auto_sel                 | 0       |
+|    add_ln93_fu_347_p2                  |      |        | add_ln93          | add       | fabric                   | 0       |
+|    empty_37_fu_353_p2                  |      |        | empty_37          | or        | auto                     | 0       |
+|    j_mid2_fu_359_p3                    |      |        | j_mid2            | select    | auto_sel                 | 0       |
+|    first_iter_1_mid2_fu_367_p3         |      |        | first_iter_1_mid2 | select    | auto_sel                 | 0       |
+|    select_ln93_fu_375_p3               |      |        | select_ln93       | select    | auto_sel                 | 0       |
+|    first_iter_0_fu_383_p2              |      |        | first_iter_0      | seteq     | auto                     | 0       |
+|    mul_2ns_19ns_20_1_1_U1              |      |        | mul_ln91          | mul       | auto                     | 0       |
+|    add_ln91_fu_403_p2                  |      |        | add_ln91          | add       | fabric                   | 0       |
+|    mac_muladd_8ns_2ns_8ns_10_4_1_U2    | 1    |        | mul_ln98          | mul       | dsp_slice                | 3       |
+|    mac_muladd_8ns_2ns_8ns_10_4_1_U2    | 1    |        | add_ln98          | add       | dsp_slice                | 3       |
+|    add_ln95_fu_428_p2                  |      |        | add_ln95          | add       | fabric                   | 0       |
+|    add_ln93_1_fu_434_p2                |      |        | add_ln93_1        | add       | fabric                   | 0       |
+|    select_ln93_1_fu_440_p3             |      |        | select_ln93_1     | select    | auto_sel                 | 0       |
+|  + conv1_Pipeline_L7                   | 0    |        |                   |           |                          |         |
+|    cmp36_fu_6178_p2                    |      |        | cmp36             | seteq     | auto                     | 0       |
+|    icmp_ln114_fu_6202_p2               |      |        | icmp_ln114        | seteq     | auto                     | 0       |
+|    add_ln114_16_fu_6208_p2             |      |        | add_ln114_16      | add       | fabric                   | 0       |
+|    add_ln132_10_fu_6231_p2             |      |        | add_ln132_10      | add       | fabric                   | 0       |
+|    add_ln132_fu_6237_p2                |      |        | add_ln132         | add       | fabric                   | 0       |
+|    add_ln132_1_fu_9760_p2              |      |        | add_ln132_1       | add       | fabric                   | 0       |
+|    add_ln132_2_fu_9776_p2              |      |        | add_ln132_2       | add       | fabric                   | 0       |
+|    add_ln132_3_fu_10242_p2             |      |        | add_ln132_3       | add       | fabric                   | 0       |
+|    add_ln132_4_fu_10258_p2             |      |        | add_ln132_4       | add       | fabric                   | 0       |
+|    add_ln132_5_fu_10694_p2             |      |        | add_ln132_5       | add       | fabric                   | 0       |
+|    add_ln132_6_fu_10710_p2             |      |        | add_ln132_6       | add       | fabric                   | 0       |
+|    add_ln132_7_fu_10987_p2             |      |        | add_ln132_7       | add       | fabric                   | 0       |
+|    add_ln132_8_fu_11003_p2             |      |        | add_ln132_8       | add       | fabric                   | 0       |
+|    add_ln132_9_fu_11229_p2             |      |        | add_ln132_9       | add       | fabric                   | 0       |
+|    add_ln170_fu_6254_p2                |      |        | add_ln170         | add       | fabric                   | 0       |
+|    add_ln170_1_fu_6270_p2              |      |        | add_ln170_1       | add       | fabric                   | 0       |
+|    add_ln170_2_fu_9792_p2              |      |        | add_ln170_2       | add       | fabric                   | 0       |
+|    add_ln170_3_fu_9807_p2              |      |        | add_ln170_3       | add       | fabric                   | 0       |
+|    add_ln114_26_fu_6286_p2             |      |        | add_ln114_26      | add       | fabric                   | 0       |
+|    add_ln114_17_fu_6296_p2             |      |        | add_ln114_17      | add       | fabric                   | 0       |
+|    add_ln114_18_fu_11596_p2            |      |        | add_ln114_18      | add       | fabric                   | 0       |
+|    add_ln114_fu_11605_p2               |      |        | add_ln114         | add       | fabric                   | 0       |
+|    add_ln114_1_fu_11622_p2             |      |        | add_ln114_1       | add       | fabric                   | 0       |
+|    add_ln114_19_fu_11455_p2            |      |        | add_ln114_19      | add       | fabric                   | 0       |
+|    add_ln114_2_fu_11464_p2             |      |        | add_ln114_2       | add       | fabric                   | 0       |
+|    add_ln114_3_fu_11481_p2             |      |        | add_ln114_3       | add       | fabric                   | 0       |
+|    add_ln114_20_fu_10726_p2            |      |        | add_ln114_20      | add       | fabric                   | 0       |
+|    add_ln114_4_fu_10735_p2             |      |        | add_ln114_4       | add       | fabric                   | 0       |
+|    add_ln114_5_fu_10752_p2             |      |        | add_ln114_5       | add       | fabric                   | 0       |
+|    add_ln114_21_fu_6304_p2             |      |        | add_ln114_21      | add       | fabric                   | 0       |
+|    add_ln114_6_fu_6314_p2              |      |        | add_ln114_6       | add       | fabric                   | 0       |
+|    add_ln114_7_fu_6332_p2              |      |        | add_ln114_7       | add       | fabric                   | 0       |
+|    add_ln114_22_fu_12526_p2            |      |        | add_ln114_22      | add       | fabric                   | 0       |
+|    add_ln114_8_fu_12535_p2             |      |        | add_ln114_8       | add       | fabric                   | 0       |
+|    add_ln114_9_fu_12742_p2             |      |        | add_ln114_9       | add       | fabric                   | 0       |
+|    add_ln114_23_fu_12540_p2            |      |        | add_ln114_23      | add       | fabric                   | 0       |
+|    add_ln114_10_fu_12549_p2            |      |        | add_ln114_10      | add       | fabric                   | 0       |
+|    add_ln114_11_fu_12566_p2            |      |        | add_ln114_11      | add       | fabric                   | 0       |
+|    add_ln114_24_fu_12214_p2            |      |        | add_ln114_24      | add       | fabric                   | 0       |
+|    add_ln114_12_fu_12223_p2            |      |        | add_ln114_12      | add       | fabric                   | 0       |
+|    add_ln114_13_fu_12240_p2            |      |        | add_ln114_13      | add       | fabric                   | 0       |
+|    add_ln114_25_fu_11717_p2            |      |        | add_ln114_25      | add       | fabric                   | 0       |
+|    add_ln114_14_fu_11726_p2            |      |        | add_ln114_14      | add       | fabric                   | 0       |
+|    add_ln114_15_fu_11743_p2            |      |        | add_ln114_15      | add       | fabric                   | 0       |
+|    empty_31_fu_11952_p2                |      |        | empty_31          | add       | fabric                   | 0       |
+|    add_ln181_fu_11763_p2               |      |        | add_ln181         | add       | fabric                   | 0       |
+|    add_ln181_1_fu_11780_p2             |      |        | add_ln181_1       | add       | fabric                   | 0       |
+|    add_ln181_2_fu_11870_p2             |      |        | add_ln181_2       | add       | fabric                   | 0       |
+|    add_ln181_3_fu_11887_p2             |      |        | add_ln181_3       | add       | fabric                   | 0       |
+|    add_ln181_4_fu_11961_p2             |      |        | add_ln181_4       | add       | fabric                   | 0       |
+|    add_ln181_5_fu_11978_p2             |      |        | add_ln181_5       | add       | fabric                   | 0       |
+|    add_ln181_6_fu_12038_p2             |      |        | add_ln181_6       | add       | fabric                   | 0       |
+|    add_ln181_7_fu_12054_p2             |      |        | add_ln181_7       | add       | fabric                   | 0       |
+|    sparsemux_7_2_32_1_1_U14            |      |        | window_3D_560     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U15            |      |        | window_3D_363     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U16            |      |        | window_3D_364     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U17            |      |        | window_3D_365     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U18            |      |        | window_3D_366     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U19            |      |        | window_3D_367     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U20            |      |        | window_3D_368     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U21            |      |        | window_3D_369     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U22            |      |        | window_3D_370     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U23            |      |        | window_3D_371     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U24            |      |        | window_3D_372     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U25            |      |        | window_3D_373     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U26            |      |        | window_3D_374     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U27            |      |        | window_3D_375     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U28            |      |        | window_3D_376     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U29            |      |        | window_3D_377     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U30            |      |        | window_3D_378     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U31            |      |        | window_3D_379     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U32            |      |        | window_3D_380     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U33            |      |        | window_3D_381     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U34            |      |        | window_3D_382     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U35            |      |        | window_3D_383     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U36            |      |        | window_3D_384     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U37            |      |        | window_3D_385     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U38            |      |        | window_3D_386     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U39            |      |        | window_3D_387     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U40            |      |        | window_3D_388     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U41            |      |        | window_3D_389     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U42            |      |        | window_3D_390     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U43            |      |        | window_3D_391     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U44            |      |        | window_3D_392     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U45            |      |        | window_3D_393     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U46            |      |        | window_3D_394     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U47            |      |        | window_3D_395     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U48            |      |        | window_3D_396     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U49            |      |        | window_3D_397     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U50            |      |        | window_3D_398     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U51            |      |        | window_3D_399     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U52            |      |        | window_3D_400     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U53            |      |        | window_3D_401     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U54            |      |        | window_3D_402     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U55            |      |        | window_3D_403     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U56            |      |        | window_3D_404     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U57            |      |        | window_3D_405     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U58            |      |        | window_3D_406     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U59            |      |        | window_3D_407     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U60            |      |        | window_3D_408     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U61            |      |        | window_3D_409     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U62            |      |        | window_3D_410     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U63            |      |        | window_3D_411     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U64            |      |        | window_3D_412     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U65            |      |        | window_3D_413     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U66            |      |        | window_3D_414     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U67            |      |        | window_3D_415     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U68            |      |        | window_3D_416     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U69            |      |        | window_3D_417     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U70            |      |        | window_3D_418     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U71            |      |        | window_3D_419     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U72            |      |        | window_3D_420     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U73            |      |        | window_3D_421     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U74            |      |        | window_3D_422     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U75            |      |        | window_3D_423     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U76            |      |        | window_3D_424     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U77            |      |        | window_3D_425     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U78            |      |        | window_3D_426     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U79            |      |        | window_3D_427     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U80            |      |        | window_3D_428     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U81            |      |        | window_3D_429     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U82            |      |        | window_3D_430     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U83            |      |        | window_3D_431     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U84            |      |        | window_3D_432     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U85            |      |        | window_3D_433     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U86            |      |        | window_3D_434     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U87            |      |        | window_3D_435     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U88            |      |        | window_3D_436     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U89            |      |        | window_3D_437     | sparsemux | onehotencoding_realdef   | 0       |
+|    sparsemux_7_2_32_1_1_U90            |      |        | window_3D_438     | sparsemux | onehotencoding_realdef   | 0       |
+|    add_ln144_fu_12923_p2               |      |        | add_ln144         | add       | fabric                   | 0       |
+|    add_ln144_1_fu_12928_p2             |      |        | add_ln144_1       | add       | fabric                   | 0       |
+|    add_ln144_2_fu_12965_p2             |      |        | add_ln144_2       | add       | fabric                   | 0       |
+|    add_ln144_3_fu_13002_p2             |      |        | add_ln144_3       | add       | fabric                   | 0       |
+|    add_ln144_4_fu_13039_p2             |      |        | add_ln144_4       | add       | fabric                   | 0       |
+|  + conv1_Pipeline_L1                   | 1835 |        |                   |           |                          |         |
+|    icmp_ln212_fu_75911_p2              |      |        | icmp_ln212        | seteq     | auto                     | 0       |
+|    add_ln212_fu_75917_p2               |      |        | add_ln212         | add       | fabric                   | 0       |
+|    sparsemux_193_7_32_1_1_U1210        |      |        | tmp_s             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U846  | 3    |        | lm                | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1211        |      |        | tmp_1             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U847  | 3    |        | lm_1              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1212        |      |        | tmp_2             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U848  | 3    |        | lm_2              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1213        |      |        | tmp_3             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U849  | 3    |        | lm_3              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1214        |      |        | tmp_4             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U850  | 3    |        | lm_4              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1215        |      |        | tmp_5             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U851  | 3    |        | lm_5              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1216        |      |        | tmp_6             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U852  | 3    |        | lm_6              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1217        |      |        | tmp_7             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U853  | 3    |        | lm_7              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1218        |      |        | tmp_8             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U854  | 3    |        | lm_8              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1219        |      |        | tmp_9             | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U855  | 3    |        | lm_9              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1220        |      |        | tmp_10            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U856  | 3    |        | lm_s              | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1221        |      |        | tmp_11            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U857  | 3    |        | lm_10             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1222        |      |        | tmp_12            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U858  | 3    |        | lm_11             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1223        |      |        | tmp_13            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U859  | 3    |        | lm_12             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1224        |      |        | tmp_14            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U860  | 3    |        | lm_13             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1225        |      |        | tmp_15            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U861  | 3    |        | lm_14             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1226        |      |        | tmp_16            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U862  | 3    |        | lm_15             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1227        |      |        | tmp_17            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U863  | 3    |        | lm_16             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1228        |      |        | tmp_18            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U864  | 3    |        | lm_17             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1229        |      |        | tmp_19            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U865  | 3    |        | lm_18             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1230        |      |        | tmp_20            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U866  | 3    |        | lm_19             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1231        |      |        | tmp_21            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U867  | 3    |        | lm_20             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1232        |      |        | tmp_22            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U868  | 3    |        | lm_21             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1233        |      |        | tmp_23            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U869  | 3    |        | lm_22             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1234        |      |        | tmp_24            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U870  | 3    |        | lm_23             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1235        |      |        | tmp_25            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U871  | 3    |        | lm_24             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1236        |      |        | tmp_26            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U872  | 3    |        | lm_25             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1237        |      |        | tmp_27            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U873  | 3    |        | lm_26             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1238        |      |        | tmp_28            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U874  | 3    |        | lm_27             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1239        |      |        | tmp_29            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U875  | 3    |        | lm_28             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1240        |      |        | tmp_30            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U876  | 3    |        | lm_29             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1241        |      |        | tmp_31            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U877  | 3    |        | lm_30             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1242        |      |        | tmp_32            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U878  | 3    |        | lm_31             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1243        |      |        | tmp_33            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U879  | 3    |        | lm_32             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1244        |      |        | tmp_34            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U880  | 3    |        | lm_33             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1245        |      |        | tmp_35            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U881  | 3    |        | lm_34             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1246        |      |        | tmp_36            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U882  | 3    |        | lm_35             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1247        |      |        | tmp_37            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U883  | 3    |        | lm_36             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1248        |      |        | tmp_38            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U884  | 3    |        | lm_37             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1249        |      |        | tmp_39            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U885  | 3    |        | lm_38             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1250        |      |        | tmp_40            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U886  | 3    |        | lm_39             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1251        |      |        | tmp_41            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U887  | 3    |        | lm_40             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1252        |      |        | tmp_42            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U888  | 3    |        | lm_41             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1253        |      |        | tmp_43            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U889  | 3    |        | lm_42             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1254        |      |        | tmp_44            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U890  | 3    |        | lm_43             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1255        |      |        | tmp_45            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U891  | 3    |        | lm_44             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1256        |      |        | tmp_46            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U892  | 3    |        | lm_45             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1257        |      |        | tmp_47            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U893  | 3    |        | lm_46             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1258        |      |        | tmp_48            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U894  | 3    |        | lm_47             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1259        |      |        | tmp_49            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U895  | 3    |        | lm_48             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1260        |      |        | tmp_50            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U896  | 3    |        | lm_49             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1261        |      |        | tmp_51            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U897  | 3    |        | lm_50             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1262        |      |        | tmp_52            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U898  | 3    |        | lm_51             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1263        |      |        | tmp_53            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U899  | 3    |        | lm_52             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1264        |      |        | tmp_54            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U900  | 3    |        | lm_53             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1265        |      |        | tmp_55            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U901  | 3    |        | lm_54             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1266        |      |        | tmp_56            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U902  | 3    |        | lm_55             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1267        |      |        | tmp_57            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U903  | 3    |        | lm_56             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1268        |      |        | tmp_58            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U904  | 3    |        | lm_57             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1269        |      |        | tmp_59            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U905  | 3    |        | lm_58             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1270        |      |        | tmp_60            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U906  | 3    |        | lm_59             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1271        |      |        | tmp_61            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U907  | 3    |        | lm_60             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1272        |      |        | tmp_62            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U908  | 3    |        | lm_61             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1273        |      |        | tmp_63            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U909  | 3    |        | lm_62             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1274        |      |        | tmp_64            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U910  | 3    |        | lm_63             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1275        |      |        | tmp_65            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U911  | 3    |        | lm_64             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1276        |      |        | tmp_66            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U912  | 3    |        | lm_65             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1277        |      |        | tmp_67            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U913  | 3    |        | lm_66             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1278        |      |        | tmp_68            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U914  | 3    |        | lm_67             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1279        |      |        | tmp_69            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U915  | 3    |        | lm_68             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1280        |      |        | tmp_70            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U916  | 3    |        | lm_69             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1281        |      |        | tmp_71            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U917  | 3    |        | lm_70             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1282        |      |        | tmp_72            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U918  | 3    |        | lm_71             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1283        |      |        | tmp_73            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U919  | 3    |        | lm_72             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1284        |      |        | tmp_74            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U920  | 3    |        | lm_73             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1285        |      |        | tmp_75            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U921  | 3    |        | lm_74             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1286        |      |        | tmp_76            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U922  | 3    |        | lm_75             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1287        |      |        | tmp_77            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U923  | 3    |        | lm_76             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1288        |      |        | tmp_78            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U924  | 3    |        | lm_77             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1289        |      |        | tmp_79            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U925  | 3    |        | lm_78             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1290        |      |        | tmp_80            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U926  | 3    |        | lm_79             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1291        |      |        | tmp_81            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U927  | 3    |        | lm_80             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1292        |      |        | tmp_82            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U928  | 3    |        | lm_81             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1293        |      |        | tmp_83            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U929  | 3    |        | lm_82             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1294        |      |        | tmp_84            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U930  | 3    |        | lm_83             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1295        |      |        | tmp_85            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U931  | 3    |        | lm_84             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1296        |      |        | tmp_86            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U932  | 3    |        | lm_85             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1297        |      |        | tmp_87            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U933  | 3    |        | lm_86             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1298        |      |        | tmp_88            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U934  | 3    |        | lm_87             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1299        |      |        | tmp_89            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U935  | 3    |        | lm_88             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1300        |      |        | tmp_90            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U936  | 3    |        | lm_89             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1301        |      |        | tmp_91            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U937  | 3    |        | lm_90             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1302        |      |        | tmp_92            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U938  | 3    |        | lm_91             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1303        |      |        | tmp_93            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U939  | 3    |        | lm_92             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1304        |      |        | tmp_94            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U940  | 3    |        | lm_93             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1305        |      |        | tmp_95            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U941  | 3    |        | lm_94             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1306        |      |        | tmp_96            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U942  | 3    |        | lm_95             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1307        |      |        | tmp_97            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U943  | 3    |        | lm_96             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1308        |      |        | tmp_98            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U944  | 3    |        | lm_97             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1309        |      |        | tmp_99            | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U945  | 3    |        | lm_98             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1310        |      |        | tmp_100           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U946  | 3    |        | lm_99             | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1311        |      |        | tmp_101           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U947  | 3    |        | lm_100            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1312        |      |        | tmp_102           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U948  | 3    |        | lm_101            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1313        |      |        | tmp_103           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U949  | 3    |        | lm_102            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1314        |      |        | tmp_104           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U950  | 3    |        | lm_103            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1315        |      |        | tmp_105           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U951  | 3    |        | lm_104            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1316        |      |        | tmp_106           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U952  | 3    |        | lm_105            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1317        |      |        | tmp_107           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U953  | 3    |        | lm_106            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1318        |      |        | tmp_108           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U954  | 3    |        | lm_107            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1319        |      |        | tmp_109           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U955  | 3    |        | lm_108            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1320        |      |        | tmp_110           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U956  | 3    |        | lm_109            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1321        |      |        | tmp_111           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U957  | 3    |        | lm_110            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1322        |      |        | tmp_112           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U958  | 3    |        | lm_111            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1323        |      |        | tmp_113           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U959  | 3    |        | lm_112            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1324        |      |        | tmp_114           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U960  | 3    |        | lm_113            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1325        |      |        | tmp_115           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U961  | 3    |        | lm_114            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1326        |      |        | tmp_116           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U962  | 3    |        | lm_115            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1327        |      |        | tmp_117           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U963  | 3    |        | lm_116            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1328        |      |        | tmp_118           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U964  | 3    |        | lm_117            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1329        |      |        | tmp_119           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U965  | 3    |        | lm_118            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1330        |      |        | tmp_120           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U966  | 3    |        | lm_119            | fmul      | maxdsp                   | 2       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U473 | 2    |        | sum               | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U474 | 2    |        | sum_1             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U475 | 2    |        | sum_2             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U476 | 2    |        | sum_3             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U477 | 2    |        | sum_4             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U478 | 2    |        | sum_5             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U479 | 2    |        | sum_6             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U480 | 2    |        | sum_7             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U481 | 2    |        | sum_8             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U482 | 2    |        | sum_9             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U483 | 2    |        | sum_s             | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U484 | 2    |        | sum_10            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U485 | 2    |        | sum_11            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U486 | 2    |        | sum_12            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U487 | 2    |        | sum_13            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U488 | 2    |        | sum_14            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U489 | 2    |        | sum_15            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U490 | 2    |        | sum_16            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U491 | 2    |        | sum_17            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U492 | 2    |        | sum_18            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U493 | 2    |        | sum_19            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U494 | 2    |        | sum_20            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U495 | 2    |        | sum_21            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U496 | 2    |        | sum_22            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U497 | 2    |        | sum_23            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U498 | 2    |        | sum_24            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U499 | 2    |        | sum_25            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U500 | 2    |        | sum_26            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U501 | 2    |        | sum_27            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U502 | 2    |        | sum_28            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U503 | 2    |        | sum_29            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U504 | 2    |        | sum_30            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U505 | 2    |        | sum_31            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U506 | 2    |        | sum_32            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U507 | 2    |        | sum_33            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U508 | 2    |        | sum_34            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U509 | 2    |        | sum_35            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U510 | 2    |        | sum_36            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U511 | 2    |        | sum_37            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U512 | 2    |        | sum_38            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U513 | 2    |        | sum_39            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U514 | 2    |        | sum_40            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U515 | 2    |        | sum_41            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U516 | 2    |        | sum_42            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U517 | 2    |        | sum_43            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U518 | 2    |        | sum_44            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U519 | 2    |        | sum_45            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U520 | 2    |        | sum_46            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U521 | 2    |        | sum_47            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U522 | 2    |        | sum_48            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U523 | 2    |        | sum_49            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U524 | 2    |        | sum_50            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U525 | 2    |        | sum_51            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U526 | 2    |        | sum_52            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U527 | 2    |        | sum_53            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U528 | 2    |        | sum_54            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U529 | 2    |        | sum_55            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U530 | 2    |        | sum_56            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U531 | 2    |        | sum_57            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U532 | 2    |        | sum_58            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U533 | 2    |        | sum_59            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U656 | 2    |        | sum2              | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U657 | 2    |        | sum2_1            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U658 | 2    |        | sum2_2            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U659 | 2    |        | sum2_3            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U660 | 2    |        | sum2_4            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U661 | 2    |        | sum2_5            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U662 | 2    |        | sum2_6            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U663 | 2    |        | sum2_7            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U664 | 2    |        | sum2_8            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U665 | 2    |        | sum2_9            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U666 | 2    |        | sum2_s            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U667 | 2    |        | sum2_10           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U668 | 2    |        | sum2_11           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U669 | 2    |        | sum2_12           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U670 | 2    |        | sum2_13           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U671 | 2    |        | sum2_14           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U672 | 2    |        | sum2_15           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U673 | 2    |        | sum2_16           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U674 | 2    |        | sum2_17           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U675 | 2    |        | sum2_18           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U676 | 2    |        | sum2_19           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U677 | 2    |        | sum2_20           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U678 | 2    |        | sum2_21           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U679 | 2    |        | sum2_22           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U680 | 2    |        | sum2_23           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U681 | 2    |        | sum2_24           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U682 | 2    |        | sum2_25           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U683 | 2    |        | sum2_26           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U684 | 2    |        | sum2_27           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U685 | 2    |        | sum2_28           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U686 | 2    |        | sum2_29           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U749 | 2    |        | add               | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U750 | 2    |        | add408_s          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U751 | 2    |        | add408_16         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U752 | 2    |        | add408_3          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U753 | 2    |        | add408_4          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U754 | 2    |        | add408_5          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U755 | 2    |        | add408_6          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U756 | 2    |        | add408_7          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U757 | 2    |        | add408_8          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U758 | 2    |        | add408_9          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U759 | 2    |        | add408_10         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U760 | 2    |        | add408_11         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U761 | 2    |        | add408_12         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U762 | 2    |        | add408_13         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U763 | 2    |        | add408_14         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U764 | 2    |        | add408_15         | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U797 | 2    |        | add1              | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U798 | 2    |        | add430_s          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U799 | 2    |        | add430_8          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U800 | 2    |        | add430_3          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U801 | 2    |        | add430_4          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U802 | 2    |        | add430_5          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U803 | 2    |        | add430_6          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U804 | 2    |        | add430_7          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U821 | 2    |        | add2              | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U822 | 2    |        | add452_s          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U823 | 2    |        | add452_4          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U824 | 2    |        | add452_3          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U833 | 2    |        | add3              | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U834 | 2    |        | add474_s          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U839 | 2    |        | sum7              | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U842 | 2    |        | add5              | fadd      | fulldsp                  | 3       |
+|    sparsemux_193_7_32_1_1_U1331        |      |        | tmp_121           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U967  | 3    |        | lm_120            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1332        |      |        | tmp_122           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U968  | 3    |        | lm_121            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1333        |      |        | tmp_123           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U969  | 3    |        | lm_122            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1334        |      |        | tmp_124           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U970  | 3    |        | lm_123            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1335        |      |        | tmp_125           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U971  | 3    |        | lm_124            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1336        |      |        | tmp_126           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U972  | 3    |        | lm_125            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1337        |      |        | tmp_127           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U973  | 3    |        | lm_126            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1338        |      |        | tmp_128           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U974  | 3    |        | lm_127            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1339        |      |        | tmp_129           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U975  | 3    |        | lm_128            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1340        |      |        | tmp_130           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U976  | 3    |        | lm_129            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1341        |      |        | tmp_131           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U977  | 3    |        | lm_130            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1342        |      |        | tmp_132           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U978  | 3    |        | lm_131            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1343        |      |        | tmp_133           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U979  | 3    |        | lm_132            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1344        |      |        | tmp_134           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U980  | 3    |        | lm_133            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1345        |      |        | tmp_135           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U981  | 3    |        | lm_134            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1346        |      |        | tmp_136           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U982  | 3    |        | lm_135            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1347        |      |        | tmp_137           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U983  | 3    |        | lm_136            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1348        |      |        | tmp_138           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U984  | 3    |        | lm_137            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1349        |      |        | tmp_139           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U985  | 3    |        | lm_138            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1350        |      |        | tmp_140           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U986  | 3    |        | lm_139            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1351        |      |        | tmp_141           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U987  | 3    |        | lm_140            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1352        |      |        | tmp_142           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U988  | 3    |        | lm_141            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1353        |      |        | tmp_143           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U989  | 3    |        | lm_142            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1354        |      |        | tmp_144           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U990  | 3    |        | lm_143            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1355        |      |        | tmp_145           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U991  | 3    |        | lm_144            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1356        |      |        | tmp_146           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U992  | 3    |        | lm_145            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1357        |      |        | tmp_147           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U993  | 3    |        | lm_146            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1358        |      |        | tmp_148           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U994  | 3    |        | lm_147            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1359        |      |        | tmp_149           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U995  | 3    |        | lm_148            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1360        |      |        | tmp_150           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U996  | 3    |        | lm_149            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1361        |      |        | tmp_151           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U997  | 3    |        | lm_150            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1362        |      |        | tmp_152           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U998  | 3    |        | lm_151            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1363        |      |        | tmp_153           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U999  | 3    |        | lm_152            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1364        |      |        | tmp_154           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1000 | 3    |        | lm_153            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1365        |      |        | tmp_155           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1001 | 3    |        | lm_154            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1366        |      |        | tmp_156           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1002 | 3    |        | lm_155            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1367        |      |        | tmp_157           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1003 | 3    |        | lm_156            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1368        |      |        | tmp_158           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1004 | 3    |        | lm_157            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1369        |      |        | tmp_159           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1005 | 3    |        | lm_158            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1370        |      |        | tmp_160           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1006 | 3    |        | lm_159            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1371        |      |        | tmp_161           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1007 | 3    |        | lm_160            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1372        |      |        | tmp_162           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1008 | 3    |        | lm_161            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1373        |      |        | tmp_163           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1009 | 3    |        | lm_162            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1374        |      |        | tmp_164           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1010 | 3    |        | lm_163            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1375        |      |        | tmp_165           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1011 | 3    |        | lm_164            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1376        |      |        | tmp_166           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1012 | 3    |        | lm_165            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1377        |      |        | tmp_167           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1013 | 3    |        | lm_166            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1378        |      |        | tmp_168           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1014 | 3    |        | lm_167            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1379        |      |        | tmp_169           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1015 | 3    |        | lm_168            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1380        |      |        | tmp_170           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1016 | 3    |        | lm_169            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1381        |      |        | tmp_171           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1017 | 3    |        | lm_170            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1382        |      |        | tmp_172           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1018 | 3    |        | lm_171            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1383        |      |        | tmp_173           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1019 | 3    |        | lm_172            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1384        |      |        | tmp_174           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1020 | 3    |        | lm_173            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1385        |      |        | tmp_175           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1021 | 3    |        | lm_174            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1386        |      |        | tmp_176           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1022 | 3    |        | lm_175            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1387        |      |        | tmp_177           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1023 | 3    |        | lm_176            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1388        |      |        | tmp_178           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1024 | 3    |        | lm_177            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1389        |      |        | tmp_179           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1025 | 3    |        | lm_178            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1390        |      |        | tmp_180           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1026 | 3    |        | lm_179            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1391        |      |        | tmp_181           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1027 | 3    |        | lm_180            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1392        |      |        | tmp_182           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1028 | 3    |        | lm_181            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1393        |      |        | tmp_183           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1029 | 3    |        | lm_182            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1394        |      |        | tmp_184           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1030 | 3    |        | lm_183            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1395        |      |        | tmp_185           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1031 | 3    |        | lm_184            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1396        |      |        | tmp_186           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1032 | 3    |        | lm_185            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1397        |      |        | tmp_187           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1033 | 3    |        | lm_186            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1398        |      |        | tmp_188           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1034 | 3    |        | lm_187            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1399        |      |        | tmp_189           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1035 | 3    |        | lm_188            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1400        |      |        | tmp_190           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1036 | 3    |        | lm_189            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1401        |      |        | tmp_191           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1037 | 3    |        | lm_190            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1402        |      |        | tmp_192           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1038 | 3    |        | lm_191            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1403        |      |        | tmp_193           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1039 | 3    |        | lm_192            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1404        |      |        | tmp_194           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1040 | 3    |        | lm_193            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1405        |      |        | tmp_195           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1041 | 3    |        | lm_194            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1406        |      |        | tmp_196           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1042 | 3    |        | lm_195            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1407        |      |        | tmp_197           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1043 | 3    |        | lm_196            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1408        |      |        | tmp_198           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1044 | 3    |        | lm_197            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1409        |      |        | tmp_199           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1045 | 3    |        | lm_198            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1410        |      |        | tmp_200           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1046 | 3    |        | lm_199            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1411        |      |        | tmp_201           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1047 | 3    |        | lm_200            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1412        |      |        | tmp_202           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1048 | 3    |        | lm_201            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1413        |      |        | tmp_203           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1049 | 3    |        | lm_202            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1414        |      |        | tmp_204           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1050 | 3    |        | lm_203            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1415        |      |        | tmp_205           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1051 | 3    |        | lm_204            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1416        |      |        | tmp_206           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1052 | 3    |        | lm_205            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1417        |      |        | tmp_207           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1053 | 3    |        | lm_206            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1418        |      |        | tmp_208           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1054 | 3    |        | lm_207            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1419        |      |        | tmp_209           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1055 | 3    |        | lm_208            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1420        |      |        | tmp_210           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1056 | 3    |        | lm_209            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1421        |      |        | tmp_211           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1057 | 3    |        | lm_210            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1422        |      |        | tmp_212           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1058 | 3    |        | lm_211            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1423        |      |        | tmp_213           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1059 | 3    |        | lm_212            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1424        |      |        | tmp_214           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1060 | 3    |        | lm_213            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1425        |      |        | tmp_215           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1061 | 3    |        | lm_214            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1426        |      |        | tmp_216           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1062 | 3    |        | lm_215            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1427        |      |        | tmp_217           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1063 | 3    |        | lm_216            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1428        |      |        | tmp_218           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1064 | 3    |        | lm_217            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1429        |      |        | tmp_219           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1065 | 3    |        | lm_218            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1430        |      |        | tmp_220           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1066 | 3    |        | lm_219            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1431        |      |        | tmp_221           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1067 | 3    |        | lm_220            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1432        |      |        | tmp_222           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1068 | 3    |        | lm_221            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1433        |      |        | tmp_223           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1069 | 3    |        | lm_222            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1434        |      |        | tmp_224           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1070 | 3    |        | lm_223            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1435        |      |        | tmp_225           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1071 | 3    |        | lm_224            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1436        |      |        | tmp_226           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1072 | 3    |        | lm_225            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1437        |      |        | tmp_227           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1073 | 3    |        | lm_226            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1438        |      |        | tmp_228           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1074 | 3    |        | lm_227            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1439        |      |        | tmp_229           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1075 | 3    |        | lm_228            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1440        |      |        | tmp_230           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1076 | 3    |        | lm_229            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1441        |      |        | tmp_231           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1077 | 3    |        | lm_230            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1442        |      |        | tmp_232           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1078 | 3    |        | lm_231            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1443        |      |        | tmp_233           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1079 | 3    |        | lm_232            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1444        |      |        | tmp_234           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1080 | 3    |        | lm_233            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1445        |      |        | tmp_235           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1081 | 3    |        | lm_234            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1446        |      |        | tmp_236           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1082 | 3    |        | lm_235            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1447        |      |        | tmp_237           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1083 | 3    |        | lm_236            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1448        |      |        | tmp_238           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1084 | 3    |        | lm_237            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1449        |      |        | tmp_239           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1085 | 3    |        | lm_238            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1450        |      |        | tmp_240           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1086 | 3    |        | lm_239            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1451        |      |        | tmp_241           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1087 | 3    |        | lm_240            | fmul      | maxdsp                   | 2       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U534 | 2    |        | sum_60            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U535 | 2    |        | sum_61            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U536 | 2    |        | sum_62            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U537 | 2    |        | sum_63            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U538 | 2    |        | sum_64            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U539 | 2    |        | sum_65            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U540 | 2    |        | sum_66            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U541 | 2    |        | sum_67            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U542 | 2    |        | sum_68            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U543 | 2    |        | sum_69            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U544 | 2    |        | sum_70            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U545 | 2    |        | sum_71            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U546 | 2    |        | sum_72            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U547 | 2    |        | sum_73            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U548 | 2    |        | sum_74            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U549 | 2    |        | sum_75            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U550 | 2    |        | sum_76            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U551 | 2    |        | sum_77            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U552 | 2    |        | sum_78            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U553 | 2    |        | sum_79            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U554 | 2    |        | sum_80            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U555 | 2    |        | sum_81            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U556 | 2    |        | sum_82            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U557 | 2    |        | sum_83            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U558 | 2    |        | sum_84            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U559 | 2    |        | sum_85            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U560 | 2    |        | sum_86            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U561 | 2    |        | sum_87            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U562 | 2    |        | sum_88            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U563 | 2    |        | sum_89            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U564 | 2    |        | sum_90            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U565 | 2    |        | sum_91            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U566 | 2    |        | sum_92            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U567 | 2    |        | sum_93            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U568 | 2    |        | sum_94            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U569 | 2    |        | sum_95            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U570 | 2    |        | sum_96            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U571 | 2    |        | sum_97            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U572 | 2    |        | sum_98            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U573 | 2    |        | sum_99            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U574 | 2    |        | sum_100           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U575 | 2    |        | sum_101           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U576 | 2    |        | sum_102           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U577 | 2    |        | sum_103           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U578 | 2    |        | sum_104           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U579 | 2    |        | sum_105           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U580 | 2    |        | sum_106           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U581 | 2    |        | sum_107           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U582 | 2    |        | sum_108           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U583 | 2    |        | sum_109           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U584 | 2    |        | sum_110           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U585 | 2    |        | sum_111           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U586 | 2    |        | sum_112           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U587 | 2    |        | sum_113           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U588 | 2    |        | sum_114           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U589 | 2    |        | sum_115           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U590 | 2    |        | sum_116           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U591 | 2    |        | sum_117           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U592 | 2    |        | sum_118           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U593 | 2    |        | sum_119           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U594 | 2    |        | sum_120           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U687 | 2    |        | sum2_30           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U688 | 2    |        | sum2_31           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U689 | 2    |        | sum2_32           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U690 | 2    |        | sum2_33           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U691 | 2    |        | sum2_34           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U692 | 2    |        | sum2_35           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U693 | 2    |        | sum2_36           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U694 | 2    |        | sum2_37           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U695 | 2    |        | sum2_38           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U696 | 2    |        | sum2_39           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U697 | 2    |        | sum2_40           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U698 | 2    |        | sum2_41           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U699 | 2    |        | sum2_42           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U700 | 2    |        | sum2_43           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U701 | 2    |        | sum2_44           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U702 | 2    |        | sum2_45           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U703 | 2    |        | sum2_46           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U704 | 2    |        | sum2_47           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U705 | 2    |        | sum2_48           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U706 | 2    |        | sum2_49           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U707 | 2    |        | sum2_50           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U708 | 2    |        | sum2_51           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U709 | 2    |        | sum2_52           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U710 | 2    |        | sum2_53           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U711 | 2    |        | sum2_54           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U712 | 2    |        | sum2_55           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U713 | 2    |        | sum2_56           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U714 | 2    |        | sum2_57           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U715 | 2    |        | sum2_58           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U716 | 2    |        | sum2_59           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U717 | 2    |        | sum2_60           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U765 | 2    |        | add408_1          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U766 | 2    |        | add408_1_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U767 | 2    |        | add408_1_2        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U768 | 2    |        | add408_1_3        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U769 | 2    |        | add408_1_4        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U770 | 2    |        | add408_1_5        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U771 | 2    |        | add408_1_6        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U772 | 2    |        | add408_1_7        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U773 | 2    |        | add408_1_8        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U774 | 2    |        | add408_1_9        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U775 | 2    |        | add408_1_s        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U776 | 2    |        | add408_1_10       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U777 | 2    |        | add408_1_11       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U778 | 2    |        | add408_1_12       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U779 | 2    |        | add408_1_13       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U780 | 2    |        | add408_1_14       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U805 | 2    |        | add430_1          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U806 | 2    |        | add430_1_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U807 | 2    |        | add430_1_2        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U808 | 2    |        | add430_1_3        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U809 | 2    |        | add430_1_4        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U810 | 2    |        | add430_1_5        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U811 | 2    |        | add430_1_6        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U812 | 2    |        | add430_1_7        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U825 | 2    |        | add452_1          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U826 | 2    |        | add452_1_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U827 | 2    |        | add452_1_2        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U828 | 2    |        | add452_1_3        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U835 | 2    |        | add474_1          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U836 | 2    |        | add474_1_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U840 | 2    |        | sum7_1            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U843 | 2    |        | add495_1          | fadd      | fulldsp                  | 3       |
+|    sparsemux_193_7_32_1_1_U1452        |      |        | tmp_242           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1088 | 3    |        | lm_241            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1453        |      |        | tmp_243           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1089 | 3    |        | lm_242            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1454        |      |        | tmp_244           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1090 | 3    |        | lm_243            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1455        |      |        | tmp_245           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1091 | 3    |        | lm_244            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1456        |      |        | tmp_246           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1092 | 3    |        | lm_245            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1457        |      |        | tmp_247           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1093 | 3    |        | lm_246            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1458        |      |        | tmp_248           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1094 | 3    |        | lm_247            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1459        |      |        | tmp_249           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1095 | 3    |        | lm_248            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1460        |      |        | tmp_250           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1096 | 3    |        | lm_249            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1461        |      |        | tmp_251           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1097 | 3    |        | lm_250            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1462        |      |        | tmp_252           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1098 | 3    |        | lm_251            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1463        |      |        | tmp_253           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1099 | 3    |        | lm_252            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1464        |      |        | tmp_254           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1100 | 3    |        | lm_253            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1465        |      |        | tmp_255           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1101 | 3    |        | lm_254            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1466        |      |        | tmp_256           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1102 | 3    |        | lm_255            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1467        |      |        | tmp_257           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1103 | 3    |        | lm_256            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1468        |      |        | tmp_258           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1104 | 3    |        | lm_257            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1469        |      |        | tmp_259           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1105 | 3    |        | lm_258            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1470        |      |        | tmp_260           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1106 | 3    |        | lm_259            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1471        |      |        | tmp_261           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1107 | 3    |        | lm_260            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1472        |      |        | tmp_262           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1108 | 3    |        | lm_261            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1473        |      |        | tmp_263           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1109 | 3    |        | lm_262            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1474        |      |        | tmp_264           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1110 | 3    |        | lm_263            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1475        |      |        | tmp_265           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1111 | 3    |        | lm_264            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1476        |      |        | tmp_266           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1112 | 3    |        | lm_265            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1477        |      |        | tmp_267           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1113 | 3    |        | lm_266            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1478        |      |        | tmp_268           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1114 | 3    |        | lm_267            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1479        |      |        | tmp_269           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1115 | 3    |        | lm_268            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1480        |      |        | tmp_270           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1116 | 3    |        | lm_269            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1481        |      |        | tmp_271           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1117 | 3    |        | lm_270            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1482        |      |        | tmp_272           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1118 | 3    |        | lm_271            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1483        |      |        | tmp_273           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1119 | 3    |        | lm_272            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1484        |      |        | tmp_274           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1120 | 3    |        | lm_273            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1485        |      |        | tmp_275           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1121 | 3    |        | lm_274            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1486        |      |        | tmp_276           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1122 | 3    |        | lm_275            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1487        |      |        | tmp_277           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1123 | 3    |        | lm_276            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1488        |      |        | tmp_278           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1124 | 3    |        | lm_277            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1489        |      |        | tmp_279           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1125 | 3    |        | lm_278            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1490        |      |        | tmp_280           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1126 | 3    |        | lm_279            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1491        |      |        | tmp_281           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1127 | 3    |        | lm_280            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1492        |      |        | tmp_282           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1128 | 3    |        | lm_281            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1493        |      |        | tmp_283           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1129 | 3    |        | lm_282            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1494        |      |        | tmp_284           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1130 | 3    |        | lm_283            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1495        |      |        | tmp_285           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1131 | 3    |        | lm_284            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1496        |      |        | tmp_286           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1132 | 3    |        | lm_285            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1497        |      |        | tmp_287           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1133 | 3    |        | lm_286            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1498        |      |        | tmp_288           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1134 | 3    |        | lm_287            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1499        |      |        | tmp_289           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1135 | 3    |        | lm_288            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1500        |      |        | tmp_290           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1136 | 3    |        | lm_289            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1501        |      |        | tmp_291           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1137 | 3    |        | lm_290            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1502        |      |        | tmp_292           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1138 | 3    |        | lm_291            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1503        |      |        | tmp_293           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1139 | 3    |        | lm_292            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1504        |      |        | tmp_294           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1140 | 3    |        | lm_293            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1505        |      |        | tmp_295           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1141 | 3    |        | lm_294            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1506        |      |        | tmp_296           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1142 | 3    |        | lm_295            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1507        |      |        | tmp_297           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1143 | 3    |        | lm_296            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1508        |      |        | tmp_298           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1144 | 3    |        | lm_297            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1509        |      |        | tmp_299           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1145 | 3    |        | lm_298            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1510        |      |        | tmp_300           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1146 | 3    |        | lm_299            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1511        |      |        | tmp_301           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1147 | 3    |        | lm_300            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1512        |      |        | tmp_302           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1148 | 3    |        | lm_301            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1513        |      |        | tmp_303           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1149 | 3    |        | lm_302            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1514        |      |        | tmp_304           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1150 | 3    |        | lm_303            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1515        |      |        | tmp_305           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1151 | 3    |        | lm_304            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1516        |      |        | tmp_306           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1152 | 3    |        | lm_305            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1517        |      |        | tmp_307           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1153 | 3    |        | lm_306            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1518        |      |        | tmp_308           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1154 | 3    |        | lm_307            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1519        |      |        | tmp_309           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1155 | 3    |        | lm_308            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1520        |      |        | tmp_310           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1156 | 3    |        | lm_309            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1521        |      |        | tmp_311           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1157 | 3    |        | lm_310            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1522        |      |        | tmp_312           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1158 | 3    |        | lm_311            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1523        |      |        | tmp_313           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1159 | 3    |        | lm_312            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1524        |      |        | tmp_314           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1160 | 3    |        | lm_313            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1525        |      |        | tmp_315           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1161 | 3    |        | lm_314            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1526        |      |        | tmp_316           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1162 | 3    |        | lm_315            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1527        |      |        | tmp_317           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1163 | 3    |        | lm_316            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1528        |      |        | tmp_318           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1164 | 3    |        | lm_317            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1529        |      |        | tmp_319           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1165 | 3    |        | lm_318            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1530        |      |        | tmp_320           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1166 | 3    |        | lm_319            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1531        |      |        | tmp_321           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1167 | 3    |        | lm_320            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1532        |      |        | tmp_322           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1168 | 3    |        | lm_321            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1533        |      |        | tmp_323           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1169 | 3    |        | lm_322            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1534        |      |        | tmp_324           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1170 | 3    |        | lm_323            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1535        |      |        | tmp_325           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1171 | 3    |        | lm_324            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1536        |      |        | tmp_326           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1172 | 3    |        | lm_325            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1537        |      |        | tmp_327           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1173 | 3    |        | lm_326            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1538        |      |        | tmp_328           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1174 | 3    |        | lm_327            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1539        |      |        | tmp_329           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1175 | 3    |        | lm_328            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1540        |      |        | tmp_330           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1176 | 3    |        | lm_329            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1541        |      |        | tmp_331           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1177 | 3    |        | lm_330            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1542        |      |        | tmp_332           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1178 | 3    |        | lm_331            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1543        |      |        | tmp_333           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1179 | 3    |        | lm_332            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1544        |      |        | tmp_334           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1180 | 3    |        | lm_333            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1545        |      |        | tmp_335           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1181 | 3    |        | lm_334            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1546        |      |        | tmp_336           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1182 | 3    |        | lm_335            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1547        |      |        | tmp_337           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1183 | 3    |        | lm_336            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1548        |      |        | tmp_338           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1184 | 3    |        | lm_337            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1549        |      |        | tmp_339           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1185 | 3    |        | lm_338            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1550        |      |        | tmp_340           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1186 | 3    |        | lm_339            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1551        |      |        | tmp_341           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1187 | 3    |        | lm_340            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1552        |      |        | tmp_342           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1188 | 3    |        | lm_341            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1553        |      |        | tmp_343           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1189 | 3    |        | lm_342            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1554        |      |        | tmp_344           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1190 | 3    |        | lm_343            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1555        |      |        | tmp_345           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1191 | 3    |        | lm_344            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1556        |      |        | tmp_346           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1192 | 3    |        | lm_345            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1557        |      |        | tmp_347           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1193 | 3    |        | lm_346            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1558        |      |        | tmp_348           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1194 | 3    |        | lm_347            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1559        |      |        | tmp_349           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1195 | 3    |        | lm_348            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1560        |      |        | tmp_350           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1196 | 3    |        | lm_349            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1561        |      |        | tmp_351           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1197 | 3    |        | lm_350            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1562        |      |        | tmp_352           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1198 | 3    |        | lm_351            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1563        |      |        | tmp_353           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1199 | 3    |        | lm_352            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1564        |      |        | tmp_354           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1200 | 3    |        | lm_353            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1565        |      |        | tmp_355           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1201 | 3    |        | lm_354            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1566        |      |        | tmp_356           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1202 | 3    |        | lm_355            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1567        |      |        | tmp_357           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1203 | 3    |        | lm_356            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1568        |      |        | tmp_358           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1204 | 3    |        | lm_357            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1569        |      |        | tmp_359           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1205 | 3    |        | lm_358            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1570        |      |        | tmp_360           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1206 | 3    |        | lm_359            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1571        |      |        | tmp_361           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1207 | 3    |        | lm_360            | fmul      | maxdsp                   | 2       |
+|    sparsemux_193_7_32_1_1_U1572        |      |        | tmp_362           | sparsemux | compactencoding_dontcare | 0       |
+|    fmul_32ns_32ns_32_3_max_dsp_1_U1208 | 3    |        | lm_361            | fmul      | maxdsp                   | 2       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U595 | 2    |        | sum_121           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U596 | 2    |        | sum_122           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U597 | 2    |        | sum_123           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U598 | 2    |        | sum_124           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U599 | 2    |        | sum_125           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U600 | 2    |        | sum_126           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U601 | 2    |        | sum_127           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U602 | 2    |        | sum_128           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U603 | 2    |        | sum_129           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U604 | 2    |        | sum_130           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U605 | 2    |        | sum_131           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U606 | 2    |        | sum_132           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U607 | 2    |        | sum_133           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U608 | 2    |        | sum_134           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U609 | 2    |        | sum_135           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U610 | 2    |        | sum_136           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U611 | 2    |        | sum_137           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U612 | 2    |        | sum_138           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U613 | 2    |        | sum_139           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U614 | 2    |        | sum_140           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U615 | 2    |        | sum_141           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U616 | 2    |        | sum_142           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U617 | 2    |        | sum_143           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U618 | 2    |        | sum_144           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U619 | 2    |        | sum_145           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U620 | 2    |        | sum_146           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U621 | 2    |        | sum_147           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U622 | 2    |        | sum_148           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U623 | 2    |        | sum_149           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U624 | 2    |        | sum_150           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U625 | 2    |        | sum_151           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U626 | 2    |        | sum_152           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U627 | 2    |        | sum_153           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U628 | 2    |        | sum_154           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U629 | 2    |        | sum_155           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U630 | 2    |        | sum_156           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U631 | 2    |        | sum_157           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U632 | 2    |        | sum_158           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U633 | 2    |        | sum_159           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U634 | 2    |        | sum_160           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U635 | 2    |        | sum_161           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U636 | 2    |        | sum_162           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U637 | 2    |        | sum_163           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U638 | 2    |        | sum_164           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U639 | 2    |        | sum_165           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U640 | 2    |        | sum_166           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U641 | 2    |        | sum_167           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U642 | 2    |        | sum_168           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U643 | 2    |        | sum_169           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U644 | 2    |        | sum_170           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U645 | 2    |        | sum_171           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U646 | 2    |        | sum_172           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U647 | 2    |        | sum_173           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U648 | 2    |        | sum_174           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U649 | 2    |        | sum_175           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U650 | 2    |        | sum_176           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U651 | 2    |        | sum_177           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U652 | 2    |        | sum_178           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U653 | 2    |        | sum_179           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U654 | 2    |        | sum_180           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U655 | 2    |        | sum_181           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U718 | 2    |        | sum2_61           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U719 | 2    |        | sum2_62           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U720 | 2    |        | sum2_63           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U721 | 2    |        | sum2_64           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U722 | 2    |        | sum2_65           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U723 | 2    |        | sum2_66           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U724 | 2    |        | sum2_67           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U725 | 2    |        | sum2_68           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U726 | 2    |        | sum2_69           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U727 | 2    |        | sum2_70           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U728 | 2    |        | sum2_71           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U729 | 2    |        | sum2_72           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U730 | 2    |        | sum2_73           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U731 | 2    |        | sum2_74           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U732 | 2    |        | sum2_75           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U733 | 2    |        | sum2_76           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U734 | 2    |        | sum2_77           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U735 | 2    |        | sum2_78           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U736 | 2    |        | sum2_79           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U737 | 2    |        | sum2_80           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U738 | 2    |        | sum2_81           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U739 | 2    |        | sum2_82           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U740 | 2    |        | sum2_83           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U741 | 2    |        | sum2_84           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U742 | 2    |        | sum2_85           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U743 | 2    |        | sum2_86           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U744 | 2    |        | sum2_87           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U745 | 2    |        | sum2_88           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U746 | 2    |        | sum2_89           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U747 | 2    |        | sum2_90           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U748 | 2    |        | sum2_91           | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U781 | 2    |        | add408_2          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U782 | 2    |        | add408_2_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U783 | 2    |        | add408_2_2        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U784 | 2    |        | add408_2_3        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U785 | 2    |        | add408_2_4        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U786 | 2    |        | add408_2_5        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U787 | 2    |        | add408_2_6        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U788 | 2    |        | add408_2_7        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U789 | 2    |        | add408_2_8        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U790 | 2    |        | add408_2_9        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U791 | 2    |        | add408_2_s        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U792 | 2    |        | add408_2_10       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U793 | 2    |        | add408_2_11       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U794 | 2    |        | add408_2_12       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U795 | 2    |        | add408_2_13       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U796 | 2    |        | add408_2_14       | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U813 | 2    |        | add430_2          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U814 | 2    |        | add430_2_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U815 | 2    |        | add430_2_2        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U816 | 2    |        | add430_2_3        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U817 | 2    |        | add430_2_4        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U818 | 2    |        | add430_2_5        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U819 | 2    |        | add430_2_6        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U820 | 2    |        | add430_2_7        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U829 | 2    |        | add452_2          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U830 | 2    |        | add452_2_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U831 | 2    |        | add452_2_2        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U832 | 2    |        | add452_2_3        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U837 | 2    |        | add474_2          | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U838 | 2    |        | add474_2_1        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U841 | 2    |        | sum7_2            | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U844 | 2    |        | filter_out        | fadd      | fulldsp                  | 3       |
+|    fadd_32ns_32ns_32_4_full_dsp_1_U845 | 2    |        | out               | fadd      | fulldsp                  | 3       |
+|    icmp_ln270_fu_218306_p2             |      |        | icmp_ln270        | setne     | auto                     | 0       |
+|    icmp_ln270_1_fu_218312_p2           |      |        | icmp_ln270_1      | seteq     | auto                     | 0       |
+|    or_ln270_fu_218318_p2               |      |        | or_ln270          | or        | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U1209   |      |        | tmp_363           | fcmp      | auto                     | 1       |
+|    and_ln270_fu_218324_p2              |      |        | and_ln270         | and       | auto                     | 0       |
+|    add_ln274_3_fu_218231_p2            |      |        | add_ln274_3       | add       | fabric                   | 0       |
+|    add_ln274_1_fu_218259_p2            |      |        | add_ln274_1       | add       | fabric                   | 0       |
+|    empty_fu_218330_p3                  |      |        | empty             | select    | auto_sel                 | 0       |
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------+---------------+-----------+------+------+--------+------------------+------+---------+------------------+
+| Name                 | Usage         | Type      | BRAM | URAM | Pragma | Variable         | Impl | Latency | Bitwidth, Depth, |
+|                      |               |           |      |      |        |                  |      |         | Banks            |
++----------------------+---------------+-----------+------+------+--------+------------------+------+---------+------------------+
+| + conv1              |               |           | 19   | 0    |        |                  |      |         |                  |
+|   control_s_axi_U    | interface     | s_axilite |      |      |        |                  |      |         |                  |
+|   gmem_m_axi_U       | interface     | m_axi     | 4    |      |        |                  |      |         |                  |
+|   line_buffer_3D_U   | ram_t2p array |           | 2    |      |        | line_buffer_3D   | auto | 1       | 32, 681, 1       |
+|   line_buffer_3D_1_U | ram_t2p array |           | 2    |      |        | line_buffer_3D_1 | auto | 1       | 32, 681, 1       |
+|   line_buffer_3D_2_U | ram_t2p array |           | 2    |      |        | line_buffer_3D_2 | auto | 1       | 32, 681, 1       |
+|   line_buffer_3D_3_U | ram_t2p array |           | 2    |      |        | line_buffer_3D_3 | auto | 1       | 32, 681, 1       |
+|   line_buffer_3D_4_U | ram_t2p array |           | 2    |      |        | line_buffer_3D_4 | auto | 1       | 32, 681, 1       |
+|   line_buffer_3D_5_U | ram_t2p array |           | 2    |      |        | line_buffer_3D_5 | auto | 1       | 32, 681, 1       |
+|   line_buffer_3D_6_U | ram_t2p array |           | 2    |      |        | line_buffer_3D_6 | auto | 1       | 32, 681, 1       |
+|  + conv1_Pipeline_L1 |               |           | 1    | 0    |        |                  |      |         |                  |
+|    bias_U            | rom_1p        |           | 1    |      |        | bias             | auto | 1       | 32, 96, 1        |
++----------------------+---------------+-----------+------+------+--------+------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Ignored Pragmas
++------------+----------------+-------------------------------------------------------------+---------------------------------------------------------------+
+| Type       | Options        | Location                                                    | Messages                                                      |
++------------+----------------+-------------------------------------------------------------+---------------------------------------------------------------+
+| allocation | instances=fmul | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36 in conv1 | unexpected pragma argument 'fmul', expects function/operation |
++------------+----------------+-------------------------------------------------------------+---------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------+
+| Type            | Options                                          | Location                                                                     |
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------+
+| interface       | m_axi port=inp_img offset=slave bundle=gmem      | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:37 in conv1, inp_img         |
+| interface       | m_axi port=out_img offset=slave bundle=gmem      | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:38 in conv1, out_img         |
+| interface       | s_axilite port=inp_img bundle=control            | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:40 in conv1, inp_img         |
+| interface       | s_axilite port=out_img bundle=control            | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:41 in conv1, out_img         |
+| interface       | s_axilite port=return bundle=control             | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:43 in conv1, return          |
+| array_partition | variable=filter_local complete dim=0             | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:50 in conv1, filter_local    |
+| array_partition | variable=window_3D complete dim=0                | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:59 in conv1, window_3D       |
+| array_partition | variable=right_col_3D complete dim=0             | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:61 in conv1, right_col_3D    |
+| array_partition | variable=right_col_3D_l complete dim=0           | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:63 in conv1, right_col_3D_l  |
+| array_partition | variable=line_buffer_3D complete dim=2           | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:65 in conv1, line_buffer_3D  |
+| array_partition | variable=new_pixels complete dim=0               | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:67 in conv1, new_pixels      |
+| array_partition | variable=new_pixels_l complete dim=0             | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:69 in conv1, new_pixels_l    |
+| array_partition | variable=lm complete dim=0                       | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:72 in conv1, lm              |
+| array_partition | variable=sum complete dim=0                      | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:75 in conv1, sum             |
+| array_partition | variable=sum2 complete dim=0                     | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:77 in conv1, sum2            |
+| array_partition | variable=sum3 complete dim=1                     | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:79 in conv1, sum3            |
+| array_partition | variable=sum4 complete dim=0                     | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:81 in conv1, sum4            |
+| array_partition | variable=sum5 complete dim=0                     | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:83 in conv1, sum5            |
+| array_partition | variable=sum6 complete dim=0                     | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:85 in conv1, sum6            |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:97 in conv1                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:117 in conv1                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:214 in conv1                 |
+| interface       | m_axi port=inp_img offset=slave bundle=gmem0     | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:37 in conv2, inp_img         |
+| interface       | m_axi port=out_img offset=slave bundle=gmem0     | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:38 in conv2, out_img         |
+| interface       | m_axi port=filter offset=slave bundle=gmem0      | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:39 in conv2, filter          |
+| interface       | m_axi port=bias offset=slave bundle=gmem0        | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:40 in conv2, bias            |
+| interface       | s_axilite port=inp_img bundle=control            | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:42 in conv2, inp_img         |
+| interface       | s_axilite port=out_img bundle=control            | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:43 in conv2, out_img         |
+| interface       | s_axilite port=filter bundle=control             | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:44 in conv2, filter          |
+| interface       | s_axilite port=bias bundle=control               | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:45 in conv2, bias            |
+| interface       | s_axilite port=return bundle=control             | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:47 in conv2, return          |
+| array_partition | variable=inp_image_local cyclic factor=155 dim=1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:51 in conv2, inp_image_local |
+| array_partition | variable=inp_img_2D complete dim=0               | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:53 in conv2, inp_img_2D      |
+| array_partition | variable=filter_local cyclic factor=25           | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:55 in conv2, filter_local    |
+| array_partition | variable=filter_2D complete dim=0                | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:57 in conv2, filter_2D       |
+| array_partition | variable=window_2D complete dim=0                | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:59 in conv2, window_2D       |
+| array_partition | variable=conv_out cyclic factor=27 dim=1         | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:61 in conv2, conv_out        |
+| array_partition | variable=sh complete dim=0                       | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:63 in conv2, sh              |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:71 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:80 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:86 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:94 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:100 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:110 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:137 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:158 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:168 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:174 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:180 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:187 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:197 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:222 in conv2                 |
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------+
+
+

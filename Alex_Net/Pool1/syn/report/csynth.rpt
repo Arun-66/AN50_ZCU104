@@ -1,0 +1,293 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pool1'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 25 23:50:46 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Alex_Net
+    * Solution:       Pool1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+------------+-----------+-----+
+    |          Modules         | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |            |           |     |
+    |          & Loops         | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |    LUT    | URAM|
+    +--------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+------------+-----------+-----+
+    |+ pool1                   |     -|  0.00|   428743|  4.287e+06|         -|   428744|     -|        no|  4 (~0%)|   -|   7572 (1%)|  5533 (2%)|    -|
+    | o VITIS_LOOP_51_1        |     -|  7.30|   428736|  4.287e+06|      4466|        -|    96|        no|        -|   -|           -|          -|    -|
+    |  + pool1_Pipeline_L4     |     -|  0.00|       58|    580.000|         -|       58|     -|        no|        -|   -|  1866 (~0%)|  572 (~0%)|    -|
+    |   o L4                   |     -|  7.30|       56|    560.000|         3|        1|    55|       yes|        -|   -|           -|          -|    -|
+    |  + pool1_Pipeline_L5_L6  |     -|  0.00|     4395|  4.395e+04|         -|     4395|     -|        no|        -|   -|  2478 (~0%)|  3531 (1%)|    -|
+    |   o L5_L6                |    II|  7.30|     4393|  4.393e+04|        26|        6|   729|       yes|        -|   -|           -|          -|    -|
+    +--------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+------------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | inp_img_1 | 0x10   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | inp_img_2 | 0x14   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | out_img_1 | 0x1c   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | out_img_2 | 0x20   | 32    | W      | Data signal of out_img           |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| inp_img  | inout     | float*   |
+| out_img  | inout     | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| inp_img  | m_axi_gmem    | interface |          | channel=0                           |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_1 offset=0x10 range=32 |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_2 offset=0x14 range=32 |
+| out_img  | m_axi_gmem    | interface |          | channel=0                           |
+| out_img  | s_axi_control | register  | offset   | name=out_img_1 offset=0x1c range=32 |
+| out_img  | s_axi_control | register  | offset   | name=out_img_2 offset=0x20 range=32 |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-----------------+-------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop            | Loop Location                                         |
++--------------+-----------+--------+-------+-----------------+-------------------------------------------------------+
+| m_axi_gmem   | write     | 69984  | 32    | VITIS_LOOP_51_1 | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:51:19 |
+| m_axi_gmem   | read      | 55     | 32    | L4              | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:57:5  |
+| m_axi_gmem   | read      | 3      | 32    |                 |                                                       |
+| m_axi_gmem   | read      | 2      | 32    |                 |                                                       |
++--------------+-----------+--------+-------+-----------------+-------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------------------------------------------+-----------+--------------+--------+-----------------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                        | Direction | Burst Status | Length | Loop            | Loop Location                                         | Resolution | Problem                                                                                                 |
++--------------+----------+--------------------------------------------------------+-----------+--------------+--------+-----------------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:63:25  | read      | Widen Fail   |        | L4              | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:57:5  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:63:25  | read      | Fail         |        | VITIS_LOOP_51_1 | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:51:19 | 214-230    | Stride is incompatible                                                                                  |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:63:25  | read      | Inferred     | 55     | L4              | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:57:5  |            |                                                                                                         |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:91:38  | read      | Widen Fail   |        |                 |                                                       | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:91:38  | read      | Inferred     | 3      | L6              | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:71:5  |            |                                                                                                         |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:126:39 | read      | Widen Fail   |        |                 |                                                       | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | inp_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:126:39 | read      | Inferred     | 2      | L6              | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:71:5  |            |                                                                                                         |
+| m_axi_gmem   | out_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:160:56 | write     | Widen Fail   |        | L6              | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:71:5  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | out_img  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:160:56 | write     | Inferred     | 69984  | VITIS_LOOP_51_1 | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:51:19 |            |                                                                                                         |
++--------------+----------+--------------------------------------------------------+-----------+--------------+--------+-----------------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------+-----+--------+-------------------+-----------+--------------------------+---------+
+| Name                                | DSP | Pragma | Variable          | Op        | Impl                     | Latency |
++-------------------------------------+-----+--------+-------------------+-----------+--------------------------+---------+
+| + pool1                             | 0   |        |                   |           |                          |         |
+|   add_ln51_1_fu_869_p2              |     |        | add_ln51_1        | add       | fabric                   | 0       |
+|   add_ln51_2_fu_875_p2              |     |        | add_ln51_2        | add       | fabric                   | 0       |
+|   icmp_ln51_fu_881_p2               |     |        | icmp_ln51         | seteq     | auto                     | 0       |
+|   add_ln51_fu_887_p2                |     |        | add_ln51          | add       | fabric                   | 0       |
+|   empty_41_fu_897_p2                |     |        | empty_41          | add       | fabric                   | 0       |
+|  + pool1_Pipeline_L4                | 0   |        |                   |           |                          |         |
+|    icmp_ln57_fu_1611_p2             |     |        | icmp_ln57         | seteq     | auto                     | 0       |
+|    add_ln57_fu_1617_p2              |     |        | add_ln57          | add       | fabric                   | 0       |
+|  + pool1_Pipeline_L5_L6             | 0   |        |                   |           |                          |         |
+|    icmp_ln68_fu_1785_p2             |     |        | icmp_ln68         | seteq     | auto                     | 0       |
+|    add_ln68_fu_1791_p2              |     |        | add_ln68          | add       | fabric                   | 0       |
+|    icmp_ln71_fu_1806_p2             |     |        | icmp_ln71         | seteq     | auto                     | 0       |
+|    select_ln71_fu_1812_p3           |     |        | select_ln71       | select    | auto_sel                 | 0       |
+|    select_ln71_1_fu_1820_p3         |     |        | select_ln71_1     | select    | auto_sel                 | 0       |
+|    add_ln68_1_fu_1828_p2            |     |        | add_ln68_1        | add       | fabric                   | 0       |
+|    select_ln68_fu_1834_p3           |     |        | select_ln68       | select    | auto_sel                 | 0       |
+|    mul_5ns_8ns_12_1_1_U115          |     |        | empty_27          | mul       | auto                     | 0       |
+|    tmp1_fu_2366_p2                  |     |        | tmp1              | add       | fabric                   | 0       |
+|    empty_28_fu_2375_p2              |     |        | empty_28          | add       | fabric                   | 0       |
+|    empty_29_fu_2392_p2              |     |        | empty_29          | add       | fabric                   | 0       |
+|    tmp2_fu_1852_p2                  |     |        | tmp2              | add       | fabric                   | 0       |
+|    empty_30_fu_1862_p2              |     |        | empty_30          | add       | fabric                   | 0       |
+|    empty_31_fu_1880_p2              |     |        | empty_31          | add       | fabric                   | 0       |
+|    tmp3_fu_2310_p2                  |     |        | tmp3              | add       | fabric                   | 0       |
+|    tmp4_fu_1886_p2                  |     |        | tmp4              | add       | fabric                   | 0       |
+|    add_ln76_1_fu_2341_p2            |     |        | add_ln76_1        | add       | fabric                   | 0       |
+|    add_ln76_3_fu_1952_p2            |     |        | add_ln76_3        | add       | fabric                   | 0       |
+|    icmp_ln76_fu_1958_p2             |     |        | icmp_ln76         | seteq     | auto                     | 0       |
+|    sparsemux_53_6_32_1_1_U116       |     |        | line_buffer_2D_18 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_53_6_32_1_1_U117       |     |        | line_buffer_2D_10 | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln156_fu_3216_p2            |     |        | icmp_ln156        | setne     | auto                     | 0       |
+|    icmp_ln156_1_fu_3222_p2          |     |        | icmp_ln156_1      | seteq     | auto                     | 0       |
+|    or_ln156_fu_3228_p2              |     |        | or_ln156          | or        | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U113 |     |        | tmp_5             | fcmp      | auto                     | 1       |
+|    and_ln156_fu_3234_p2             |     |        | and_ln156         | and       | auto                     | 0       |
+|    tmp_48_fu_3240_p3                |     |        | tmp_48            | select    | auto_sel                 | 0       |
+|    icmp_ln156_2_fu_3294_p2          |     |        | icmp_ln156_2      | setne     | auto                     | 0       |
+|    icmp_ln156_3_fu_3300_p2          |     |        | icmp_ln156_3      | seteq     | auto                     | 0       |
+|    or_ln156_1_fu_3306_p2            |     |        | or_ln156_1        | or        | auto                     | 0       |
+|    icmp_ln156_4_fu_3312_p2          |     |        | icmp_ln156_4      | setne     | auto                     | 0       |
+|    icmp_ln156_5_fu_3318_p2          |     |        | icmp_ln156_5      | seteq     | auto                     | 0       |
+|    or_ln156_2_fu_3324_p2            |     |        | or_ln156_2        | or        | auto                     | 0       |
+|    and_ln156_1_fu_3330_p2           |     |        | and_ln156_1       | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U113 |     |        | tmp_11            | fcmp      | auto                     | 1       |
+|    and_ln156_2_fu_3336_p2           |     |        | and_ln156_2       | and       | auto                     | 0       |
+|    tmp_49_fu_3342_p3                |     |        | tmp_49            | select    | auto_sel                 | 0       |
+|    icmp_ln156_6_fu_3390_p2          |     |        | icmp_ln156_6      | setne     | auto                     | 0       |
+|    icmp_ln156_7_fu_3396_p2          |     |        | icmp_ln156_7      | seteq     | auto                     | 0       |
+|    or_ln156_3_fu_3402_p2            |     |        | or_ln156_3        | or        | auto                     | 0       |
+|    icmp_ln156_8_fu_3408_p2          |     |        | icmp_ln156_8      | setne     | auto                     | 0       |
+|    icmp_ln156_9_fu_3414_p2          |     |        | icmp_ln156_9      | seteq     | auto                     | 0       |
+|    or_ln156_4_fu_3420_p2            |     |        | or_ln156_4        | or        | auto                     | 0       |
+|    and_ln156_3_fu_3426_p2           |     |        | and_ln156_3       | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U113 |     |        | tmp_17            | fcmp      | auto                     | 1       |
+|    and_ln156_4_fu_3432_p2           |     |        | and_ln156_4       | and       | auto                     | 0       |
+|    tmp_50_fu_3438_p3                |     |        | tmp_50            | select    | auto_sel                 | 0       |
+|    icmp_ln156_10_fu_3481_p2         |     |        | icmp_ln156_10     | setne     | auto                     | 0       |
+|    icmp_ln156_11_fu_3487_p2         |     |        | icmp_ln156_11     | seteq     | auto                     | 0       |
+|    or_ln156_5_fu_3493_p2            |     |        | or_ln156_5        | or        | auto                     | 0       |
+|    icmp_ln156_12_fu_3499_p2         |     |        | icmp_ln156_12     | setne     | auto                     | 0       |
+|    icmp_ln156_13_fu_3505_p2         |     |        | icmp_ln156_13     | seteq     | auto                     | 0       |
+|    or_ln156_6_fu_3511_p2            |     |        | or_ln156_6        | or        | auto                     | 0       |
+|    and_ln156_5_fu_3517_p2           |     |        | and_ln156_5       | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U113 |     |        | tmp_20            | fcmp      | auto                     | 1       |
+|    and_ln156_6_fu_3523_p2           |     |        | and_ln156_6       | and       | auto                     | 0       |
+|    tmp_51_fu_3529_p3                |     |        | tmp_51            | select    | auto_sel                 | 0       |
+|    icmp_ln156_14_fu_3572_p2         |     |        | icmp_ln156_14     | setne     | auto                     | 0       |
+|    icmp_ln156_15_fu_3578_p2         |     |        | icmp_ln156_15     | seteq     | auto                     | 0       |
+|    or_ln156_7_fu_3584_p2            |     |        | or_ln156_7        | or        | auto                     | 0       |
+|    icmp_ln156_16_fu_3590_p2         |     |        | icmp_ln156_16     | setne     | auto                     | 0       |
+|    icmp_ln156_17_fu_3596_p2         |     |        | icmp_ln156_17     | seteq     | auto                     | 0       |
+|    or_ln156_8_fu_3602_p2            |     |        | or_ln156_8        | or        | auto                     | 0       |
+|    and_ln156_7_fu_3608_p2           |     |        | and_ln156_7       | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U113 |     |        | tmp_23            | fcmp      | auto                     | 1       |
+|    and_ln156_8_fu_3614_p2           |     |        | and_ln156_8       | and       | auto                     | 0       |
+|    tmp_52_fu_3620_p3                |     |        | tmp_52            | select    | auto_sel                 | 0       |
+|    icmp_ln156_18_fu_3663_p2         |     |        | icmp_ln156_18     | setne     | auto                     | 0       |
+|    icmp_ln156_19_fu_3669_p2         |     |        | icmp_ln156_19     | seteq     | auto                     | 0       |
+|    or_ln156_9_fu_3675_p2            |     |        | or_ln156_9        | or        | auto                     | 0       |
+|    icmp_ln156_20_fu_3681_p2         |     |        | icmp_ln156_20     | setne     | auto                     | 0       |
+|    icmp_ln156_21_fu_3687_p2         |     |        | icmp_ln156_21     | seteq     | auto                     | 0       |
+|    or_ln156_10_fu_3693_p2           |     |        | or_ln156_10       | or        | auto                     | 0       |
+|    and_ln156_9_fu_3699_p2           |     |        | and_ln156_9       | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U113 |     |        | tmp_26            | fcmp      | auto                     | 1       |
+|    and_ln156_10_fu_3705_p2          |     |        | and_ln156_10      | and       | auto                     | 0       |
+|    tmp_53_fu_3711_p3                |     |        | tmp_53            | select    | auto_sel                 | 0       |
+|    icmp_ln156_22_fu_3754_p2         |     |        | icmp_ln156_22     | setne     | auto                     | 0       |
+|    icmp_ln156_23_fu_3760_p2         |     |        | icmp_ln156_23     | seteq     | auto                     | 0       |
+|    or_ln156_11_fu_3766_p2           |     |        | or_ln156_11       | or        | auto                     | 0       |
+|    icmp_ln156_24_fu_3772_p2         |     |        | icmp_ln156_24     | setne     | auto                     | 0       |
+|    icmp_ln156_25_fu_3778_p2         |     |        | icmp_ln156_25     | seteq     | auto                     | 0       |
+|    or_ln156_12_fu_3784_p2           |     |        | or_ln156_12       | or        | auto                     | 0       |
+|    and_ln156_11_fu_3790_p2          |     |        | and_ln156_11      | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U114 |     |        | tmp_29            | fcmp      | auto                     | 1       |
+|    and_ln156_12_fu_3796_p2          |     |        | and_ln156_12      | and       | auto                     | 0       |
+|    tmp_54_fu_3802_p3                |     |        | tmp_54            | select    | auto_sel                 | 0       |
+|    icmp_ln156_26_fu_3845_p2         |     |        | icmp_ln156_26     | setne     | auto                     | 0       |
+|    icmp_ln156_27_fu_3851_p2         |     |        | icmp_ln156_27     | seteq     | auto                     | 0       |
+|    or_ln156_13_fu_3857_p2           |     |        | or_ln156_13       | or        | auto                     | 0       |
+|    icmp_ln156_28_fu_3863_p2         |     |        | icmp_ln156_28     | setne     | auto                     | 0       |
+|    icmp_ln156_29_fu_3869_p2         |     |        | icmp_ln156_29     | seteq     | auto                     | 0       |
+|    or_ln156_14_fu_3875_p2           |     |        | or_ln156_14       | or        | auto                     | 0       |
+|    and_ln156_13_fu_3881_p2          |     |        | and_ln156_13      | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U114 |     |        | tmp_32            | fcmp      | auto                     | 1       |
+|    and_ln156_14_fu_3887_p2          |     |        | and_ln156_14      | and       | auto                     | 0       |
+|    tmp_55_fu_3893_p3                |     |        | tmp_55            | select    | auto_sel                 | 0       |
+|    icmp_ln156_30_fu_3936_p2         |     |        | icmp_ln156_30     | setne     | auto                     | 0       |
+|    icmp_ln156_31_fu_3942_p2         |     |        | icmp_ln156_31     | seteq     | auto                     | 0       |
+|    or_ln156_15_fu_3948_p2           |     |        | or_ln156_15       | or        | auto                     | 0       |
+|    icmp_ln156_32_fu_3954_p2         |     |        | icmp_ln156_32     | setne     | auto                     | 0       |
+|    icmp_ln156_33_fu_3960_p2         |     |        | icmp_ln156_33     | seteq     | auto                     | 0       |
+|    or_ln156_16_fu_3966_p2           |     |        | or_ln156_16       | or        | auto                     | 0       |
+|    and_ln156_15_fu_3972_p2          |     |        | and_ln156_15      | and       | auto                     | 0       |
+|    fcmp_32ns_32ns_1_2_no_dsp_1_U114 |     |        | tmp_35            | fcmp      | auto                     | 1       |
+|    and_ln156_16_fu_3978_p2          |     |        | and_ln156_16      | and       | auto                     | 0       |
+|    tmp_56_fu_3984_p3                |     |        | tmp_56            | select    | auto_sel                 | 0       |
+|    add_ln71_fu_2278_p2              |     |        | add_ln71          | add       | fabric                   | 0       |
+|    add_ln71_1_fu_2284_p2            |     |        | add_ln71_1        | add       | fabric                   | 0       |
++-------------------------------------+-----+--------+-------------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + pool1           |           |           | 4    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem_m_axi_U    | interface | m_axi     | 4    |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------------------+-----------------------------------------------------------------------------+
+| Type            | Options                                                    | Location                                                                    |
++-----------------+------------------------------------------------------------+-----------------------------------------------------------------------------+
+| interface       | m_axi port=inp_img offset=slave bundle=gmem depth = 290400 | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:28 in pool1, inp_img        |
+| interface       | m_axi port=out_img offset=slave bundle=gmem depth = 69984  | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:29 in pool1, out_img        |
+| interface       | s_axilite port=inp_img bundle=control                      | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:31 in pool1, inp_img        |
+| interface       | s_axilite port=out_img bundle=control                      | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:32 in pool1, out_img        |
+| interface       | s_axilite port=return bundle=control                       | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:34 in pool1, return         |
+| array_partition | variable=window_2D complete dim=0                          | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:37 in pool1, window_2D      |
+| array_partition | variable=right_col_2D complete dim=0                       | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:39 in pool1, right_col_2D   |
+| array_partition | variable=right_col_2D_l complete dim=0                     | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:41 in pool1, right_col_2D_l |
+| array_partition | variable=line_buffer_2D complete dim=0                     | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:43 in pool1, line_buffer_2D |
+| array_partition | variable=new_pixels complete dim=0                         | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:45 in pool1, new_pixels     |
+| array_partition | variable=new_pixels_l complete dim=0                       | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:47 in pool1, new_pixels_l   |
+| pipeline        |                                                            | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:59 in pool1                 |
+| pipeline        |                                                            | AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:73 in pool1                 |
++-----------------+------------------------------------------------------------+-----------------------------------------------------------------------------+
+
+

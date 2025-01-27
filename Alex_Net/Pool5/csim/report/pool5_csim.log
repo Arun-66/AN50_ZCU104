@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../AlexNet-FPGA-implementation/Pool5/src/testbench.cpp in debug mode
+   Compiling ../../../../AlexNet-FPGA-implementation/Pool5/src/pool5.cpp in debug mode
+   Generating csim.exe
+Start calling the conv1 HW function
+After calling the conv1 HW function
+big_diff = 244.185
+pooling Functionality pass
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

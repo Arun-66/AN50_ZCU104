@@ -1,0 +1,209 @@
+[
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/Alex_Net/Wrap_up.cpp"
+    ],
+    "file": "/primary/HLS/Alex_Net/Wrap_up.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/work/Xilinx/Vitis/2024.2/common/technology/autopilot",
+      "-fhlstoplevel=NN",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp"
+  },
+  {
+    "directory": "/primary/HLS/Alex_Net",
+    "arguments": [
+      "/work/Xilinx/Vitis/2024.2/vcxx/libexec/clang++",
+      "--gcc-toolchain=/work/Xilinx/Vitis/2024.2/tps/lnx64/gcc-8.3.0",
+      "-fhls-tb",
+      "-hls-sim-headers-dir=/work/Xilinx/Vitis/2024.2/include",
+      "-c",
+      "/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp"
+    ],
+    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp"
+  }
+]

@@ -1,0 +1,80 @@
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:47536:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:47536:5: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:47550:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:47550:5: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:47564:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:47564:5: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:49186:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:49186:7: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51028:3: warning: Added loop label VITIS_LOOP_85_1:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_85_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51028:3: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51059:6: warning: Added loop label VITIS_LOOP_116_2:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_116_2: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51059:6: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51060:7: warning: Added loop label VITIS_LOOP_117_3:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_117_3: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51060:7: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51066:6: warning: Added loop label VITIS_LOOP_123_4:   [xilinx-label-all-loops]
+     for (int i=0; i<3; i++){
+     ^~~
+     VITIS_LOOP_123_4: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51066:6: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51067:7: warning: Added loop label VITIS_LOOP_124_5:   [xilinx-label-all-loops]
+      for (int j=0; j<3; j++){
+      ^~~
+      VITIS_LOOP_124_5: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51067:7: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51080:2: warning: Added loop label VITIS_LOOP_137_6:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_137_6: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51080:2: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51115:3: warning: Added loop label VITIS_LOOP_172_7:   [xilinx-label-all-loops]
+  for(int i=0; i<13*13; i++)
+  ^~~
+  VITIS_LOOP_172_7: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51115:3: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51146:6: warning: Added loop label VITIS_LOOP_203_8:   [xilinx-label-all-loops]
+     for (int ii = 0; ii < 3; ii++){
+     ^~~
+     VITIS_LOOP_203_8: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51146:6: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51147:7: warning: Added loop label VITIS_LOOP_204_9:   [xilinx-label-all-loops]
+      for (int jj = 0; jj < 3; jj++){
+      ^~~
+      VITIS_LOOP_204_9: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51147:7: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51153:9: warning: Added loop label VITIS_LOOP_210_10:   [xilinx-label-all-loops]
+        for (int i=0; i<3; i++){
+        ^~~
+        VITIS_LOOP_210_10: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51153:9: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51154:10: warning: Added loop label VITIS_LOOP_211_11:   [xilinx-label-all-loops]
+         for (int j=0; j<3; j++){
+         ^~~
+         VITIS_LOOP_211_11: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51154:10: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51165:2: warning: Added loop label VITIS_LOOP_222_12:   [xilinx-label-all-loops]
+ for (int j=0; j<13; j++){
+ ^~~
+ VITIS_LOOP_222_12: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/conv5.pp.0.cpp:51165:2: note: FIX-IT applied suggested code changes

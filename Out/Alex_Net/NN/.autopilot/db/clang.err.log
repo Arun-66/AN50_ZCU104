@@ -1,0 +1,12 @@
+In file included from ../NN/NN.cpp:13:
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34: warning: unexpected pragma argument 'fmul', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fmul limit=130 operation
+                                 ^
+../NN/NN.cpp:98:24: error: use of undeclared identifier 'Pad2_out_img'; did you mean 'Pad1_out_img'?
+    pad2(Conv2_out_img,Pad2_out_img);
+                       ^~~~~~~~~~~~
+                       Pad1_out_img
+../NN/NN.cpp:50:14: note: 'Pad1_out_img' declared here
+    DataType Pad1_out_img[31 * 31 * 96];
+             ^
+1 warning and 1 error generated.

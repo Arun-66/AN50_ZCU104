@@ -1,0 +1,274 @@
+<ENTRY>
+{
+ "thisFile": "/primary/HLS/Alex_Net/Alex_Net/Alex_Net.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jan 24 21:45:53 2025",
+ "timestampMillis": "1737735353144",
+ "buildStep": {
+  "cmdId": "efaf769c-cc4f-4cdb-a665-42dcf1f0b600",
+  "name": "v++",
+  "logFile": "/primary/HLS/Alex_Net/Alex_Net/logs/Alex_Net.steps.log",
+  "commandLine": "/work/Xilinx/Vitis/2024.2/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /primary/HLS/Alex_Net/hls_config.cfg --work_dir Alex_Net ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/primary/HLS/Alex_Net/hls_config.cfg",
+   "--work_dir",
+   "Alex_Net"
+  ],
+  "iniFiles": [
+   {
+    "path": "/primary/HLS/Alex_Net/hls_config.cfg",
+    "content": "part=xczu7ev-fbvb900-3-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\ncsim.code_analyzer=1\nsyn.top=NN\ntb.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp\nsyn.file=/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h\nsyn.file=Wrap_up.cpp\nsyn.file=NN.h"
+   }
+  ],
+  "cwd": "/primary/HLS/Alex_Net"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 24 21:45:53 2025",
+ "timestampMillis": "1737735353145",
+ "status": {
+  "cmdId": "efaf769c-cc4f-4cdb-a665-42dcf1f0b600",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jan 24 21:46:00 2025",
+ "timestampMillis": "1737735360499",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "NN",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp",
+     "/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h",
+     "/primary/HLS/Alex_Net/Wrap_up.cpp",
+     "/primary/HLS/Alex_Net/NN.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jan 24 21:46:00 2025",
+ "timestampMillis": "1737735360501",
+ "buildStep": {
+  "cmdId": "b942224d-e30d-451b-85c1-69defa42547d",
+  "name": "",
+  "logFile": "/primary/HLS/Alex_Net/Alex_Net/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/primary/HLS/Alex_Net"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 24 21:46:00 2025",
+ "timestampMillis": "1737735360502",
+ "status": {
+  "cmdId": "b942224d-e30d-451b-85c1-69defa42547d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:46:00 2025",
+ "timestampMillis": "1737735360502",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:46:00 2025",
+ "timestampMillis": "1737735360502",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:46:00 2025",
+ "timestampMillis": "1737735360502",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479204",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479205",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479205",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479206",
+ "status": {
+  "cmdId": "b942224d-e30d-451b-85c1-69defa42547d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479429",
+ "status": {
+  "cmdId": "efaf769c-cc4f-4cdb-a665-42dcf1f0b600",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479485",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/reports/v++_compile_Alex_Net_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jan 24 21:47:59 2025",
+ "timestampMillis": "1737735479486",
+ "report": {
+  "path": "/primary/HLS/Alex_Net/Alex_Net/reports/.db/v++_compile_Alex_Net_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

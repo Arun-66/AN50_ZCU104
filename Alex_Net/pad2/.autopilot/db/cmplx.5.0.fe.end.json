@@ -1,0 +1,22 @@
+{
+    "0": {
+        "name": "pad2",
+        "file": "pad2.cpp",
+        "fileloc": "30",
+        "instructions": "84",
+        "total_instructions": "84",
+        "calls": "",
+        "basicblocks": "3",
+        "loads": {
+            "L": "6",
+            "T": "1"
+        },
+        "stores": {
+            "L": "12",
+            "T": "1"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

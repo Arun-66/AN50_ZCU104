@@ -1,0 +1,12 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_pad1_ir
+Args:            
+  - Callee:          'pad1(float*, float*, int)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Pad1/src/pad1.cpp, 
+                       Line: 33, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_pad1_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...

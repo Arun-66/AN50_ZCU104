@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'norm2_Pipeline_L8_L9_L10'" level="0">
+<item name = "Date">Sat Jan 25 18:25:22 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">Alex_Net</item>
+<item name = "Solution">norm2 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">42661, 42661, 0.427 ms, 0.427 ms, 42589, 42589, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_pow_generic_float_s_fu_4468">pow_generic_float_s, 11, 11, 0.110 us, 0.110 us, 1, 1, yes</column>
+<column name="grp_pow_generic_float_s_fu_4489">pow_generic_float_s, 11, 11, 0.110 us, 0.110 us, 1, 1, yes</column>
+<column name="grp_pow_generic_float_s_fu_4510">pow_generic_float_s, 11, 11, 0.110 us, 0.110 us, 1, 1, yes</column>
+<column name="grp_pow_generic_float_s_fu_4531">pow_generic_float_s, 11, 11, 0.110 us, 0.110 us, 1, 1, yes</column>
+<column name="grp_pow_generic_float_s_fu_4552">pow_generic_float_s, 11, 11, 0.110 us, 0.110 us, 1, 1, yes</column>
+<column name="grp_pow_generic_float_s_fu_4573">pow_generic_float_s, 11, 11, 0.110 us, 0.110 us, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- L8_L9_L10">42659, 42659, 73, 1, 1, 42588, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

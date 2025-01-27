@@ -1,0 +1,12 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-3777" msg_severity="ERROR" msg_loc="../NN/NN.cpp:98:24" msg_body="use of undeclared identifier 'Pad2_out_img'; did you mean 'Pad1_out_img'?">
+        <args/>
+    </msg>
+    <msg msg_groups="" msg_id="207-4436" msg_severity="INFO" msg_loc="../NN/NN.cpp:50:14" msg_body="'Pad1_out_img' declared here">
+        <args/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5570" msg_severity="WARNING" msg_loc="/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34" msg_body="unexpected pragma argument 'fmul', expects function/operation">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

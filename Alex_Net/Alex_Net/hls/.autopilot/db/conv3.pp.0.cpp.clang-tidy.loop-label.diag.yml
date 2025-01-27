@@ -1,0 +1,94 @@
+---
+MainSourceFile:  /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          1524072
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          1524538
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          1525005
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          1808047
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_91_1:  '
+    FileOffset:      91
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          2177447
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_91_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_124_2:  '
+    FileOffset:      124
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          2178148
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_124_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_125_3:  '
+    FileOffset:      125
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          2178186
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_125_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_132_4:  '
+    FileOffset:      132
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          2178332
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_132_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_133_5:  '
+    FileOffset:      133
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          2178363
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_133_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_146_6:  '
+    FileOffset:      146
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/conv3.pp.0.cpp
+        Offset:          2178549
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_146_6: '
+...

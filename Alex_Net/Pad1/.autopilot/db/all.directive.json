@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "pad1",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "pad1"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/primary/HLS/AN_script2.tcl",
+    "sourceLine": 14,
+    "success": true
+  }
+]

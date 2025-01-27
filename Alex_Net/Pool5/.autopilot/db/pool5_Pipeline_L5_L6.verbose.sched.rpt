@@ -1,0 +1,727 @@
+
+
+================================================================
+== Vitis HLS Report for 'pool5_Pipeline_L5_L6'
+================================================================
+* Date:           Sat Jan 25 23:57:34 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        Alex_Net
+* Solution:       Pool5 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                      |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+    |      237|      237|  2.370 us|  2.370 us|  222|  222|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- L5_L6   |      235|      235|        26|          6|          1|    36|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 6, depth = 26
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 26
+* Pipeline : 1
+  Pipeline-0 : II = 6, D = 26, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.24>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%col = alloca i32 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 29 'alloca' 'col' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%indvar139 = alloca i32 1"   --->   Operation 30 'alloca' 'indvar139' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%indvar = alloca i32 1"   --->   Operation 31 'alloca' 'indvar' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 32 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%line_buffer_2D = alloca i32 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 33 'alloca' 'line_buffer_2D' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%line_buffer_2D_2 = alloca i32 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 34 'alloca' 'line_buffer_2D_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%line_buffer_2D_1 = alloca i32 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 35 'alloca' 'line_buffer_2D_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%empty_22 = alloca i32 1"   --->   Operation 36 'alloca' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%empty_23 = alloca i32 1"   --->   Operation 37 'alloca' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%empty_24 = alloca i32 1"   --->   Operation 38 'alloca' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%inp_img_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %inp_img"   --->   Operation 39 'read' 'inp_img_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%phi_mul_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %phi_mul"   --->   Operation 40 'read' 'phi_mul_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%sext_ln51_read = read i62 @_ssdm_op_Read.ap_auto.i62, i62 %sext_ln51"   --->   Operation 41 'read' 'sext_ln51_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_45 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty"   --->   Operation 42 'read' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_46 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty_14"   --->   Operation 43 'read' 'tmp_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_47 = read i32 @_ssdm_op_Read.ap_auto.float, i32 %empty_13"   --->   Operation 44 'read' 'tmp_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%mux_case_114_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_114_reload"   --->   Operation 45 'read' 'mux_case_114_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%mux_case_321_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_321_reload"   --->   Operation 46 'read' 'mux_case_321_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%mux_case_528_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_528_reload"   --->   Operation 47 'read' 'mux_case_528_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%mux_case_735_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_735_reload"   --->   Operation 48 'read' 'mux_case_735_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%mux_case_942_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_942_reload"   --->   Operation 49 'read' 'mux_case_942_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%mux_case_1149_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_1149_reload"   --->   Operation 50 'read' 'mux_case_1149_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%mux_case_256_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_256_reload"   --->   Operation 51 'read' 'mux_case_256_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%mux_case_463_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_463_reload"   --->   Operation 52 'read' 'mux_case_463_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%mux_case_670_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_670_reload"   --->   Operation 53 'read' 'mux_case_670_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%mux_case_877_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_877_reload"   --->   Operation 54 'read' 'mux_case_877_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%mux_case_1084_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_1084_reload"   --->   Operation 55 'read' 'mux_case_1084_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%mux_case_1291_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %mux_case_1291_reload"   --->   Operation 56 'read' 'mux_case_1291_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_reload_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %p_reload"   --->   Operation 57 'read' 'p_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%sext_ln51_cast = sext i62 %sext_ln51_read"   --->   Operation 58 'sext' 'sext_ln51_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty, i32 0, i32 0, void @empty_11, i32 0, i32 290400, void @empty_0, void @empty_1, void @empty_11, i32 16, i32 16, i32 16, i32 16, void @empty_11, void @empty_11, i32 4294967295, i32 0, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_1291_reload_read, i32 %mux_case_12_out"   --->   Operation 60 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 61 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_1084_reload_read, i32 %mux_case_10_out"   --->   Operation 61 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 62 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_877_reload_read, i32 %mux_case_8_out"   --->   Operation 62 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 63 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_670_reload_read, i32 %mux_case_6_out"   --->   Operation 63 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 64 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_463_reload_read, i32 %mux_case_4_out"   --->   Operation 64 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 65 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_1149_reload_read, i32 %mux_case_11_out"   --->   Operation 65 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 66 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_942_reload_read, i32 %mux_case_9_out"   --->   Operation 66 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 67 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_735_reload_read, i32 %mux_case_7_out"   --->   Operation 67 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 68 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_528_reload_read, i32 %mux_case_5_out"   --->   Operation 68 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 69 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %mux_case_321_reload_read, i32 %mux_case_3_out"   --->   Operation 69 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 70 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %tmp_47, i32 %empty_24"   --->   Operation 70 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 71 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %tmp_46, i32 %empty_23"   --->   Operation 71 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 72 [1/1] (0.42ns)   --->   "%store_ln0 = store i32 %tmp_45, i32 %empty_22"   --->   Operation 72 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 73 [1/1] (0.42ns)   --->   "%store_ln42 = store i32 %p_reload_read, i32 %line_buffer_2D_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 73 'store' 'store_ln42' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 74 [1/1] (0.42ns)   --->   "%store_ln42 = store i32 %mux_case_256_reload_read, i32 %line_buffer_2D_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 74 'store' 'store_ln42' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 75 [1/1] (0.42ns)   --->   "%store_ln42 = store i32 %mux_case_114_reload_read, i32 %line_buffer_2D" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 75 'store' 'store_ln42' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 76 [1/1] (0.42ns)   --->   "%store_ln0 = store i6 0, i6 %indvar_flatten"   --->   Operation 76 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 77 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %indvar"   --->   Operation 77 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 78 [1/1] (0.42ns)   --->   "%store_ln0 = store i3 0, i3 %indvar139"   --->   Operation 78 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 79 [1/1] (0.42ns)   --->   "%store_ln71 = store i4 2, i4 %col" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 79 'store' 'store_ln71' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body26"   --->   Operation 80 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i6 %indvar_flatten" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 81 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.78ns)   --->   "%icmp_ln68 = icmp_eq  i6 %indvar_flatten_load, i6 36" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 82 'icmp' 'icmp_ln68' <Predicate = true> <Delay = 0.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 83 [1/1] (0.78ns)   --->   "%add_ln68 = add i6 %indvar_flatten_load, i6 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 83 'add' 'add_ln68' <Predicate = true> <Delay = 0.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%col_load = load i4 %col" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 84 'load' 'col_load' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%indvar139_load = load i3 %indvar139" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 85 'load' 'indvar139_load' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%indvar_load = load i3 %indvar" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 86 'load' 'indvar_load' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.67ns)   --->   "%icmp_ln71 = icmp_eq  i3 %indvar139_load, i3 6" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 87 'icmp' 'icmp_ln71' <Predicate = (!icmp_ln68)> <Delay = 0.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 88 [1/1] (0.20ns)   --->   "%select_ln71 = select i1 %icmp_ln71, i3 0, i3 %indvar139_load" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 88 'select' 'select_ln71' <Predicate = (!icmp_ln68)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 89 [1/1] (0.39ns)   --->   "%select_ln71_1 = select i1 %icmp_ln71, i4 2, i4 %col_load" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 89 'select' 'select_ln71_1' <Predicate = (!icmp_ln68)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 90 [1/1] (0.67ns)   --->   "%add_ln68_1 = add i3 %indvar_load, i3 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 90 'add' 'add_ln68_1' <Predicate = (!icmp_ln68)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 91 [1/1] (0.20ns)   --->   "%select_ln68 = select i1 %icmp_ln71, i3 %add_ln68_1, i3 %indvar_load" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 91 'select' 'select_ln68' <Predicate = (!icmp_ln68)> <Delay = 0.20> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.20> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%zext_ln68 = zext i3 %select_ln68" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 92 'zext' 'zext_ln68' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (1.23ns)   --->   "%empty_27 = mul i8 %zext_ln68, i8 26" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 93 'mul' 'empty_27' <Predicate = (!icmp_ln68)> <Delay = 1.23> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 1.23> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 94 [1/1] (0.76ns)   --->   "%tmp2 = add i8 %empty_27, i8 13" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 94 'add' 'tmp2' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%tmp2_cast = zext i8 %tmp2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 95 'zext' 'tmp2_cast' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.85ns)   --->   "%empty_30 = add i16 %tmp2_cast, i16 %phi_mul_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 96 'add' 'empty_30' <Predicate = (!icmp_ln68)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_3 = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i16.i2, i16 %empty_30, i2 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 97 'bitconcatenate' 'tmp_3' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%p_cast12 = zext i18 %tmp_3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 98 'zext' 'p_cast12' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (1.08ns)   --->   "%empty_31 = add i64 %p_cast12, i64 %inp_img_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 99 'add' 'empty_31' <Predicate = (!icmp_ln68)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 100 [1/1] (0.76ns)   --->   "%tmp4 = add i8 %empty_27, i8 14" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 100 'add' 'tmp4' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%tmp4_cast = zext i8 %tmp4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 101 'zext' 'tmp4_cast' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_33 = add i16 %tmp4_cast, i16 %phi_mul_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 102 'add' 'empty_33' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%p_cast8 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_31, i32 2, i32 63" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 103 'partselect' 'p_cast8' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%p_cast8_cast = sext i62 %p_cast8" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 104 'sext' 'p_cast8_cast' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%gmem_addr_1 = getelementptr i32 %gmem, i64 %p_cast8_cast" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 105 'getelementptr' 'gmem_addr_1' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i4 @_ssdm_op_BitConcatenate.i4.i3.i1, i3 %select_ln71, i1 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 106 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%zext_ln76 = zext i4 %shl_ln" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 107 'zext' 'zext_ln76' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.68ns) (root node of TernaryAdder)   --->   "%add_ln76_2 = add i16 %empty_33, i16 %zext_ln76" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 108 'add' 'add_ln76_2' <Predicate = (!icmp_ln68)> <Delay = 0.68> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%shl_ln76_2 = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i16.i2, i16 %add_ln76_2, i2 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 109 'bitconcatenate' 'shl_ln76_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%zext_ln76_2 = zext i18 %shl_ln76_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 110 'zext' 'zext_ln76_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (1.08ns)   --->   "%add_ln76_3 = add i64 %zext_ln76_2, i64 %inp_img_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 111 'add' 'add_ln76_3' <Predicate = (!icmp_ln68)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 112 [1/1] (0.79ns)   --->   "%icmp_ln76 = icmp_eq  i4 %select_ln71_1, i4 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 112 'icmp' 'icmp_ln76' <Predicate = (!icmp_ln68)> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln76_3, i32 2, i32 63" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 113 'partselect' 'trunc_ln2' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%sext_ln126 = sext i62 %trunc_ln2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 114 'sext' 'sext_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%gmem_addr_3 = getelementptr i32 %gmem, i64 %sext_ln126" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 115 'getelementptr' 'gmem_addr_3' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.79ns)   --->   "%switch_ln114 = switch i4 %select_ln71_1, void %arrayidx12312.case.11, i4 10, void %arrayidx11811.1.case.10, i4 4, void %arrayidx11811.1.case.4, i4 6, void %arrayidx11811.1.case.6, i4 8, void %L15.for.body232_crit_edge" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 116 'switch' 'switch_ln114' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.79>
+ST_1 : Operation 117 [1/1] (0.79ns)   --->   "%add_ln71 = add i4 %select_ln71_1, i4 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 117 'add' 'add_ln71' <Predicate = (!icmp_ln68)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 118 [1/1] (0.67ns)   --->   "%add_ln71_1 = add i3 %select_ln71, i3 1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 118 'add' 'add_ln71_1' <Predicate = (!icmp_ln68)> <Delay = 0.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 119 [1/1] (0.42ns)   --->   "%store_ln68 = store i6 %add_ln68, i6 %indvar_flatten" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 119 'store' 'store_ln68' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+ST_1 : Operation 120 [1/1] (0.42ns)   --->   "%store_ln68 = store i3 %select_ln68, i3 %indvar" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 120 'store' 'store_ln68' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+ST_1 : Operation 121 [1/1] (0.42ns)   --->   "%store_ln71 = store i3 %add_ln71_1, i3 %indvar139" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 121 'store' 'store_ln71' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+ST_1 : Operation 122 [1/1] (0.42ns)   --->   "%store_ln71 = store i4 %add_ln71, i4 %col" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 122 'store' 'store_ln71' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 123 [8/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 123 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 124 [8/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 124 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 125 [1/1] (0.76ns)   --->   "%tmp3 = add i8 %empty_27, i8 27" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 125 'add' 'tmp3' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "%tmp3_cast = zext i8 %tmp3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 126 'zext' 'tmp3_cast' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%empty_32 = add i16 %tmp3_cast, i16 %phi_mul_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 127 'add' 'empty_32' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 128 [1/1] (0.68ns) (root node of TernaryAdder)   --->   "%add_ln76 = add i16 %empty_32, i16 %zext_ln76" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 128 'add' 'add_ln76' <Predicate = (!icmp_ln68)> <Delay = 0.68> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%shl_ln76_1 = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i16.i2, i16 %add_ln76, i2 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 129 'bitconcatenate' 'shl_ln76_1' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "%zext_ln76_1 = zext i18 %shl_ln76_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 130 'zext' 'zext_ln76_1' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_3 : Operation 131 [1/1] (1.08ns)   --->   "%add_ln76_1 = add i64 %zext_ln76_1, i64 %inp_img_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 131 'add' 'add_ln76_1' <Predicate = (!icmp_ln68)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 132 [7/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 132 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "%trunc_ln126_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln76_1, i32 2, i32 63" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 133 'partselect' 'trunc_ln126_1' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "%sext_ln126_1 = sext i62 %trunc_ln126_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 134 'sext' 'sext_ln126_1' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%gmem_addr_4 = getelementptr i32 %gmem, i64 %sext_ln126_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 135 'getelementptr' 'gmem_addr_4' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_3 : Operation 136 [7/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 136 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 137 [1/1] (0.76ns)   --->   "%tmp1 = add i8 %empty_27, i8 26" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 137 'add' 'tmp1' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 138 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i8 %tmp1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 138 'zext' 'tmp1_cast' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 139 [1/1] (0.85ns)   --->   "%empty_28 = add i16 %tmp1_cast, i16 %phi_mul_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 139 'add' 'empty_28' <Predicate = (!icmp_ln68)> <Delay = 0.85> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_1 = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i16.i2, i16 %empty_28, i2 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 140 'bitconcatenate' 'tmp_1' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 141 [1/1] (0.00ns)   --->   "%p_cast11 = zext i18 %tmp_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 141 'zext' 'p_cast11' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 142 [1/1] (1.08ns)   --->   "%empty_29 = add i64 %p_cast11, i64 %inp_img_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 142 'add' 'empty_29' <Predicate = (!icmp_ln68)> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "%p_cast9 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %empty_29, i32 2, i32 63" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 143 'partselect' 'p_cast9' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 144 [1/1] (0.00ns)   --->   "%p_cast9_cast = sext i62 %p_cast9" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 144 'sext' 'p_cast9_cast' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 145 [1/1] (0.00ns)   --->   "%gmem_addr_2 = getelementptr i32 %gmem, i64 %p_cast9_cast" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 145 'getelementptr' 'gmem_addr_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_4 : Operation 146 [6/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 146 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 147 [8/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 147 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 148 [6/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 148 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 149 [5/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 149 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 150 [7/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 150 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 151 [5/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 151 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 152 [8/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 152 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 153 [4/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 153 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 154 [6/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 154 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 155 [4/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 155 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 156 [7/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 156 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 157 [3/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 157 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 158 [5/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 158 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 159 [3/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 159 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 160 [6/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 160 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 161 [2/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 161 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 162 [4/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 162 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 163 [2/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 163 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 164 [5/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 164 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 165 [1/8] (7.30ns)   --->   "%empty_34 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_3, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 165 'readreq' 'empty_34' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 166 [3/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 166 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 167 [1/8] (7.30ns)   --->   "%empty_25 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_1, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 167 'readreq' 'empty_25' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 168 [4/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 168 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 169 [1/1] (7.30ns)   --->   "%gmem_addr_3_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 169 'read' 'gmem_addr_3_read' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 170 [2/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 170 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 171 [1/1] (7.30ns)   --->   "%gmem_addr_1_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 171 'read' 'gmem_addr_1_read' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 172 [3/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 172 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 7.30>
+ST_11 : Operation 173 [1/1] (7.30ns)   --->   "%gmem_addr_3_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 173 'read' 'gmem_addr_3_read_1' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 174 [1/8] (7.30ns)   --->   "%empty_35 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_4, i64 2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 174 'readreq' 'empty_35' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 175 [1/1] (7.30ns)   --->   "%gmem_addr_1_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 175 'read' 'gmem_addr_1_read_1' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 176 [2/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 176 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 177 [1/1] (7.30ns)   --->   "%gmem_addr_4_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 177 'read' 'gmem_addr_4_read' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_12 : Operation 178 [1/1] (0.00ns)   --->   "%line_buffer_2D_21 = bitcast i32 %gmem_addr_4_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 178 'bitcast' 'line_buffer_2D_21' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_12 : Operation 179 [1/1] (7.30ns)   --->   "%gmem_addr_1_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 179 'read' 'gmem_addr_1_read_2' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_12 : Operation 180 [1/8] (7.30ns)   --->   "%empty_26 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_addr_2, i64 3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 180 'readreq' 'empty_26' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 7.30>
+ST_13 : Operation 181 [1/1] (7.30ns)   --->   "%gmem_addr_4_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 181 'read' 'gmem_addr_4_read_1' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_13 : Operation 182 [1/1] (7.30ns)   --->   "%gmem_addr_2_read = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 182 'read' 'gmem_addr_2_read' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 13> <Delay = 7.30>
+ST_14 : Operation 183 [1/1] (7.30ns)   --->   "%gmem_addr_2_read_1 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 183 'read' 'gmem_addr_2_read_1' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 184 [1/1] (0.00ns)   --->   "%p_load58 = load i32 %empty_22"   --->   Operation 184 'load' 'p_load58' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 185 [1/1] (0.00ns)   --->   "%p_load57 = load i32 %empty_23"   --->   Operation 185 'load' 'p_load57' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 186 [1/1] (0.00ns)   --->   "%p_load = load i32 %empty_24"   --->   Operation 186 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 187 [1/1] (0.00ns)   --->   "%mux_case_3_out_load = load i32 %mux_case_3_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 187 'load' 'mux_case_3_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 4)> <Delay = 0.00>
+ST_15 : Operation 188 [1/1] (0.00ns)   --->   "%mux_case_5_out_load = load i32 %mux_case_5_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 188 'load' 'mux_case_5_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 6)> <Delay = 0.00>
+ST_15 : Operation 189 [1/1] (0.00ns)   --->   "%mux_case_7_out_load = load i32 %mux_case_7_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 189 'load' 'mux_case_7_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 8)> <Delay = 0.00>
+ST_15 : Operation 190 [1/1] (0.00ns)   --->   "%mux_case_9_out_load = load i32 %mux_case_9_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 190 'load' 'mux_case_9_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 10)> <Delay = 0.00>
+ST_15 : Operation 191 [1/1] (0.00ns)   --->   "%mux_case_11_out_load = load i32 %mux_case_11_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 191 'load' 'mux_case_11_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 12)> <Delay = 0.00>
+ST_15 : Operation 192 [1/1] (0.00ns)   --->   "%mux_case_4_out_load = load i32 %mux_case_4_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 192 'load' 'mux_case_4_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 4)> <Delay = 0.00>
+ST_15 : Operation 193 [1/1] (0.00ns)   --->   "%mux_case_6_out_load = load i32 %mux_case_6_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 193 'load' 'mux_case_6_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 6)> <Delay = 0.00>
+ST_15 : Operation 194 [1/1] (0.00ns)   --->   "%mux_case_8_out_load = load i32 %mux_case_8_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 194 'load' 'mux_case_8_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 8)> <Delay = 0.00>
+ST_15 : Operation 195 [1/1] (0.00ns)   --->   "%mux_case_10_out_load = load i32 %mux_case_10_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 195 'load' 'mux_case_10_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 10)> <Delay = 0.00>
+ST_15 : Operation 196 [1/1] (0.00ns)   --->   "%mux_case_12_out_load = load i32 %mux_case_12_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 196 'load' 'mux_case_12_out_load' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 12)> <Delay = 0.00>
+ST_15 : Operation 197 [1/1] (0.57ns)   --->   "%line_buffer_2D_18 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.5float.float.i4, i4 4, i32 %mux_case_3_out_load, i4 6, i32 %mux_case_5_out_load, i4 8, i32 %mux_case_7_out_load, i4 10, i32 %mux_case_9_out_load, i4 12, i32 %mux_case_11_out_load, i32 <undef>, i4 %select_ln71_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 197 'sparsemux' 'line_buffer_2D_18' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.57> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 198 [1/1] (0.00ns)   --->   "%line_buffer_2D_19 = bitcast i32 %gmem_addr_3_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 198 'bitcast' 'line_buffer_2D_19' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_15 : Operation 199 [1/1] (0.00ns)   --->   "%line_buffer_2D_20 = bitcast i32 %gmem_addr_3_read_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 199 'bitcast' 'line_buffer_2D_20' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_15 : Operation 200 [1/1] (0.00ns)   --->   "%line_buffer_2D_22 = bitcast i32 %gmem_addr_4_read_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 200 'bitcast' 'line_buffer_2D_22' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.00>
+ST_15 : Operation 201 [1/1] (0.57ns)   --->   "%line_buffer_2D_10 = sparsemux i32 @_ssdm_op_SparseMux.ap_auto.5float.float.i4, i4 4, i32 %mux_case_4_out_load, i4 6, i32 %mux_case_6_out_load, i4 8, i32 %mux_case_8_out_load, i4 10, i32 %mux_case_10_out_load, i4 12, i32 %mux_case_12_out_load, i32 <undef>, i4 %select_ln71_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 201 'sparsemux' 'line_buffer_2D_10' <Predicate = (!icmp_ln68 & !icmp_ln76)> <Delay = 0.57> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.57> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 202 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_22, i32 %mux_case_8_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 202 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 8)> <Delay = 0.42>
+ST_15 : Operation 203 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_21, i32 %mux_case_7_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 203 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 8)> <Delay = 0.42>
+ST_15 : Operation 204 [1/1] (0.42ns)   --->   "%br_ln114 = br void %for.body232" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 204 'br' 'br_ln114' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 8)> <Delay = 0.42>
+ST_15 : Operation 205 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_22, i32 %mux_case_6_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 205 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 6)> <Delay = 0.42>
+ST_15 : Operation 206 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_21, i32 %mux_case_5_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 206 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 6)> <Delay = 0.42>
+ST_15 : Operation 207 [1/1] (0.42ns)   --->   "%br_ln127 = br void %for.body232" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:127]   --->   Operation 207 'br' 'br_ln127' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 6)> <Delay = 0.42>
+ST_15 : Operation 208 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_22, i32 %mux_case_4_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 208 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 4)> <Delay = 0.42>
+ST_15 : Operation 209 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_21, i32 %mux_case_3_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 209 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 4)> <Delay = 0.42>
+ST_15 : Operation 210 [1/1] (0.42ns)   --->   "%br_ln127 = br void %for.body232" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:127]   --->   Operation 210 'br' 'br_ln127' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 4)> <Delay = 0.42>
+ST_15 : Operation 211 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_22, i32 %mux_case_10_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 211 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 10)> <Delay = 0.42>
+ST_15 : Operation 212 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_21, i32 %mux_case_9_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 212 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 10)> <Delay = 0.42>
+ST_15 : Operation 213 [1/1] (0.42ns)   --->   "%br_ln127 = br void %for.body232" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:127]   --->   Operation 213 'br' 'br_ln127' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 == 10)> <Delay = 0.42>
+ST_15 : Operation 214 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_22, i32 %mux_case_12_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 214 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 != 10 & select_ln71_1 != 4 & select_ln71_1 != 6 & select_ln71_1 != 8)> <Delay = 0.42>
+ST_15 : Operation 215 [1/1] (0.42ns)   --->   "%store_ln126 = store i32 %line_buffer_2D_21, i32 %mux_case_11_out" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126]   --->   Operation 215 'store' 'store_ln126' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 != 10 & select_ln71_1 != 4 & select_ln71_1 != 6 & select_ln71_1 != 8)> <Delay = 0.42>
+ST_15 : Operation 216 [1/1] (0.42ns)   --->   "%br_ln127 = br void %for.body232" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:127]   --->   Operation 216 'br' 'br_ln127' <Predicate = (!icmp_ln68 & !icmp_ln76 & select_ln71_1 != 10 & select_ln71_1 != 4 & select_ln71_1 != 6 & select_ln71_1 != 8)> <Delay = 0.42>
+ST_15 : Operation 217 [1/1] (7.30ns)   --->   "%gmem_addr_2_read_2 = read i32 @_ssdm_op_Read.m_axi.p1i32, i32 %gmem_addr_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 217 'read' 'gmem_addr_2_read_2' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 3.20>
+ST_16 : Operation 218 [1/1] (0.00ns)   --->   "%line_buffer_2D_4 = load i32 %line_buffer_2D"   --->   Operation 218 'load' 'line_buffer_2D_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 219 [1/1] (0.00ns)   --->   "%line_buffer_2D_5 = load i32 %line_buffer_2D_2"   --->   Operation 219 'load' 'line_buffer_2D_5' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 220 [1/1] (0.00ns)   --->   "%line_buffer_2D_3 = load i32 %line_buffer_2D_1"   --->   Operation 220 'load' 'line_buffer_2D_3' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 221 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 221 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 222 [1/1] (0.00ns)   --->   "%br_ln68 = br i1 %icmp_ln68, void %for.inc265, void %for.inc268.exitStub" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68]   --->   Operation 222 'br' 'br_ln68' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 223 [1/1] (0.00ns)   --->   "%line_buffer_2D_6 = bitcast i32 %gmem_addr_1_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 223 'bitcast' 'line_buffer_2D_6' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.00>
+ST_16 : Operation 224 [1/1] (0.00ns)   --->   "%line_buffer_2D_7 = bitcast i32 %gmem_addr_1_read_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 224 'bitcast' 'line_buffer_2D_7' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.00>
+ST_16 : Operation 225 [1/1] (0.00ns)   --->   "%line_buffer_2D_8 = bitcast i32 %gmem_addr_1_read_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 225 'bitcast' 'line_buffer_2D_8' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.00>
+ST_16 : Operation 226 [1/1] (0.00ns)   --->   "%line_buffer_2D_9 = bitcast i32 %gmem_addr_2_read" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 226 'bitcast' 'line_buffer_2D_9' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.00>
+ST_16 : Operation 227 [1/1] (0.00ns)   --->   "%line_buffer_2D_16 = bitcast i32 %gmem_addr_2_read_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 227 'bitcast' 'line_buffer_2D_16' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.00>
+ST_16 : Operation 228 [1/1] (0.00ns)   --->   "%line_buffer_2D_17 = bitcast i32 %gmem_addr_2_read_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 228 'bitcast' 'line_buffer_2D_17' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.00>
+ST_16 : Operation 229 [1/1] (0.42ns)   --->   "%store_ln42 = store i32 %line_buffer_2D_9, i32 %line_buffer_2D_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 229 'store' 'store_ln42' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.42>
+ST_16 : Operation 230 [1/1] (0.42ns)   --->   "%store_ln42 = store i32 %line_buffer_2D_17, i32 %line_buffer_2D_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 230 'store' 'store_ln42' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.42>
+ST_16 : Operation 231 [1/1] (0.42ns)   --->   "%store_ln42 = store i32 %line_buffer_2D_16, i32 %line_buffer_2D" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42]   --->   Operation 231 'store' 'store_ln42' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.42>
+ST_16 : Operation 232 [1/1] (0.42ns)   --->   "%br_ln106 = br void %for.body232" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:106]   --->   Operation 232 'br' 'br_ln106' <Predicate = (!icmp_ln68 & icmp_ln76)> <Delay = 0.42>
+ST_16 : Operation 233 [1/1] (0.00ns)   --->   "%tmp = phi i32 %line_buffer_2D_3, void %for.inc42, i32 %p_load58, void %arrayidx12312.case.11, i32 %p_load58, void %arrayidx11811.1.case.10, i32 %p_load58, void %arrayidx11811.1.case.6, i32 %p_load58, void %arrayidx11811.1.case.4, i32 %p_load58, void %L15.for.body232_crit_edge"   --->   Operation 233 'phi' 'tmp' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_16 : Operation 234 [2/2] (2.78ns)   --->   "%tmp_5 = fcmp_ogt  i32 %tmp, i32 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 234 'fcmp' 'tmp_5' <Predicate = (!icmp_ln68)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.01>
+ST_17 : Operation 235 [1/1] (0.00ns)   --->   "%tmp_16 = phi i32 %line_buffer_2D_17, void %for.inc42, i32 %line_buffer_2D_22, void %arrayidx12312.case.11, i32 %line_buffer_2D_22, void %arrayidx11811.1.case.10, i32 %line_buffer_2D_22, void %arrayidx11811.1.case.6, i32 %line_buffer_2D_22, void %arrayidx11811.1.case.4, i32 %line_buffer_2D_22, void %L15.for.body232_crit_edge"   --->   Operation 235 'phi' 'tmp_16' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 236 [1/1] (0.00ns)   --->   "%tmp_14 = phi i32 %line_buffer_2D_16, void %for.inc42, i32 %line_buffer_2D_21, void %arrayidx12312.case.11, i32 %line_buffer_2D_21, void %arrayidx11811.1.case.10, i32 %line_buffer_2D_21, void %arrayidx11811.1.case.6, i32 %line_buffer_2D_21, void %arrayidx11811.1.case.4, i32 %line_buffer_2D_21, void %L15.for.body232_crit_edge"   --->   Operation 236 'phi' 'tmp_14' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 237 [1/1] (0.00ns)   --->   "%tmp_12 = phi i32 %line_buffer_2D_9, void %for.inc42, i32 %p_load, void %arrayidx12312.case.11, i32 %p_load, void %arrayidx11811.1.case.10, i32 %p_load, void %arrayidx11811.1.case.6, i32 %p_load, void %arrayidx11811.1.case.4, i32 %p_load, void %L15.for.body232_crit_edge"   --->   Operation 237 'phi' 'tmp_12' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 238 [1/1] (0.00ns)   --->   "%tmp_10 = phi i32 %line_buffer_2D_8, void %for.inc42, i32 %line_buffer_2D_20, void %arrayidx12312.case.11, i32 %line_buffer_2D_20, void %arrayidx11811.1.case.10, i32 %line_buffer_2D_20, void %arrayidx11811.1.case.6, i32 %line_buffer_2D_20, void %arrayidx11811.1.case.4, i32 %line_buffer_2D_20, void %L15.for.body232_crit_edge"   --->   Operation 238 'phi' 'tmp_10' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 239 [1/1] (0.00ns)   --->   "%tmp_8 = phi i32 %line_buffer_2D_7, void %for.inc42, i32 %line_buffer_2D_19, void %arrayidx12312.case.11, i32 %line_buffer_2D_19, void %arrayidx11811.1.case.10, i32 %line_buffer_2D_19, void %arrayidx11811.1.case.6, i32 %line_buffer_2D_19, void %arrayidx11811.1.case.4, i32 %line_buffer_2D_19, void %L15.for.body232_crit_edge"   --->   Operation 239 'phi' 'tmp_8' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 240 [1/1] (0.00ns)   --->   "%tmp_6 = phi i32 %line_buffer_2D_6, void %for.inc42, i32 %p_load57, void %arrayidx12312.case.11, i32 %p_load57, void %arrayidx11811.1.case.10, i32 %p_load57, void %arrayidx11811.1.case.6, i32 %p_load57, void %arrayidx11811.1.case.4, i32 %p_load57, void %L15.for.body232_crit_edge"   --->   Operation 240 'phi' 'tmp_6' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 241 [1/1] (0.00ns)   --->   "%tmp_2 = phi i32 %line_buffer_2D_4, void %for.inc42, i32 %line_buffer_2D_18, void %arrayidx12312.case.11, i32 %line_buffer_2D_18, void %arrayidx11811.1.case.10, i32 %line_buffer_2D_18, void %arrayidx11811.1.case.6, i32 %line_buffer_2D_18, void %arrayidx11811.1.case.4, i32 %line_buffer_2D_18, void %L15.for.body232_crit_edge"   --->   Operation 241 'phi' 'tmp_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 242 [1/1] (0.00ns)   --->   "%bitcast_ln156 = bitcast i32 %tmp" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 242 'bitcast' 'bitcast_ln156' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_s = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 243 'partselect' 'tmp_s' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 244 [1/1] (0.00ns)   --->   "%trunc_ln156 = trunc i32 %bitcast_ln156" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 244 'trunc' 'trunc_ln156' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_17 : Operation 245 [1/1] (0.76ns)   --->   "%icmp_ln156 = icmp_ne  i8 %tmp_s, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 245 'icmp' 'icmp_ln156' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 246 [1/1] (0.92ns)   --->   "%icmp_ln156_1 = icmp_eq  i23 %trunc_ln156, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 246 'icmp' 'icmp_ln156_1' <Predicate = (!icmp_ln68)> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 247 [1/1] (0.00ns) (grouped into LUT with out node tmp_48)   --->   "%or_ln156 = or i1 %icmp_ln156_1, i1 %icmp_ln156" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 247 'or' 'or_ln156' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 248 [1/2] (2.78ns)   --->   "%tmp_5 = fcmp_ogt  i32 %tmp, i32 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 248 'fcmp' 'tmp_5' <Predicate = (!icmp_ln68)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 249 [1/1] (0.00ns) (grouped into LUT with out node tmp_48)   --->   "%and_ln156 = and i1 %or_ln156, i1 %tmp_5" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 249 'and' 'and_ln156' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 250 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_48 = select i1 %and_ln156, i32 %tmp, i32 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 250 'select' 'tmp_48' <Predicate = (!icmp_ln68)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_17 : Operation 251 [2/2] (2.78ns)   --->   "%tmp_11 = fcmp_ogt  i32 %tmp_2, i32 %tmp_48" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 251 'fcmp' 'tmp_11' <Predicate = (!icmp_ln68)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 252 [1/1] (0.42ns)   --->   "%store_ln91 = store i32 %tmp_16, i32 %empty_24" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 252 'store' 'store_ln91' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+ST_17 : Operation 253 [1/1] (0.42ns)   --->   "%store_ln91 = store i32 %tmp_10, i32 %empty_23" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91]   --->   Operation 253 'store' 'store_ln91' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+
+State 18 <SV = 17> <Delay = 6.30>
+ST_18 : Operation 254 [1/1] (0.00ns)   --->   "%tmp_4 = phi i32 %line_buffer_2D_5, void %for.inc42, i32 %line_buffer_2D_10, void %arrayidx12312.case.11, i32 %line_buffer_2D_10, void %arrayidx11811.1.case.10, i32 %line_buffer_2D_10, void %arrayidx11811.1.case.6, i32 %line_buffer_2D_10, void %arrayidx11811.1.case.4, i32 %line_buffer_2D_10, void %L15.for.body232_crit_edge"   --->   Operation 254 'phi' 'tmp_4' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 255 [1/1] (0.00ns)   --->   "%bitcast_ln156_1 = bitcast i32 %tmp_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 255 'bitcast' 'bitcast_ln156_1' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 256 [1/1] (0.00ns)   --->   "%tmp_9 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_1, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 256 'partselect' 'tmp_9' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 257 [1/1] (0.00ns)   --->   "%trunc_ln156_1 = trunc i32 %bitcast_ln156_1" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 257 'trunc' 'trunc_ln156_1' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 258 [1/1] (0.00ns)   --->   "%bitcast_ln156_2 = bitcast i32 %tmp_48" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 258 'bitcast' 'bitcast_ln156_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 259 [1/1] (0.00ns)   --->   "%tmp_7 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_2, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 259 'partselect' 'tmp_7' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 260 [1/1] (0.00ns)   --->   "%trunc_ln156_2 = trunc i32 %bitcast_ln156_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 260 'trunc' 'trunc_ln156_2' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_18 : Operation 261 [1/1] (0.76ns)   --->   "%icmp_ln156_2 = icmp_ne  i8 %tmp_9, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 261 'icmp' 'icmp_ln156_2' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 262 [1/1] (0.92ns)   --->   "%icmp_ln156_3 = icmp_eq  i23 %trunc_ln156_1, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 262 'icmp' 'icmp_ln156_3' <Predicate = (!icmp_ln68)> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 263 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_2)   --->   "%or_ln156_1 = or i1 %icmp_ln156_3, i1 %icmp_ln156_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 263 'or' 'or_ln156_1' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 264 [1/1] (0.76ns)   --->   "%icmp_ln156_4 = icmp_ne  i8 %tmp_7, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 264 'icmp' 'icmp_ln156_4' <Predicate = (!icmp_ln68)> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 265 [1/1] (0.92ns)   --->   "%icmp_ln156_5 = icmp_eq  i23 %trunc_ln156_2, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 265 'icmp' 'icmp_ln156_5' <Predicate = (!icmp_ln68)> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 266 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_2)   --->   "%or_ln156_2 = or i1 %icmp_ln156_5, i1 %icmp_ln156_4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 266 'or' 'or_ln156_2' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 267 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_2)   --->   "%and_ln156_1 = and i1 %or_ln156_1, i1 %or_ln156_2" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 267 'and' 'and_ln156_1' <Predicate = (!icmp_ln68)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 268 [1/2] (2.78ns)   --->   "%tmp_11 = fcmp_ogt  i32 %tmp_2, i32 %tmp_48" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 268 'fcmp' 'tmp_11' <Predicate = (!icmp_ln68)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 269 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_2 = and i1 %and_ln156_1, i1 %tmp_11" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 269 'and' 'and_ln156_2' <Predicate = (!icmp_ln68)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 270 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_49 = select i1 %and_ln156_2, i32 %tmp_2, i32 %tmp_48" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 270 'select' 'tmp_49' <Predicate = (!icmp_ln68)> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_18 : Operation 271 [2/2] (2.78ns)   --->   "%tmp_17 = fcmp_ogt  i32 %tmp_4, i32 %tmp_49" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 271 'fcmp' 'tmp_17' <Predicate = (!icmp_ln68)> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 272 [1/1] (0.42ns)   --->   "%store_ln114 = store i32 %tmp_4, i32 %empty_22" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114]   --->   Operation 272 'store' 'store_ln114' <Predicate = (!icmp_ln68)> <Delay = 0.42>
+
+State 19 <SV = 18> <Delay = 6.30>
+ST_19 : Operation 273 [1/1] (0.00ns)   --->   "%bitcast_ln156_3 = bitcast i32 %tmp_4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 273 'bitcast' 'bitcast_ln156_3' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 274 [1/1] (0.00ns)   --->   "%tmp_13 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_3, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 274 'partselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 275 [1/1] (0.00ns)   --->   "%trunc_ln156_3 = trunc i32 %bitcast_ln156_3" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 275 'trunc' 'trunc_ln156_3' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 276 [1/1] (0.00ns)   --->   "%bitcast_ln156_4 = bitcast i32 %tmp_49" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 276 'bitcast' 'bitcast_ln156_4' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_15 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_4, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 277 'partselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 278 [1/1] (0.00ns)   --->   "%trunc_ln156_4 = trunc i32 %bitcast_ln156_4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 278 'trunc' 'trunc_ln156_4' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 279 [1/1] (0.76ns)   --->   "%icmp_ln156_6 = icmp_ne  i8 %tmp_13, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 279 'icmp' 'icmp_ln156_6' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 280 [1/1] (0.92ns)   --->   "%icmp_ln156_7 = icmp_eq  i23 %trunc_ln156_3, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 280 'icmp' 'icmp_ln156_7' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 281 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_4)   --->   "%or_ln156_3 = or i1 %icmp_ln156_7, i1 %icmp_ln156_6" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 281 'or' 'or_ln156_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 282 [1/1] (0.76ns)   --->   "%icmp_ln156_8 = icmp_ne  i8 %tmp_15, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 282 'icmp' 'icmp_ln156_8' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 283 [1/1] (0.92ns)   --->   "%icmp_ln156_9 = icmp_eq  i23 %trunc_ln156_4, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 283 'icmp' 'icmp_ln156_9' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 284 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_4)   --->   "%or_ln156_4 = or i1 %icmp_ln156_9, i1 %icmp_ln156_8" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 284 'or' 'or_ln156_4' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 285 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_4)   --->   "%and_ln156_3 = and i1 %or_ln156_3, i1 %or_ln156_4" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 285 'and' 'and_ln156_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 286 [1/2] (2.78ns)   --->   "%tmp_17 = fcmp_ogt  i32 %tmp_4, i32 %tmp_49" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 286 'fcmp' 'tmp_17' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 287 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_4 = and i1 %and_ln156_3, i1 %tmp_17" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 287 'and' 'and_ln156_4' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 288 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_50 = select i1 %and_ln156_4, i32 %tmp_4, i32 %tmp_49" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 288 'select' 'tmp_50' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_19 : Operation 289 [2/2] (2.78ns)   --->   "%tmp_20 = fcmp_ogt  i32 %tmp_6, i32 %tmp_50" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 289 'fcmp' 'tmp_20' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 6.30>
+ST_20 : Operation 290 [1/1] (0.00ns)   --->   "%bitcast_ln156_5 = bitcast i32 %tmp_6" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 290 'bitcast' 'bitcast_ln156_5' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 291 [1/1] (0.00ns)   --->   "%tmp_18 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_5, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 291 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 292 [1/1] (0.00ns)   --->   "%trunc_ln156_5 = trunc i32 %bitcast_ln156_5" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 292 'trunc' 'trunc_ln156_5' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 293 [1/1] (0.00ns)   --->   "%bitcast_ln156_6 = bitcast i32 %tmp_50" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 293 'bitcast' 'bitcast_ln156_6' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 294 [1/1] (0.00ns)   --->   "%tmp_19 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_6, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 294 'partselect' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 295 [1/1] (0.00ns)   --->   "%trunc_ln156_6 = trunc i32 %bitcast_ln156_6" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 295 'trunc' 'trunc_ln156_6' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 296 [1/1] (0.76ns)   --->   "%icmp_ln156_10 = icmp_ne  i8 %tmp_18, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 296 'icmp' 'icmp_ln156_10' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 297 [1/1] (0.92ns)   --->   "%icmp_ln156_11 = icmp_eq  i23 %trunc_ln156_5, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 297 'icmp' 'icmp_ln156_11' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 298 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_6)   --->   "%or_ln156_5 = or i1 %icmp_ln156_11, i1 %icmp_ln156_10" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 298 'or' 'or_ln156_5' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 299 [1/1] (0.76ns)   --->   "%icmp_ln156_12 = icmp_ne  i8 %tmp_19, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 299 'icmp' 'icmp_ln156_12' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 300 [1/1] (0.92ns)   --->   "%icmp_ln156_13 = icmp_eq  i23 %trunc_ln156_6, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 300 'icmp' 'icmp_ln156_13' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 301 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_6)   --->   "%or_ln156_6 = or i1 %icmp_ln156_13, i1 %icmp_ln156_12" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 301 'or' 'or_ln156_6' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_6)   --->   "%and_ln156_5 = and i1 %or_ln156_5, i1 %or_ln156_6" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 302 'and' 'and_ln156_5' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 303 [1/2] (2.78ns)   --->   "%tmp_20 = fcmp_ogt  i32 %tmp_6, i32 %tmp_50" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 303 'fcmp' 'tmp_20' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 304 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_6 = and i1 %and_ln156_5, i1 %tmp_20" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 304 'and' 'and_ln156_6' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 305 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_51 = select i1 %and_ln156_6, i32 %tmp_6, i32 %tmp_50" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 305 'select' 'tmp_51' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_20 : Operation 306 [2/2] (2.78ns)   --->   "%tmp_23 = fcmp_ogt  i32 %tmp_8, i32 %tmp_51" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 306 'fcmp' 'tmp_23' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 399 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %line_buffer_2D_3, i32 %line_buffer_2D_1_out"   --->   Operation 399 'store' 'store_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_20 : Operation 400 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %line_buffer_2D_5, i32 %line_buffer_2D_3_out"   --->   Operation 400 'store' 'store_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_20 : Operation 401 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %line_buffer_2D_4, i32 %line_buffer_2D_2_out"   --->   Operation 401 'store' 'store_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_20 : Operation 402 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %p_load, i32 %p_out"   --->   Operation 402 'store' 'store_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_20 : Operation 403 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %p_load57, i32 %p_out1"   --->   Operation 403 'store' 'store_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_20 : Operation 404 [1/1] (0.00ns)   --->   "%store_ln0 = store i32 %p_load58, i32 %p_out2"   --->   Operation 404 'store' 'store_ln0' <Predicate = (icmp_ln68)> <Delay = 0.00>
+ST_20 : Operation 405 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 405 'ret' 'ret_ln0' <Predicate = (icmp_ln68)> <Delay = 0.42>
+
+State 21 <SV = 20> <Delay = 6.30>
+ST_21 : Operation 307 [1/1] (0.00ns)   --->   "%bitcast_ln156_7 = bitcast i32 %tmp_8" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 307 'bitcast' 'bitcast_ln156_7' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 308 [1/1] (0.00ns)   --->   "%tmp_21 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_7, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 308 'partselect' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 309 [1/1] (0.00ns)   --->   "%trunc_ln156_7 = trunc i32 %bitcast_ln156_7" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 309 'trunc' 'trunc_ln156_7' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 310 [1/1] (0.00ns)   --->   "%bitcast_ln156_8 = bitcast i32 %tmp_51" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 310 'bitcast' 'bitcast_ln156_8' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 311 [1/1] (0.00ns)   --->   "%tmp_22 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_8, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 311 'partselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 312 [1/1] (0.00ns)   --->   "%trunc_ln156_8 = trunc i32 %bitcast_ln156_8" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 312 'trunc' 'trunc_ln156_8' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 313 [1/1] (0.76ns)   --->   "%icmp_ln156_14 = icmp_ne  i8 %tmp_21, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 313 'icmp' 'icmp_ln156_14' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 314 [1/1] (0.92ns)   --->   "%icmp_ln156_15 = icmp_eq  i23 %trunc_ln156_7, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 314 'icmp' 'icmp_ln156_15' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 315 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_8)   --->   "%or_ln156_7 = or i1 %icmp_ln156_15, i1 %icmp_ln156_14" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 315 'or' 'or_ln156_7' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 316 [1/1] (0.76ns)   --->   "%icmp_ln156_16 = icmp_ne  i8 %tmp_22, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 316 'icmp' 'icmp_ln156_16' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 317 [1/1] (0.92ns)   --->   "%icmp_ln156_17 = icmp_eq  i23 %trunc_ln156_8, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 317 'icmp' 'icmp_ln156_17' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 318 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_8)   --->   "%or_ln156_8 = or i1 %icmp_ln156_17, i1 %icmp_ln156_16" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 318 'or' 'or_ln156_8' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 319 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_8)   --->   "%and_ln156_7 = and i1 %or_ln156_7, i1 %or_ln156_8" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 319 'and' 'and_ln156_7' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 320 [1/2] (2.78ns)   --->   "%tmp_23 = fcmp_ogt  i32 %tmp_8, i32 %tmp_51" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 320 'fcmp' 'tmp_23' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 321 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_8 = and i1 %and_ln156_7, i1 %tmp_23" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 321 'and' 'and_ln156_8' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 322 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_52 = select i1 %and_ln156_8, i32 %tmp_8, i32 %tmp_51" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 322 'select' 'tmp_52' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_21 : Operation 323 [2/2] (2.78ns)   --->   "%tmp_26 = fcmp_ogt  i32 %tmp_10, i32 %tmp_52" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 323 'fcmp' 'tmp_26' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 6.30>
+ST_22 : Operation 324 [1/1] (0.00ns)   --->   "%bitcast_ln156_9 = bitcast i32 %tmp_10" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 324 'bitcast' 'bitcast_ln156_9' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_24 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_9, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 325 'partselect' 'tmp_24' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 326 [1/1] (0.00ns)   --->   "%trunc_ln156_9 = trunc i32 %bitcast_ln156_9" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 326 'trunc' 'trunc_ln156_9' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 327 [1/1] (0.00ns)   --->   "%bitcast_ln156_10 = bitcast i32 %tmp_52" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 327 'bitcast' 'bitcast_ln156_10' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 328 [1/1] (0.00ns)   --->   "%tmp_25 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_10, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 328 'partselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 329 [1/1] (0.00ns)   --->   "%trunc_ln156_10 = trunc i32 %bitcast_ln156_10" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 329 'trunc' 'trunc_ln156_10' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 330 [1/1] (0.76ns)   --->   "%icmp_ln156_18 = icmp_ne  i8 %tmp_24, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 330 'icmp' 'icmp_ln156_18' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 331 [1/1] (0.92ns)   --->   "%icmp_ln156_19 = icmp_eq  i23 %trunc_ln156_9, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 331 'icmp' 'icmp_ln156_19' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 332 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_10)   --->   "%or_ln156_9 = or i1 %icmp_ln156_19, i1 %icmp_ln156_18" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 332 'or' 'or_ln156_9' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 333 [1/1] (0.76ns)   --->   "%icmp_ln156_20 = icmp_ne  i8 %tmp_25, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 333 'icmp' 'icmp_ln156_20' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 334 [1/1] (0.92ns)   --->   "%icmp_ln156_21 = icmp_eq  i23 %trunc_ln156_10, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 334 'icmp' 'icmp_ln156_21' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 335 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_10)   --->   "%or_ln156_10 = or i1 %icmp_ln156_21, i1 %icmp_ln156_20" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 335 'or' 'or_ln156_10' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 336 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_10)   --->   "%and_ln156_9 = and i1 %or_ln156_9, i1 %or_ln156_10" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 336 'and' 'and_ln156_9' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 337 [1/2] (2.78ns)   --->   "%tmp_26 = fcmp_ogt  i32 %tmp_10, i32 %tmp_52" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 337 'fcmp' 'tmp_26' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 338 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_10 = and i1 %and_ln156_9, i1 %tmp_26" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 338 'and' 'and_ln156_10' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 339 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_53 = select i1 %and_ln156_10, i32 %tmp_10, i32 %tmp_52" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 339 'select' 'tmp_53' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_22 : Operation 340 [2/2] (2.78ns)   --->   "%tmp_29 = fcmp_ogt  i32 %tmp_12, i32 %tmp_53" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 340 'fcmp' 'tmp_29' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 6.30>
+ST_23 : Operation 341 [1/1] (0.00ns)   --->   "%bitcast_ln156_11 = bitcast i32 %tmp_12" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 341 'bitcast' 'bitcast_ln156_11' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 342 [1/1] (0.00ns)   --->   "%tmp_27 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_11, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 342 'partselect' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 343 [1/1] (0.00ns)   --->   "%trunc_ln156_11 = trunc i32 %bitcast_ln156_11" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 343 'trunc' 'trunc_ln156_11' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 344 [1/1] (0.00ns)   --->   "%bitcast_ln156_12 = bitcast i32 %tmp_53" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 344 'bitcast' 'bitcast_ln156_12' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 345 [1/1] (0.00ns)   --->   "%tmp_28 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_12, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 345 'partselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 346 [1/1] (0.00ns)   --->   "%trunc_ln156_12 = trunc i32 %bitcast_ln156_12" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 346 'trunc' 'trunc_ln156_12' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 347 [1/1] (0.76ns)   --->   "%icmp_ln156_22 = icmp_ne  i8 %tmp_27, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 347 'icmp' 'icmp_ln156_22' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 348 [1/1] (0.92ns)   --->   "%icmp_ln156_23 = icmp_eq  i23 %trunc_ln156_11, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 348 'icmp' 'icmp_ln156_23' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 349 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_12)   --->   "%or_ln156_11 = or i1 %icmp_ln156_23, i1 %icmp_ln156_22" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 349 'or' 'or_ln156_11' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 350 [1/1] (0.76ns)   --->   "%icmp_ln156_24 = icmp_ne  i8 %tmp_28, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 350 'icmp' 'icmp_ln156_24' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 351 [1/1] (0.92ns)   --->   "%icmp_ln156_25 = icmp_eq  i23 %trunc_ln156_12, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 351 'icmp' 'icmp_ln156_25' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 352 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_12)   --->   "%or_ln156_12 = or i1 %icmp_ln156_25, i1 %icmp_ln156_24" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 352 'or' 'or_ln156_12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 353 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_12)   --->   "%and_ln156_11 = and i1 %or_ln156_11, i1 %or_ln156_12" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 353 'and' 'and_ln156_11' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 354 [1/2] (2.78ns)   --->   "%tmp_29 = fcmp_ogt  i32 %tmp_12, i32 %tmp_53" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 354 'fcmp' 'tmp_29' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 355 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_12 = and i1 %and_ln156_11, i1 %tmp_29" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 355 'and' 'and_ln156_12' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 356 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_54 = select i1 %and_ln156_12, i32 %tmp_12, i32 %tmp_53" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 356 'select' 'tmp_54' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_23 : Operation 357 [2/2] (2.78ns)   --->   "%tmp_32 = fcmp_ogt  i32 %tmp_14, i32 %tmp_54" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 357 'fcmp' 'tmp_32' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 6.30>
+ST_24 : Operation 358 [1/1] (0.00ns)   --->   "%bitcast_ln156_13 = bitcast i32 %tmp_14" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 358 'bitcast' 'bitcast_ln156_13' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 359 [1/1] (0.00ns)   --->   "%tmp_30 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_13, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 359 'partselect' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 360 [1/1] (0.00ns)   --->   "%trunc_ln156_13 = trunc i32 %bitcast_ln156_13" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 360 'trunc' 'trunc_ln156_13' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 361 [1/1] (0.00ns)   --->   "%bitcast_ln156_14 = bitcast i32 %tmp_54" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 361 'bitcast' 'bitcast_ln156_14' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 362 [1/1] (0.00ns)   --->   "%tmp_31 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_14, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 362 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 363 [1/1] (0.00ns)   --->   "%trunc_ln156_14 = trunc i32 %bitcast_ln156_14" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 363 'trunc' 'trunc_ln156_14' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 364 [1/1] (0.76ns)   --->   "%icmp_ln156_26 = icmp_ne  i8 %tmp_30, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 364 'icmp' 'icmp_ln156_26' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 365 [1/1] (0.92ns)   --->   "%icmp_ln156_27 = icmp_eq  i23 %trunc_ln156_13, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 365 'icmp' 'icmp_ln156_27' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 366 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_14)   --->   "%or_ln156_13 = or i1 %icmp_ln156_27, i1 %icmp_ln156_26" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 366 'or' 'or_ln156_13' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 367 [1/1] (0.76ns)   --->   "%icmp_ln156_28 = icmp_ne  i8 %tmp_31, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 367 'icmp' 'icmp_ln156_28' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 368 [1/1] (0.92ns)   --->   "%icmp_ln156_29 = icmp_eq  i23 %trunc_ln156_14, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 368 'icmp' 'icmp_ln156_29' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 369 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_14)   --->   "%or_ln156_14 = or i1 %icmp_ln156_29, i1 %icmp_ln156_28" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 369 'or' 'or_ln156_14' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 370 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_14)   --->   "%and_ln156_13 = and i1 %or_ln156_13, i1 %or_ln156_14" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 370 'and' 'and_ln156_13' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 371 [1/2] (2.78ns)   --->   "%tmp_32 = fcmp_ogt  i32 %tmp_14, i32 %tmp_54" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 371 'fcmp' 'tmp_32' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 372 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_14 = and i1 %and_ln156_13, i1 %tmp_32" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 372 'and' 'and_ln156_14' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 373 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_55 = select i1 %and_ln156_14, i32 %tmp_14, i32 %tmp_54" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 373 'select' 'tmp_55' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_24 : Operation 374 [2/2] (2.78ns)   --->   "%tmp_35 = fcmp_ogt  i32 %tmp_16, i32 %tmp_55" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 374 'fcmp' 'tmp_35' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 3.51>
+ST_25 : Operation 375 [1/1] (0.00ns)   --->   "%bitcast_ln156_15 = bitcast i32 %tmp_16" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 375 'bitcast' 'bitcast_ln156_15' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 376 [1/1] (0.00ns)   --->   "%tmp_33 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_15, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 376 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 377 [1/1] (0.00ns)   --->   "%trunc_ln156_15 = trunc i32 %bitcast_ln156_15" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 377 'trunc' 'trunc_ln156_15' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 378 [1/1] (0.00ns)   --->   "%bitcast_ln156_16 = bitcast i32 %tmp_55" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 378 'bitcast' 'bitcast_ln156_16' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 379 [1/1] (0.00ns)   --->   "%tmp_34 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %bitcast_ln156_16, i32 23, i32 30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 379 'partselect' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 380 [1/1] (0.00ns)   --->   "%trunc_ln156_16 = trunc i32 %bitcast_ln156_16" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 380 'trunc' 'trunc_ln156_16' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 381 [1/1] (0.76ns)   --->   "%icmp_ln156_30 = icmp_ne  i8 %tmp_33, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 381 'icmp' 'icmp_ln156_30' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 382 [1/1] (0.92ns)   --->   "%icmp_ln156_31 = icmp_eq  i23 %trunc_ln156_15, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 382 'icmp' 'icmp_ln156_31' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 383 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_16)   --->   "%or_ln156_15 = or i1 %icmp_ln156_31, i1 %icmp_ln156_30" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 383 'or' 'or_ln156_15' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 384 [1/1] (0.76ns)   --->   "%icmp_ln156_32 = icmp_ne  i8 %tmp_34, i8 255" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 384 'icmp' 'icmp_ln156_32' <Predicate = true> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 385 [1/1] (0.92ns)   --->   "%icmp_ln156_33 = icmp_eq  i23 %trunc_ln156_16, i23 0" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 385 'icmp' 'icmp_ln156_33' <Predicate = true> <Delay = 0.92> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.92> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 386 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_16)   --->   "%or_ln156_16 = or i1 %icmp_ln156_33, i1 %icmp_ln156_32" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 386 'or' 'or_ln156_16' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 387 [1/1] (0.00ns) (grouped into LUT with out node and_ln156_16)   --->   "%and_ln156_15 = and i1 %or_ln156_15, i1 %or_ln156_16" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 387 'and' 'and_ln156_15' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 388 [1/2] (2.78ns)   --->   "%tmp_35 = fcmp_ogt  i32 %tmp_16, i32 %tmp_55" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 388 'fcmp' 'tmp_35' <Predicate = true> <Delay = 2.78> <CoreInst = "FCompare">   --->   Core 19 'FCompare' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 389 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln156_16 = and i1 %and_ln156_15, i1 %tmp_35" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 389 'and' 'and_ln156_16' <Predicate = true> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 390 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_56 = select i1 %and_ln156_16, i32 %tmp_16, i32 %tmp_55" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156]   --->   Operation 390 'select' 'tmp_56' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 7.30>
+ST_26 : Operation 391 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i64 %sext_ln51_cast" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51]   --->   Operation 391 'getelementptr' 'gmem_addr' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_26 : Operation 392 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @L5_L6_str"   --->   Operation 392 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_26 : Operation 393 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 36, i64 36, i64 36"   --->   Operation 393 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_26 : Operation 394 [1/1] (0.00ns)   --->   "%specpipeline_ln73 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_11" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:73]   --->   Operation 394 'specpipeline' 'specpipeline_ln73' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_26 : Operation 395 [1/1] (0.00ns)   --->   "%br_ln76 = br i1 %icmp_ln76, void %L15, void %for.inc42" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76]   --->   Operation 395 'br' 'br_ln76' <Predicate = (!icmp_ln68)> <Delay = 0.00>
+ST_26 : Operation 396 [1/1] (0.00ns)   --->   "%bitcast_ln160 = bitcast i32 %tmp_56" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:160]   --->   Operation 396 'bitcast' 'bitcast_ln160' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 397 [1/1] (7.30ns)   --->   "%write_ln160 = write void @_ssdm_op_Write.m_axi.p1i32, i32 %gmem_addr, i32 %bitcast_ln160, i4 15" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:160]   --->   Operation 397 'write' 'write_ln160' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_26 : Operation 398 [1/1] (0.00ns)   --->   "%br_ln71 = br void %for.body26" [AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71]   --->   Operation 398 'br' 'br_ln71' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.240ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar' [85]  (0.427 ns)
+	'load' operation 3 bit ('indvar_load', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) on local variable 'indvar' [104]  (0.000 ns)
+	'add' operation 3 bit ('add_ln68_1', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) [111]  (0.673 ns)
+	'select' operation 3 bit ('select_ln68', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) [112]  (0.208 ns)
+	'mul' operation 8 bit ('empty_27', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) [114]  (1.230 ns)
+	'add' operation 8 bit ('tmp2', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) [121]  (0.765 ns)
+	'add' operation 16 bit ('empty_30', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) [123]  (0.853 ns)
+	'add' operation 64 bit ('empty_31', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68) [126]  (1.085 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 4>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 5>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 6>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 7>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 8>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 9>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty_25', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [203]  (7.300 ns)
+
+ <State 10>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_1_read', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [204]  (7.300 ns)
+
+ <State 11>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_1_read_1', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [206]  (7.300 ns)
+
+ <State 12>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_1_read_2', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [208]  (7.300 ns)
+
+ <State 13>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_2_read', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [211]  (7.300 ns)
+
+ <State 14>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_2_read_1', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [213]  (7.300 ns)
+
+ <State 15>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_2_read_2', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91) [215]  (7.300 ns)
+
+ <State 16>: 3.209ns
+The critical path consists of the following:
+	'load' operation 32 bit ('line_buffer_2D') on local variable 'line_buffer_2D', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:42 [93]  (0.000 ns)
+	multiplexor before 'phi' operation 32 bit ('line_buffer_2D') with incoming values : ('line_buffer_2D') ('p_load58') [230]  (0.427 ns)
+	'phi' operation 32 bit ('line_buffer_2D') with incoming values : ('line_buffer_2D') ('p_load58') [230]  (0.000 ns)
+	'fcmp' operation 1 bit ('tmp_5', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [237]  (2.782 ns)
+
+ <State 17>: 6.013ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_5', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [237]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [238]  (0.000 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [239]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_11', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [253]  (2.782 ns)
+
+ <State 18>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_11', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [253]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_2', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [254]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [255]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_17', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [269]  (2.782 ns)
+
+ <State 19>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_17', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [269]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_4', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [270]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [271]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_20', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [285]  (2.782 ns)
+
+ <State 20>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_20', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [285]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_6', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [286]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [287]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_23', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [301]  (2.782 ns)
+
+ <State 21>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_23', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [301]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_8', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [302]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [303]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_26', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [317]  (2.782 ns)
+
+ <State 22>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_26', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [317]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_10', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [318]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [319]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_29', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [333]  (2.782 ns)
+
+ <State 23>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_29', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [333]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_12', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [334]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [335]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_32', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [349]  (2.782 ns)
+
+ <State 24>: 6.300ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_32', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [349]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_14', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [350]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [351]  (0.449 ns)
+	'fcmp' operation 1 bit ('tmp_35', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [365]  (2.782 ns)
+
+ <State 25>: 3.518ns
+The critical path consists of the following:
+	'fcmp' operation 1 bit ('tmp_35', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [365]  (2.782 ns)
+	'and' operation 1 bit ('and_ln156_16', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [366]  (0.287 ns)
+	'select' operation 32 bit ('tmp', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156) [367]  (0.449 ns)
+
+ <State 26>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51) [105]  (0.000 ns)
+	bus write operation ('write_ln160', AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:160) on port 'gmem' (AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:160) [369]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

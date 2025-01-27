@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1310" tag="" content="Cannot find source file NN.cpp; skipping it." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 493.055 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../NN/NN.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5570]" key="HLS 207-5570" tag="" content="unexpected pragma argument &apos;fmul&apos;, expects function/operation (/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)" resolution=""/>
+	<Message severity="ERROR" prefix="[HLS 207-3777]" key="HLS 207-3777" tag="" content="use of undeclared identifier &apos;Pad2_out_img&apos;; did you mean &apos;Pad1_out_img&apos;? (../NN/NN.cpp:98:24)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 207-4436]" key="HLS 207-4436" tag="" content="&apos;Pad1_out_img&apos; declared here (../NN/NN.cpp:50:14)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2161]" key="HLS 200-2161" tag="" content="Finished Command csynth_design Elapsed time: 00:00:02; Allocated memory: 0.000 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: source NN.tcl" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: source NN.tcl" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: open_project Alex_Net" resolution=""/>
+</Messages>

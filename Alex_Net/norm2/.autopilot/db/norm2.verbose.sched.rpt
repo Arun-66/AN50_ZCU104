@@ -1,0 +1,801 @@
+
+
+================================================================
+== Vitis HLS Report for 'norm2'
+================================================================
+* Date:           Sat Jan 25 18:25:23 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        Alex_Net
+* Solution:       norm2 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    86919|    86919|  0.869 ms|  0.869 ms|  86920|  86920|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 47
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 48 [1/1] (1.00ns)   --->   "%out_img_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %out_img"   --->   Operation 48 'read' 'out_img_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 49 [1/1] (1.00ns)   --->   "%inp_img_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %inp_img"   --->   Operation 49 'read' 'inp_img_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 120 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%inp_image = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 50 'alloca' 'inp_image' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%inp_image_1 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 51 'alloca' 'inp_image_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%inp_image_2 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 52 'alloca' 'inp_image_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%inp_image_3 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 53 'alloca' 'inp_image_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%inp_image_4 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 54 'alloca' 'inp_image_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%inp_image_5 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 55 'alloca' 'inp_image_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%inp_image_6 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 56 'alloca' 'inp_image_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%inp_image_7 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 57 'alloca' 'inp_image_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%inp_image_8 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 58 'alloca' 'inp_image_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%inp_image_9 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 59 'alloca' 'inp_image_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%inp_image_10 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 60 'alloca' 'inp_image_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%inp_image_11 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 61 'alloca' 'inp_image_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%inp_image_12 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 62 'alloca' 'inp_image_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%inp_image_13 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 63 'alloca' 'inp_image_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%inp_image_14 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 64 'alloca' 'inp_image_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%inp_image_15 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 65 'alloca' 'inp_image_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%inp_image_16 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 66 'alloca' 'inp_image_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%inp_image_17 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 67 'alloca' 'inp_image_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%inp_image_18 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 68 'alloca' 'inp_image_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%inp_image_19 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 69 'alloca' 'inp_image_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%inp_image_20 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 70 'alloca' 'inp_image_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%inp_image_21 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 71 'alloca' 'inp_image_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%inp_image_22 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 72 'alloca' 'inp_image_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%inp_image_23 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 73 'alloca' 'inp_image_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%inp_image_24 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 74 'alloca' 'inp_image_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%inp_image_25 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 75 'alloca' 'inp_image_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%inp_image_26 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 76 'alloca' 'inp_image_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%inp_image_27 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 77 'alloca' 'inp_image_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%inp_image_28 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 78 'alloca' 'inp_image_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%inp_image_29 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 79 'alloca' 'inp_image_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%inp_image_30 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 80 'alloca' 'inp_image_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%inp_image_31 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 81 'alloca' 'inp_image_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%inp_image_32 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 82 'alloca' 'inp_image_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%inp_image_33 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 83 'alloca' 'inp_image_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%inp_image_34 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 84 'alloca' 'inp_image_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%inp_image_35 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 85 'alloca' 'inp_image_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%inp_image_36 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 86 'alloca' 'inp_image_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%inp_image_37 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 87 'alloca' 'inp_image_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%inp_image_38 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 88 'alloca' 'inp_image_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%inp_image_39 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 89 'alloca' 'inp_image_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%inp_image_40 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 90 'alloca' 'inp_image_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%inp_image_41 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 91 'alloca' 'inp_image_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%inp_image_42 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 92 'alloca' 'inp_image_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%inp_image_43 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 93 'alloca' 'inp_image_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%inp_image_44 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 94 'alloca' 'inp_image_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%inp_image_45 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 95 'alloca' 'inp_image_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%inp_image_46 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 96 'alloca' 'inp_image_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%inp_image_47 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 97 'alloca' 'inp_image_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%inp_image_48 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 98 'alloca' 'inp_image_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%inp_image_49 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 99 'alloca' 'inp_image_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%inp_image_50 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 100 'alloca' 'inp_image_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%inp_image_51 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 101 'alloca' 'inp_image_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%inp_image_52 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 102 'alloca' 'inp_image_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%inp_image_53 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 103 'alloca' 'inp_image_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%inp_image_54 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 104 'alloca' 'inp_image_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%inp_image_55 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 105 'alloca' 'inp_image_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%inp_image_56 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 106 'alloca' 'inp_image_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%inp_image_57 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 107 'alloca' 'inp_image_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%inp_image_58 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 108 'alloca' 'inp_image_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%inp_image_59 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 109 'alloca' 'inp_image_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%inp_image_60 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 110 'alloca' 'inp_image_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%inp_image_61 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 111 'alloca' 'inp_image_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%inp_image_62 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 112 'alloca' 'inp_image_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%inp_image_63 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 113 'alloca' 'inp_image_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%inp_image_64 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 114 'alloca' 'inp_image_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%inp_image_65 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 115 'alloca' 'inp_image_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%inp_image_66 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 116 'alloca' 'inp_image_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%inp_image_67 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 117 'alloca' 'inp_image_67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%inp_image_68 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 118 'alloca' 'inp_image_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%inp_image_69 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 119 'alloca' 'inp_image_69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%inp_image_70 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 120 'alloca' 'inp_image_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%inp_image_71 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 121 'alloca' 'inp_image_71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%inp_image_72 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 122 'alloca' 'inp_image_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%inp_image_73 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 123 'alloca' 'inp_image_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%inp_image_74 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 124 'alloca' 'inp_image_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%inp_image_75 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 125 'alloca' 'inp_image_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%inp_image_76 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 126 'alloca' 'inp_image_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%inp_image_77 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 127 'alloca' 'inp_image_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%inp_image_78 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 128 'alloca' 'inp_image_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%inp_image_79 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 129 'alloca' 'inp_image_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%inp_image_80 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 130 'alloca' 'inp_image_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%inp_image_81 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 131 'alloca' 'inp_image_81' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%inp_image_82 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 132 'alloca' 'inp_image_82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%inp_image_83 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 133 'alloca' 'inp_image_83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%inp_image_84 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 134 'alloca' 'inp_image_84' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%inp_image_85 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 135 'alloca' 'inp_image_85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%inp_image_86 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 136 'alloca' 'inp_image_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%inp_image_87 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 137 'alloca' 'inp_image_87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%inp_image_88 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 138 'alloca' 'inp_image_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%inp_image_89 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 139 'alloca' 'inp_image_89' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%inp_image_90 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 140 'alloca' 'inp_image_90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%inp_image_91 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 141 'alloca' 'inp_image_91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%inp_image_92 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 142 'alloca' 'inp_image_92' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%inp_image_93 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 143 'alloca' 'inp_image_93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%inp_image_94 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 144 'alloca' 'inp_image_94' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%inp_image_95 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 145 'alloca' 'inp_image_95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%inp_image_96 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 146 'alloca' 'inp_image_96' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%inp_image_97 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 147 'alloca' 'inp_image_97' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%inp_image_98 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 148 'alloca' 'inp_image_98' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%inp_image_99 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 149 'alloca' 'inp_image_99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%inp_image_100 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 150 'alloca' 'inp_image_100' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%inp_image_101 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 151 'alloca' 'inp_image_101' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%inp_image_102 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 152 'alloca' 'inp_image_102' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%inp_image_103 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 153 'alloca' 'inp_image_103' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%inp_image_104 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 154 'alloca' 'inp_image_104' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%inp_image_105 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 155 'alloca' 'inp_image_105' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%inp_image_106 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 156 'alloca' 'inp_image_106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%inp_image_107 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 157 'alloca' 'inp_image_107' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%inp_image_108 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 158 'alloca' 'inp_image_108' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%inp_image_109 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 159 'alloca' 'inp_image_109' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%inp_image_110 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 160 'alloca' 'inp_image_110' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%inp_image_111 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 161 'alloca' 'inp_image_111' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%inp_image_112 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 162 'alloca' 'inp_image_112' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%inp_image_113 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 163 'alloca' 'inp_image_113' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%inp_image_114 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 164 'alloca' 'inp_image_114' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%inp_image_115 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 165 'alloca' 'inp_image_115' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%inp_image_116 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 166 'alloca' 'inp_image_116' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%inp_image_117 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 167 'alloca' 'inp_image_117' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%inp_image_118 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 168 'alloca' 'inp_image_118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%inp_image_119 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 169 'alloca' 'inp_image_119' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%inp_image_120 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 170 'alloca' 'inp_image_120' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%inp_image_121 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 171 'alloca' 'inp_image_121' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%inp_image_122 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 172 'alloca' 'inp_image_122' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%inp_image_123 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 173 'alloca' 'inp_image_123' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%inp_image_124 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 174 'alloca' 'inp_image_124' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%inp_image_125 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 175 'alloca' 'inp_image_125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%inp_image_126 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 176 'alloca' 'inp_image_126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%inp_image_127 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 177 'alloca' 'inp_image_127' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%inp_image_128 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 178 'alloca' 'inp_image_128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%inp_image_129 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 179 'alloca' 'inp_image_129' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%inp_image_130 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 180 'alloca' 'inp_image_130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%inp_image_131 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 181 'alloca' 'inp_image_131' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%inp_image_132 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 182 'alloca' 'inp_image_132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%inp_image_133 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 183 'alloca' 'inp_image_133' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%inp_image_134 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 184 'alloca' 'inp_image_134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%inp_image_135 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 185 'alloca' 'inp_image_135' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%inp_image_136 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 186 'alloca' 'inp_image_136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%inp_image_137 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 187 'alloca' 'inp_image_137' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%inp_image_138 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 188 'alloca' 'inp_image_138' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%inp_image_139 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 189 'alloca' 'inp_image_139' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%inp_image_140 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 190 'alloca' 'inp_image_140' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%inp_image_141 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 191 'alloca' 'inp_image_141' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%inp_image_142 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 192 'alloca' 'inp_image_142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%inp_image_143 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 193 'alloca' 'inp_image_143' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%inp_image_144 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 194 'alloca' 'inp_image_144' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%inp_image_145 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 195 'alloca' 'inp_image_145' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%inp_image_146 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 196 'alloca' 'inp_image_146' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%inp_image_147 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 197 'alloca' 'inp_image_147' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (0.00ns)   --->   "%inp_image_148 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 198 'alloca' 'inp_image_148' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 199 [1/1] (0.00ns)   --->   "%inp_image_149 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 199 'alloca' 'inp_image_149' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 200 [1/1] (0.00ns)   --->   "%inp_image_150 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 200 'alloca' 'inp_image_150' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 201 [1/1] (0.00ns)   --->   "%inp_image_151 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 201 'alloca' 'inp_image_151' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 202 [1/1] (0.00ns)   --->   "%inp_image_152 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 202 'alloca' 'inp_image_152' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 203 [1/1] (0.00ns)   --->   "%inp_image_153 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 203 'alloca' 'inp_image_153' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 204 [1/1] (0.00ns)   --->   "%inp_image_154 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 204 'alloca' 'inp_image_154' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 205 [1/1] (0.00ns)   --->   "%inp_image_155 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 205 'alloca' 'inp_image_155' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 206 [1/1] (0.00ns)   --->   "%inp_image_156 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 206 'alloca' 'inp_image_156' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 207 [1/1] (0.00ns)   --->   "%inp_image_157 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 207 'alloca' 'inp_image_157' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 208 [1/1] (0.00ns)   --->   "%inp_image_158 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 208 'alloca' 'inp_image_158' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 209 [1/1] (0.00ns)   --->   "%inp_image_159 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 209 'alloca' 'inp_image_159' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 210 [1/1] (0.00ns)   --->   "%inp_image_160 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 210 'alloca' 'inp_image_160' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 211 [1/1] (0.00ns)   --->   "%inp_image_161 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 211 'alloca' 'inp_image_161' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 212 [1/1] (0.00ns)   --->   "%inp_image_162 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 212 'alloca' 'inp_image_162' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 213 [1/1] (0.00ns)   --->   "%inp_image_163 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 213 'alloca' 'inp_image_163' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 214 [1/1] (0.00ns)   --->   "%inp_image_164 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 214 'alloca' 'inp_image_164' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 215 [1/1] (0.00ns)   --->   "%inp_image_165 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 215 'alloca' 'inp_image_165' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 216 [1/1] (0.00ns)   --->   "%inp_image_166 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 216 'alloca' 'inp_image_166' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 217 [1/1] (0.00ns)   --->   "%inp_image_167 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 217 'alloca' 'inp_image_167' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 218 [1/1] (0.00ns)   --->   "%inp_image_168 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 218 'alloca' 'inp_image_168' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 219 [1/1] (0.00ns)   --->   "%inp_image_169 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 219 'alloca' 'inp_image_169' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 220 [1/1] (0.00ns)   --->   "%inp_image_170 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 220 'alloca' 'inp_image_170' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 221 [1/1] (0.00ns)   --->   "%inp_image_171 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 221 'alloca' 'inp_image_171' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 222 [1/1] (0.00ns)   --->   "%inp_image_172 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 222 'alloca' 'inp_image_172' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 223 [1/1] (0.00ns)   --->   "%inp_image_173 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 223 'alloca' 'inp_image_173' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 224 [1/1] (0.00ns)   --->   "%inp_image_174 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 224 'alloca' 'inp_image_174' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 225 [1/1] (0.00ns)   --->   "%inp_image_175 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 225 'alloca' 'inp_image_175' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 226 [1/1] (0.00ns)   --->   "%inp_image_176 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 226 'alloca' 'inp_image_176' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 227 [1/1] (0.00ns)   --->   "%inp_image_177 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 227 'alloca' 'inp_image_177' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 228 [1/1] (0.00ns)   --->   "%inp_image_178 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 228 'alloca' 'inp_image_178' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 229 [1/1] (0.00ns)   --->   "%inp_image_179 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 229 'alloca' 'inp_image_179' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 230 [1/1] (0.00ns)   --->   "%inp_image_180 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 230 'alloca' 'inp_image_180' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 231 [1/1] (0.00ns)   --->   "%inp_image_181 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 231 'alloca' 'inp_image_181' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 232 [1/1] (0.00ns)   --->   "%inp_image_182 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 232 'alloca' 'inp_image_182' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 233 [1/1] (0.00ns)   --->   "%inp_image_183 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 233 'alloca' 'inp_image_183' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 234 [1/1] (0.00ns)   --->   "%inp_image_184 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 234 'alloca' 'inp_image_184' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 235 [1/1] (0.00ns)   --->   "%inp_image_185 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 235 'alloca' 'inp_image_185' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 236 [1/1] (0.00ns)   --->   "%inp_image_186 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 236 'alloca' 'inp_image_186' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 237 [1/1] (0.00ns)   --->   "%inp_image_187 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 237 'alloca' 'inp_image_187' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 238 [1/1] (0.00ns)   --->   "%inp_image_188 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 238 'alloca' 'inp_image_188' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 239 [1/1] (0.00ns)   --->   "%inp_image_189 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 239 'alloca' 'inp_image_189' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 240 [1/1] (0.00ns)   --->   "%inp_image_190 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 240 'alloca' 'inp_image_190' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 241 [1/1] (0.00ns)   --->   "%inp_image_191 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 241 'alloca' 'inp_image_191' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 242 [1/1] (0.00ns)   --->   "%inp_image_192 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 242 'alloca' 'inp_image_192' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 243 [1/1] (0.00ns)   --->   "%inp_image_193 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 243 'alloca' 'inp_image_193' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 244 [1/1] (0.00ns)   --->   "%inp_image_194 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 244 'alloca' 'inp_image_194' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 245 [1/1] (0.00ns)   --->   "%inp_image_195 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 245 'alloca' 'inp_image_195' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 246 [1/1] (0.00ns)   --->   "%inp_image_196 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 246 'alloca' 'inp_image_196' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 247 [1/1] (0.00ns)   --->   "%inp_image_197 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 247 'alloca' 'inp_image_197' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 248 [1/1] (0.00ns)   --->   "%inp_image_198 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 248 'alloca' 'inp_image_198' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 249 [1/1] (0.00ns)   --->   "%inp_image_199 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 249 'alloca' 'inp_image_199' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 250 [1/1] (0.00ns)   --->   "%inp_image_200 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 250 'alloca' 'inp_image_200' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 251 [1/1] (0.00ns)   --->   "%inp_image_201 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 251 'alloca' 'inp_image_201' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 252 [1/1] (0.00ns)   --->   "%inp_image_202 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 252 'alloca' 'inp_image_202' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 253 [1/1] (0.00ns)   --->   "%inp_image_203 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 253 'alloca' 'inp_image_203' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 254 [1/1] (0.00ns)   --->   "%inp_image_204 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 254 'alloca' 'inp_image_204' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 255 [1/1] (0.00ns)   --->   "%inp_image_205 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 255 'alloca' 'inp_image_205' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 256 [1/1] (0.00ns)   --->   "%inp_image_206 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 256 'alloca' 'inp_image_206' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 257 [1/1] (0.00ns)   --->   "%inp_image_207 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 257 'alloca' 'inp_image_207' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 258 [1/1] (0.00ns)   --->   "%inp_image_208 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 258 'alloca' 'inp_image_208' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 259 [1/1] (0.00ns)   --->   "%inp_image_209 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 259 'alloca' 'inp_image_209' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 260 [1/1] (0.00ns)   --->   "%inp_image_210 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 260 'alloca' 'inp_image_210' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 261 [1/1] (0.00ns)   --->   "%inp_image_211 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 261 'alloca' 'inp_image_211' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 262 [1/1] (0.00ns)   --->   "%inp_image_212 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 262 'alloca' 'inp_image_212' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 263 [1/1] (0.00ns)   --->   "%inp_image_213 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 263 'alloca' 'inp_image_213' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 264 [1/1] (0.00ns)   --->   "%inp_image_214 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 264 'alloca' 'inp_image_214' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 265 [1/1] (0.00ns)   --->   "%inp_image_215 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 265 'alloca' 'inp_image_215' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 266 [1/1] (0.00ns)   --->   "%inp_image_216 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 266 'alloca' 'inp_image_216' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 267 [1/1] (0.00ns)   --->   "%inp_image_217 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 267 'alloca' 'inp_image_217' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 268 [1/1] (0.00ns)   --->   "%inp_image_218 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 268 'alloca' 'inp_image_218' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 269 [1/1] (0.00ns)   --->   "%inp_image_219 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 269 'alloca' 'inp_image_219' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 270 [1/1] (0.00ns)   --->   "%inp_image_220 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 270 'alloca' 'inp_image_220' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 271 [1/1] (0.00ns)   --->   "%inp_image_221 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 271 'alloca' 'inp_image_221' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 272 [1/1] (0.00ns)   --->   "%inp_image_222 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 272 'alloca' 'inp_image_222' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 273 [1/1] (0.00ns)   --->   "%inp_image_223 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 273 'alloca' 'inp_image_223' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 274 [1/1] (0.00ns)   --->   "%inp_image_224 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 274 'alloca' 'inp_image_224' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 275 [1/1] (0.00ns)   --->   "%inp_image_225 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 275 'alloca' 'inp_image_225' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 276 [1/1] (0.00ns)   --->   "%inp_image_226 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 276 'alloca' 'inp_image_226' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 277 [1/1] (0.00ns)   --->   "%inp_image_227 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 277 'alloca' 'inp_image_227' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 278 [1/1] (0.00ns)   --->   "%inp_image_228 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 278 'alloca' 'inp_image_228' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 279 [1/1] (0.00ns)   --->   "%inp_image_229 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 279 'alloca' 'inp_image_229' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 280 [1/1] (0.00ns)   --->   "%inp_image_230 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 280 'alloca' 'inp_image_230' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 281 [1/1] (0.00ns)   --->   "%inp_image_231 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 281 'alloca' 'inp_image_231' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 282 [1/1] (0.00ns)   --->   "%inp_image_232 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 282 'alloca' 'inp_image_232' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 283 [1/1] (0.00ns)   --->   "%inp_image_233 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 283 'alloca' 'inp_image_233' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 284 [1/1] (0.00ns)   --->   "%inp_image_234 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 284 'alloca' 'inp_image_234' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 285 [1/1] (0.00ns)   --->   "%inp_image_235 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 285 'alloca' 'inp_image_235' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 286 [1/1] (0.00ns)   --->   "%inp_image_236 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 286 'alloca' 'inp_image_236' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 287 [1/1] (0.00ns)   --->   "%inp_image_237 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 287 'alloca' 'inp_image_237' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 288 [1/1] (0.00ns)   --->   "%inp_image_238 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 288 'alloca' 'inp_image_238' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 289 [1/1] (0.00ns)   --->   "%inp_image_239 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 289 'alloca' 'inp_image_239' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 290 [1/1] (0.00ns)   --->   "%inp_image_240 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 290 'alloca' 'inp_image_240' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 291 [1/1] (0.00ns)   --->   "%inp_image_241 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 291 'alloca' 'inp_image_241' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 292 [1/1] (0.00ns)   --->   "%inp_image_242 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 292 'alloca' 'inp_image_242' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 293 [1/1] (0.00ns)   --->   "%inp_image_243 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 293 'alloca' 'inp_image_243' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 294 [1/1] (0.00ns)   --->   "%inp_image_244 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 294 'alloca' 'inp_image_244' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 295 [1/1] (0.00ns)   --->   "%inp_image_245 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 295 'alloca' 'inp_image_245' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 296 [1/1] (0.00ns)   --->   "%inp_image_246 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 296 'alloca' 'inp_image_246' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 297 [1/1] (0.00ns)   --->   "%inp_image_247 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 297 'alloca' 'inp_image_247' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 298 [1/1] (0.00ns)   --->   "%inp_image_248 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 298 'alloca' 'inp_image_248' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 299 [1/1] (0.00ns)   --->   "%inp_image_249 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 299 'alloca' 'inp_image_249' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 300 [1/1] (0.00ns)   --->   "%inp_image_250 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 300 'alloca' 'inp_image_250' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 301 [1/1] (0.00ns)   --->   "%inp_image_251 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 301 'alloca' 'inp_image_251' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 302 [1/1] (0.00ns)   --->   "%inp_image_252 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 302 'alloca' 'inp_image_252' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 303 [1/1] (0.00ns)   --->   "%inp_image_253 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 303 'alloca' 'inp_image_253' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 304 [1/1] (0.00ns)   --->   "%inp_image_254 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 304 'alloca' 'inp_image_254' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 305 [1/1] (0.00ns)   --->   "%inp_image_255 = alloca i64 1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42]   --->   Operation 305 'alloca' 'inp_image_255' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 306 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %inp_img_read, i32 2, i32 63" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 306 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 307 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %out_img_read, i32 2, i32 63" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59]   --->   Operation 307 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 308 [1/1] (0.00ns)   --->   "%sext_ln49 = sext i62 %trunc_ln" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 308 'sext' 'sext_ln49' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 309 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i32 %gmem0, i64 %sext_ln49" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 309 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 310 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 310 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 311 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 311 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 7.30>
+ST_4 : Operation 312 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 312 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 313 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 313 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 314 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 314 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 315 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 315 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 316 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 316 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 317 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem0_addr, i64 43264" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 317 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 318 [2/2] (0.00ns)   --->   "%call_ln49 = call void @norm2_Pipeline_L1_VITIS_LOOP_50_1_VITIS_LOOP_51_2, i32 %gmem0, i62 %trunc_ln, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i32 %inp_image_3, i32 %inp_image_4, i32 %inp_image_5, i32 %inp_image_6, i32 %inp_image_7, i32 %inp_image_8, i32 %inp_image_9, i32 %inp_image_10, i32 %inp_image_11, i32 %inp_image_12, i32 %inp_image_13, i32 %inp_image_14, i32 %inp_image_15, i32 %inp_image_16, i32 %inp_image_17, i32 %inp_image_18, i32 %inp_image_19, i32 %inp_image_20, i32 %inp_image_21, i32 %inp_image_22, i32 %inp_image_23, i32 %inp_image_24, i32 %inp_image_25, i32 %inp_image_26, i32 %inp_image_27, i32 %inp_image_28, i32 %inp_image_29, i32 %inp_image_30, i32 %inp_image_31, i32 %inp_image_32, i32 %inp_image_33, i32 %inp_image_34, i32 %inp_image_35, i32 %inp_image_36, i32 %inp_image_37, i32 %inp_image_38, i32 %inp_image_39, i32 %inp_image_40, i32 %inp_image_41, i32 %inp_image_42, i32 %inp_image_43, i32 %inp_image_44, i32 %inp_image_45, i32 %inp_image_46, i32 %inp_image_47, i32 %inp_image_48, i32 %inp_image_49, i32 %inp_image_50, i32 %inp_image_51, i32 %inp_image_52, i32 %inp_image_53, i32 %inp_image_54, i32 %inp_image_55, i32 %inp_image_56, i32 %inp_image_57, i32 %inp_image_58, i32 %inp_image_59, i32 %inp_image_60, i32 %inp_image_61, i32 %inp_image_62, i32 %inp_image_63, i32 %inp_image_64, i32 %inp_image_65, i32 %inp_image_66, i32 %inp_image_67, i32 %inp_image_68, i32 %inp_image_69, i32 %inp_image_70, i32 %inp_image_71, i32 %inp_image_72, i32 %inp_image_73, i32 %inp_image_74, i32 %inp_image_75, i32 %inp_image_76, i32 %inp_image_77, i32 %inp_image_78, i32 %inp_image_79, i32 %inp_image_80, i32 %inp_image_81, i32 %inp_image_82, i32 %inp_image_83, i32 %inp_image_84, i32 %inp_image_85, i32 %inp_image_86, i32 %inp_image_87, i32 %inp_image_88, i32 %inp_image_89, i32 %inp_image_90, i32 %inp_image_91, i32 %inp_image_92, i32 %inp_image_93, i32 %inp_image_94, i32 %inp_image_95, i32 %inp_image_96, i32 %inp_image_97, i32 %inp_image_98, i32 %inp_image_99, i32 %inp_image_100, i32 %inp_image_101, i32 %inp_image_102, i32 %inp_image_103, i32 %inp_image_104, i32 %inp_image_105, i32 %inp_image_106, i32 %inp_image_107, i32 %inp_image_108, i32 %inp_image_109, i32 %inp_image_110, i32 %inp_image_111, i32 %inp_image_112, i32 %inp_image_113, i32 %inp_image_114, i32 %inp_image_115, i32 %inp_image_116, i32 %inp_image_117, i32 %inp_image_118, i32 %inp_image_119, i32 %inp_image_120, i32 %inp_image_121, i32 %inp_image_122, i32 %inp_image_123, i32 %inp_image_124, i32 %inp_image_125, i32 %inp_image_126, i32 %inp_image_127, i32 %inp_image_128, i32 %inp_image_129, i32 %inp_image_130, i32 %inp_image_131, i32 %inp_image_132, i32 %inp_image_133, i32 %inp_image_134, i32 %inp_image_135, i32 %inp_image_136, i32 %inp_image_137, i32 %inp_image_138, i32 %inp_image_139, i32 %inp_image_140, i32 %inp_image_141, i32 %inp_image_142, i32 %inp_image_143, i32 %inp_image_144, i32 %inp_image_145, i32 %inp_image_146, i32 %inp_image_147, i32 %inp_image_148, i32 %inp_image_149, i32 %inp_image_150, i32 %inp_image_151, i32 %inp_image_152, i32 %inp_image_153, i32 %inp_image_154, i32 %inp_image_155, i32 %inp_image_156, i32 %inp_image_157, i32 %inp_image_158, i32 %inp_image_159, i32 %inp_image_160, i32 %inp_image_161, i32 %inp_image_162, i32 %inp_image_163, i32 %inp_image_164, i32 %inp_image_165, i32 %inp_image_166, i32 %inp_image_167, i32 %inp_image_168, i32 %inp_image_169, i32 %inp_image_170, i32 %inp_image_171, i32 %inp_image_172, i32 %inp_image_173, i32 %inp_image_174, i32 %inp_image_175, i32 %inp_image_176, i32 %inp_image_177, i32 %inp_image_178, i32 %inp_image_179, i32 %inp_image_180, i32 %inp_image_181, i32 %inp_image_182, i32 %inp_image_183, i32 %inp_image_184, i32 %inp_image_185, i32 %inp_image_186, i32 %inp_image_187, i32 %inp_image_188, i32 %inp_image_189, i32 %inp_image_190, i32 %inp_image_191, i32 %inp_image_192, i32 %inp_image_193, i32 %inp_image_194, i32 %inp_image_195, i32 %inp_image_196, i32 %inp_image_197, i32 %inp_image_198, i32 %inp_image_199, i32 %inp_image_200, i32 %inp_image_201, i32 %inp_image_202, i32 %inp_image_203, i32 %inp_image_204, i32 %inp_image_205, i32 %inp_image_206, i32 %inp_image_207, i32 %inp_image_208, i32 %inp_image_209, i32 %inp_image_210, i32 %inp_image_211, i32 %inp_image_212, i32 %inp_image_213, i32 %inp_image_214, i32 %inp_image_215, i32 %inp_image_216, i32 %inp_image_217, i32 %inp_image_218, i32 %inp_image_219, i32 %inp_image_220, i32 %inp_image_221, i32 %inp_image_222, i32 %inp_image_223, i32 %inp_image_224, i32 %inp_image_225, i32 %inp_image_226, i32 %inp_image_227, i32 %inp_image_228, i32 %inp_image_229, i32 %inp_image_230, i32 %inp_image_231, i32 %inp_image_232, i32 %inp_image_233, i32 %inp_image_234, i32 %inp_image_235, i32 %inp_image_236, i32 %inp_image_237, i32 %inp_image_238, i32 %inp_image_239, i32 %inp_image_240, i32 %inp_image_241, i32 %inp_image_242, i32 %inp_image_243, i32 %inp_image_244, i32 %inp_image_245, i32 %inp_image_246, i32 %inp_image_247, i32 %inp_image_248, i32 %inp_image_249, i32 %inp_image_250, i32 %inp_image_251, i32 %inp_image_252, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 318 'call' 'call_ln49' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 319 [1/2] (0.00ns)   --->   "%call_ln49 = call void @norm2_Pipeline_L1_VITIS_LOOP_50_1_VITIS_LOOP_51_2, i32 %gmem0, i62 %trunc_ln, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i32 %inp_image_3, i32 %inp_image_4, i32 %inp_image_5, i32 %inp_image_6, i32 %inp_image_7, i32 %inp_image_8, i32 %inp_image_9, i32 %inp_image_10, i32 %inp_image_11, i32 %inp_image_12, i32 %inp_image_13, i32 %inp_image_14, i32 %inp_image_15, i32 %inp_image_16, i32 %inp_image_17, i32 %inp_image_18, i32 %inp_image_19, i32 %inp_image_20, i32 %inp_image_21, i32 %inp_image_22, i32 %inp_image_23, i32 %inp_image_24, i32 %inp_image_25, i32 %inp_image_26, i32 %inp_image_27, i32 %inp_image_28, i32 %inp_image_29, i32 %inp_image_30, i32 %inp_image_31, i32 %inp_image_32, i32 %inp_image_33, i32 %inp_image_34, i32 %inp_image_35, i32 %inp_image_36, i32 %inp_image_37, i32 %inp_image_38, i32 %inp_image_39, i32 %inp_image_40, i32 %inp_image_41, i32 %inp_image_42, i32 %inp_image_43, i32 %inp_image_44, i32 %inp_image_45, i32 %inp_image_46, i32 %inp_image_47, i32 %inp_image_48, i32 %inp_image_49, i32 %inp_image_50, i32 %inp_image_51, i32 %inp_image_52, i32 %inp_image_53, i32 %inp_image_54, i32 %inp_image_55, i32 %inp_image_56, i32 %inp_image_57, i32 %inp_image_58, i32 %inp_image_59, i32 %inp_image_60, i32 %inp_image_61, i32 %inp_image_62, i32 %inp_image_63, i32 %inp_image_64, i32 %inp_image_65, i32 %inp_image_66, i32 %inp_image_67, i32 %inp_image_68, i32 %inp_image_69, i32 %inp_image_70, i32 %inp_image_71, i32 %inp_image_72, i32 %inp_image_73, i32 %inp_image_74, i32 %inp_image_75, i32 %inp_image_76, i32 %inp_image_77, i32 %inp_image_78, i32 %inp_image_79, i32 %inp_image_80, i32 %inp_image_81, i32 %inp_image_82, i32 %inp_image_83, i32 %inp_image_84, i32 %inp_image_85, i32 %inp_image_86, i32 %inp_image_87, i32 %inp_image_88, i32 %inp_image_89, i32 %inp_image_90, i32 %inp_image_91, i32 %inp_image_92, i32 %inp_image_93, i32 %inp_image_94, i32 %inp_image_95, i32 %inp_image_96, i32 %inp_image_97, i32 %inp_image_98, i32 %inp_image_99, i32 %inp_image_100, i32 %inp_image_101, i32 %inp_image_102, i32 %inp_image_103, i32 %inp_image_104, i32 %inp_image_105, i32 %inp_image_106, i32 %inp_image_107, i32 %inp_image_108, i32 %inp_image_109, i32 %inp_image_110, i32 %inp_image_111, i32 %inp_image_112, i32 %inp_image_113, i32 %inp_image_114, i32 %inp_image_115, i32 %inp_image_116, i32 %inp_image_117, i32 %inp_image_118, i32 %inp_image_119, i32 %inp_image_120, i32 %inp_image_121, i32 %inp_image_122, i32 %inp_image_123, i32 %inp_image_124, i32 %inp_image_125, i32 %inp_image_126, i32 %inp_image_127, i32 %inp_image_128, i32 %inp_image_129, i32 %inp_image_130, i32 %inp_image_131, i32 %inp_image_132, i32 %inp_image_133, i32 %inp_image_134, i32 %inp_image_135, i32 %inp_image_136, i32 %inp_image_137, i32 %inp_image_138, i32 %inp_image_139, i32 %inp_image_140, i32 %inp_image_141, i32 %inp_image_142, i32 %inp_image_143, i32 %inp_image_144, i32 %inp_image_145, i32 %inp_image_146, i32 %inp_image_147, i32 %inp_image_148, i32 %inp_image_149, i32 %inp_image_150, i32 %inp_image_151, i32 %inp_image_152, i32 %inp_image_153, i32 %inp_image_154, i32 %inp_image_155, i32 %inp_image_156, i32 %inp_image_157, i32 %inp_image_158, i32 %inp_image_159, i32 %inp_image_160, i32 %inp_image_161, i32 %inp_image_162, i32 %inp_image_163, i32 %inp_image_164, i32 %inp_image_165, i32 %inp_image_166, i32 %inp_image_167, i32 %inp_image_168, i32 %inp_image_169, i32 %inp_image_170, i32 %inp_image_171, i32 %inp_image_172, i32 %inp_image_173, i32 %inp_image_174, i32 %inp_image_175, i32 %inp_image_176, i32 %inp_image_177, i32 %inp_image_178, i32 %inp_image_179, i32 %inp_image_180, i32 %inp_image_181, i32 %inp_image_182, i32 %inp_image_183, i32 %inp_image_184, i32 %inp_image_185, i32 %inp_image_186, i32 %inp_image_187, i32 %inp_image_188, i32 %inp_image_189, i32 %inp_image_190, i32 %inp_image_191, i32 %inp_image_192, i32 %inp_image_193, i32 %inp_image_194, i32 %inp_image_195, i32 %inp_image_196, i32 %inp_image_197, i32 %inp_image_198, i32 %inp_image_199, i32 %inp_image_200, i32 %inp_image_201, i32 %inp_image_202, i32 %inp_image_203, i32 %inp_image_204, i32 %inp_image_205, i32 %inp_image_206, i32 %inp_image_207, i32 %inp_image_208, i32 %inp_image_209, i32 %inp_image_210, i32 %inp_image_211, i32 %inp_image_212, i32 %inp_image_213, i32 %inp_image_214, i32 %inp_image_215, i32 %inp_image_216, i32 %inp_image_217, i32 %inp_image_218, i32 %inp_image_219, i32 %inp_image_220, i32 %inp_image_221, i32 %inp_image_222, i32 %inp_image_223, i32 %inp_image_224, i32 %inp_image_225, i32 %inp_image_226, i32 %inp_image_227, i32 %inp_image_228, i32 %inp_image_229, i32 %inp_image_230, i32 %inp_image_231, i32 %inp_image_232, i32 %inp_image_233, i32 %inp_image_234, i32 %inp_image_235, i32 %inp_image_236, i32 %inp_image_237, i32 %inp_image_238, i32 %inp_image_239, i32 %inp_image_240, i32 %inp_image_241, i32 %inp_image_242, i32 %inp_image_243, i32 %inp_image_244, i32 %inp_image_245, i32 %inp_image_246, i32 %inp_image_247, i32 %inp_image_248, i32 %inp_image_249, i32 %inp_image_250, i32 %inp_image_251, i32 %inp_image_252, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49]   --->   Operation 319 'call' 'call_ln49' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 12 <SV = 11> <Delay = 7.30>
+ST_12 : Operation 320 [1/1] (0.00ns)   --->   "%sext_ln59 = sext i62 %trunc_ln2" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59]   --->   Operation 320 'sext' 'sext_ln59' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 321 [1/1] (0.00ns)   --->   "%gmem0_addr_1 = getelementptr i32 %gmem0, i64 %sext_ln59" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59]   --->   Operation 321 'getelementptr' 'gmem0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 322 [1/1] (7.30ns)   --->   "%empty_45 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem0_addr_1, i64 169" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59]   --->   Operation 322 'writereq' 'empty_45' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 323 [2/2] (0.00ns)   --->   "%call_ln59 = call void @norm2_Pipeline_L2_L3, i32 %gmem0, i62 %trunc_ln2, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59]   --->   Operation 323 'call' 'call_ln59' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 324 [1/2] (0.00ns)   --->   "%call_ln59 = call void @norm2_Pipeline_L2_L3, i32 %gmem0, i62 %trunc_ln2, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59]   --->   Operation 324 'call' 'call_ln59' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 15 <SV = 14> <Delay = 7.30>
+ST_15 : Operation 325 [5/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 325 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 15> <Delay = 7.30>
+ST_16 : Operation 326 [4/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 326 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 16> <Delay = 7.30>
+ST_17 : Operation 327 [3/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 327 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 18 <SV = 17> <Delay = 7.30>
+ST_18 : Operation 328 [2/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 328 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 329 [1/1] (1.08ns)   --->   "%add_ln74 = add i64 %out_img_read, i64 676" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 329 'add' 'add_ln74' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 330 [1/1] (0.00ns)   --->   "%trunc_ln3 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln74, i32 2, i32 63" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 330 'partselect' 'trunc_ln3' <Predicate = true> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 7.30>
+ST_19 : Operation 331 [1/5] (7.30ns)   --->   "%empty_46 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 331 'writeresp' 'empty_46' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 332 [1/1] (0.00ns)   --->   "%sext_ln74 = sext i62 %trunc_ln3" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 332 'sext' 'sext_ln74' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 333 [1/1] (0.00ns)   --->   "%gmem0_addr_2 = getelementptr i32 %gmem0, i64 %sext_ln74" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 333 'getelementptr' 'gmem0_addr_2' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 334 [1/1] (7.30ns)   --->   "%empty_47 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem0_addr_2, i64 169" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 334 'writereq' 'empty_47' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 335 [2/2] (0.00ns)   --->   "%call_ln74 = call void @norm2_Pipeline_L5_L6, i32 %gmem0, i62 %trunc_ln3, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i32 %inp_image_3, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 335 'call' 'call_ln74' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 336 [1/2] (0.00ns)   --->   "%call_ln74 = call void @norm2_Pipeline_L5_L6, i32 %gmem0, i62 %trunc_ln3, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i32 %inp_image_3, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74]   --->   Operation 336 'call' 'call_ln74' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 22 <SV = 21> <Delay = 7.30>
+ST_22 : Operation 337 [5/5] (7.30ns)   --->   "%empty_48 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_2" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 337 'writeresp' 'empty_48' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 22> <Delay = 7.30>
+ST_23 : Operation 338 [4/5] (7.30ns)   --->   "%empty_48 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_2" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 338 'writeresp' 'empty_48' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 24 <SV = 23> <Delay = 7.30>
+ST_24 : Operation 339 [3/5] (7.30ns)   --->   "%empty_48 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_2" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 339 'writeresp' 'empty_48' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 25 <SV = 24> <Delay = 7.30>
+ST_25 : Operation 340 [2/5] (7.30ns)   --->   "%empty_48 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_2" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 340 'writeresp' 'empty_48' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_25 : Operation 341 [1/1] (1.08ns)   --->   "%add_ln89 = add i64 %out_img_read, i64 1352" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 341 'add' 'add_ln89' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 342 [1/1] (0.00ns)   --->   "%trunc_ln4 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln89, i32 2, i32 63" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 342 'partselect' 'trunc_ln4' <Predicate = true> <Delay = 0.00>
+
+State 26 <SV = 25> <Delay = 7.30>
+ST_26 : Operation 343 [1/5] (7.30ns)   --->   "%empty_48 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_2" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 343 'writeresp' 'empty_48' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_26 : Operation 344 [1/1] (0.00ns)   --->   "%sext_ln89 = sext i62 %trunc_ln4" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 344 'sext' 'sext_ln89' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 345 [1/1] (0.00ns)   --->   "%gmem0_addr_3 = getelementptr i32 %gmem0, i64 %sext_ln89" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 345 'getelementptr' 'gmem0_addr_3' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 346 [1/1] (7.30ns)   --->   "%empty_49 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem0_addr_3, i64 42588" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 346 'writereq' 'empty_49' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 27 <SV = 26> <Delay = 0.00>
+ST_27 : Operation 347 [2/2] (0.00ns)   --->   "%call_ln89 = call void @norm2_Pipeline_L8_L9_L10, i32 %gmem0, i62 %trunc_ln4, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i32 %inp_image_3, i32 %inp_image_4, i32 %inp_image_5, i32 %inp_image_6, i32 %inp_image_7, i32 %inp_image_8, i32 %inp_image_9, i32 %inp_image_10, i32 %inp_image_11, i32 %inp_image_12, i32 %inp_image_13, i32 %inp_image_14, i32 %inp_image_15, i32 %inp_image_16, i32 %inp_image_17, i32 %inp_image_18, i32 %inp_image_19, i32 %inp_image_20, i32 %inp_image_21, i32 %inp_image_22, i32 %inp_image_23, i32 %inp_image_24, i32 %inp_image_25, i32 %inp_image_26, i32 %inp_image_27, i32 %inp_image_28, i32 %inp_image_29, i32 %inp_image_30, i32 %inp_image_31, i32 %inp_image_32, i32 %inp_image_33, i32 %inp_image_34, i32 %inp_image_35, i32 %inp_image_36, i32 %inp_image_37, i32 %inp_image_38, i32 %inp_image_39, i32 %inp_image_40, i32 %inp_image_41, i32 %inp_image_42, i32 %inp_image_43, i32 %inp_image_44, i32 %inp_image_45, i32 %inp_image_46, i32 %inp_image_47, i32 %inp_image_48, i32 %inp_image_49, i32 %inp_image_50, i32 %inp_image_51, i32 %inp_image_52, i32 %inp_image_53, i32 %inp_image_54, i32 %inp_image_55, i32 %inp_image_56, i32 %inp_image_57, i32 %inp_image_58, i32 %inp_image_59, i32 %inp_image_60, i32 %inp_image_61, i32 %inp_image_62, i32 %inp_image_63, i32 %inp_image_64, i32 %inp_image_65, i32 %inp_image_66, i32 %inp_image_67, i32 %inp_image_68, i32 %inp_image_69, i32 %inp_image_70, i32 %inp_image_71, i32 %inp_image_72, i32 %inp_image_73, i32 %inp_image_74, i32 %inp_image_75, i32 %inp_image_76, i32 %inp_image_77, i32 %inp_image_78, i32 %inp_image_79, i32 %inp_image_80, i32 %inp_image_81, i32 %inp_image_82, i32 %inp_image_83, i32 %inp_image_84, i32 %inp_image_85, i32 %inp_image_86, i32 %inp_image_87, i32 %inp_image_88, i32 %inp_image_89, i32 %inp_image_90, i32 %inp_image_91, i32 %inp_image_92, i32 %inp_image_93, i32 %inp_image_94, i32 %inp_image_95, i32 %inp_image_96, i32 %inp_image_97, i32 %inp_image_98, i32 %inp_image_99, i32 %inp_image_100, i32 %inp_image_101, i32 %inp_image_102, i32 %inp_image_103, i32 %inp_image_104, i32 %inp_image_105, i32 %inp_image_106, i32 %inp_image_107, i32 %inp_image_108, i32 %inp_image_109, i32 %inp_image_110, i32 %inp_image_111, i32 %inp_image_112, i32 %inp_image_113, i32 %inp_image_114, i32 %inp_image_115, i32 %inp_image_116, i32 %inp_image_117, i32 %inp_image_118, i32 %inp_image_119, i32 %inp_image_120, i32 %inp_image_121, i32 %inp_image_122, i32 %inp_image_123, i32 %inp_image_124, i32 %inp_image_125, i32 %inp_image_126, i32 %inp_image_127, i32 %inp_image_128, i32 %inp_image_129, i32 %inp_image_130, i32 %inp_image_131, i32 %inp_image_132, i32 %inp_image_133, i32 %inp_image_134, i32 %inp_image_135, i32 %inp_image_136, i32 %inp_image_137, i32 %inp_image_138, i32 %inp_image_139, i32 %inp_image_140, i32 %inp_image_141, i32 %inp_image_142, i32 %inp_image_143, i32 %inp_image_144, i32 %inp_image_145, i32 %inp_image_146, i32 %inp_image_147, i32 %inp_image_148, i32 %inp_image_149, i32 %inp_image_150, i32 %inp_image_151, i32 %inp_image_152, i32 %inp_image_153, i32 %inp_image_154, i32 %inp_image_155, i32 %inp_image_156, i32 %inp_image_157, i32 %inp_image_158, i32 %inp_image_159, i32 %inp_image_160, i32 %inp_image_161, i32 %inp_image_162, i32 %inp_image_163, i32 %inp_image_164, i32 %inp_image_165, i32 %inp_image_166, i32 %inp_image_167, i32 %inp_image_168, i32 %inp_image_169, i32 %inp_image_170, i32 %inp_image_171, i32 %inp_image_172, i32 %inp_image_173, i32 %inp_image_174, i32 %inp_image_175, i32 %inp_image_176, i32 %inp_image_177, i32 %inp_image_178, i32 %inp_image_179, i32 %inp_image_180, i32 %inp_image_181, i32 %inp_image_182, i32 %inp_image_183, i32 %inp_image_184, i32 %inp_image_185, i32 %inp_image_186, i32 %inp_image_187, i32 %inp_image_188, i32 %inp_image_189, i32 %inp_image_190, i32 %inp_image_191, i32 %inp_image_192, i32 %inp_image_193, i32 %inp_image_194, i32 %inp_image_195, i32 %inp_image_196, i32 %inp_image_197, i32 %inp_image_198, i32 %inp_image_199, i32 %inp_image_200, i32 %inp_image_201, i32 %inp_image_202, i32 %inp_image_203, i32 %inp_image_204, i32 %inp_image_205, i32 %inp_image_206, i32 %inp_image_207, i32 %inp_image_208, i32 %inp_image_209, i32 %inp_image_210, i32 %inp_image_211, i32 %inp_image_212, i32 %inp_image_213, i32 %inp_image_214, i32 %inp_image_215, i32 %inp_image_216, i32 %inp_image_217, i32 %inp_image_218, i32 %inp_image_219, i32 %inp_image_220, i32 %inp_image_221, i32 %inp_image_222, i32 %inp_image_223, i32 %inp_image_224, i32 %inp_image_225, i32 %inp_image_226, i32 %inp_image_227, i32 %inp_image_228, i32 %inp_image_229, i32 %inp_image_230, i32 %inp_image_231, i32 %inp_image_232, i32 %inp_image_233, i32 %inp_image_234, i32 %inp_image_235, i32 %inp_image_236, i32 %inp_image_237, i32 %inp_image_238, i32 %inp_image_239, i32 %inp_image_240, i32 %inp_image_241, i32 %inp_image_242, i32 %inp_image_243, i32 %inp_image_244, i32 %inp_image_245, i32 %inp_image_246, i32 %inp_image_247, i32 %inp_image_248, i32 %inp_image_249, i32 %inp_image_250, i32 %inp_image_251, i32 %inp_image_252, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 347 'call' 'call_ln89' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 28 <SV = 27> <Delay = 0.00>
+ST_28 : Operation 348 [1/2] (0.00ns)   --->   "%call_ln89 = call void @norm2_Pipeline_L8_L9_L10, i32 %gmem0, i62 %trunc_ln4, i32 %inp_image, i32 %inp_image_1, i32 %inp_image_2, i32 %inp_image_3, i32 %inp_image_4, i32 %inp_image_5, i32 %inp_image_6, i32 %inp_image_7, i32 %inp_image_8, i32 %inp_image_9, i32 %inp_image_10, i32 %inp_image_11, i32 %inp_image_12, i32 %inp_image_13, i32 %inp_image_14, i32 %inp_image_15, i32 %inp_image_16, i32 %inp_image_17, i32 %inp_image_18, i32 %inp_image_19, i32 %inp_image_20, i32 %inp_image_21, i32 %inp_image_22, i32 %inp_image_23, i32 %inp_image_24, i32 %inp_image_25, i32 %inp_image_26, i32 %inp_image_27, i32 %inp_image_28, i32 %inp_image_29, i32 %inp_image_30, i32 %inp_image_31, i32 %inp_image_32, i32 %inp_image_33, i32 %inp_image_34, i32 %inp_image_35, i32 %inp_image_36, i32 %inp_image_37, i32 %inp_image_38, i32 %inp_image_39, i32 %inp_image_40, i32 %inp_image_41, i32 %inp_image_42, i32 %inp_image_43, i32 %inp_image_44, i32 %inp_image_45, i32 %inp_image_46, i32 %inp_image_47, i32 %inp_image_48, i32 %inp_image_49, i32 %inp_image_50, i32 %inp_image_51, i32 %inp_image_52, i32 %inp_image_53, i32 %inp_image_54, i32 %inp_image_55, i32 %inp_image_56, i32 %inp_image_57, i32 %inp_image_58, i32 %inp_image_59, i32 %inp_image_60, i32 %inp_image_61, i32 %inp_image_62, i32 %inp_image_63, i32 %inp_image_64, i32 %inp_image_65, i32 %inp_image_66, i32 %inp_image_67, i32 %inp_image_68, i32 %inp_image_69, i32 %inp_image_70, i32 %inp_image_71, i32 %inp_image_72, i32 %inp_image_73, i32 %inp_image_74, i32 %inp_image_75, i32 %inp_image_76, i32 %inp_image_77, i32 %inp_image_78, i32 %inp_image_79, i32 %inp_image_80, i32 %inp_image_81, i32 %inp_image_82, i32 %inp_image_83, i32 %inp_image_84, i32 %inp_image_85, i32 %inp_image_86, i32 %inp_image_87, i32 %inp_image_88, i32 %inp_image_89, i32 %inp_image_90, i32 %inp_image_91, i32 %inp_image_92, i32 %inp_image_93, i32 %inp_image_94, i32 %inp_image_95, i32 %inp_image_96, i32 %inp_image_97, i32 %inp_image_98, i32 %inp_image_99, i32 %inp_image_100, i32 %inp_image_101, i32 %inp_image_102, i32 %inp_image_103, i32 %inp_image_104, i32 %inp_image_105, i32 %inp_image_106, i32 %inp_image_107, i32 %inp_image_108, i32 %inp_image_109, i32 %inp_image_110, i32 %inp_image_111, i32 %inp_image_112, i32 %inp_image_113, i32 %inp_image_114, i32 %inp_image_115, i32 %inp_image_116, i32 %inp_image_117, i32 %inp_image_118, i32 %inp_image_119, i32 %inp_image_120, i32 %inp_image_121, i32 %inp_image_122, i32 %inp_image_123, i32 %inp_image_124, i32 %inp_image_125, i32 %inp_image_126, i32 %inp_image_127, i32 %inp_image_128, i32 %inp_image_129, i32 %inp_image_130, i32 %inp_image_131, i32 %inp_image_132, i32 %inp_image_133, i32 %inp_image_134, i32 %inp_image_135, i32 %inp_image_136, i32 %inp_image_137, i32 %inp_image_138, i32 %inp_image_139, i32 %inp_image_140, i32 %inp_image_141, i32 %inp_image_142, i32 %inp_image_143, i32 %inp_image_144, i32 %inp_image_145, i32 %inp_image_146, i32 %inp_image_147, i32 %inp_image_148, i32 %inp_image_149, i32 %inp_image_150, i32 %inp_image_151, i32 %inp_image_152, i32 %inp_image_153, i32 %inp_image_154, i32 %inp_image_155, i32 %inp_image_156, i32 %inp_image_157, i32 %inp_image_158, i32 %inp_image_159, i32 %inp_image_160, i32 %inp_image_161, i32 %inp_image_162, i32 %inp_image_163, i32 %inp_image_164, i32 %inp_image_165, i32 %inp_image_166, i32 %inp_image_167, i32 %inp_image_168, i32 %inp_image_169, i32 %inp_image_170, i32 %inp_image_171, i32 %inp_image_172, i32 %inp_image_173, i32 %inp_image_174, i32 %inp_image_175, i32 %inp_image_176, i32 %inp_image_177, i32 %inp_image_178, i32 %inp_image_179, i32 %inp_image_180, i32 %inp_image_181, i32 %inp_image_182, i32 %inp_image_183, i32 %inp_image_184, i32 %inp_image_185, i32 %inp_image_186, i32 %inp_image_187, i32 %inp_image_188, i32 %inp_image_189, i32 %inp_image_190, i32 %inp_image_191, i32 %inp_image_192, i32 %inp_image_193, i32 %inp_image_194, i32 %inp_image_195, i32 %inp_image_196, i32 %inp_image_197, i32 %inp_image_198, i32 %inp_image_199, i32 %inp_image_200, i32 %inp_image_201, i32 %inp_image_202, i32 %inp_image_203, i32 %inp_image_204, i32 %inp_image_205, i32 %inp_image_206, i32 %inp_image_207, i32 %inp_image_208, i32 %inp_image_209, i32 %inp_image_210, i32 %inp_image_211, i32 %inp_image_212, i32 %inp_image_213, i32 %inp_image_214, i32 %inp_image_215, i32 %inp_image_216, i32 %inp_image_217, i32 %inp_image_218, i32 %inp_image_219, i32 %inp_image_220, i32 %inp_image_221, i32 %inp_image_222, i32 %inp_image_223, i32 %inp_image_224, i32 %inp_image_225, i32 %inp_image_226, i32 %inp_image_227, i32 %inp_image_228, i32 %inp_image_229, i32 %inp_image_230, i32 %inp_image_231, i32 %inp_image_232, i32 %inp_image_233, i32 %inp_image_234, i32 %inp_image_235, i32 %inp_image_236, i32 %inp_image_237, i32 %inp_image_238, i32 %inp_image_239, i32 %inp_image_240, i32 %inp_image_241, i32 %inp_image_242, i32 %inp_image_243, i32 %inp_image_244, i32 %inp_image_245, i32 %inp_image_246, i32 %inp_image_247, i32 %inp_image_248, i32 %inp_image_249, i32 %inp_image_250, i32 %inp_image_251, i32 %inp_image_252, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89]   --->   Operation 348 'call' 'call_ln89' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 29 <SV = 28> <Delay = 7.30>
+ST_29 : Operation 349 [5/5] (7.30ns)   --->   "%empty_50 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_3" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 349 'writeresp' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 30 <SV = 29> <Delay = 7.30>
+ST_30 : Operation 350 [4/5] (7.30ns)   --->   "%empty_50 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_3" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 350 'writeresp' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 31 <SV = 30> <Delay = 7.30>
+ST_31 : Operation 351 [3/5] (7.30ns)   --->   "%empty_50 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_3" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 351 'writeresp' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 32 <SV = 31> <Delay = 7.30>
+ST_32 : Operation 352 [2/5] (7.30ns)   --->   "%empty_50 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_3" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 352 'writeresp' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_32 : Operation 353 [1/1] (1.08ns)   --->   "%add_ln107 = add i64 %out_img_read, i64 171704" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 353 'add' 'add_ln107' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 354 [1/1] (0.00ns)   --->   "%trunc_ln5 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln107, i32 2, i32 63" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 354 'partselect' 'trunc_ln5' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 355 [1/1] (1.08ns)   --->   "%add_ln120 = add i64 %out_img_read, i64 172380" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 355 'add' 'add_ln120' <Predicate = true> <Delay = 1.08> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.08> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 356 [1/1] (0.00ns)   --->   "%trunc_ln6 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %add_ln120, i32 2, i32 63" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 356 'partselect' 'trunc_ln6' <Predicate = true> <Delay = 0.00>
+
+State 33 <SV = 32> <Delay = 7.30>
+ST_33 : Operation 357 [1/5] (7.30ns)   --->   "%empty_50 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_3" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 357 'writeresp' 'empty_50' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_33 : Operation 358 [1/1] (0.00ns)   --->   "%sext_ln107 = sext i62 %trunc_ln5" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 358 'sext' 'sext_ln107' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 359 [1/1] (0.00ns)   --->   "%gmem0_addr_4 = getelementptr i32 %gmem0, i64 %sext_ln107" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 359 'getelementptr' 'gmem0_addr_4' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 360 [1/1] (7.30ns)   --->   "%empty_51 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem0_addr_4, i64 169" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 360 'writereq' 'empty_51' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 34 <SV = 33> <Delay = 0.00>
+ST_34 : Operation 361 [2/2] (0.00ns)   --->   "%call_ln107 = call void @norm2_Pipeline_L12_L13, i32 %gmem0, i62 %trunc_ln5, i32 %inp_image_252, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 361 'call' 'call_ln107' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 35 <SV = 34> <Delay = 0.00>
+ST_35 : Operation 362 [1/2] (0.00ns)   --->   "%call_ln107 = call void @norm2_Pipeline_L12_L13, i32 %gmem0, i62 %trunc_ln5, i32 %inp_image_252, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107]   --->   Operation 362 'call' 'call_ln107' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 36 <SV = 35> <Delay = 7.30>
+ST_36 : Operation 363 [5/5] (7.30ns)   --->   "%empty_52 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_4" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 363 'writeresp' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 36> <Delay = 7.30>
+ST_37 : Operation 364 [4/5] (7.30ns)   --->   "%empty_52 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_4" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 364 'writeresp' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 37> <Delay = 7.30>
+ST_38 : Operation 365 [3/5] (7.30ns)   --->   "%empty_52 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_4" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 365 'writeresp' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 38> <Delay = 7.30>
+ST_39 : Operation 366 [2/5] (7.30ns)   --->   "%empty_52 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_4" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 366 'writeresp' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 39> <Delay = 7.30>
+ST_40 : Operation 367 [1/5] (7.30ns)   --->   "%empty_52 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_4" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 367 'writeresp' 'empty_52' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 368 [1/1] (0.00ns)   --->   "%sext_ln120 = sext i62 %trunc_ln6" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 368 'sext' 'sext_ln120' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 369 [1/1] (0.00ns)   --->   "%gmem0_addr_5 = getelementptr i32 %gmem0, i64 %sext_ln120" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 369 'getelementptr' 'gmem0_addr_5' <Predicate = true> <Delay = 0.00>
+ST_40 : Operation 370 [1/1] (7.30ns)   --->   "%empty_53 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem0_addr_5, i64 169" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 370 'writereq' 'empty_53' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 40> <Delay = 0.00>
+ST_41 : Operation 371 [2/2] (0.00ns)   --->   "%call_ln120 = call void @norm2_Pipeline_L15_L16, i32 %gmem0, i62 %trunc_ln6, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 371 'call' 'call_ln120' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 42 <SV = 41> <Delay = 0.00>
+ST_42 : Operation 372 [1/2] (0.00ns)   --->   "%call_ln120 = call void @norm2_Pipeline_L15_L16, i32 %gmem0, i62 %trunc_ln6, i32 %inp_image_253, i32 %inp_image_254, i32 %inp_image_255, i6 %pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array, i56 %pow_reduce_anonymous_namespace_log0_lut_table_array, i52 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array, i49 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array, i44 %pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array, i27 %pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array, i8 %pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120]   --->   Operation 372 'call' 'call_ln120' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 43 <SV = 42> <Delay = 7.30>
+ST_43 : Operation 373 [5/5] (7.30ns)   --->   "%empty_54 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_5" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134]   --->   Operation 373 'writeresp' 'empty_54' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 43> <Delay = 7.30>
+ST_44 : Operation 374 [4/5] (7.30ns)   --->   "%empty_54 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_5" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134]   --->   Operation 374 'writeresp' 'empty_54' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 44> <Delay = 7.30>
+ST_45 : Operation 375 [3/5] (7.30ns)   --->   "%empty_54 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_5" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134]   --->   Operation 375 'writeresp' 'empty_54' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 45> <Delay = 7.30>
+ST_46 : Operation 376 [2/5] (7.30ns)   --->   "%empty_54 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_5" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134]   --->   Operation 376 'writeresp' 'empty_54' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 46> <Delay = 7.30>
+ST_47 : Operation 377 [1/1] (0.00ns)   --->   "%spectopmodule_ln31 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:31]   --->   Operation 377 'spectopmodule' 'spectopmodule_ln31' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 378 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem0, void @empty_4, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_3, void @empty_10, void @empty_5, i32 16, i32 16, i32 16, i32 16, void @empty_5, void @empty_5, i32 4294967295, i32 0, i32 0"   --->   Operation 378 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 379 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem0"   --->   Operation 379 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 380 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inp_img, void @empty_9, i32 4294967295, i32 4294967295, void @empty_8, i32 0, i32 0, void @empty_7, void @empty_2, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 380 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 381 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inp_img, void @empty_0, i32 4294967295, i32 4294967295, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 381 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 382 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_img, void @empty_9, i32 4294967295, i32 4294967295, void @empty_8, i32 0, i32 0, void @empty_7, void @empty, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 382 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 383 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_img, void @empty_0, i32 4294967295, i32 4294967295, void @empty_5, i32 0, i32 0, void @empty_5, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_6, i32 4294967295, i32 0, i32 0"   --->   Operation 383 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 384 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_9, i32 0, i32 0, void @empty_5, i32 0, i32 0, void @empty_7, void @empty_5, void @empty_5, i32 0, i32 0, i32 0, i32 0, void @empty_5, void @empty_5, i32 4294967295, i32 0, i32 0"   --->   Operation 384 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_47 : Operation 385 [1/5] (7.30ns)   --->   "%empty_54 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem0_addr_5" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134]   --->   Operation 385 'writeresp' 'empty_54' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 119 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_47 : Operation 386 [1/1] (0.00ns)   --->   "%ret_ln134 = ret" [AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134]   --->   Operation 386 'ret' 'ret_ln134' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('out_img_read') on port 'out_img' [19]  (1.000 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem0_addr', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [279]  (0.000 ns)
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 4>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 5>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 6>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 7>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 8>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 9>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('empty', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:49) [280]  (7.300 ns)
+
+ <State 10>: 0.000ns
+The critical path consists of the following:
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+ <State 12>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem0_addr_1', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59) [284]  (0.000 ns)
+	bus request operation ('empty_45', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:59) [285]  (7.300 ns)
+
+ <State 13>: 0.000ns
+The critical path consists of the following:
+
+ <State 14>: 0.000ns
+The critical path consists of the following:
+
+ <State 15>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_46', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) [287]  (7.300 ns)
+
+ <State 16>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_46', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) [287]  (7.300 ns)
+
+ <State 17>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_46', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) [287]  (7.300 ns)
+
+ <State 18>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_46', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) [287]  (7.300 ns)
+
+ <State 19>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_46', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:74) [287]  (7.300 ns)
+
+ <State 20>: 0.000ns
+The critical path consists of the following:
+
+ <State 21>: 0.000ns
+The critical path consists of the following:
+
+ <State 22>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_48', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) [294]  (7.300 ns)
+
+ <State 23>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_48', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) [294]  (7.300 ns)
+
+ <State 24>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_48', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) [294]  (7.300 ns)
+
+ <State 25>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_48', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) [294]  (7.300 ns)
+
+ <State 26>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_48', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:89) [294]  (7.300 ns)
+
+ <State 27>: 0.000ns
+The critical path consists of the following:
+
+ <State 28>: 0.000ns
+The critical path consists of the following:
+
+ <State 29>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_50', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) [301]  (7.300 ns)
+
+ <State 30>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_50', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) [301]  (7.300 ns)
+
+ <State 31>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_50', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) [301]  (7.300 ns)
+
+ <State 32>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_50', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) [301]  (7.300 ns)
+
+ <State 33>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_50', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:107) [301]  (7.300 ns)
+
+ <State 34>: 0.000ns
+The critical path consists of the following:
+
+ <State 35>: 0.000ns
+The critical path consists of the following:
+
+ <State 36>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_52', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) [308]  (7.300 ns)
+
+ <State 37>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_52', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) [308]  (7.300 ns)
+
+ <State 38>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_52', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) [308]  (7.300 ns)
+
+ <State 39>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_52', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) [308]  (7.300 ns)
+
+ <State 40>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_52', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:120) [308]  (7.300 ns)
+
+ <State 41>: 0.000ns
+The critical path consists of the following:
+
+ <State 42>: 0.000ns
+The critical path consists of the following:
+
+ <State 43>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_54', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) [315]  (7.300 ns)
+
+ <State 44>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_54', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) [315]  (7.300 ns)
+
+ <State 45>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_54', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) [315]  (7.300 ns)
+
+ <State 46>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_54', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) [315]  (7.300 ns)
+
+ <State 47>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_54', AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) on port 'gmem0' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:134) [315]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,24 @@
+<pragmas>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="86" pragmaType="pipeline" parentfunction="conv3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="92" pragmaType="pipeline" parentfunction="conv3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="96" pragmaType="pipeline" parentfunction="conv3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="145" pragmaType="pipeline" parentfunction="conv3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="126" pragmaType="pipeline" parentfunction="conv3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="78" pragmaType="pipeline" parentfunction="conv3" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="37" pragmaType="interface" parentfunction="conv3" mode="m_axi" port="inp_img" bundle="gmem0" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="38" pragmaType="interface" parentfunction="conv3" mode="m_axi" port="out_img" bundle="gmem0" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="39" pragmaType="interface" parentfunction="conv3" mode="m_axi" port="filter" bundle="gmem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="40" pragmaType="interface" parentfunction="conv3" mode="m_axi" port="bias" bundle="gmem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="42" pragmaType="interface" parentfunction="conv3" mode="s_axilite" port="inp_img" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="43" pragmaType="interface" parentfunction="conv3" mode="s_axilite" port="out_img" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="44" pragmaType="interface" parentfunction="conv3" mode="s_axilite" port="filter" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="45" pragmaType="interface" parentfunction="conv3" mode="s_axilite" port="bias" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="47" pragmaType="interface" parentfunction="conv3" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="51" pragmaType="array_partition" parentfunction="conv3" dim="1" factor="25" mode="cyclic" dynamic="0" variable="inp_image_local"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="53" pragmaType="array_partition" parentfunction="conv3" dim="0" factor="0" mode="complete" dynamic="0" variable="inp_img_2D"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="57" pragmaType="array_partition" parentfunction="conv3" dim="1" factor="9" mode="cyclic" dynamic="0" variable="filter_local"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="59" pragmaType="array_partition" parentfunction="conv3" dim="0" factor="0" mode="complete" dynamic="0" variable="filter_2D"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="63" pragmaType="array_partition" parentfunction="conv3" dim="0" factor="0" mode="complete" dynamic="0" variable="window_2D"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="69" pragmaType="array_partition" parentfunction="conv3" dim="1" factor="169" mode="cyclic" dynamic="0" variable="conv_out"/>
+<pragma file="AlexNet-FPGA-implementation/Conv3/src/conv3.cpp" line="72" pragmaType="array_partition" parentfunction="conv3" dim="0" factor="0" mode="complete" dynamic="0" variable="sh"/>
+</pragmas>

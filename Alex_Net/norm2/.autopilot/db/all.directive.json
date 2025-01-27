@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "norm2",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "norm2"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/primary/HLS/AN_script2.tcl",
+    "sourceLine": 13,
+    "success": true
+  }
+]

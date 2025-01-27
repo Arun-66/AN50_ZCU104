@@ -1,0 +1,219 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/primary/HLS/AN_script.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=conv2" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=inp_img offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out_img offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=filter offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=bias offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=inp_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=filter bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=bias bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:51:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=inp_image_local cyclic factor=155 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:53:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=inp_img_2D complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=filter_local cyclic factor=25" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:57:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=filter_2D complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=window_2D complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:61:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=conv_out cyclic factor=27 dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=sh complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:71:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:80:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:100:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:110:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:137:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:158:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:168:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:174:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:180:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:187:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:197:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:222:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="conv2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:181:6" msg_body="Loop 'S22' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="S22"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:188:6" msg_body="Loop 'F22' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="F22"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:198:8" msg_body="Loop 'w2_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="w2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13" msg_body="Loop 'w2_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="w2_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:205:24" msg_body="Loop 'VITIS_LOOP_205_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_205_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25" msg_body="Loop 'VITIS_LOOP_206_9' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_206_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:211:28" msg_body="Loop 'VITIS_LOOP_211_10' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_211_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29" msg_body="Loop 'VITIS_LOOP_212_11' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_212_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:223:21" msg_body="Loop 'VITIS_LOOP_223_12' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_223_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:95:6" msg_body="Loop 'S12' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="S12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:101:6" msg_body="Loop 'F12' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="F12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:112:8" msg_body="Loop 'w1_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="w1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13" msg_body="Loop 'w1_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="w1_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:118:24" msg_body="Loop 'VITIS_LOOP_118_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_118_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25" msg_body="Loop 'VITIS_LOOP_119_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_119_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:124:24" msg_body="Loop 'VITIS_LOOP_124_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_124_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25" msg_body="Loop 'VITIS_LOOP_125_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_125_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:138:20" msg_body="Loop 'VITIS_LOOP_138_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_138_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'S22' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:181:6) in function 'conv2' completely with a factor of 31">
+        <args Factor="31" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:181:6" LoopName="S22"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'F22' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:188:6) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:188:6" LoopName="F22"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'w2_2' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:198:8) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:198:8" LoopName="w2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'w2_3' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13" LoopName="w2_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_205_8' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:205:24) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:205:24" LoopName="VITIS_LOOP_205_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_206_9' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25" LoopName="VITIS_LOOP_206_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_211_10' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:211:28) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:211:28" LoopName="VITIS_LOOP_211_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_212_11' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29" LoopName="VITIS_LOOP_212_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_223_12' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:223:21) in function 'conv2' completely with a factor of 27">
+        <args Factor="27" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:223:21" LoopName="VITIS_LOOP_223_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'S12' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:95:6) in function 'conv2' completely with a factor of 31">
+        <args Factor="31" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:95:6" LoopName="S12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'F12' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:101:6) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:101:6" LoopName="F12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'w1_2' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:112:8) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:112:8" LoopName="w1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'w1_3' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13" LoopName="w1_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_118_2' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:118:24) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:118:24" LoopName="VITIS_LOOP_118_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_119_3' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25" LoopName="VITIS_LOOP_119_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_124_4' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:124:24) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:124:24" LoopName="VITIS_LOOP_124_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_125_5' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25) in function 'conv2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25" LoopName="VITIS_LOOP_125_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:35:0" msg_body="Unrolling loop 'VITIS_LOOP_138_6' (AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:138:20) in function 'conv2' completely with a factor of 27">
+        <args Factor="27" LoopLoc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:138:20" LoopName="VITIS_LOOP_138_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:50:11" msg_body="Applying array_partition to 'inp_image_local': Cyclic partitioning with factor 155 on dimension 1.">
+        <args Dim="1" Factor="155" Mode="Cyclic" UOName="inp_image_local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:52:11" msg_body="Applying array_partition to 'inp_img_2D': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="inp_img_2D"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:54:11" msg_body="Applying array_partition to 'filter_local': Cyclic partitioning with factor 25 on dimension 1.">
+        <args Dim="1" Factor="25" Mode="Cyclic" UOName="filter_local"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:56:11" msg_body="Applying array_partition to 'filter_2D': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="filter_2D"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:60:11" msg_body="Applying array_partition to 'conv_out': Cyclic partitioning with factor 27 on dimension 1.">
+        <args Dim="1" Factor="27" Mode="Cyclic" UOName="conv_out"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,259 @@
+
+
+================================================================
+== Vitis HLS Report for 'conv1_Pipeline_L2_L3_L4'
+================================================================
+* Date:           Sun Jan 26 19:55:43 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        Alex_Net
+* Solution:       NN (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.373 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+    |     4772|     4772|  47.720 us|  47.720 us|  4768|  4768|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- L2_L3_L4  |     4770|     4770|         5|          1|          1|  4767|       yes|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%j = alloca i32 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 8 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 9 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 10 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%c = alloca i32 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 11 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%indvar_flatten12 = alloca i32 1"   --->   Operation 12 'alloca' 'indvar_flatten12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inp_img, void @empty_21, i32 0, i32 0, void @empty_2, i32 4294967295, i32 0, void @empty_2, void @empty_2, void @empty_2, i32 0, i32 0, i32 0, i32 0, void @empty_2, void @empty_2, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.42ns)   --->   "%store_ln0 = store i13 0, i13 %indvar_flatten12"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 15 [1/1] (0.42ns)   --->   "%store_ln80 = store i2 0, i2 %c" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 15 'store' 'store_ln80' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 16 [1/1] (0.42ns)   --->   "%store_ln0 = store i11 0, i11 %indvar_flatten"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 17 [1/1] (0.42ns)   --->   "%store_ln82 = store i4 4, i4 %i" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 17 'store' 'store_ln82' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 18 [1/1] (0.42ns)   --->   "%store_ln84 = store i8 0, i8 %j" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 18 'store' 'store_ln84' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 19 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.37>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i11 %indvar_flatten" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 20 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%indvar_flatten12_load = load i13 %indvar_flatten12" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 21 'load' 'indvar_flatten12_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.82ns)   --->   "%icmp_ln80 = icmp_eq  i13 %indvar_flatten12_load, i13 4767" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 22 'icmp' 'icmp_ln80' <Predicate = true> <Delay = 0.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.82ns)   --->   "%add_ln80_1 = add i13 %indvar_flatten12_load, i13 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 23 'add' 'add_ln80_1' <Predicate = true> <Delay = 0.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln80 = br i1 %icmp_ln80, void %for.inc21, void %L6.preheader.exitStub" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 24 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%j_load = load i8 %j" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 25 'load' 'j_load' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%i_load = load i4 %i" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 26 'load' 'i_load' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.79ns)   --->   "%icmp_ln82 = icmp_eq  i11 %indvar_flatten_load, i11 1589" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 27 'icmp' 'icmp_ln82' <Predicate = (!icmp_ln80)> <Delay = 0.79> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.39ns)   --->   "%select_ln80 = select i1 %icmp_ln82, i4 4, i4 %i_load" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 28 'select' 'select_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns) (grouped into LUT with out node and_ln80)   --->   "%xor_ln80 = xor i1 %icmp_ln82, i1 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 29 'xor' 'xor_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.76ns)   --->   "%icmp_ln84 = icmp_eq  i8 %j_load, i8 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 30 'icmp' 'icmp_ln84' <Predicate = (!icmp_ln80)> <Delay = 0.76> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.28ns) (out node of the LUT)   --->   "%and_ln80 = and i1 %icmp_ln84, i1 %xor_ln80" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 31 'and' 'and_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.28> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.79ns)   --->   "%add_ln82 = add i4 %select_ln80, i4 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 32 'add' 'add_ln82' <Predicate = (!icmp_ln80)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node j_mid2)   --->   "%empty = or i1 %and_ln80, i1 %icmp_ln82" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 33 'or' 'empty' <Predicate = (!icmp_ln80)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.39ns) (out node of the LUT)   --->   "%j_mid2 = select i1 %empty, i8 0, i8 %j_load" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 34 'select' 'j_mid2' <Predicate = (!icmp_ln80)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.39ns)   --->   "%select_ln82 = select i1 %and_ln80, i4 %add_ln82, i4 %select_ln80" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 35 'select' 'select_ln82' <Predicate = (!icmp_ln80)> <Delay = 0.39> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.39> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln82_1 = zext i4 %select_ln82" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 36 'zext' 'zext_ln82_1' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_2 : Operation 37 [3/3] (0.99ns) (grouped into DSP with root node add_ln87_1)   --->   "%empty_461 = mul i12 %zext_ln82_1, i12 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 37 'mul' 'empty_461' <Predicate = (!icmp_ln80)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 38 [1/1] (0.79ns)   --->   "%switch_ln87 = switch i4 %select_ln82, void %arrayidx1772.case.10, i4 4, void %arrayidx1772.case.4, i4 5, void %arrayidx1772.case.5, i4 6, void %arrayidx1772.case.6, i4 7, void %arrayidx1772.case.7, i4 8, void %arrayidx1772.case.8, i4 9, void %arrayidx1772.case.9" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 38 'switch' 'switch_ln87' <Predicate = (!icmp_ln80)> <Delay = 0.79>
+ST_2 : Operation 39 [1/1] (0.76ns)   --->   "%add_ln84 = add i8 %j_mid2, i8 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 39 'add' 'add_ln84' <Predicate = (!icmp_ln80)> <Delay = 0.76> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.79ns)   --->   "%add_ln82_1 = add i11 %indvar_flatten_load, i11 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 40 'add' 'add_ln82_1' <Predicate = (!icmp_ln80)> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.38ns)   --->   "%select_ln82_1 = select i1 %icmp_ln82, i11 1, i11 %add_ln82_1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 41 'select' 'select_ln82_1' <Predicate = (!icmp_ln80)> <Delay = 0.38> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.42ns)   --->   "%store_ln80 = store i13 %add_ln80_1, i13 %indvar_flatten12" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 42 'store' 'store_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.42>
+ST_2 : Operation 43 [1/1] (0.42ns)   --->   "%store_ln82 = store i11 %select_ln82_1, i11 %indvar_flatten" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 43 'store' 'store_ln82' <Predicate = (!icmp_ln80)> <Delay = 0.42>
+ST_2 : Operation 44 [1/1] (0.42ns)   --->   "%store_ln82 = store i4 %select_ln82, i4 %i" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 44 'store' 'store_ln82' <Predicate = (!icmp_ln80)> <Delay = 0.42>
+ST_2 : Operation 45 [1/1] (0.42ns)   --->   "%store_ln84 = store i8 %add_ln84, i8 %j" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 45 'store' 'store_ln84' <Predicate = (!icmp_ln80)> <Delay = 0.42>
+
+State 3 <SV = 2> <Delay = 1.72>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%c_load = load i2 %c" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 46 'load' 'c_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.54ns)   --->   "%add_ln80 = add i2 %c_load, i2 1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 47 'add' 'add_ln80' <Predicate = (icmp_ln82)> <Delay = 0.54> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.17ns)   --->   "%select_ln80_1 = select i1 %icmp_ln82, i2 %add_ln80, i2 %c_load" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 48 'select' 'select_ln80_1' <Predicate = true> <Delay = 0.17> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.17> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln87_1 = zext i2 %select_ln80_1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 49 'zext' 'zext_ln87_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 50 [3/3] (0.99ns) (grouped into DSP with root node add_ln87_3)   --->   "%mul_ln87 = mul i10 %zext_ln87_1, i10 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 50 'mul' 'mul_ln87' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 51 [2/3] (0.99ns) (grouped into DSP with root node add_ln87_1)   --->   "%empty_461 = mul i12 %zext_ln82_1, i12 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 51 'mul' 'empty_461' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 52 [1/1] (0.42ns)   --->   "%store_ln80 = store i2 %select_ln80_1, i2 %c" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80]   --->   Operation 52 'store' 'store_ln80' <Predicate = true> <Delay = 0.42>
+ST_3 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln84 = br void %for.inc" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 53 'br' 'br_ln84' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.06>
+ST_4 : Operation 54 [2/3] (0.99ns) (grouped into DSP with root node add_ln87_3)   --->   "%mul_ln87 = mul i10 %zext_ln87_1, i10 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 54 'mul' 'mul_ln87' <Predicate = true> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%zext_ln82 = zext i2 %select_ln80_1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 55 'zext' 'zext_ln82' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (2.41ns)   --->   "%mul_ln82 = mul i17 %zext_ln82, i17 51529" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 56 'mul' 'mul_ln82' <Predicate = true> <Delay = 2.41> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.41> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/3] (0.00ns) (grouped into DSP with root node add_ln87_1)   --->   "%empty_461 = mul i12 %zext_ln82_1, i12 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 57 'mul' 'empty_461' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 58 [1/1] (0.00ns) (grouped into DSP with root node add_ln87_1)   --->   "%p_cast8 = zext i12 %empty_461" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82]   --->   Operation 58 'zext' 'p_cast8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln87_1 = add i17 %mul_ln82, i17 %p_cast8" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 59 'add' 'add_ln87_1' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 2.89>
+ST_5 : Operation 60 [1/3] (0.00ns) (grouped into DSP with root node add_ln87_3)   --->   "%mul_ln87 = mul i10 %zext_ln87_1, i10 227" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 60 'mul' 'mul_ln87' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln87_2 = zext i8 %j_mid2" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 61 'zext' 'zext_ln87_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 62 [2/2] (0.64ns) (root node of the DSP)   --->   "%add_ln87_3 = add i10 %mul_ln87, i10 %zext_ln87_2" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 62 'add' 'add_ln87_3' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%zext_ln84 = zext i8 %j_mid2" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:84]   --->   Operation 63 'zext' 'zext_ln84' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 64 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln87_1 = add i17 %mul_ln82, i17 %p_cast8" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 64 'add' 'add_ln87_1' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 65 [1/1] (0.79ns)   --->   "%add_ln87_2 = add i11 %zext_ln84, i11 1140" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 65 'add' 'add_ln87_2' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln87 = sext i11 %add_ln87_2" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 66 'sext' 'sext_ln87' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (0.86ns)   --->   "%add_ln87 = add i17 %sext_ln87, i17 %add_ln87_1" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 67 'add' 'add_ln87' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln87 = zext i17 %add_ln87" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 68 'zext' 'zext_ln87' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 69 [1/1] (0.00ns)   --->   "%inp_img_addr = getelementptr i32 %inp_img, i64 0, i64 %zext_ln87" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 69 'getelementptr' 'inp_img_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 70 [2/2] (1.23ns)   --->   "%inp_img_load = load i18 %inp_img_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 70 'load' 'inp_img_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 154587> <RAM>
+ST_5 : Operation 99 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 99 'ret' 'ret_ln0' <Predicate = (icmp_ln80)> <Delay = 0.42>
+
+State 6 <SV = 5> <Delay = 2.47>
+ST_6 : Operation 71 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @L2_L3_L4_str"   --->   Operation 71 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 72 [1/1] (0.00ns)   --->   "%speclooptripcount_ln0 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 4767, i64 4767, i64 4767"   --->   Operation 72 'speclooptripcount' 'speclooptripcount_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [1/2] (0.64ns) (root node of the DSP)   --->   "%add_ln87_3 = add i10 %mul_ln87, i10 %zext_ln87_2" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 73 'add' 'add_ln87_3' <Predicate = true> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 124 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 74 [1/1] (0.00ns)   --->   "%zext_ln87_3 = zext i10 %add_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 74 'zext' 'zext_ln87_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%line_buffer_3D_addr = getelementptr i32 %line_buffer_3D, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 75 'getelementptr' 'line_buffer_3D_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [1/1] (0.00ns)   --->   "%line_buffer_3D_1_addr = getelementptr i32 %line_buffer_3D_1, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 76 'getelementptr' 'line_buffer_3D_1_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 77 [1/1] (0.00ns)   --->   "%line_buffer_3D_2_addr = getelementptr i32 %line_buffer_3D_2, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 77 'getelementptr' 'line_buffer_3D_2_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 78 [1/1] (0.00ns)   --->   "%line_buffer_3D_3_addr = getelementptr i32 %line_buffer_3D_3, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 78 'getelementptr' 'line_buffer_3D_3_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "%line_buffer_3D_4_addr = getelementptr i32 %line_buffer_3D_4, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 79 'getelementptr' 'line_buffer_3D_4_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "%line_buffer_3D_5_addr = getelementptr i32 %line_buffer_3D_5, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 80 'getelementptr' 'line_buffer_3D_5_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "%line_buffer_3D_6_addr = getelementptr i32 %line_buffer_3D_6, i64 0, i64 %zext_ln87_3" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 81 'getelementptr' 'line_buffer_3D_6_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "%specpipeline_ln86 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_2" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:86]   --->   Operation 82 'specpipeline' 'specpipeline_ln86' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 83 [1/2] ( I:1.23ns O:1.23ns )   --->   "%inp_img_load = load i18 %inp_img_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 83 'load' 'inp_img_load' <Predicate = true> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 154587> <RAM>
+ST_6 : Operation 84 [1/1] (0.00ns)   --->   "%bitcast_ln87 = bitcast i32 %inp_img_load" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 84 'bitcast' 'bitcast_ln87' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 85 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_5_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 85 'store' 'store_ln87' <Predicate = (select_ln82 == 9)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 86 'br' 'br_ln87' <Predicate = (select_ln82 == 9)> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_4_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 87 'store' 'store_ln87' <Predicate = (select_ln82 == 8)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 88 'br' 'br_ln87' <Predicate = (select_ln82 == 8)> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_3_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 89 'store' 'store_ln87' <Predicate = (select_ln82 == 7)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 90 'br' 'br_ln87' <Predicate = (select_ln82 == 7)> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_2_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 91 'store' 'store_ln87' <Predicate = (select_ln82 == 6)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 92 'br' 'br_ln87' <Predicate = (select_ln82 == 6)> <Delay = 0.00>
+ST_6 : Operation 93 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_1_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 93 'store' 'store_ln87' <Predicate = (select_ln82 == 5)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 94 'br' 'br_ln87' <Predicate = (select_ln82 == 5)> <Delay = 0.00>
+ST_6 : Operation 95 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 95 'store' 'store_ln87' <Predicate = (select_ln82 == 4)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 96 'br' 'br_ln87' <Predicate = (select_ln82 == 4)> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] ( I:1.23ns O:1.23ns )   --->   "%store_ln87 = store i32 %bitcast_ln87, i10 %line_buffer_3D_6_addr" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 97 'store' 'store_ln87' <Predicate = (select_ln82 != 4 & select_ln82 != 5 & select_ln82 != 6 & select_ln82 != 7 & select_ln82 != 8 & select_ln82 != 9)> <Delay = 1.23> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 681> <RAM>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%br_ln87 = br void %arrayidx1772.exit" [../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87]   --->   Operation 98 'br' 'br_ln87' <Predicate = (select_ln82 != 4 & select_ln82 != 5 & select_ln82 != 6 & select_ln82 != 7 & select_ln82 != 8 & select_ln82 != 9)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.427ns
+The critical path consists of the following:
+	'alloca' operation 13 bit ('indvar_flatten12') [13]  (0.000 ns)
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'indvar_flatten12' [15]  (0.427 ns)
+
+ <State 2>: 3.373ns
+The critical path consists of the following:
+	'load' operation 11 bit ('indvar_flatten_load', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82) on local variable 'indvar_flatten' [22]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln82', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82) [34]  (0.798 ns)
+	'select' operation 4 bit ('select_ln80', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80) [35]  (0.391 ns)
+	'add' operation 4 bit ('add_ln82', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82) [40]  (0.797 ns)
+	'select' operation 4 bit ('select_ln82', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82) [43]  (0.391 ns)
+	'mul' operation 12 bit of DSP[63] ('empty_461', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82) [49]  (0.996 ns)
+
+ <State 3>: 1.723ns
+The critical path consists of the following:
+	'load' operation 2 bit ('c_load', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80) on local variable 'c', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80 [30]  (0.000 ns)
+	'add' operation 2 bit ('add_ln80', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80) [31]  (0.548 ns)
+	'select' operation 2 bit ('select_ln80_1', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:80) [39]  (0.179 ns)
+	'mul' operation 10 bit of DSP[52] ('mul_ln87', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) [45]  (0.996 ns)
+
+ <State 4>: 3.062ns
+The critical path consists of the following:
+	'mul' operation 17 bit ('mul_ln82', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:82) [47]  (2.417 ns)
+	'add' operation 17 bit of DSP[63] ('add_ln87_1', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) [63]  (0.645 ns)
+
+ <State 5>: 2.898ns
+The critical path consists of the following:
+	'add' operation 11 bit ('add_ln87_2', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) [64]  (0.798 ns)
+	'add' operation 17 bit ('add_ln87', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) [66]  (0.863 ns)
+	'getelementptr' operation 18 bit ('inp_img_addr', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) [68]  (0.000 ns)
+	'load' operation 32 bit ('inp_img_load', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) on array 'inp_img' [69]  (1.237 ns)
+
+ <State 6>: 2.474ns
+The critical path consists of the following:
+	'load' operation 32 bit ('inp_img_load', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) on array 'inp_img' [69]  (1.237 ns)
+	'store' operation 0 bit ('store_ln87', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87) of variable 'bitcast_ln87', ../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:87 on array 'line_buffer_3D_4' [76]  (1.237 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

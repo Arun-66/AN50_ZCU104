@@ -1,0 +1,148 @@
+
+
+================================================================
+== Synthesis Summary Report of 'pad1'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 25 23:13:10 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Alex_Net
+    * Solution:       Pad1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+---------+-----------+-----------+-----+
+    |                              Modules                             | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |      |         |           |           |     |
+    |                              & Loops                             | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+---------+-----------+-----------+-----+
+    |+ pad1                                                            |     -|  2.99|    92262|  9.226e+05|         -|    92263|      -|        no|     -|  3 (~0%)|  312 (~0%)|  669 (~0%)|    -|
+    | + pad1_Pipeline_VITIS_LOOP_34_1_VITIS_LOOP_35_2_VITIS_LOOP_36_3  |     -|  2.99|    92261|  9.226e+05|         -|    92261|      -|        no|     -|  3 (~0%)|  228 (~0%)|  616 (~0%)|    -|
+    |  o VITIS_LOOP_34_1_VITIS_LOOP_35_2_VITIS_LOOP_36_3               |     -|  7.30|    92259|  9.226e+05|         5|        1|  92256|       yes|     -|        -|          -|          -|    -|
+    +------------------------------------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------------+-----------+----------+
+| Port             | Direction | Bitwidth |
++------------------+-----------+----------+
+| inp_img_address0 | out       | 17       |
+| inp_img_q0       | in        | 32       |
+| out_img_address0 | out       | 17       |
+| out_img_d0       | out       | 32       |
++------------------+-----------+----------+
+
+* Other Ports
++------+---------+-----------+----------+
+| Port | Mode    | Direction | Bitwidth |
++------+---------+-----------+----------+
+| pad  | ap_none | in        | 32       |
++------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| inp_img  | in        | float*   |
+| out_img  | out       | float*   |
+| pad      | in        | int      |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+------------------+---------+----------+
+| Argument | HW Interface     | HW Type | HW Usage |
++----------+------------------+---------+----------+
+| inp_img  | inp_img_address0 | port    | offset   |
+| inp_img  | inp_img_ce0      | port    |          |
+| inp_img  | inp_img_q0       | port    |          |
+| out_img  | out_img_address0 | port    | offset   |
+| out_img  | out_img_ce0      | port    |          |
+| out_img  | out_img_we0      | port    |          |
+| out_img  | out_img_d0       | port    |          |
+| pad      | pad              | port    |          |
++----------+------------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------------------+-----+--------+---------------+--------+-----------+---------+
+| Name                                                             | DSP | Pragma | Variable      | Op     | Impl      | Latency |
++------------------------------------------------------------------+-----+--------+---------------+--------+-----------+---------+
+| + pad1                                                           | 3   |        |               |        |           |         |
+|   sub_fu_48_p2                                                   |     |        | sub           | sub    | fabric    | 0       |
+|  + pad1_Pipeline_VITIS_LOOP_34_1_VITIS_LOOP_35_2_VITIS_LOOP_36_3 | 3   |        |               |        |           |         |
+|    select_ln34_fu_210_p3                                         |     |        | select_ln34   | select | auto_sel  | 0       |
+|    xor_ln34_fu_218_p2                                            |     |        | xor_ln34      | xor    | auto      | 0       |
+|    and_ln34_fu_224_p2                                            |     |        | and_ln34      | and    | auto      | 0       |
+|    c_fu_230_p3                                                   |     |        | c             | select | auto_sel  | 0       |
+|    add_ln35_fu_238_p2                                            |     |        | add_ln35      | add    | fabric    | 0       |
+|    empty_5_fu_244_p2                                             |     |        | empty_5       | or     | auto      | 0       |
+|    j_mid2_fu_250_p3                                              |     |        | j_mid2        | select | auto_sel  | 0       |
+|    i_fu_258_p3                                                   |     |        | i             | select | auto_sel  | 0       |
+|    mac_muladd_10ns_7ns_5ns_17_4_1_U1                             | 1   |        | empty_6       | mul    | dsp_slice | 3       |
+|    mac_mul_sub_10ns_7ns_17ns_17_4_1_U2                           | 1   |        | empty_7       | mul    | dsp_slice | 3       |
+|    cmp9_fu_278_p2                                                |     |        | cmp9          | setlt  | auto      | 0       |
+|    empty_8_fu_425_p2                                             |     |        | empty_8       | sub    | fabric    | 0       |
+|    slt_fu_283_p2                                                 |     |        | slt           | setlt  | auto      | 0       |
+|    rev_fu_288_p2                                                 |     |        | rev           | xor    | auto      | 0       |
+|    ama_submuladd_5ns_17ns_5ns_5ns_17_4_1_U3                      | 1   |        | empty_9       | sub    | dsp_slice | 3       |
+|    ama_submuladd_5ns_17ns_5ns_5ns_17_4_1_U3                      | 1   |        | empty_10      | mul    | dsp_slice | 3       |
+|    icmp_ln39_fu_298_p2                                           |     |        | icmp_ln39     | setlt  | auto      | 0       |
+|    icmp_ln39_1_fu_303_p2                                         |     |        | icmp_ln39_1   | setlt  | auto      | 0       |
+|    xor_ln39_fu_308_p2                                            |     |        | xor_ln39      | xor    | auto      | 0       |
+|    or_ln39_fu_314_p2                                             |     |        | or_ln39       | or     | auto      | 0       |
+|    or_ln39_2_fu_320_p2                                           |     |        | or_ln39_2     | or     | auto      | 0       |
+|    or_ln39_1_fu_326_p2                                           |     |        | or_ln39_1     | or     | auto      | 0       |
+|    mac_muladd_10ns_7ns_5ns_17_4_1_U1                             | 1   |        | add_ln45_2    | add    | dsp_slice | 3       |
+|    add_ln45_fu_435_p2                                            |     |        | add_ln45      | add    | fabric    | 0       |
+|    mac_mul_sub_10ns_7ns_17ns_17_4_1_U2                           | 1   |        | sub_ln45      | sub    | dsp_slice | 3       |
+|    ama_submuladd_5ns_17ns_5ns_5ns_17_4_1_U3                      | 1   |        | add_ln45_3    | add    | dsp_slice | 3       |
+|    add_ln45_1_fu_440_p2                                          |     |        | add_ln45_1    | add    | fabric    | 0       |
+|    empty_11_fu_453_p3                                            |     |        | empty_11      | select | auto_sel  | 0       |
+|    j_fu_332_p2                                                   |     |        | j             | add    | fabric    | 0       |
+|    add_ln35_1_fu_338_p2                                          |     |        | add_ln35_1    | add    | fabric    | 0       |
+|    select_ln35_1_fu_344_p3                                       |     |        | select_ln35_1 | select | auto_sel  | 0       |
+|    add_ln34_1_fu_352_p2                                          |     |        | add_ln34_1    | add    | fabric    | 0       |
+|    icmp_ln36_fu_358_p2                                           |     |        | icmp_ln36     | seteq  | auto      | 0       |
+|    icmp_ln35_fu_364_p2                                           |     |        | icmp_ln35     | seteq  | auto      | 0       |
+|    add_ln34_fu_370_p2                                            |     |        | add_ln34      | add    | fabric    | 0       |
+|    icmp_ln34_fu_376_p2                                           |     |        | icmp_ln34     | seteq  | auto      | 0       |
++------------------------------------------------------------------+-----+--------+---------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++----------+---------+----------------------------------------------------------+
+| Type     | Options | Location                                                 |
++----------+---------+----------------------------------------------------------+
+| pipeline |         | AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:37 in pad1 |
++----------+---------+----------------------------------------------------------+
+
+

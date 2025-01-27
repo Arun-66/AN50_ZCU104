@@ -1,0 +1,199 @@
+{
+  "0": {
+    "basicblocks": 33,
+    "calls": "2 12 5 11 7 6 10 1 8 9",
+    "file": "NN.cpp",
+    "fileloc": 38,
+    "instructions": 188,
+    "loads": {
+      "L": 4
+    },
+    "name": "NN",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 214116
+  },
+  "1": {
+    "basicblocks": 437,
+    "calls": "",
+    "file": "conv4.cpp",
+    "fileloc": 30,
+    "instructions": 25393,
+    "loads": {
+      "G": 2,
+      "L": 1148
+    },
+    "name": "conv4",
+    "stores": {
+      "L": 770
+    },
+    "total_instructions": 25393
+  },
+  "10": {
+    "basicblocks": 219,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 30,
+    "instructions": 12832,
+    "loads": {
+      "G": 1,
+      "L": 574
+    },
+    "name": "conv3",
+    "stores": {
+      "L": 385
+    },
+    "total_instructions": 12832
+  },
+  "11": {
+    "basicblocks": 2561,
+    "calls": "",
+    "file": "conv2.cpp",
+    "fileloc": 30,
+    "instructions": 69577,
+    "loads": {
+      "G": 2,
+      "L": 46472
+    },
+    "name": "conv2",
+    "stores": {
+      "L": 2494
+    },
+    "total_instructions": 69577
+  },
+  "12": {
+    "basicblocks": 236,
+    "calls": "",
+    "file": "pool1.cpp",
+    "fileloc": 25,
+    "instructions": 804,
+    "loads": {
+      "L": 68
+    },
+    "name": "pool1",
+    "stores": {
+      "L": 227
+    },
+    "total_instructions": 804
+  },
+  "2": {
+    "basicblocks": 994,
+    "calls": "",
+    "file": "conv1.cpp",
+    "fileloc": 21,
+    "instructions": 43247,
+    "loads": {
+      "G": 34849,
+      "L": 769
+    },
+    "name": "conv1",
+    "stores": {
+      "L": 1538
+    },
+    "total_instructions": 43247
+  },
+  "3": {
+    "basicblocks": 31,
+    "calls": "4 4 4 4 4 4 4 4 4",
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 425,
+    "loads": {
+      "G": 7
+    },
+    "name": "pow_generic<float>",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 506
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 9,
+    "loads": {
+      "L": 3
+    },
+    "name": "to_ieee",
+    "total_instructions": 9
+  },
+  "5": {
+    "basicblocks": 126,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "file": "norm1.cpp",
+    "fileloc": 32,
+    "instructions": 3253,
+    "loads": {
+      "L": 475
+    },
+    "name": "norm1",
+    "stores": {
+      "L": 101
+    },
+    "total_instructions": 15397
+  },
+  "6": {
+    "basicblocks": 286,
+    "calls": "3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3",
+    "file": "norm2.cpp",
+    "fileloc": 31,
+    "instructions": 8373,
+    "loads": {
+      "L": 1275
+    },
+    "name": "norm2",
+    "stores": {
+      "L": 261
+    },
+    "total_instructions": 20517
+  },
+  "7": {
+    "basicblocks": 124,
+    "calls": "",
+    "file": "pool2.cpp",
+    "fileloc": 25,
+    "instructions": 468,
+    "loads": {
+      "L": 40
+    },
+    "name": "pool2",
+    "stores": {
+      "L": 115
+    },
+    "total_instructions": 468
+  },
+  "8": {
+    "basicblocks": 437,
+    "calls": "",
+    "file": "conv5.cpp",
+    "fileloc": 30,
+    "instructions": 25393,
+    "loads": {
+      "G": 2,
+      "L": 1148
+    },
+    "name": "conv5",
+    "stores": {
+      "L": 770
+    },
+    "total_instructions": 25393
+  },
+  "9": {
+    "basicblocks": 68,
+    "calls": "",
+    "file": "pool5.cpp",
+    "fileloc": 25,
+    "instructions": 300,
+    "loads": {
+      "L": 26
+    },
+    "name": "pool5",
+    "stores": {
+      "L": 59
+    },
+    "total_instructions": 300
+  }
+}

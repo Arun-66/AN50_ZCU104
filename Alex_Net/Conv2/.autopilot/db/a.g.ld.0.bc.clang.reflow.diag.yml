@@ -1,0 +1,1977 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 181, Column: 6 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        S22
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 188, Column: 6 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        F22
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 198, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        w2_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 199, Column: 13 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        w2_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 205, Column: 24 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_205_8
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 206, Column: 25 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_206_9
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 211, Column: 28 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_211_10
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 212, Column: 29 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_212_11
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 223, Column: 21 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_223_12
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 95, Column: 6 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        S12
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 101, Column: 6 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        F12
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 112, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        w1_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 113, Column: 13 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        w1_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 118, Column: 24 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_118_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 119, Column: 25 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 124, Column: 24 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_124_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 125, Column: 25 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 138, Column: 20 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_138_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        S22
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:181:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '31'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        F22
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:188:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w2_2
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:198:8'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w2_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w2_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w2_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w2_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w2_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:199:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_205_8
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:205:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_206_9
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_206_9
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_206_9
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_206_9
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_206_9
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:206:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_211_10
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:211:28'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_212_11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_212_11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_212_11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_212_11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_212_11
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:212:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_223_12
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:223:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '27'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        S12
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:95:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '31'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        F12
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:101:6'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w1_2
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:112:8'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w1_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w1_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w1_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w1_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        w1_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:113:13'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_118_2
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:118:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_119_3
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:119:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_124_4
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:124:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_5
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:125:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 35, Column: 0 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_138_6
+  - String:          ''' ('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:138:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          conv2
+  - String:          ''' completely with a factor of '
+  - Factor:          '27'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_conv2_ir
+Args:            
+  - Callee:          'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_conv2_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 50, Column: 11 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          inp_image_local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '155'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 52, Column: 11 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          inp_img_2D
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 54, Column: 11 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          filter_local
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '25'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 56, Column: 11 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          filter_2D
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 60, Column: 11 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          conv_out
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '27'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 69, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '46128'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        inp_img49584seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L1_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 72, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.161
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 79, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1200'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        F1_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 81, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc17.load.32
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 76, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '93312'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        out_img49585seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L4
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.39
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.48
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.57
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.66
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.75
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.84
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.93
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.102
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.111
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.120
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.129
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.138
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.147
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.156
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.165
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.174
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.183
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.192
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.201
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.210
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.219
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.228
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.237
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.246
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.255
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.264
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_138_6.store.273
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 156, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '46128'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep49586seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L2_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 159, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          for.inc241.load.162
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 167, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1200'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep49587seq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        F2_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 169, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          for.inc262.load.32
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 164, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '93312'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep49588seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L7
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.39
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.48
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.57
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.66
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.75
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.84
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.93
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.102
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.111
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.120
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.129
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.138
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.147
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.156
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.165
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.174
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.183
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.192
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.201
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.210
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.219
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.228
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.237
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.246
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.255
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.264
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_223_12.store.273
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 81, Column: 20 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          M1.load.987
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 79, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 79, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 169, Column: 20 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+  - OrigDirection:   read
+  - OrigID:          M2.load.987
+  - ArrayName:       bias
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 167, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 167, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          scevgep49587seq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 164, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 164, Column: 5 }
+  - OrigDirection:   write
+  - OrigID:          scevgep49588seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        M2
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:221:5'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 167, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 167, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          scevgep49587seq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        F2_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 156, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 156, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          scevgep49586seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L2_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 76, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 76, Column: 5 }
+  - OrigDirection:   write
+  - OrigID:          out_img49585seq
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        M1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:136:5'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 79, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 79, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       filter
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        F1_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 69, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 69, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          inp_img49584seq
+  - ArrayName:       inp_img
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L1_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 69, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '46128'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L1_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 69, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '46128'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L1_1
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 76, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '93312'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L4
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 76, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '93312'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L4
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 79, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1200'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq2
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        F1_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 79, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1200'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        F1_1
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 156, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '46128'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L2_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 156, Column: 7 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '46128'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L2_1
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 164, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '93312'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        L7
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 164, Column: 5 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '93312'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        L7
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 167, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1200'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq5
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        F2_1
+  - String:          ' '
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8'
+  - String:          ' '
+  - Function:        'conv2(float*, float*, float*, float*)'
+    DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                       Line: 35, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: AlexNet-FPGA-implementation/Conv2/src/conv2.cpp, 
+                   Line: 167, Column: 8 }
+Function:        _Z5conv2PfS_S_S_
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1200'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        F2_1
+  - String:          '''('
+  - LoopLoc:         'AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

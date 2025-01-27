@@ -1,0 +1,56 @@
+INFO-FLOW: Workspace /primary/HLS/Alex_Net/pad3 opened at Sat Jan 25 23:19:13 IST 2025
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute     set_part xczu7ev-ffvc1156-2-i 
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-i 
+Execute       create_platform xczu7ev-ffvc1156-2-i -board  
+Command       create_platform done; 0.25 sec.
+Execute       source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/util.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.13 sec.
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /work/Xilinx/Vitis/2024.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.17 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-i -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.49 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+Execute       ::AP::init_summary_file csim 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-i -data info 
+INFO-FLOW: AESL_CSIM::c_sim errorInfo:
+
+    while executing
+"::AESL_CSIM::c_sim "$argn" "
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command     csim_design done; error code: 2; 11.69 sec.
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:11; Allocated memory: 0.000 MB.
+Command   ap_source done; error code: 1; 12.28 sec.
+Execute   source AN_script2.tcl 
+INFO: [HLS 200-1510] Running: source AN_script2.tcl
+Execute     open_project Alex_Net 
+INFO: [HLS 200-1510] Running: open_project Alex_Net 
+Execute       close_solution 
+Execute         cleanup_all 
+Execute         cleanup_all 

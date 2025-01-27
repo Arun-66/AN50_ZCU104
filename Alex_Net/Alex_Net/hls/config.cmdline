@@ -1,0 +1,3 @@
+relativeroot=/primary/HLS/Alex_Net
+original_argv=-c --mode hls --config /primary/HLS/Alex_Net/hls_config.cfg --work_dir Alex_Net 
+

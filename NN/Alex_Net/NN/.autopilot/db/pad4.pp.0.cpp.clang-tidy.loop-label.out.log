@@ -1,0 +1,35 @@
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:47534:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:47534:5: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:47548:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:47548:5: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:47562:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:47562:5: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:49184:7: warning: Added loop label VITIS_LOOP_1248_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1248_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:49184:7: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:50975:2: warning: Added loop label VITIS_LOOP_34_1:   [xilinx-label-all-loops]
+ for (int c = 0; c < 384; c++){
+ ^~~
+ VITIS_LOOP_34_1: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:50975:2: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:50976:4: warning: Added loop label VITIS_LOOP_35_2:   [xilinx-label-all-loops]
+   for (int i = 0; i < 15; i++){
+   ^~~
+   VITIS_LOOP_35_2: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:50976:4: note: FIX-IT applied suggested code changes
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:50977:13: warning: Added loop label VITIS_LOOP_36_3:   [xilinx-label-all-loops]
+            for (int j = 0; j < 15; j++){
+            ^~~
+            VITIS_LOOP_36_3: 
+/primary/HLS/NN/Alex_Net/NN/.autopilot/db/pad4.pp.0.cpp:50977:13: note: FIX-IT applied suggested code changes

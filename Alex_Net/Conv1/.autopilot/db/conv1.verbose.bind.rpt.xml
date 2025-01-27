@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'conv1'" level="0">
+<item name = "Date">Sat Jan 25 15:56:47 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">Alex_Net</item>
+<item name = "Solution">Conv1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu7ev-ffvc1156-2-i</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">909365, 909365, 9.094 ms, 9.094 ms, 909366, 909366, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_conv1_Pipeline_L2_L3_L4_fu_1629">conv1_Pipeline_L2_L3_L4, 4778, 4778, 47.780 us, 47.780 us, 4768, 4768, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv1_Pipeline_L7_fu_1651">conv1_Pipeline_L7, 143, 143, 1.430 us, 1.430 us, 142, 142, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_conv1_Pipeline_L1_fu_2040">conv1_Pipeline_L1, 152, 152, 1.520 us, 1.520 us, 97, 97, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- L5">904585, 904585, 16447, -, -, 55, no</column>
+<column name=" + L6">16445, 16445, 299, -, -, 55, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

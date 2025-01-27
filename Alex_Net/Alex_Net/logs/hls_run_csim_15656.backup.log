@@ -1,0 +1,22 @@
+  **** HLS Build v2024.2 5238294
+INFO: [HLS 200-2005] Using work_dir /primary/HLS/Alex_Net/Alex_Net 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h' from /primary/HLS/Alex_Net/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp' from /primary/HLS/Alex_Net/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /primary/HLS/Alex_Net/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xczu7ev-fbvb900-3-e' from /primary/HLS/Alex_Net/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-fbvb900-3-e'
+INFO: [HLS 200-1465] Applying ini 'csim.code_analyzer=1' from /primary/HLS/Alex_Net/hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /primary/HLS/Alex_Net/hls_config.cfg(5)
+INFO: [SIM 211-200] Executing Code Analyzer instead of classic HLS C simulation
+slxcmd:0:0: error: No top-level hardware function has been defined
+ERROR: [SIM 211-200] Code Analyzer execution failed. Consider running the classic C simulation instead by disabling the hls.csim.code_analyzer option in the config file.
+ERROR: Problem running csim: child process exited abnormally
+INFO: [HLS 200-112] Total CPU user time: 6.81 seconds. Total CPU system time: 0.93 seconds. Total elapsed time: 8.97 seconds; peak allocated memory: 326.746 MB.

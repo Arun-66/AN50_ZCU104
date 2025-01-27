@@ -1,0 +1,51 @@
+<dict>
+  <key>main-file</key>
+  <string>/primary/HLS/Out/Alex_Net/NN/.autopilot/db/NN.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp</string>
+      <key>line</key>
+      <integer>36</integer>
+      <key>column</key>
+      <integer>34</integer>
+      <key>message</key>
+      <string>unexpected pragma argument &apos;fmul&apos;, expects function/operation</string>
+      <key>ID</key>
+      <integer>5570</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>error</string>
+      <key>filename</key>
+      <string>../NN/NN.cpp</string>
+      <key>line</key>
+      <integer>98</integer>
+      <key>column</key>
+      <integer>24</integer>
+      <key>message</key>
+      <string>use of undeclared identifier &apos;Pad2_out_img&apos;; did you mean &apos;Pad1_out_img&apos;?</string>
+      <key>ID</key>
+      <integer>3777</integer>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>note</string>
+      <key>filename</key>
+      <string>../NN/NN.cpp</string>
+      <key>line</key>
+      <integer>50</integer>
+      <key>column</key>
+      <integer>14</integer>
+      <key>message</key>
+      <string>&apos;Pad1_out_img&apos; declared here</string>
+      <key>ID</key>
+      <integer>4436</integer>
+    </dict>
+  </array>
+</dict>

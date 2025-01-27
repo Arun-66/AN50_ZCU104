@@ -1,0 +1,12 @@
+{
+  "name": "Alex_Net",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "Alex_Net"
+  },
+  "template": "empty_hls_component"
+}

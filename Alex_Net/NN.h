@@ -1,0 +1,14 @@
+#define INP_IMAGE_SIZE 227
+#define INP_IMAGE_CHANNEL 3
+#define OUT_IMAGE_SIZE 55
+#define FILTER_BATCH 96
+#define FILTER_SIZE 11
+#define STRIDE 4
+#define STRIDE_NEW 11
+
+#define INP_IMG_CHAN 256
+#define INP_IMG_SIZE 13
+#define OUT_IMG_SIZE 6
+#define FILTER_SIZE_O 3
+#define STRIDE_0 2
+#define STRIDE_NEW_0 3

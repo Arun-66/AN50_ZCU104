@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/primary/HLS/Alex_Net/Conv1/.autopilot/db/conv1.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>AlexNet-FPGA-implementation/Conv1/src/conv1.cpp</string>
+      <key>line</key>
+      <integer>36</integer>
+      <key>column</key>
+      <integer>34</integer>
+      <key>message</key>
+      <string>unexpected pragma argument &apos;fmul&apos;, expects function/operation</string>
+      <key>ID</key>
+      <integer>5570</integer>
+      <key>WarningOption</key>
+      <string>invalid-hls-pragmas</string>
+    </dict>
+  </array>
+</dict>

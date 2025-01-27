@@ -1,0 +1,70 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 186,983 *    | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  38,224      | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  18,211      | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  18,450      | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  12,642      | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  20,524      | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  14,919      | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  14,919      | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  14,919      | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  14,928      | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  13,870      | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  13,486      | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  13,486      | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  13,486      | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  13,504      | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  13,558      | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+    * - Exceeded design size warning message threshold
+
+* Instructions per Function for each Compilation Phase
++---------------------------------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+
+| Function                              | Location          | Compile/Link       | Unroll/Inline     | Array/Struct      | Performance       | HW Transforms     |
++---------------------------------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+
+| + norm2                               | norm2.cpp:31      | 186,983 *          | 12,642            | 14,928            | 13,486            | 13,558            |
+|  + powf                               | powfloat.cpp:7    | 186,560 (10 calls) |                   |                   |                   |                   |
+|   + pow_generic<float>                | hls_pow.h:291     | 186,540 (10 calls) |                   |                   |                   |                   |
+|      fp_struct                        | x_hls_utils.h:283 |  6,360 (20 calls)  |                   |                   |                   |                   |
+|      fp_struct                        | x_hls_utils.h:281 |     40 (10 calls)  |                   |                   |                   |                   |
+|      expv                             | x_hls_utils.h:316 |  2,180 (20 calls)  |                   |                   |                   |                   |
+|    + generic_isinf<float>             | hls_isinf.h:16    |  7,760 (20 calls)  |                   |                   |                   |                   |
+|       fp_struct                       | x_hls_utils.h:283 |  6,360 (20 calls)  |                   |                   |                   |                   |
+|    + generic_isnan<float>             | hls_isnan.h:16    |  7,780 (20 calls)  |                   |                   |                   |                   |
+|       fp_struct                       | x_hls_utils.h:283 |  6,360 (20 calls)  |                   |                   |                   |                   |
+|    + to_ieee                          | x_hls_utils.h:346 | 27,270 (90 calls)  |                   |                   |                   |                   |
+|     + to_float                        | x_hls_utils.h:322 | 27,090 (90 calls)  |                   |                   |                   |                   |
+|        data                           | x_hls_utils.h:309 | 25,110 (90 calls)  |                   |                   |                   |                   |
+|    + log_range_reduction<39>          | hls_pow.h:130     | 43,990 (10 calls)  |                   |                   |                   |                   |
+|       log_range_reduce<ap_fixed<65... | hls_pow.h:30      | 12,650 (10 calls)  |                   |                   |                   |                   |
+|       log_range_reduce<ap_fixed<65... | hls_pow.h:30      | 12,420 (10 calls)  |                   |                   |                   |                   |
+|       log_range_reduce<ap_fixed<65... | hls_pow.h:30      | 12,400 (10 calls)  |                   |                   |                   |                   |
+|      exp_Z1P_m_1                      | hls_pow.h:156     |  3,600 (10 calls)  |                   |                   |                   |                   |
+|  + pow_generic<float>                 | hls_pow.h:291     |                    | 12,408 (24 calls) | 12,144 (24 calls) | 10,704 (24 calls) | 10,728 (24 calls) |
+|     to_ieee                           | x_hls_utils.h:346 |                    | 1,944 (216 calls) | 1,944 (216 calls) | 1,296 (216 calls) | 1,296 (216 calls) |
++---------------------------------------+-------------------+--------------------+-------------------+-------------------+-------------------+-------------------+
+    * - Exceeded design size warning message threshold
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

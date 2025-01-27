@@ -1,0 +1,203 @@
+{
+  "0": {
+    "basicblocks": 46,
+    "calls": "8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8",
+    "file": "norm2.cpp",
+    "fileloc": 31,
+    "instructions": 352,
+    "loads": {
+      "L": 34,
+      "T": 1
+    },
+    "name": "norm2",
+    "stores": {
+      "L": 11,
+      "T": 5
+    },
+    "total_instructions": 38224
+  },
+  "1": {
+    "basicblocks": 61,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 111,
+    "loads": {
+      "G": 1
+    },
+    "name": "log_range_reduce<ap_fixed<65, 9, AP_TRN, AP_WRAP, 0>, 4, 4, 39, 41>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 111
+  },
+  "10": {
+    "basicblocks": 61,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 107,
+    "loads": {
+      "G": 1
+    },
+    "name": "log_range_reduce<ap_fixed<65, 9, AP_TRN, AP_WRAP, 0>, 7, 6, 41, 44>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 107
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 14,
+    "loads": {
+      "L": 4
+    },
+    "name": "data",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 14
+  },
+  "12": {
+    "basicblocks": 20,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 156,
+    "instructions": 49,
+    "loads": {
+      "G": 3
+    },
+    "name": "exp_Z1P_m_1",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 49
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 21
+  },
+  "14": {
+    "basicblocks": 3,
+    "calls": "7",
+    "file": "hls_isinf.h",
+    "fileloc": 16,
+    "instructions": 13,
+    "loads": {
+      "L": 2
+    },
+    "name": "generic_isinf<float>",
+    "total_instructions": 21
+  },
+  "2": {
+    "basicblocks": 369,
+    "calls": "7 7 5 5 14 4 4 14 13 13 13 13 13 9 12 13 13 13 13",
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 803,
+    "loads": {
+      "G": 3,
+      "L": 19
+    },
+    "name": "pow_generic<float>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 1576
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "11",
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_float",
+    "total_instructions": 19
+  },
+  "4": {
+    "basicblocks": 3,
+    "calls": "7",
+    "file": "hls_isnan.h",
+    "fileloc": 16,
+    "instructions": 13,
+    "loads": {
+      "L": 2
+    },
+    "name": "generic_isnan<float>",
+    "total_instructions": 21
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 316,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "name": "expv",
+    "total_instructions": 4
+  },
+  "6": {
+    "basicblocks": 61,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 107,
+    "loads": {
+      "G": 1
+    },
+    "name": "log_range_reduce<ap_fixed<65, 9, AP_TRN, AP_WRAP, 0>, 12, 6, 44, 39>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 107
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 8,
+    "name": "fp_struct",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "2",
+    "file": "powfloat.cpp",
+    "fileloc": 7,
+    "instructions": 2,
+    "name": "powf",
+    "total_instructions": 1578
+  },
+  "9": {
+    "basicblocks": 46,
+    "calls": "1 10 6",
+    "file": "hls_pow.h",
+    "fileloc": 130,
+    "instructions": 102,
+    "loads": {
+      "L": 14
+    },
+    "name": "log_range_reduction<39>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 427
+  }
+}

@@ -1,0 +1,337 @@
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:8:9: warning: 'INP_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_SIZE 31
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:8:9: note: previous definition is here
+#define INP_IMAGE_SIZE 227
+        ^
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 96
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 3
+        ^
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:10:9: warning: 'OUT_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_SIZE 27
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:10:9: note: previous definition is here
+#define OUT_IMAGE_SIZE 55
+        ^
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:11:9: warning: 'FILTER_BATCH' macro redefined [-Wmacro-redefined]
+#define FILTER_BATCH 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:11:9: note: previous definition is here
+#define FILTER_BATCH 96
+        ^
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:13:9: warning: 'FILTER_SIZE' macro redefined [-Wmacro-redefined]
+#define FILTER_SIZE 5
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:12:9: note: previous definition is here
+#define FILTER_SIZE 11
+        ^
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:14:9: warning: 'STRIDE' macro redefined [-Wmacro-redefined]
+#define STRIDE 1
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:13:9: note: previous definition is here
+#define STRIDE 4
+        ^
+In file included from Wrap_up.cpp:14:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:15:9: warning: 'STRIDE_NEW' macro redefined [-Wmacro-redefined]
+#define STRIDE_NEW 5
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.h:14:9: note: previous definition is here
+#define STRIDE_NEW 11
+        ^
+In file included from Wrap_up.cpp:15:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:8:9: warning: 'INP_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_SIZE 15
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:8:9: note: previous definition is here
+#define INP_IMAGE_SIZE 31
+        ^
+In file included from Wrap_up.cpp:15:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 96
+        ^
+In file included from Wrap_up.cpp:15:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:10:9: warning: 'OUT_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_SIZE 13
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:10:9: note: previous definition is here
+#define OUT_IMAGE_SIZE 27
+        ^
+In file included from Wrap_up.cpp:15:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:11:9: warning: 'FILTER_BATCH' macro redefined [-Wmacro-redefined]
+#define FILTER_BATCH 384
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:11:9: note: previous definition is here
+#define FILTER_BATCH 256
+        ^
+In file included from Wrap_up.cpp:15:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:13:9: warning: 'FILTER_SIZE' macro redefined [-Wmacro-redefined]
+#define FILTER_SIZE 3
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:13:9: note: previous definition is here
+#define FILTER_SIZE 5
+        ^
+In file included from Wrap_up.cpp:15:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:15:9: warning: 'STRIDE_NEW' macro redefined [-Wmacro-redefined]
+#define STRIDE_NEW 3
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:15:9: note: previous definition is here
+#define STRIDE_NEW 5
+        ^
+In file included from Wrap_up.cpp:16:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 384
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 256
+        ^
+In file included from Wrap_up.cpp:16:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:12:9: warning: 'FILTER_CHANNEL' macro redefined [-Wmacro-redefined]
+#define FILTER_CHANNEL 192
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h:12:9: note: previous definition is here
+#define FILTER_CHANNEL 48
+        ^
+In file included from Wrap_up.cpp:17:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:11:9: warning: 'FILTER_BATCH' macro redefined [-Wmacro-redefined]
+#define FILTER_BATCH 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h:11:9: note: previous definition is here
+#define FILTER_BATCH 384
+        ^
+In file included from Wrap_up.cpp:18:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:8:9: warning: 'INP_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_SIZE 27
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:8:9: note: previous definition is here
+#define INP_IMAGE_SIZE 15
+        ^
+In file included from Wrap_up.cpp:18:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 96
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 384
+        ^
+In file included from Wrap_up.cpp:18:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:10:9: warning: 'OUT_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_SIZE 27
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:10:9: note: previous definition is here
+#define OUT_IMAGE_SIZE 13
+        ^
+In file included from Wrap_up.cpp:19:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:8:9: warning: 'INP_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_SIZE 13
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:8:9: note: previous definition is here
+#define INP_IMAGE_SIZE 27
+        ^
+In file included from Wrap_up.cpp:19:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 96
+        ^
+In file included from Wrap_up.cpp:19:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:10:9: warning: 'OUT_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_SIZE 13
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:10:9: note: previous definition is here
+#define OUT_IMAGE_SIZE 27
+        ^
+In file included from Wrap_up.cpp:19:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:20:
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:11:9: warning: 'OUT_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_CHANNEL 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.h:11:9: note: previous definition is here
+#define OUT_IMAGE_CHANNEL 96
+        ^
+In file included from Wrap_up.cpp:20:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:8:9: warning: 'INP_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_SIZE 27
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:8:9: note: previous definition is here
+#define INP_IMAGE_SIZE 13
+        ^
+In file included from Wrap_up.cpp:20:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 96
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 256
+        ^
+In file included from Wrap_up.cpp:20:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:10:9: warning: 'OUT_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_SIZE 31
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:10:9: note: previous definition is here
+#define OUT_IMAGE_SIZE 13
+        ^
+In file included from Wrap_up.cpp:20:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:11:9: warning: 'OUT_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_CHANNEL 96
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.h:11:9: note: previous definition is here
+#define OUT_IMAGE_CHANNEL 256
+        ^
+In file included from Wrap_up.cpp:21:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:8:9: warning: 'INP_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_SIZE 13
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:8:9: note: previous definition is here
+#define INP_IMAGE_SIZE 27
+        ^
+In file included from Wrap_up.cpp:21:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 96
+        ^
+In file included from Wrap_up.cpp:21:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:10:9: warning: 'OUT_IMAGE_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_SIZE 15
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:10:9: note: previous definition is here
+#define OUT_IMAGE_SIZE 31
+        ^
+In file included from Wrap_up.cpp:21:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:11:9: warning: 'OUT_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_CHANNEL 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.h:11:9: note: previous definition is here
+#define OUT_IMAGE_CHANNEL 96
+        ^
+In file included from Wrap_up.cpp:22:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h:9:9: warning: 'INP_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define INP_IMAGE_CHANNEL 384
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:9:9: note: previous definition is here
+#define INP_IMAGE_CHANNEL 256
+        ^
+In file included from Wrap_up.cpp:22:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.h:11:9: warning: 'OUT_IMAGE_CHANNEL' macro redefined [-Wmacro-redefined]
+#define OUT_IMAGE_CHANNEL 384
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.h:11:9: note: previous definition is here
+#define OUT_IMAGE_CHANNEL 256
+        ^
+In file included from Wrap_up.cpp:24:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:8:9: warning: 'INP_IMG_CHAN' macro redefined [-Wmacro-redefined]
+#define INP_IMG_CHAN 96
+        ^
+./NN.h:9:9: note: previous definition is here
+#define INP_IMG_CHAN 256
+        ^
+In file included from Wrap_up.cpp:24:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:9:9: warning: 'INP_IMG_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMG_SIZE 55
+        ^
+./NN.h:10:9: note: previous definition is here
+#define INP_IMG_SIZE 13
+        ^
+In file included from Wrap_up.cpp:24:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:10:9: warning: 'OUT_IMG_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMG_SIZE 27
+        ^
+./NN.h:11:9: note: previous definition is here
+#define OUT_IMG_SIZE 6
+        ^
+In file included from Wrap_up.cpp:24:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:12:9: warning: 'STRIDE' macro redefined [-Wmacro-redefined]
+#define STRIDE 2
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.h:14:9: note: previous definition is here
+#define STRIDE 1
+        ^
+In file included from Wrap_up.cpp:25:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:8:9: warning: 'INP_IMG_CHAN' macro redefined [-Wmacro-redefined]
+#define INP_IMG_CHAN 256
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:8:9: note: previous definition is here
+#define INP_IMG_CHAN 96
+        ^
+In file included from Wrap_up.cpp:25:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:9:9: warning: 'INP_IMG_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMG_SIZE 27
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:9:9: note: previous definition is here
+#define INP_IMG_SIZE 55
+        ^
+In file included from Wrap_up.cpp:25:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:10:9: warning: 'OUT_IMG_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMG_SIZE 13
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.h:10:9: note: previous definition is here
+#define OUT_IMG_SIZE 27
+        ^
+In file included from Wrap_up.cpp:26:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h:9:9: warning: 'INP_IMG_SIZE' macro redefined [-Wmacro-redefined]
+#define INP_IMG_SIZE 13
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:9:9: note: previous definition is here
+#define INP_IMG_SIZE 27
+        ^
+In file included from Wrap_up.cpp:26:
+In file included from /primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:19:
+/primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.h:10:9: warning: 'OUT_IMG_SIZE' macro redefined [-Wmacro-redefined]
+#define OUT_IMG_SIZE 6
+        ^
+/primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.h:10:9: note: previous definition is here
+#define OUT_IMG_SIZE 13
+        ^
+42 warnings generated.

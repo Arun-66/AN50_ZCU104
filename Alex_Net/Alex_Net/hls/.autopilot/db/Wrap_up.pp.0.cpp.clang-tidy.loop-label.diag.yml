@@ -1,0 +1,652 @@
+---
+MainSourceFile:  /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          1523472
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          1523938
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          1524405
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1248_1:  '
+    FileOffset:      1248
+    FilePath:        /work/Xilinx/Vitis/2024.2/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          1807447
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1248_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_216_1:  '
+    FileOffset:      216
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3036962
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_216_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_85_1:  '
+    FileOffset:      85
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3041379
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_85_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_2:  '
+    FileOffset:      118
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3042113
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_3:  '
+    FileOffset:      119
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3042151
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_124_4:  '
+    FileOffset:      124
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3042281
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_124_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_125_5:  '
+    FileOffset:      125
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3042312
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_125_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_138_6:  '
+    FileOffset:      138
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3042498
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_138_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_173_7:  '
+    FileOffset:      173
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3043016
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_173_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_205_8:  '
+    FileOffset:      205
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3043777
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_205_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_206_9:  '
+    FileOffset:      206
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3043815
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_206_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_211_10:  '
+    FileOffset:      211
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3043951
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_211_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_212_11:  '
+    FileOffset:      212
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3043985
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_212_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_223_12:  '
+    FileOffset:      223
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3044184
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_223_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_91_1:  '
+    FileOffset:      91
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3047156
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_91_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_124_2:  '
+    FileOffset:      124
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3047857
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_124_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_125_3:  '
+    FileOffset:      125
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3047895
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_125_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_132_4:  '
+    FileOffset:      132
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3048041
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_132_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_133_5:  '
+    FileOffset:      133
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3048072
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_133_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_146_6:  '
+    FileOffset:      146
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/conv3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3048258
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_146_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_87_1:  '
+    FileOffset:      87
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3051307
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_87_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_2:  '
+    FileOffset:      118
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3052008
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_3:  '
+    FileOffset:      119
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3052046
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_125_4:  '
+    FileOffset:      125
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3052191
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_125_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_126_5:  '
+    FileOffset:      126
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3052222
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_126_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_138_6:  '
+    FileOffset:      138
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3052407
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_138_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_174_7:  '
+    FileOffset:      174
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3052930
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_174_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_211_8:  '
+    FileOffset:      211
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3053688
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_211_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_212_9:  '
+    FileOffset:      212
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3053726
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_212_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_219_10:  '
+    FileOffset:      219
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3053878
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_219_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_220_11:  '
+    FileOffset:      220
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3053912
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_220_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_231_12:  '
+    FileOffset:      231
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3054111
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_231_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_85_1:  '
+    FileOffset:      85
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3057083
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_85_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_2:  '
+    FileOffset:      116
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3057784
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_117_3:  '
+    FileOffset:      117
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3057822
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_117_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_123_4:  '
+    FileOffset:      123
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3057967
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_123_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_124_5:  '
+    FileOffset:      124
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3057998
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_124_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_137_6:  '
+    FileOffset:      137
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3058184
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_137_6: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_172_7:  '
+    FileOffset:      172
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3058706
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_172_7: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_203_8:  '
+    FileOffset:      203
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3059458
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_203_8: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_204_9:  '
+    FileOffset:      204
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3059496
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_204_9: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_210_10:  '
+    FileOffset:      210
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3059647
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_210_10: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_211_11:  '
+    FileOffset:      211
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3059681
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_211_11: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_222_12:  '
+    FileOffset:      222
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Conv5/src/conv5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3059880
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_222_12: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_1:  '
+    FileOffset:      50
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3061786
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_2:  '
+    FileOffset:      51
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Norm1/src/norm1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3061814
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_1:  '
+    FileOffset:      50
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3065194
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_2:  '
+    FileOffset:      51
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Norm2/src/norm2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3065222
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3068081
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3068114
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_3:  '
+    FileOffset:      36
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad1/src/pad1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3068156
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3069570
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3069604
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_3:  '
+    FileOffset:      36
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad2/src/pad2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3069646
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3071048
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3071082
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_3:  '
+    FileOffset:      36
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad3/src/pad3.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3071124
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_34_1:  '
+    FileOffset:      34
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3072526
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_34_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_35_2:  '
+    FileOffset:      35
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3072560
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_35_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_36_3:  '
+    FileOffset:      36
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pad4/src/pad4.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3072602
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_36_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_1:  '
+    FileOffset:      51
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3074893
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_2:  '
+    FileOffset:      152
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3076980
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_154_3:  '
+    FileOffset:      154
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool1/src/pool1.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3077020
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_154_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_1:  '
+    FileOffset:      51
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3079238
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_2:  '
+    FileOffset:      152
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3081326
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_154_3:  '
+    FileOffset:      154
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool2/src/pool2.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3081366
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_154_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_51_1:  '
+    FileOffset:      51
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3083582
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_51_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_152_2:  '
+    FileOffset:      152
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3085670
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_152_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_154_3:  '
+    FileOffset:      154
+    FilePath:        /primary/HLS/AlexNet-FPGA-implementation/Pool5/src/pool5.cpp
+    Replacements:    
+      - FilePath:        /primary/HLS/Alex_Net/Alex_Net/hls/.autopilot/db/Wrap_up.pp.0.cpp
+        Offset:          3085710
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_154_3: '
+...

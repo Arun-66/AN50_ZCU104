@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 2119,
+    "calls": "",
+    "file": "conv3.cpp",
+    "fileloc": 30,
+    "instructions": 25746,
+    "loads": {
+      "L": 6500,
+      "T": 3
+    },
+    "name": "conv3",
+    "stores": {
+      "L": 3448,
+      "T": 26
+    },
+    "total_instructions": 25746
+  }
+}

@@ -1,0 +1,153 @@
+instrumenter::INFOR: [Instrumenter - Initialization] Checking for the existence of the required environment variables
+instrumenter::INFOR: [Instrumenter - Initialization] Loading the supported wrappers for standard library functions
+instrumenter::INFOR: [Instrumenter - Initialization] Adding static information
+instrumenter::VERBO: [Instrumenter - INFO] Local variable was optimized away by the compiler, skipping instrumentation...
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::VERBO: [Instrumenter - IRBuilder] Instruction has no debug information, defaulting to function/basic block info
+instrumenter::INFOR: [Instrumenter - Initialization] Finished adding static information
+instrumenter::VERBO: [Instrumenter - Finalize] Dumping static data to .... "/primary/HLS/Alex_Net/Alex_Net/hls/csim/code_analyzer/.internal/instrument/app_0/static.xml"
+instrumenter::VERBO: [Instrumenter - GV] Global Variables Instrumentation
+instrumenter::VERBO: [Instrumenter - WARNING] Global value llvm.global_ctors is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.1 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.2 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.3 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.4 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.5 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.6 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value .str.7 is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value __const.main.out_img is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value __const._Z5conv1PfS_.filter_local is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value __const._Z5conv1PfS_.bias is not instrumentable
+instrumenter::VERBO: [Instrumenter - WARNING] Global value llvm.used is not instrumentable
+instrumenter::VERBO: spec:0:0: note: [Instrumenter - FN/BB] Function/BasicBlock profiling
+instrumenter::VERBO: [Instrumenter - FN/BB] Inserting profiling calls for function/basic-blocks
+instrumenter::INFOR: [Instrumenter - FN_TRACE] Adding the init function for the trace calls...
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_testbench.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt8ios_base4InitC1Ev
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt8ios_base4InitD1Ev
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxa_atexit
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: main
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __gxx_personality_v0
+instrumenter::VERBO: [Instrumenter - BB] Skipping Function llvm.vcxx.region.start
+instrumenter::VERBO: [Instrumenter - BB] Skipping Function llvm.dbg.declare
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: malloc
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt14basic_ifstreamIcSt11char_traitsIcEE7is_openEv
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSolsEPFRSoS_E
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSirsERf
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt14basic_ifstreamIcSt11char_traitsIcEE5closeEv
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: free
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt14basic_ofstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSolsEf
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt14basic_ofstreamIcSt11char_traitsIcEED1Ev
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: llvm.memcpy.p0i8.p0i8.i64
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv1.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.2
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z5conv1PfS_
+instrumenter::VERBO: [Instrumenter - BB] Skipping Function llvm.dbg.label
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv2.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.5
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv3.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.8
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z5conv3PfS_S_S_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv4.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.11
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z5conv4PfS_S_S_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv5.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.14
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z5conv5PfS_S_S_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_norm1.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.17
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z5norm1PfS_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: powf
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: llvm.fmuladd.f64
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_pad1.cpp
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.20
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z4pad1PfS_i
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv1.cpp.23
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv2.cpp.24
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv3.cpp.25
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv4.cpp.26
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_conv5.cpp.27
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_pad1.cpp.28
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _GLOBAL__sub_I_norm1.cpp.29
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.22
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.24
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: atexit
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.18
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.20
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.14.30
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.16
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.10
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.12
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.6
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.8
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.2.32
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit.4
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __cxx_global_var_init.34
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: __dtor__ZStL8__ioinit
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: _Z5conv2PfS_S_S_
+instrumenter::VERBO: [Instrumenter - BB] Instrumenting the function: llvm.sideeffect
+instrumenter::VERBO: [Instrumenter - BB] Skipping Function llvm.dbg.value
+instrumenter::VERBO: [Instrumenter - Finalize] Adding extra setup and memory access calls
+instrumenter::VERBO: [Instrumenter - STD] Instrumenting function malloc
+instrumenter::VERBO: [Instrumenter - STD] Instrumenting function free

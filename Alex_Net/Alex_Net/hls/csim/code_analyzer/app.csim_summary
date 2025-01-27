@@ -1,0 +1,55 @@
+<ENTRY>
+{
+ "thisFile": "/primary/HLS/Alex_Net/Alex_Net/hls/csim/code_analyzer/app.csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jan 24 21:45:45 2025",
+ "timestampMillis": "1737735345301",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jan 24 21:45:45 2025",
+ "timestampMillis": "1737735345303",
+ "buildStep": {
+  "cmdId": "77358d18-da6e-11ef-bf69-d8c0a69b5d79",
+  "name": "vitis_c++",
+  "logFile": "",
+  "commandLine": "vitis_c++ code_analyzer",
+  "args": [
+   "code_analyzer"
+  ],
+  "iniFiles": [],
+  "cwd": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jan 24 21:45:45 2025",
+ "timestampMillis": "1737735345305",
+ "status": {
+  "cmdId": "77358d18-da6e-11ef-bf69-d8c0a69b5d79",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>

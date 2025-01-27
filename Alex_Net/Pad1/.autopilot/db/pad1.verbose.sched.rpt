@@ -1,0 +1,125 @@
+
+
+================================================================
+== Vitis HLS Report for 'pad1'
+================================================================
+* Date:           Sat Jan 25 23:13:10 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        Alex_Net
+* Solution:       Pad1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.309 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    92262|    92262|  0.923 ms|  0.923 ms|  92263|  92263|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.01>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%pad_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %pad" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31]   --->   Operation 3 'read' 'pad_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (1.01ns)   --->   "%sub = sub i32 31, i32 %pad_read" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31]   --->   Operation 4 'sub' 'sub' <Predicate = true> <Delay = 1.01> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%trunc_ln34 = trunc i32 %pad_read" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:34]   --->   Operation 5 'trunc' 'trunc_ln34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln31 = call void @pad1_Pipeline_VITIS_LOOP_34_1_VITIS_LOOP_35_2_VITIS_LOOP_36_3, i32 %pad_read, i32 %sub, i17 %trunc_ln34, i32 %inp_img, i32 %out_img" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31]   --->   Operation 6 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%spectopmodule_ln30 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:30]   --->   Operation 7 'spectopmodule' 'spectopmodule_ln30' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %inp_img, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %inp_img"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_img, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %out_img"   --->   Operation 11 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %pad"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %pad, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/2] (0.00ns)   --->   "%call_ln31 = call void @pad1_Pipeline_VITIS_LOOP_34_1_VITIS_LOOP_35_2_VITIS_LOOP_36_3, i32 %pad_read, i32 %sub, i17 %trunc_ln34, i32 %inp_img, i32 %out_img" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31]   --->   Operation 14 'call' 'call_ln31' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%ret_ln50 = ret" [AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:50]   --->   Operation 15 'ret' 'ret_ln50' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.016ns
+The critical path consists of the following:
+	wire read operation ('pad_read', AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31) on port 'pad' (AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31) [11]  (0.000 ns)
+	'sub' operation 32 bit ('sub', AlexNet-FPGA-implementation/Pad1/src/pad1.cpp:31) [12]  (1.016 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

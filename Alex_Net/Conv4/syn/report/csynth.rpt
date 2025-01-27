@@ -1,0 +1,502 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv4'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 25 18:13:50 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Alex_Net
+    * Solution:       Conv4 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-------------+---------------+---------------+-----+
+    |               Modules               | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |             |               |               |     |
+    |               & Loops               | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |     DSP     |       FF      |      LUT      | URAM|
+    +-------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-------------+---------------+---------------+-----+
+    |+ conv4                              |     -|  0.00|  1066024|  1.066e+07|         -|  1066025|      -|        no|  213 (34%)|  2649 (153%)|  612946 (133%)|  429361 (186%)|    -|
+    | + conv4_Pipeline_L1_1               |     -|  0.00|    43203|  4.320e+05|         -|    43203|      -|        no|          -|            -|      132 (~0%)|      225 (~0%)|    -|
+    |  o L1_1                             |     -|  7.30|    43201|  4.320e+05|         3|        1|  43200|       yes|          -|            -|              -|              -|    -|
+    | + conv4_Pipeline_L2_1               |     -|  0.00|    43203|  4.320e+05|         -|    43203|      -|        no|          -|            -|      132 (~0%)|      225 (~0%)|    -|
+    |  o L2_1                             |     -|  7.30|    43201|  4.320e+05|         3|        1|  43200|       yes|          -|            -|              -|              -|    -|
+    | o L4                                |     -|  7.30|   489792|  4.898e+06|      2551|        -|    192|        no|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_F1_1              |     -|  0.00|     1731|  1.731e+04|         -|     1731|      -|        no|          -|            -|       91 (~0%)|      188 (~0%)|    -|
+    |   o F1_1                            |     -|  7.30|     1729|  1.729e+04|         3|        1|   1728|       yes|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_VITIS_LOOP_87_1   |     -|  5.68|      171|  1.710e+03|         -|      171|      -|        no|          -|            -|      5418 (1%)|     1580 (~0%)|    -|
+    |   o VITIS_LOOP_87_1                 |     -|  7.30|      169|  1.690e+03|         1|        1|    169|       yes|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_C1_1              |     -|  0.28|      621|  6.210e+03|         -|      621|      -|        no|          -|            -|   196911 (42%)|    89247 (38%)|    -|
+    |   o C1_1                            |    II|  7.30|      619|  6.190e+03|        47|        3|    192|       yes|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_M1                |     -|  0.00|      177|  1.770e+03|         -|      177|      -|        no|          -|            -|      962 (~0%)|     2218 (~0%)|    -|
+    |   o M1                              |    II|  7.30|      175|  1.750e+03|        20|       13|     13|       yes|          -|            -|              -|              -|    -|
+    | o L7                                |     -|  7.30|   489792|  4.898e+06|      2551|        -|    192|        no|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_F2_1              |     -|  0.00|     1731|  1.731e+04|         -|     1731|      -|        no|          -|            -|       91 (~0%)|      188 (~0%)|    -|
+    |   o F2_1                            |     -|  7.30|     1729|  1.729e+04|         3|        1|   1728|       yes|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_VITIS_LOOP_174_7  |     -|  5.68|      171|  1.710e+03|         -|      171|      -|        no|          -|            -|      5418 (1%)|     1580 (~0%)|    -|
+    |   o VITIS_LOOP_174_7                |     -|  7.30|      169|  1.690e+03|         1|        1|    169|       yes|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_C2_1              |     -|  0.28|      621|  6.210e+03|         -|      621|      -|        no|          -|            -|   196911 (42%)|    89247 (38%)|    -|
+    |   o C2_1                            |    II|  7.30|      619|  6.190e+03|        47|        3|    192|       yes|          -|            -|              -|              -|    -|
+    |  + conv4_Pipeline_M2                |     -|  0.00|      177|  1.770e+03|         -|      177|      -|        no|          -|            -|      962 (~0%)|     2218 (~0%)|    -|
+    |   o M2                              |    II|  7.30|      175|  1.750e+03|        20|       13|     13|       yes|          -|            -|              -|              -|    -|
+    +-------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-------------+---------------+---------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+-------------------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Offset Interfaces | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |                   |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+-------------------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | s_axi_control     | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++-------------+------------+------------+---------------+---------+--------+-------------------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+----------------+
+| Interface     | Data Width | Address Width | Offset | Register | Data Interface |
++---------------+------------+---------------+--------+----------+----------------+
+| s_axi_control | 32         | 6             | 16     | 0        | m_axi_gmem0    |
++---------------+------------+---------------+--------+----------+----------------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | inp_img_1 | 0x10   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | inp_img_2 | 0x14   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | out_img_1 | 0x1c   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | out_img_2 | 0x20   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | filter_1  | 0x28   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control | filter_2  | 0x2c   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control | bias_1    | 0x34   | 32    | W      | Data signal of bias              |                                                                      |
+| s_axi_control | bias_2    | 0x38   | 32    | W      | Data signal of bias              |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| inp_img  | inout     | float*   |
+| out_img  | inout     | float*   |
+| filter   | inout     | float*   |
+| bias     | inout     | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| inp_img  | m_axi_gmem0   | interface |          | channel=0                           |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_1 offset=0x10 range=32 |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_2 offset=0x14 range=32 |
+| out_img  | m_axi_gmem0   | interface |          | channel=0                           |
+| out_img  | s_axi_control | register  | offset   | name=out_img_1 offset=0x1c range=32 |
+| out_img  | s_axi_control | register  | offset   | name=out_img_2 offset=0x20 range=32 |
+| filter   | m_axi_gmem0   | interface |          | channel=0                           |
+| filter   | s_axi_control | register  | offset   | name=filter_1 offset=0x28 range=32  |
+| filter   | s_axi_control | register  | offset   | name=filter_2 offset=0x2c range=32  |
+| bias     | m_axi_gmem0   | interface |          | channel=0                           |
+| bias     | s_axi_control | register  | offset   | name=bias_1 offset=0x34 range=32    |
+| bias     | s_axi_control | register  | offset   | name=bias_2 offset=0x38 range=32    |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop | Loop Location                                         |
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+| m_axi_gmem0  | read      | 43200  | 32    | L1_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:71:7  |
+| m_axi_gmem0  | write     | 32448  | 32    | L4   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:78:5  |
+| m_axi_gmem0  | read      | 1728   | 32    | F1_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:81:8  |
+| m_axi_gmem0  | read      | 43200  | 32    | L2_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:157:7 |
+| m_axi_gmem0  | write     | 32448  | 32    | L7   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:165:5 |
+| m_axi_gmem0  | read      | 1728   | 32    | F2_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:168:8 |
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                        | Direction                                                                            | Burst Status | Length | Loop | Loop Location                                         | Resolution | Problem                                                                                                 |
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:74:23  | read                                                                                 | Widen Fail   |        | L1_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:71:7  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:74:23  | read                                                                                 | Inferred     | 43200  | L1_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:71:7  |            |                                                                                                         |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:78:5   | write                                                                                | Widen Fail   |        | M1   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:136:5 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:78:5   | islist write write write write write write write write write write write write write | Inferred     | 32448  | L4   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:78:5  |            |                                                                                                         |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:83:20  | read                                                                                 | Widen Fail   |        | F1_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:81:8  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:83:20  | read                                                                                 | Fail         |        |      |                                                       | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:83:20  | read                                                                                 | Inferred     | 1728   | F1_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:81:8  |            |                                                                                                         |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:160:23 | read                                                                                 | Widen Fail   |        | L2_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:157:7 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:160:23 | read                                                                                 | Inferred     | 43200  | L2_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:157:7 |            |                                                                                                         |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:165:5  | write                                                                                | Widen Fail   |        | M2   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:229:5 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:165:5  | islist write write write write write write write write write write write write write | Inferred     | 32448  | L7   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:165:5 |            |                                                                                                         |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:170:20 | read                                                                                 | Widen Fail   |        | F2_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:168:8 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:170:20 | read                                                                                 | Fail         |        |      |                                                       | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:170:20 | read                                                                                 | Inferred     | 1728   | F2_1 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:168:8 |            |                                                                                                         |
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+| Name                                   | DSP  | Pragma | Variable          | Op        | Impl                     | Latency |
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+| + conv4                                | 2649 |        |                   |           |                          |         |
+|   add_ln78_1_fu_6885_p2                |      |        | add_ln78_1        | add       | fabric                   | 0       |
+|   icmp_ln78_fu_6891_p2                 |      |        | icmp_ln78         | seteq     | auto                     | 0       |
+|   add_ln78_fu_6897_p2                  |      |        | add_ln78          | add       | fabric                   | 0       |
+|   empty_203_fu_6907_p2                 |      |        | empty_203         | add       | fabric                   | 0       |
+|   empty_205_fu_7838_p2                 |      |        | empty_205         | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4433 |      |        | empty_207         | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4500 |      |        | add_ln157         | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4756  |      |        | empty_208         | adapter   | m_axi                    | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4758  |      |        | add_ln165         | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4762  |      |        | empty_209         | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4274 |      |        | add_ln165_2       | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4341 |      |        | icmp_ln165        | seteq     | auto                     | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4546 |      |        | tmp1              | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4917  |      |        | empty_210         | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4921  |      |        | empty_211         | adapter   | m_axi                    | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4679  |      |        | empty_212         | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4200 |      |        | gmem0_load_1_req  | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4227 |      |        | gmem0_addr_7_read | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4396 |      |        | add_ln165_1       | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4574 |      |        | empty_214         | adapter   | m_axi                    | 0       |
+|  + conv4_Pipeline_L1_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln71_fu_527_p2                 |      |        | icmp_ln71         | seteq     | auto                     | 0       |
+|    add_ln71_fu_533_p2                  |      |        | add_ln71          | add       | fabric                   | 0       |
+|    add_ln71_1_fu_586_p2                |      |        | add_ln71_1        | add       | fabric                   | 0       |
+|    add_ln71_2_fu_543_p2                |      |        | add_ln71_2        | add       | fabric                   | 0       |
+|    icmp_ln71_1_fu_549_p2               |      |        | icmp_ln71_1       | seteq     | auto                     | 0       |
+|    select_ln71_fu_555_p3               |      |        | select_ln71       | select    | auto_sel                 | 0       |
+|  + conv4_Pipeline_F1_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln81_fu_257_p2                 |      |        | icmp_ln81         | seteq     | auto                     | 0       |
+|    add_ln81_fu_263_p2                  |      |        | add_ln81          | add       | fabric                   | 0       |
+|    add_ln81_1_fu_312_p2                |      |        | add_ln81_1        | add       | fabric                   | 0       |
+|    add_ln81_2_fu_273_p2                |      |        | add_ln81_2        | add       | fabric                   | 0       |
+|    icmp_ln81_1_fu_279_p2               |      |        | icmp_ln81_1       | seteq     | auto                     | 0       |
+|    select_ln81_fu_285_p3               |      |        | select_ln81       | select    | auto_sel                 | 0       |
+|  + conv4_Pipeline_VITIS_LOOP_87_1      | 0    |        |                   |           |                          |         |
+|    icmp_ln87_fu_4768_p2                |      |        | icmp_ln87         | seteq     | auto                     | 0       |
+|    add_ln87_fu_4774_p2                 |      |        | add_ln87          | add       | fabric                   | 0       |
+|  + conv4_Pipeline_C1_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln93_fu_11127_p2               |      |        | icmp_ln93         | seteq     | auto                     | 0       |
+|    add_ln93_fu_11133_p2                |      |        | add_ln93          | add       | fabric                   | 0       |
+|    add_ln98_8_fu_11168_p2              |      |        | add_ln98_8        | add       | fabric                   | 0       |
+|    add_ln98_fu_11205_p2                |      |        | add_ln98          | add       | fabric                   | 0       |
+|    add_ln98_1_fu_11236_p2              |      |        | add_ln98_1        | add       | fabric                   | 0       |
+|    add_ln98_2_fu_11267_p2              |      |        | add_ln98_2        | add       | fabric                   | 0       |
+|    add_ln98_3_fu_11285_p2              |      |        | add_ln98_3        | add       | fabric                   | 0       |
+|    add_ln98_4_fu_11302_p2              |      |        | add_ln98_4        | add       | fabric                   | 0       |
+|    add_ln98_5_fu_11332_p2              |      |        | add_ln98_5        | add       | fabric                   | 0       |
+|    add_ln98_6_fu_11349_p2              |      |        | add_ln98_6        | add       | fabric                   | 0       |
+|    add_ln98_7_fu_11362_p2              |      |        | add_ln98_7        | add       | fabric                   | 0       |
+|  + conv4_Pipeline_M1                   | 0    |        |                   |           |                          |         |
+|    icmp_ln136_fu_1591_p2               |      |        | icmp_ln136        | seteq     | auto                     | 0       |
+|    add_ln136_fu_1597_p2                |      |        | add_ln136         | add       | fabric                   | 0       |
+|    sparsemux_27_4_32_1_1_U1823         |      |        | tmp               | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_fu_2412_p2               |      |        | icmp_ln143        | setne     | auto                     | 0       |
+|    icmp_ln143_1_fu_2418_p2             |      |        | icmp_ln143_1      | seteq     | auto                     | 0       |
+|    or_ln143_fu_2424_p2                 |      |        | or_ln143          | or        | auto                     | 0       |
+|    and_ln143_fu_2430_p2                |      |        | and_ln143         | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1824         |      |        | tmp_1             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_2_fu_2462_p2             |      |        | icmp_ln143_2      | setne     | auto                     | 0       |
+|    icmp_ln143_3_fu_2468_p2             |      |        | icmp_ln143_3      | seteq     | auto                     | 0       |
+|    or_ln143_1_fu_2474_p2               |      |        | or_ln143_1        | or        | auto                     | 0       |
+|    and_ln143_1_fu_2480_p2              |      |        | and_ln143_1       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1825         |      |        | tmp_2             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_4_fu_2512_p2             |      |        | icmp_ln143_4      | setne     | auto                     | 0       |
+|    icmp_ln143_5_fu_2518_p2             |      |        | icmp_ln143_5      | seteq     | auto                     | 0       |
+|    or_ln143_2_fu_2524_p2               |      |        | or_ln143_2        | or        | auto                     | 0       |
+|    and_ln143_2_fu_2530_p2              |      |        | and_ln143_2       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1826         |      |        | tmp_3             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_6_fu_2562_p2             |      |        | icmp_ln143_6      | setne     | auto                     | 0       |
+|    icmp_ln143_7_fu_2568_p2             |      |        | icmp_ln143_7      | seteq     | auto                     | 0       |
+|    or_ln143_3_fu_2574_p2               |      |        | or_ln143_3        | or        | auto                     | 0       |
+|    and_ln143_3_fu_2580_p2              |      |        | and_ln143_3       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1827         |      |        | tmp_4             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_8_fu_2612_p2             |      |        | icmp_ln143_8      | setne     | auto                     | 0       |
+|    icmp_ln143_9_fu_2618_p2             |      |        | icmp_ln143_9      | seteq     | auto                     | 0       |
+|    or_ln143_4_fu_2624_p2               |      |        | or_ln143_4        | or        | auto                     | 0       |
+|    and_ln143_4_fu_2630_p2              |      |        | and_ln143_4       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1828         |      |        | tmp_5             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_10_fu_2662_p2            |      |        | icmp_ln143_10     | setne     | auto                     | 0       |
+|    icmp_ln143_11_fu_2668_p2            |      |        | icmp_ln143_11     | seteq     | auto                     | 0       |
+|    or_ln143_5_fu_2674_p2               |      |        | or_ln143_5        | or        | auto                     | 0       |
+|    and_ln143_5_fu_2680_p2              |      |        | and_ln143_5       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1829         |      |        | tmp_6             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_12_fu_2712_p2            |      |        | icmp_ln143_12     | setne     | auto                     | 0       |
+|    icmp_ln143_13_fu_2718_p2            |      |        | icmp_ln143_13     | seteq     | auto                     | 0       |
+|    or_ln143_6_fu_2724_p2               |      |        | or_ln143_6        | or        | auto                     | 0       |
+|    and_ln143_6_fu_2730_p2              |      |        | and_ln143_6       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1830         |      |        | tmp_7             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_14_fu_2762_p2            |      |        | icmp_ln143_14     | setne     | auto                     | 0       |
+|    icmp_ln143_15_fu_2768_p2            |      |        | icmp_ln143_15     | seteq     | auto                     | 0       |
+|    or_ln143_7_fu_2774_p2               |      |        | or_ln143_7        | or        | auto                     | 0       |
+|    and_ln143_7_fu_2780_p2              |      |        | and_ln143_7       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1831         |      |        | tmp_8             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_16_fu_2812_p2            |      |        | icmp_ln143_16     | setne     | auto                     | 0       |
+|    icmp_ln143_17_fu_2818_p2            |      |        | icmp_ln143_17     | seteq     | auto                     | 0       |
+|    or_ln143_8_fu_2824_p2               |      |        | or_ln143_8        | or        | auto                     | 0       |
+|    and_ln143_8_fu_2830_p2              |      |        | and_ln143_8       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1832         |      |        | tmp_9             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_18_fu_2862_p2            |      |        | icmp_ln143_18     | setne     | auto                     | 0       |
+|    icmp_ln143_19_fu_2868_p2            |      |        | icmp_ln143_19     | seteq     | auto                     | 0       |
+|    or_ln143_9_fu_2874_p2               |      |        | or_ln143_9        | or        | auto                     | 0       |
+|    and_ln143_9_fu_2880_p2              |      |        | and_ln143_9       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1833         |      |        | tmp_s             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_20_fu_2912_p2            |      |        | icmp_ln143_20     | setne     | auto                     | 0       |
+|    icmp_ln143_21_fu_2918_p2            |      |        | icmp_ln143_21     | seteq     | auto                     | 0       |
+|    or_ln143_10_fu_2924_p2              |      |        | or_ln143_10       | or        | auto                     | 0       |
+|    and_ln143_10_fu_2930_p2             |      |        | and_ln143_10      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1834         |      |        | tmp_10            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_22_fu_2962_p2            |      |        | icmp_ln143_22     | setne     | auto                     | 0       |
+|    icmp_ln143_23_fu_2968_p2            |      |        | icmp_ln143_23     | seteq     | auto                     | 0       |
+|    or_ln143_11_fu_2974_p2              |      |        | or_ln143_11       | or        | auto                     | 0       |
+|    and_ln143_11_fu_2980_p2             |      |        | and_ln143_11      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1835         |      |        | tmp_11            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln143_24_fu_3011_p2            |      |        | icmp_ln143_24     | setne     | auto                     | 0       |
+|    icmp_ln143_25_fu_3017_p2            |      |        | icmp_ln143_25     | seteq     | auto                     | 0       |
+|    or_ln143_12_fu_3023_p2              |      |        | or_ln143_12       | or        | auto                     | 0       |
+|    and_ln143_12_fu_3029_p2             |      |        | and_ln143_12      | and       | auto                     | 0       |
+|    select_ln136_fu_2436_p3             |      |        | select_ln136      | select    | auto_sel                 | 0       |
+|    select_ln136_1_fu_2486_p3           |      |        | select_ln136_1    | select    | auto_sel                 | 0       |
+|    select_ln136_2_fu_2536_p3           |      |        | select_ln136_2    | select    | auto_sel                 | 0       |
+|    select_ln136_3_fu_2586_p3           |      |        | select_ln136_3    | select    | auto_sel                 | 0       |
+|    select_ln136_4_fu_2636_p3           |      |        | select_ln136_4    | select    | auto_sel                 | 0       |
+|    select_ln136_5_fu_2686_p3           |      |        | select_ln136_5    | select    | auto_sel                 | 0       |
+|    select_ln136_6_fu_2736_p3           |      |        | select_ln136_6    | select    | auto_sel                 | 0       |
+|    select_ln136_7_fu_2786_p3           |      |        | select_ln136_7    | select    | auto_sel                 | 0       |
+|    select_ln136_8_fu_2836_p3           |      |        | select_ln136_8    | select    | auto_sel                 | 0       |
+|    select_ln136_9_fu_2886_p3           |      |        | select_ln136_9    | select    | auto_sel                 | 0       |
+|    select_ln136_10_fu_2936_p3          |      |        | select_ln136_10   | select    | auto_sel                 | 0       |
+|    select_ln136_11_fu_2986_p3          |      |        | select_ln136_11   | select    | auto_sel                 | 0       |
+|    select_ln136_12_fu_3035_p3          |      |        | select_ln136_12   | select    | auto_sel                 | 0       |
+|  + conv4_Pipeline_L2_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln157_fu_527_p2                |      |        | icmp_ln157        | seteq     | auto                     | 0       |
+|    add_ln157_fu_533_p2                 |      |        | add_ln157         | add       | fabric                   | 0       |
+|    add_ln157_1_fu_586_p2               |      |        | add_ln157_1       | add       | fabric                   | 0       |
+|    add_ln157_2_fu_543_p2               |      |        | add_ln157_2       | add       | fabric                   | 0       |
+|    icmp_ln157_1_fu_549_p2              |      |        | icmp_ln157_1      | seteq     | auto                     | 0       |
+|    select_ln157_fu_555_p3              |      |        | select_ln157      | select    | auto_sel                 | 0       |
+|  + conv4_Pipeline_F2_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln168_fu_257_p2                |      |        | icmp_ln168        | seteq     | auto                     | 0       |
+|    add_ln168_fu_263_p2                 |      |        | add_ln168         | add       | fabric                   | 0       |
+|    add_ln168_1_fu_312_p2               |      |        | add_ln168_1       | add       | fabric                   | 0       |
+|    add_ln168_2_fu_273_p2               |      |        | add_ln168_2       | add       | fabric                   | 0       |
+|    icmp_ln168_1_fu_279_p2              |      |        | icmp_ln168_1      | seteq     | auto                     | 0       |
+|    select_ln168_fu_285_p3              |      |        | select_ln168      | select    | auto_sel                 | 0       |
+|  + conv4_Pipeline_VITIS_LOOP_174_7     | 0    |        |                   |           |                          |         |
+|    icmp_ln174_fu_4768_p2               |      |        | icmp_ln174        | seteq     | auto                     | 0       |
+|    add_ln174_fu_4774_p2                |      |        | add_ln174         | add       | fabric                   | 0       |
+|  + conv4_Pipeline_C2_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln178_fu_11127_p2              |      |        | icmp_ln178        | seteq     | auto                     | 0       |
+|    add_ln178_fu_11133_p2               |      |        | add_ln178         | add       | fabric                   | 0       |
+|    add_ln182_8_fu_11168_p2             |      |        | add_ln182_8       | add       | fabric                   | 0       |
+|    add_ln182_fu_11205_p2               |      |        | add_ln182         | add       | fabric                   | 0       |
+|    add_ln182_1_fu_11236_p2             |      |        | add_ln182_1       | add       | fabric                   | 0       |
+|    add_ln182_2_fu_11267_p2             |      |        | add_ln182_2       | add       | fabric                   | 0       |
+|    add_ln182_3_fu_11285_p2             |      |        | add_ln182_3       | add       | fabric                   | 0       |
+|    add_ln182_4_fu_11302_p2             |      |        | add_ln182_4       | add       | fabric                   | 0       |
+|    add_ln182_5_fu_11332_p2             |      |        | add_ln182_5       | add       | fabric                   | 0       |
+|    add_ln182_6_fu_11349_p2             |      |        | add_ln182_6       | add       | fabric                   | 0       |
+|    add_ln182_7_fu_11362_p2             |      |        | add_ln182_7       | add       | fabric                   | 0       |
+|  + conv4_Pipeline_M2                   | 0    |        |                   |           |                          |         |
+|    icmp_ln229_fu_1591_p2               |      |        | icmp_ln229        | seteq     | auto                     | 0       |
+|    add_ln229_fu_1597_p2                |      |        | add_ln229         | add       | fabric                   | 0       |
+|    sparsemux_27_4_32_1_1_U3830         |      |        | tmp_s             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_fu_2412_p2               |      |        | icmp_ln234        | setne     | auto                     | 0       |
+|    icmp_ln234_1_fu_2418_p2             |      |        | icmp_ln234_1      | seteq     | auto                     | 0       |
+|    or_ln234_fu_2424_p2                 |      |        | or_ln234          | or        | auto                     | 0       |
+|    and_ln234_fu_2430_p2                |      |        | and_ln234         | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3831         |      |        | tmp_3             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_2_fu_2462_p2             |      |        | icmp_ln234_2      | setne     | auto                     | 0       |
+|    icmp_ln234_3_fu_2468_p2             |      |        | icmp_ln234_3      | seteq     | auto                     | 0       |
+|    or_ln234_1_fu_2474_p2               |      |        | or_ln234_1        | or        | auto                     | 0       |
+|    and_ln234_1_fu_2480_p2              |      |        | and_ln234_1       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3832         |      |        | tmp_6             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_4_fu_2512_p2             |      |        | icmp_ln234_4      | setne     | auto                     | 0       |
+|    icmp_ln234_5_fu_2518_p2             |      |        | icmp_ln234_5      | seteq     | auto                     | 0       |
+|    or_ln234_2_fu_2524_p2               |      |        | or_ln234_2        | or        | auto                     | 0       |
+|    and_ln234_2_fu_2530_p2              |      |        | and_ln234_2       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3833         |      |        | tmp_9             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_6_fu_2562_p2             |      |        | icmp_ln234_6      | setne     | auto                     | 0       |
+|    icmp_ln234_7_fu_2568_p2             |      |        | icmp_ln234_7      | seteq     | auto                     | 0       |
+|    or_ln234_3_fu_2574_p2               |      |        | or_ln234_3        | or        | auto                     | 0       |
+|    and_ln234_3_fu_2580_p2              |      |        | and_ln234_3       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3834         |      |        | tmp_12            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_8_fu_2612_p2             |      |        | icmp_ln234_8      | setne     | auto                     | 0       |
+|    icmp_ln234_9_fu_2618_p2             |      |        | icmp_ln234_9      | seteq     | auto                     | 0       |
+|    or_ln234_4_fu_2624_p2               |      |        | or_ln234_4        | or        | auto                     | 0       |
+|    and_ln234_4_fu_2630_p2              |      |        | and_ln234_4       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3835         |      |        | tmp_15            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_10_fu_2662_p2            |      |        | icmp_ln234_10     | setne     | auto                     | 0       |
+|    icmp_ln234_11_fu_2668_p2            |      |        | icmp_ln234_11     | seteq     | auto                     | 0       |
+|    or_ln234_5_fu_2674_p2               |      |        | or_ln234_5        | or        | auto                     | 0       |
+|    and_ln234_5_fu_2680_p2              |      |        | and_ln234_5       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3836         |      |        | tmp_18            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_12_fu_2712_p2            |      |        | icmp_ln234_12     | setne     | auto                     | 0       |
+|    icmp_ln234_13_fu_2718_p2            |      |        | icmp_ln234_13     | seteq     | auto                     | 0       |
+|    or_ln234_6_fu_2724_p2               |      |        | or_ln234_6        | or        | auto                     | 0       |
+|    and_ln234_6_fu_2730_p2              |      |        | and_ln234_6       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3837         |      |        | tmp_19            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_14_fu_2762_p2            |      |        | icmp_ln234_14     | setne     | auto                     | 0       |
+|    icmp_ln234_15_fu_2768_p2            |      |        | icmp_ln234_15     | seteq     | auto                     | 0       |
+|    or_ln234_7_fu_2774_p2               |      |        | or_ln234_7        | or        | auto                     | 0       |
+|    and_ln234_7_fu_2780_p2              |      |        | and_ln234_7       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3838         |      |        | tmp_20            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_16_fu_2812_p2            |      |        | icmp_ln234_16     | setne     | auto                     | 0       |
+|    icmp_ln234_17_fu_2818_p2            |      |        | icmp_ln234_17     | seteq     | auto                     | 0       |
+|    or_ln234_8_fu_2824_p2               |      |        | or_ln234_8        | or        | auto                     | 0       |
+|    and_ln234_8_fu_2830_p2              |      |        | and_ln234_8       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3839         |      |        | tmp_21            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_18_fu_2862_p2            |      |        | icmp_ln234_18     | setne     | auto                     | 0       |
+|    icmp_ln234_19_fu_2868_p2            |      |        | icmp_ln234_19     | seteq     | auto                     | 0       |
+|    or_ln234_9_fu_2874_p2               |      |        | or_ln234_9        | or        | auto                     | 0       |
+|    and_ln234_9_fu_2880_p2              |      |        | and_ln234_9       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3840         |      |        | tmp_22            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_20_fu_2912_p2            |      |        | icmp_ln234_20     | setne     | auto                     | 0       |
+|    icmp_ln234_21_fu_2918_p2            |      |        | icmp_ln234_21     | seteq     | auto                     | 0       |
+|    or_ln234_10_fu_2924_p2              |      |        | or_ln234_10       | or        | auto                     | 0       |
+|    and_ln234_10_fu_2930_p2             |      |        | and_ln234_10      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3841         |      |        | tmp_23            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_22_fu_2962_p2            |      |        | icmp_ln234_22     | setne     | auto                     | 0       |
+|    icmp_ln234_23_fu_2968_p2            |      |        | icmp_ln234_23     | seteq     | auto                     | 0       |
+|    or_ln234_11_fu_2974_p2              |      |        | or_ln234_11       | or        | auto                     | 0       |
+|    and_ln234_11_fu_2980_p2             |      |        | and_ln234_11      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3842         |      |        | tmp_24            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln234_24_fu_3011_p2            |      |        | icmp_ln234_24     | setne     | auto                     | 0       |
+|    icmp_ln234_25_fu_3017_p2            |      |        | icmp_ln234_25     | seteq     | auto                     | 0       |
+|    or_ln234_12_fu_3023_p2              |      |        | or_ln234_12       | or        | auto                     | 0       |
+|    and_ln234_12_fu_3029_p2             |      |        | and_ln234_12      | and       | auto                     | 0       |
+|    select_ln229_fu_2436_p3             |      |        | select_ln229      | select    | auto_sel                 | 0       |
+|    select_ln229_1_fu_2486_p3           |      |        | select_ln229_1    | select    | auto_sel                 | 0       |
+|    select_ln229_2_fu_2536_p3           |      |        | select_ln229_2    | select    | auto_sel                 | 0       |
+|    select_ln229_3_fu_2586_p3           |      |        | select_ln229_3    | select    | auto_sel                 | 0       |
+|    select_ln229_4_fu_2636_p3           |      |        | select_ln229_4    | select    | auto_sel                 | 0       |
+|    select_ln229_5_fu_2686_p3           |      |        | select_ln229_5    | select    | auto_sel                 | 0       |
+|    select_ln229_6_fu_2736_p3           |      |        | select_ln229_6    | select    | auto_sel                 | 0       |
+|    select_ln229_7_fu_2786_p3           |      |        | select_ln229_7    | select    | auto_sel                 | 0       |
+|    select_ln229_8_fu_2836_p3           |      |        | select_ln229_8    | select    | auto_sel                 | 0       |
+|    select_ln229_9_fu_2886_p3           |      |        | select_ln229_9    | select    | auto_sel                 | 0       |
+|    select_ln229_10_fu_2936_p3          |      |        | select_ln229_10   | select    | auto_sel                 | 0       |
+|    select_ln229_11_fu_2986_p3          |      |        | select_ln229_11   | select    | auto_sel                 | 0       |
+|    select_ln229_12_fu_3035_p3          |      |        | select_ln229_12   | select    | auto_sel                 | 0       |
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------+--------------+-----------+------+------+--------+--------------------+------+---------+------------------+
+| Name                   | Usage        | Type      | BRAM | URAM | Pragma | Variable           | Impl | Latency | Bitwidth, Depth, |
+|                        |              |           |      |      |        |                    |      |         | Banks            |
++------------------------+--------------+-----------+------+------+--------+--------------------+------+---------+------------------+
+| + conv4                |              |           | 213  | 0    |        |                    |      |         |                  |
+|   control_s_axi_U      | interface    | s_axilite |      |      |        |                    |      |         |                  |
+|   gmem0_m_axi_U        | interface    | m_axi     | 4    |      |        |                    |      |         |                  |
+|   inp_image_local_U    | rom_np array |           | 4    |      |        | inp_image_local    | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_1_U  | rom_np array |           | 4    |      |        | inp_image_local_1  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_2_U  | rom_np array |           | 4    |      |        | inp_image_local_2  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_3_U  | rom_np array |           | 4    |      |        | inp_image_local_3  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_4_U  | rom_np array |           | 4    |      |        | inp_image_local_4  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_5_U  | rom_np array |           | 4    |      |        | inp_image_local_5  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_6_U  | rom_np array |           | 4    |      |        | inp_image_local_6  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_7_U  | rom_np array |           | 4    |      |        | inp_image_local_7  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_8_U  | rom_np array |           | 4    |      |        | inp_image_local_8  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_9_U  | rom_np array |           | 4    |      |        | inp_image_local_9  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_10_U | rom_np array |           | 4    |      |        | inp_image_local_10 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_11_U | rom_np array |           | 4    |      |        | inp_image_local_11 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_12_U | rom_np array |           | 4    |      |        | inp_image_local_12 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_13_U | rom_np array |           | 4    |      |        | inp_image_local_13 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_14_U | rom_np array |           | 4    |      |        | inp_image_local_14 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_15_U | rom_np array |           | 4    |      |        | inp_image_local_15 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_16_U | rom_np array |           | 4    |      |        | inp_image_local_16 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_17_U | rom_np array |           | 4    |      |        | inp_image_local_17 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_18_U | rom_np array |           | 4    |      |        | inp_image_local_18 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_19_U | rom_np array |           | 4    |      |        | inp_image_local_19 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_20_U | rom_np array |           | 4    |      |        | inp_image_local_20 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_21_U | rom_np array |           | 4    |      |        | inp_image_local_21 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_22_U | rom_np array |           | 4    |      |        | inp_image_local_22 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_23_U | rom_np array |           | 4    |      |        | inp_image_local_23 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_24_U | rom_np array |           | 4    |      |        | inp_image_local_24 | auto | 1       | 32, 1728, 1      |
+|   filter_local_U       | ram_1p array |           | 2    |      |        | filter_local       | auto | 1       | 32, 192, 1       |
+|   filter_local_1_U     | ram_1p array |           | 2    |      |        | filter_local_1     | auto | 1       | 32, 192, 1       |
+|   filter_local_2_U     | ram_1p array |           | 2    |      |        | filter_local_2     | auto | 1       | 32, 192, 1       |
+|   filter_local_3_U     | ram_1p array |           | 2    |      |        | filter_local_3     | auto | 1       | 32, 192, 1       |
+|   filter_local_4_U     | ram_1p array |           | 2    |      |        | filter_local_4     | auto | 1       | 32, 192, 1       |
+|   filter_local_5_U     | ram_1p array |           | 2    |      |        | filter_local_5     | auto | 1       | 32, 192, 1       |
+|   filter_local_6_U     | ram_1p array |           | 2    |      |        | filter_local_6     | auto | 1       | 32, 192, 1       |
+|   filter_local_7_U     | ram_1p array |           | 2    |      |        | filter_local_7     | auto | 1       | 32, 192, 1       |
+|   filter_local_8_U     | ram_1p array |           | 2    |      |        | filter_local_8     | auto | 1       | 32, 192, 1       |
++------------------------+--------------+-----------+------+------+--------+--------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------------+------------------------------------------------------------------------------+
+| Type            | Options                                      | Location                                                                     |
++-----------------+----------------------------------------------+------------------------------------------------------------------------------+
+| interface       | m_axi port=inp_img offset=slave bundle=gmem0 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:37 in conv4, inp_img         |
+| interface       | m_axi port=out_img offset=slave bundle=gmem0 | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:38 in conv4, out_img         |
+| interface       | m_axi port=filter offset=slave bundle=gmem0  | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:39 in conv4, filter          |
+| interface       | m_axi port=bias offset=slave bundle=gmem0    | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:40 in conv4, bias            |
+| interface       | s_axilite port=inp_img bundle=control        | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:42 in conv4, inp_img         |
+| interface       | s_axilite port=out_img bundle=control        | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:43 in conv4, out_img         |
+| interface       | s_axilite port=filter bundle=control         | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:44 in conv4, filter          |
+| interface       | s_axilite port=bias bundle=control           | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:45 in conv4, bias            |
+| interface       | s_axilite port=return bundle=control         | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:47 in conv4, return          |
+| array_partition | variable=inp_image_local cyclic factor=25    | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:51 in conv4, inp_image_local |
+| array_partition | variable=inp_img_2D complete dim=0           | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:53 in conv4, inp_img_2D      |
+| array_partition | variable=filter_local cyclic factor=9        | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:55 in conv4, filter_local    |
+| array_partition | variable=filter_2D complete dim=0            | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:57 in conv4, filter_2D       |
+| array_partition | variable=window complete dim=1               | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:59 in conv4, window          |
+| array_partition | variable=window_2D complete dim=0            | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:61 in conv4, window_2D       |
+| array_partition | variable=conv_out cyclic factor=169 dim=1    | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:63 in conv4, conv_out        |
+| array_partition | variable=sh complete dim=0                   | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:65 in conv4, sh              |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:73 in conv4                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:82 in conv4                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:88 in conv4                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:94 in conv4                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:120 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:137 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:159 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:169 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:175 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:179 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:196 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:213 in conv4                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv4/src/conv4.cpp:230 in conv4                 |
++-----------------+----------------------------------------------+------------------------------------------------------------------------------+
+
+

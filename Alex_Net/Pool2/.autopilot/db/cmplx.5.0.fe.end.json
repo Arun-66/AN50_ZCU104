@@ -1,0 +1,56 @@
+{
+    "1": {
+        "name": "pool2_Pipeline_L4",
+        "file": "AlexNet-FPGA-implementation\/Pool2\/src\/pool2.cpp",
+        "fileloc": "42",
+        "instructions": "210",
+        "total_instructions": "210",
+        "calls": "",
+        "basicblocks": "32",
+        "loads": {
+            "L": "28"
+        },
+        "stores": {
+            "L": "56"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "pool2",
+        "file": "pool2.cpp",
+        "fileloc": "25",
+        "instructions": "159",
+        "total_instructions": "801",
+        "calls": "1 2",
+        "basicblocks": "4",
+        "loads": {
+            "L": "60"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "pool2_Pipeline_L5_L6",
+        "file": "AlexNet-FPGA-implementation\/Pool2\/src\/pool2.cpp",
+        "fileloc": "25",
+        "instructions": "432",
+        "total_instructions": "432",
+        "calls": "",
+        "basicblocks": "27",
+        "loads": {
+            "L": "34"
+        },
+        "stores": {
+            "L": "74"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

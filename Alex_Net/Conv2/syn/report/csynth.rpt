@@ -1,0 +1,1406 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv2'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 25 17:50:07 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Alex_Net
+    * Solution:       Conv2 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------+--------+-------+----------+-----------+----------+----------+-------+----------+-----------+---------+--------------+--------------+-----+
+    |               Modules               |  Issue |       | Latency  |  Latency  | Iteration|          |  Trip |          |           |         |              |              |     |
+    |               & Loops               |  Type  | Slack | (cycles) |    (ns)   |  Latency | Interval | Count | Pipelined|   BRAM    |   DSP   |      FF      |      LUT     | URAM|
+    +-------------------------------------+--------+-------+----------+-----------+----------+----------+-------+----------+-----------+---------+--------------+--------------+-----+
+    |+ conv2                              |  Timing|  -0.38|  47387272|  4.739e+08|         -|  47387273|      -|        no|  184 (29%)|  97 (5%)|  218370 (47%)|  213552 (92%)|    -|
+    | + conv2_Pipeline_L1_1               |       -|   0.00|     46131|  4.613e+05|         -|     46131|      -|        no|          -|        -|     266 (~0%)|     226 (~0%)|    -|
+    |  o L1_1                             |       -|   7.30|     46129|  4.613e+05|         3|         1|  46128|       yes|          -|        -|             -|             -|    -|
+    | + conv2_Pipeline_L2_1               |       -|   0.00|     46131|  4.613e+05|         -|     46131|      -|        no|          -|        -|     266 (~0%)|     226 (~0%)|    -|
+    |  o L2_1                             |       -|   7.30|     46129|  4.613e+05|         3|         1|  46128|       yes|          -|        -|             -|             -|    -|
+    | o L4                                |       -|   7.30|  23647488|  2.365e+08|    184746|         -|    128|        no|          -|        -|             -|             -|    -|
+    |  + conv2_Pipeline_F1_1              |       -|   0.00|      1203|  1.203e+04|         -|      1203|      -|        no|          -|        -|     112 (~0%)|     189 (~0%)|    -|
+    |   o F1_1                            |       -|   7.30|      1201|  1.201e+04|         3|         1|   1200|       yes|          -|        -|             -|             -|    -|
+    |  + conv2_Pipeline_VITIS_LOOP_85_1   |       -|   5.68|       731|  7.310e+03|         -|       731|      -|        no|          -|        -|      43 (~0%)|     152 (~0%)|    -|
+    |   o VITIS_LOOP_85_1                 |       -|   7.30|       729|  7.290e+03|         1|         1|    729|       yes|          -|        -|             -|             -|    -|
+    |  + conv2_Pipeline_M1                |  Timing|  -0.38|       737|  7.370e+03|         -|       737|      -|        no|          -|        -|    1855 (~0%)|     2760 (1%)|    -|
+    |   o M1                              |      II|   7.30|       735|  7.350e+03|        34|        27|     27|       yes|          -|        -|             -|             -|    -|
+    |  o C1_1                             |       -|   7.30|    182784|  1.828e+06|      3808|         -|     48|        no|          -|        -|             -|             -|    -|
+    |   + conv2_Pipeline_S11              |       -|   2.76|        53|    530.000|         -|        53|      -|        no|          -|  31 (1%)|    31696 (6%)|   58449 (25%)|    -|
+    |    o S11                            |       -|   7.30|        51|    510.000|        22|         1|     31|       yes|          -|        -|             -|             -|    -|
+    |   + conv2_Pipeline_F11              |       -|   1.01|         7|     70.000|         -|         7|      -|        no|          -|  4 (~0%)|     809 (~0%)|     548 (~0%)|    -|
+    |    o F11                            |       -|   7.30|         5|     50.000|         2|         1|      5|       yes|          -|        -|             -|             -|    -|
+    |   + conv2_Pipeline_L5_L6            |  Timing|  -0.06|      3750|  3.750e+04|         -|      3750|      -|        no|          -|        -|    24415 (5%)|   28286 (12%)|    -|
+    |    o L5_L6                          |      II|   7.30|      3748|  3.748e+04|       109|         5|    729|       yes|          -|        -|             -|             -|    -|
+    | o L7                                |       -|   7.30|  23647488|  2.365e+08|    184746|         -|    128|        no|          -|        -|             -|             -|    -|
+    |  + conv2_Pipeline_F2_1              |       -|   0.00|      1203|  1.203e+04|         -|      1203|      -|        no|          -|        -|     112 (~0%)|     189 (~0%)|    -|
+    |   o F2_1                            |       -|   7.30|      1201|  1.201e+04|         3|         1|   1200|       yes|          -|        -|             -|             -|    -|
+    |  + conv2_Pipeline_VITIS_LOOP_173_7  |       -|   5.68|       731|  7.310e+03|         -|       731|      -|        no|          -|        -|      43 (~0%)|     152 (~0%)|    -|
+    |   o VITIS_LOOP_173_7                |       -|   7.30|       729|  7.290e+03|         1|         1|    729|       yes|          -|        -|             -|             -|    -|
+    |  + conv2_Pipeline_M2                |  Timing|  -0.38|       737|  7.370e+03|         -|       737|      -|        no|          -|        -|    1855 (~0%)|     2760 (1%)|    -|
+    |   o M2                              |      II|   7.30|       735|  7.350e+03|        34|        27|     27|       yes|          -|        -|             -|             -|    -|
+    |  o C2_1                             |       -|   7.30|    182784|  1.828e+06|      3808|         -|     48|        no|          -|        -|             -|             -|    -|
+    |   + conv2_Pipeline_S21              |       -|   2.76|        53|    530.000|         -|        53|      -|        no|          -|  31 (1%)|    31696 (6%)|   58449 (25%)|    -|
+    |    o S21                            |       -|   7.30|        51|    510.000|        22|         1|     31|       yes|          -|        -|             -|             -|    -|
+    |   + conv2_Pipeline_F21              |       -|   1.01|         7|     70.000|         -|         7|      -|        no|          -|  4 (~0%)|     809 (~0%)|     548 (~0%)|    -|
+    |    o F21                            |       -|   7.30|         5|     50.000|         2|         1|      5|       yes|          -|        -|             -|             -|    -|
+    |   + conv2_Pipeline_L8_L9            |  Timing|  -0.06|      3750|  3.750e+04|         -|      3750|      -|        no|          -|        -|    24415 (5%)|   28286 (12%)|    -|
+    |    o L8_L9                          |      II|   7.30|      3748|  3.748e+04|       109|         5|    729|       yes|          -|        -|             -|             -|    -|
+    +-------------------------------------+--------+-------+----------+-----------+----------+----------+-------+----------+-----------+---------+--------------+--------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | inp_img_1 | 0x10   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | inp_img_2 | 0x14   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | out_img_1 | 0x1c   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | out_img_2 | 0x20   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | filter_1  | 0x28   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control | filter_2  | 0x2c   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control | bias_1    | 0x34   | 32    | W      | Data signal of bias              |                                                                      |
+| s_axi_control | bias_2    | 0x38   | 32    | W      | Data signal of bias              |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| inp_img  | inout     | float*   |
+| out_img  | inout     | float*   |
+| filter   | inout     | float*   |
+| bias     | inout     | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| inp_img  | m_axi_gmem0   | interface |          | channel=0                           |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_1 offset=0x10 range=32 |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_2 offset=0x14 range=32 |
+| out_img  | m_axi_gmem0   | interface |          | channel=0                           |
+| out_img  | s_axi_control | register  | offset   | name=out_img_1 offset=0x1c range=32 |
+| out_img  | s_axi_control | register  | offset   | name=out_img_2 offset=0x20 range=32 |
+| filter   | m_axi_gmem0   | interface |          | channel=0                           |
+| filter   | s_axi_control | register  | offset   | name=filter_1 offset=0x28 range=32  |
+| filter   | s_axi_control | register  | offset   | name=filter_2 offset=0x2c range=32  |
+| bias     | m_axi_gmem0   | interface |          | channel=0                           |
+| bias     | s_axi_control | register  | offset   | name=bias_1 offset=0x34 range=32    |
+| bias     | s_axi_control | register  | offset   | name=bias_2 offset=0x38 range=32    |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop | Loop Location                                         |
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+| m_axi_gmem0  | read      | 46128  | 32    | L1_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7  |
+| m_axi_gmem0  | write     | 93312  | 32    | L4   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5  |
+| m_axi_gmem0  | read      | 1200   | 32    | F1_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8  |
+| m_axi_gmem0  | read      | 46128  | 32    | L2_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7 |
+| m_axi_gmem0  | write     | 93312  | 32    | L7   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5 |
+| m_axi_gmem0  | read      | 1200   | 32    | F2_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8 |
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                        | Direction                                                                                                                                                                | Burst Status | Length | Loop | Loop Location                                         | Resolution | Problem                                                                                                 |
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:72:23  | read                                                                                                                                                                     | Widen Fail   |        | L1_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:72:23  | read                                                                                                                                                                     | Inferred     | 46128  | L1_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:69:7  |            |                                                                                                         |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5   | write                                                                                                                                                                    | Widen Fail   |        | M1   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:136:5 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5   | islist write write write write write write write write write write write write write write write write write write write write write write write write write write write | Inferred     | 93312  | L4   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:76:5  |            |                                                                                                         |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:81:20  | read                                                                                                                                                                     | Widen Fail   |        | F1_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:81:20  | read                                                                                                                                                                     | Fail         |        |      |                                                       | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:81:20  | read                                                                                                                                                                     | Inferred     | 1200   | F1_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:79:8  |            |                                                                                                         |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:159:23 | read                                                                                                                                                                     | Widen Fail   |        | L2_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:159:23 | read                                                                                                                                                                     | Inferred     | 46128  | L2_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:156:7 |            |                                                                                                         |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5  | write                                                                                                                                                                    | Widen Fail   |        | M2   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:221:5 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5  | islist write write write write write write write write write write write write write write write write write write write write write write write write write write write | Inferred     | 93312  | L7   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:164:5 |            |                                                                                                         |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:169:20 | read                                                                                                                                                                     | Widen Fail   |        | F2_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:169:20 | read                                                                                                                                                                     | Fail         |        |      |                                                       | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem0  | filter   | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:169:20 | read                                                                                                                                                                     | Inferred     | 1200   | F2_1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:167:8 |            |                                                                                                         |
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------+-----+--------+-----------------+-----------+--------------------------+---------+
+| Name                               | DSP | Pragma | Variable        | Op        | Impl                     | Latency |
++------------------------------------+-----+--------+-----------------+-----------+--------------------------+---------+
+| + conv2                            | 97  |        |                 |           |                          |         |
+|   add_ln76_1_fu_27965_p2           |     |        | add_ln76_1      | add       | fabric                   | 0       |
+|   icmp_ln76_fu_27971_p2            |     |        | icmp_ln76       | seteq     | auto                     | 0       |
+|   add_ln76_fu_27977_p2             |     |        | add_ln76        | add       | fabric                   | 0       |
+|   empty_49_fu_27987_p2             |     |        | empty_49        | add       | fabric                   | 0       |
+|   add_ln91_1_fu_32982_p2           |     |        | add_ln91_1      | add       | fabric                   | 0       |
+|   add_ln91_2_fu_32988_p2           |     |        | add_ln91_2      | add       | fabric                   | 0       |
+|   icmp_ln91_fu_32994_p2            |     |        | icmp_ln91       | seteq     | auto                     | 0       |
+|   add_ln91_fu_33000_p2             |     |        | add_ln91        | add       | fabric                   | 0       |
+|   empty_52_fu_33030_p2             |     |        | empty_52        | add       | fabric                   | 0       |
+|   add_ln156_fu_28002_p2            |     |        | add_ln156       | add       | fabric                   | 0       |
+|   add_ln164_fu_28017_p2            |     |        | add_ln164       | add       | fabric                   | 0       |
+|   add_ln164_2_fu_41972_p2          |     |        | add_ln164_2     | add       | fabric                   | 0       |
+|   icmp_ln164_fu_41978_p2           |     |        | icmp_ln164      | seteq     | auto                     | 0       |
+|   tmp1_fu_41984_p2                 |     |        | tmp1            | add       | fabric                   | 0       |
+|   empty_57_fu_41994_p2             |     |        | empty_57        | add       | fabric                   | 0       |
+|   add_ln177_1_fu_42019_p2          |     |        | add_ln177_1     | add       | fabric                   | 0       |
+|   add_ln177_2_fu_42025_p2          |     |        | add_ln177_2     | add       | fabric                   | 0       |
+|   icmp_ln177_fu_42031_p2           |     |        | icmp_ln177      | seteq     | auto                     | 0       |
+|   add_ln177_fu_42037_p2            |     |        | add_ln177       | add       | fabric                   | 0       |
+|   empty_60_fu_42067_p2             |     |        | empty_60        | add       | fabric                   | 0       |
+|   add_ln164_1_fu_42092_p2          |     |        | add_ln164_1     | add       | fabric                   | 0       |
+|  + conv2_Pipeline_L1_1             | 0   |        |                 |           |                          |         |
+|    icmp_ln69_fu_2739_p2            |     |        | icmp_ln69       | seteq     | auto                     | 0       |
+|    add_ln69_fu_2745_p2             |     |        | add_ln69        | add       | fabric                   | 0       |
+|    add_ln69_1_fu_2798_p2           |     |        | add_ln69_1      | add       | fabric                   | 0       |
+|    add_ln69_2_fu_2755_p2           |     |        | add_ln69_2      | add       | fabric                   | 0       |
+|    icmp_ln69_1_fu_2761_p2          |     |        | icmp_ln69_1     | seteq     | auto                     | 0       |
+|    select_ln69_fu_2767_p3          |     |        | select_ln69     | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_F1_1             | 0   |        |                 |           |                          |         |
+|    icmp_ln79_fu_527_p2             |     |        | icmp_ln79       | seteq     | auto                     | 0       |
+|    add_ln79_fu_533_p2              |     |        | add_ln79        | add       | fabric                   | 0       |
+|    add_ln79_1_fu_586_p2            |     |        | add_ln79_1      | add       | fabric                   | 0       |
+|    add_ln79_2_fu_543_p2            |     |        | add_ln79_2      | add       | fabric                   | 0       |
+|    icmp_ln79_1_fu_549_p2           |     |        | icmp_ln79_1     | seteq     | auto                     | 0       |
+|    select_ln79_fu_555_p3           |     |        | select_ln79     | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_VITIS_LOOP_85_1  | 0   |        |                 |           |                          |         |
+|    icmp_ln85_fu_557_p2             |     |        | icmp_ln85       | seteq     | auto                     | 0       |
+|    add_ln85_fu_563_p2              |     |        | add_ln85        | add       | fabric                   | 0       |
+|    add_ln85_1_fu_572_p2            |     |        | add_ln85_1      | add       | fabric                   | 0       |
+|    add_ln85_2_fu_623_p2            |     |        | add_ln85_2      | add       | fabric                   | 0       |
+|    icmp_ln85_1_fu_629_p2           |     |        | icmp_ln85_1     | seteq     | auto                     | 0       |
+|    select_ln85_fu_635_p3           |     |        | select_ln85     | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_S11              | 31  |        |                 |           |                          |         |
+|    icmp_ln93_fu_65005_p2           |     |        | icmp_ln93       | seteq     | auto                     | 0       |
+|    add_ln93_fu_65011_p2            |     |        | add_ln93        | add       | fabric                   | 0       |
+|    empty_fu_65029_p2               |     |        | empty           | sub       | fabric                   | 0       |
+|    grp_fu_65045_p0                 |     |        | empty_45        | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U213       | 1   |        | mul_ln96        | mul       | auto                     | 0       |
+|    urem_16ns_9ns_8_20_1_U212       |     |        | urem_ln96       | urem      | auto                     | 19      |
+|    sparsemux_311_8_32_1_1_U244     |     |        | inp_img_2D_2942 | sparsemux | compactencoding_dontcare | 0       |
+|    add_ln96_fu_65238_p2            |     |        | add_ln96        | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U214       | 1   |        | mul_ln96_1      | mul       | auto                     | 0       |
+|    add_ln96_1_fu_65422_p2          |     |        | add_ln96_1      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U215       | 1   |        | mul_ln96_2      | mul       | auto                     | 0       |
+|    add_ln96_2_fu_65606_p2          |     |        | add_ln96_2      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U216       | 1   |        | mul_ln96_3      | mul       | auto                     | 0       |
+|    add_ln96_3_fu_65790_p2          |     |        | add_ln96_3      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U217       | 1   |        | mul_ln96_4      | mul       | auto                     | 0       |
+|    add_ln96_4_fu_65974_p2          |     |        | add_ln96_4      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U218       | 1   |        | mul_ln96_5      | mul       | auto                     | 0       |
+|    add_ln96_5_fu_66158_p2          |     |        | add_ln96_5      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U219       | 1   |        | mul_ln96_6      | mul       | auto                     | 0       |
+|    add_ln96_6_fu_66342_p2          |     |        | add_ln96_6      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U220       | 1   |        | mul_ln96_7      | mul       | auto                     | 0       |
+|    add_ln96_7_fu_66526_p2          |     |        | add_ln96_7      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U221       | 1   |        | mul_ln96_8      | mul       | auto                     | 0       |
+|    add_ln96_8_fu_66710_p2          |     |        | add_ln96_8      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U222       | 1   |        | mul_ln96_9      | mul       | auto                     | 0       |
+|    add_ln96_9_fu_66894_p2          |     |        | add_ln96_9      | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U223       | 1   |        | mul_ln96_10     | mul       | auto                     | 0       |
+|    add_ln96_10_fu_67078_p2         |     |        | add_ln96_10     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U224       | 1   |        | mul_ln96_11     | mul       | auto                     | 0       |
+|    add_ln96_11_fu_67262_p2         |     |        | add_ln96_11     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U225       | 1   |        | mul_ln96_12     | mul       | auto                     | 0       |
+|    add_ln96_12_fu_67446_p2         |     |        | add_ln96_12     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U226       | 1   |        | mul_ln96_13     | mul       | auto                     | 0       |
+|    add_ln96_13_fu_67630_p2         |     |        | add_ln96_13     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U227       | 1   |        | mul_ln96_14     | mul       | auto                     | 0       |
+|    add_ln96_14_fu_67814_p2         |     |        | add_ln96_14     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U228       | 1   |        | mul_ln96_15     | mul       | auto                     | 0       |
+|    add_ln96_15_fu_67998_p2         |     |        | add_ln96_15     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U229       | 1   |        | mul_ln96_16     | mul       | auto                     | 0       |
+|    add_ln96_16_fu_68182_p2         |     |        | add_ln96_16     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U230       | 1   |        | mul_ln96_17     | mul       | auto                     | 0       |
+|    add_ln96_17_fu_68366_p2         |     |        | add_ln96_17     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U231       | 1   |        | mul_ln96_18     | mul       | auto                     | 0       |
+|    add_ln96_18_fu_68550_p2         |     |        | add_ln96_18     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U232       | 1   |        | mul_ln96_19     | mul       | auto                     | 0       |
+|    add_ln96_19_fu_68734_p2         |     |        | add_ln96_19     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U233       | 1   |        | mul_ln96_20     | mul       | auto                     | 0       |
+|    add_ln96_20_fu_68918_p2         |     |        | add_ln96_20     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U234       | 1   |        | mul_ln96_21     | mul       | auto                     | 0       |
+|    add_ln96_21_fu_69102_p2         |     |        | add_ln96_21     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U235       | 1   |        | mul_ln96_22     | mul       | auto                     | 0       |
+|    add_ln96_22_fu_69286_p2         |     |        | add_ln96_22     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U236       | 1   |        | mul_ln96_23     | mul       | auto                     | 0       |
+|    add_ln96_23_fu_69470_p2         |     |        | add_ln96_23     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U237       | 1   |        | mul_ln96_24     | mul       | auto                     | 0       |
+|    add_ln96_24_fu_69654_p2         |     |        | add_ln96_24     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U238       | 1   |        | mul_ln96_25     | mul       | auto                     | 0       |
+|    add_ln96_25_fu_69838_p2         |     |        | add_ln96_25     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U239       | 1   |        | mul_ln96_26     | mul       | auto                     | 0       |
+|    add_ln96_26_fu_70022_p2         |     |        | add_ln96_26     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U240       | 1   |        | mul_ln96_27     | mul       | auto                     | 0       |
+|    add_ln96_27_fu_70206_p2         |     |        | add_ln96_27     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U241       | 1   |        | mul_ln96_28     | mul       | auto                     | 0       |
+|    add_ln96_28_fu_70390_p2         |     |        | add_ln96_28     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U242       | 1   |        | mul_ln96_29     | mul       | auto                     | 0       |
+|    add_ln96_29_fu_70574_p2         |     |        | add_ln96_29     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U243       | 1   |        | mul_ln96_30     | mul       | auto                     | 0       |
+|    sparsemux_311_8_32_1_1_U245     |     |        | inp_img_2D_991  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U246     |     |        | inp_img_2D_2913 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U247     |     |        | inp_img_2D_2914 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U248     |     |        | inp_img_2D_2915 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U249     |     |        | inp_img_2D_2916 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U250     |     |        | inp_img_2D_2917 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U251     |     |        | inp_img_2D_2918 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U252     |     |        | inp_img_2D_2919 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U253     |     |        | inp_img_2D_2920 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U254     |     |        | inp_img_2D_2921 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U255     |     |        | inp_img_2D_2922 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U256     |     |        | inp_img_2D_2923 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U257     |     |        | inp_img_2D_2924 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U258     |     |        | inp_img_2D_2925 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U259     |     |        | inp_img_2D_2926 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U260     |     |        | inp_img_2D_2927 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U261     |     |        | inp_img_2D_2928 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U262     |     |        | inp_img_2D_2929 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U263     |     |        | inp_img_2D_2930 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U264     |     |        | inp_img_2D_2931 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U265     |     |        | inp_img_2D_2932 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U266     |     |        | inp_img_2D_2933 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U267     |     |        | inp_img_2D_2934 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U268     |     |        | inp_img_2D_2935 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U269     |     |        | inp_img_2D_2936 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U270     |     |        | inp_img_2D_2937 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U271     |     |        | inp_img_2D_2938 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U272     |     |        | inp_img_2D_2939 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U273     |     |        | inp_img_2D_2940 | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U274     |     |        | inp_img_2D_2941 | sparsemux | compactencoding_dontcare | 0       |
+|  + conv2_Pipeline_F11              | 4   |        |                 |           |                          |         |
+|    icmp_ln99_fu_1072_p2            |     |        | icmp_ln99       | seteq     | auto                     | 0       |
+|    add_ln99_fu_1078_p2             |     |        | add_ln99        | add       | fabric                   | 0       |
+|    empty_fu_1100_p2                |     |        | empty           | add       | fabric                   | 0       |
+|    empty_47_fu_1110_p2             |     |        | empty_47        | add       | fabric                   | 0       |
+|    sparsemux_11_3_32_1_1_U2386     |     |        | filter_2D_82    | sparsemux | compactencoding_dontcare | 0       |
+|    add_ln102_fu_1144_p2            |     |        | add_ln102       | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U2387      | 1   |        | mul_ln102       | mul       | auto                     | 0       |
+|    add_ln102_1_fu_1179_p2          |     |        | add_ln102_1     | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U2388      | 1   |        | mul_ln102_1     | mul       | auto                     | 0       |
+|    add_ln102_2_fu_1214_p2          |     |        | add_ln102_2     | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U2389      | 1   |        | mul_ln102_2     | mul       | auto                     | 0       |
+|    add_ln102_3_fu_1249_p2          |     |        | add_ln102_3     | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U2390      | 1   |        | mul_ln102_3     | mul       | auto                     | 0       |
+|    sparsemux_11_3_32_1_1_U2391     |     |        | filter_2D_29    | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_11_3_32_1_1_U2392     |     |        | filter_2D_79    | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_11_3_32_1_1_U2393     |     |        | filter_2D_80    | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_11_3_32_1_1_U2394     |     |        | filter_2D_81    | sparsemux | compactencoding_dontcare | 0       |
+|  + conv2_Pipeline_L5_L6            | 0   |        |                 |           |                          |         |
+|    icmp_ln107_fu_11220_p2          |     |        | icmp_ln107      | seteq     | auto                     | 0       |
+|    add_ln107_fu_11226_p2           |     |        | add_ln107       | add       | fabric                   | 0       |
+|    icmp_ln109_fu_11238_p2          |     |        | icmp_ln109      | seteq     | auto                     | 0       |
+|    select_ln107_fu_11244_p3        |     |        | select_ln107    | select    | auto_sel                 | 0       |
+|    add_ln107_1_fu_11252_p2         |     |        | add_ln107_1     | add       | fabric                   | 0       |
+|    select_ln107_1_fu_11258_p3      |     |        | select_ln107_1  | select    | auto_sel                 | 0       |
+|    first_iter_0_fu_32172_p2        |     |        | first_iter_0    | seteq     | auto                     | 0       |
+|    empty_fu_32177_p2               |     |        | empty           | add       | fabric                   | 0       |
+|    sparsemux_55_5_32_1_1_U2484     |     |        | tmp_s           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2485     |     |        | tmp_1           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2486     |     |        | tmp_2           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2487     |     |        | tmp_3           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2488     |     |        | tmp_4           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2489     |     |        | tmp_5           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2490     |     |        | tmp_6           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2491     |     |        | tmp_7           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2492     |     |        | tmp_8           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2493     |     |        | tmp_9           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2494     |     |        | tmp_10          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2495     |     |        | tmp_11          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2496     |     |        | tmp_12          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2497     |     |        | tmp_13          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2498     |     |        | tmp_14          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2499     |     |        | tmp_15          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2500     |     |        | tmp_16          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2501     |     |        | tmp_17          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2502     |     |        | tmp_18          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2503     |     |        | tmp_19          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2504     |     |        | tmp_20          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2505     |     |        | tmp_21          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2506     |     |        | tmp_22          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2507     |     |        | tmp_23          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2508     |     |        | tmp_24          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2509     |     |        | tmp_25          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2510     |     |        | tmp_26          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2511     |     |        | tmp_27          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2512     |     |        | tmp_28          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2513     |     |        | tmp_29          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2514     |     |        | tmp_30          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2515     |     |        | tmp_31          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2516     |     |        | tmp_32          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2517     |     |        | tmp_33          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2518     |     |        | tmp_34          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2519     |     |        | tmp_35          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2520     |     |        | tmp_36          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2521     |     |        | tmp_37          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2522     |     |        | tmp_38          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2523     |     |        | tmp_39          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2524     |     |        | tmp_40          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2525     |     |        | tmp_41          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2526     |     |        | tmp_42          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2527     |     |        | tmp_43          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2528     |     |        | tmp_44          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2529     |     |        | tmp_45          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2530     |     |        | tmp_46          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2531     |     |        | tmp_47          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2532     |     |        | tmp_48          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2533     |     |        | tmp_49          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2534     |     |        | tmp_50          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2535     |     |        | tmp_51          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2536     |     |        | tmp_52          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2537     |     |        | tmp_53          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2538     |     |        | tmp_54          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2539     |     |        | tmp_55          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2540     |     |        | tmp_56          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2541     |     |        | tmp_57          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2542     |     |        | tmp_58          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2543     |     |        | tmp_59          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2544     |     |        | tmp_60          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2545     |     |        | tmp_61          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2546     |     |        | tmp_62          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2547     |     |        | tmp_63          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2548     |     |        | tmp_64          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2549     |     |        | tmp_65          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2550     |     |        | tmp_66          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2551     |     |        | tmp_67          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2552     |     |        | tmp_68          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2553     |     |        | tmp_69          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2554     |     |        | tmp_70          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2555     |     |        | tmp_71          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2556     |     |        | tmp_72          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2557     |     |        | tmp_73          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2558     |     |        | tmp_74          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2559     |     |        | tmp_75          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2560     |     |        | tmp_76          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2561     |     |        | tmp_77          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2562     |     |        | tmp_78          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2563     |     |        | tmp_79          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2564     |     |        | tmp_80          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2565     |     |        | tmp_81          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2566     |     |        | tmp_82          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2567     |     |        | tmp_83          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2568     |     |        | tmp_84          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2569     |     |        | tmp_85          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2570     |     |        | tmp_86          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2571     |     |        | tmp_87          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2572     |     |        | tmp_88          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2573     |     |        | tmp_89          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2574     |     |        | tmp_90          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2575     |     |        | tmp_91          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2576     |     |        | tmp_92          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2577     |     |        | tmp_93          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2578     |     |        | tmp_94          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2579     |     |        | tmp_95          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2580     |     |        | tmp_96          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2581     |     |        | tmp_97          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2582     |     |        | tmp_98          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2583     |     |        | tmp_99          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2584     |     |        | tmp_100         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2585     |     |        | tmp_101         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2586     |     |        | tmp_102         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2587     |     |        | tmp_103         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2588     |     |        | tmp_104         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2589     |     |        | tmp_105         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2590     |     |        | tmp_106         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2591     |     |        | tmp_107         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2592     |     |        | tmp_108         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2593     |     |        | tmp_109         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2594     |     |        | tmp_110         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2595     |     |        | tmp_111         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2596     |     |        | tmp_112         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2597     |     |        | tmp_113         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2598     |     |        | tmp_114         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2599     |     |        | tmp_115         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2600     |     |        | tmp_116         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2601     |     |        | tmp_117         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2602     |     |        | tmp_118         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2603     |     |        | tmp_119         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2604     |     |        | tmp_120         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2605     |     |        | tmp_121         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2606     |     |        | tmp_122         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2607     |     |        | tmp_123         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2608     |     |        | tmp_124         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2609     |     |        | tmp_125         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2610     |     |        | tmp_126         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2611     |     |        | tmp_127         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2612     |     |        | tmp_128         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2613     |     |        | tmp_129         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2614     |     |        | tmp_130         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2615     |     |        | tmp_131         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2616     |     |        | tmp_132         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2617     |     |        | tmp_133         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2618     |     |        | tmp_134         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2619     |     |        | tmp_135         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2620     |     |        | tmp_136         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2621     |     |        | tmp_137         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2622     |     |        | tmp_138         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2623     |     |        | tmp_139         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2624     |     |        | tmp_140         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2625     |     |        | tmp_141         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2626     |     |        | tmp_142         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2627     |     |        | tmp_143         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2628     |     |        | tmp_144         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2629     |     |        | tmp_145         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2630     |     |        | tmp_146         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2631     |     |        | tmp_147         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2632     |     |        | tmp_148         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2633     |     |        | tmp_149         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2634     |     |        | tmp_150         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2635     |     |        | tmp_151         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2636     |     |        | tmp_152         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2637     |     |        | tmp_153         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2638     |     |        | tmp_154         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2639     |     |        | tmp_155         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2640     |     |        | tmp_156         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2641     |     |        | tmp_157         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2642     |     |        | tmp_158         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2643     |     |        | tmp_159         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2644     |     |        | tmp_160         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2645     |     |        | tmp_161         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2646     |     |        | tmp_162         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2647     |     |        | tmp_163         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2648     |     |        | tmp_164         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2649     |     |        | tmp_165         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2650     |     |        | tmp_166         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2651     |     |        | tmp_167         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2652     |     |        | tmp_168         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2653     |     |        | tmp_169         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2654     |     |        | tmp_170         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2655     |     |        | tmp_171         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2656     |     |        | tmp_172         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2657     |     |        | tmp_173         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2658     |     |        | tmp_174         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2659     |     |        | tmp_175         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2660     |     |        | tmp_176         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2661     |     |        | tmp_177         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2662     |     |        | tmp_178         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U2663     |     |        | tmp_179         | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln129_1_fu_32321_p2        |     |        | icmp_ln129_1    | setlt     | auto                     | 0       |
+|    add_ln129_fu_32326_p2           |     |        | add_ln129       | add       | fabric                   | 0       |
+|    tmp_180_fu_32338_p56            |     |        | select_ln129    | select    | auto_sel                 | 0       |
+|    sparsemux_55_5_32_1_1_U2664     |     |        | tmp_180         | sparsemux | compactencoding_dontcare | 0       |
+|    add_ln109_fu_32156_p2           |     |        | add_ln109       | add       | fabric                   | 0       |
+|    icmp_ln109_1_fu_32161_p2        |     |        | icmp_ln109_1    | seteq     | auto                     | 0       |
+|  + conv2_Pipeline_M1               | 0   |        |                 |           |                          |         |
+|    icmp_ln136_fu_733_p2            |     |        | icmp_ln136      | seteq     | auto                     | 0       |
+|    add_ln136_fu_739_p2             |     |        | add_ln136       | add       | fabric                   | 0       |
+|    icmp_ln143_fu_805_p2            |     |        | icmp_ln143      | setne     | auto                     | 0       |
+|    icmp_ln143_1_fu_811_p2          |     |        | icmp_ln143_1    | seteq     | auto                     | 0       |
+|    or_ln143_fu_817_p2              |     |        | or_ln143        | or        | auto                     | 0       |
+|    and_ln143_fu_823_p2             |     |        | and_ln143       | and       | auto                     | 0       |
+|    icmp_ln143_2_fu_855_p2          |     |        | icmp_ln143_2    | setne     | auto                     | 0       |
+|    icmp_ln143_3_fu_861_p2          |     |        | icmp_ln143_3    | seteq     | auto                     | 0       |
+|    or_ln143_1_fu_867_p2            |     |        | or_ln143_1      | or        | auto                     | 0       |
+|    and_ln143_1_fu_873_p2           |     |        | and_ln143_1     | and       | auto                     | 0       |
+|    icmp_ln143_4_fu_905_p2          |     |        | icmp_ln143_4    | setne     | auto                     | 0       |
+|    icmp_ln143_5_fu_911_p2          |     |        | icmp_ln143_5    | seteq     | auto                     | 0       |
+|    or_ln143_2_fu_917_p2            |     |        | or_ln143_2      | or        | auto                     | 0       |
+|    and_ln143_2_fu_923_p2           |     |        | and_ln143_2     | and       | auto                     | 0       |
+|    icmp_ln143_6_fu_955_p2          |     |        | icmp_ln143_6    | setne     | auto                     | 0       |
+|    icmp_ln143_7_fu_961_p2          |     |        | icmp_ln143_7    | seteq     | auto                     | 0       |
+|    or_ln143_3_fu_967_p2            |     |        | or_ln143_3      | or        | auto                     | 0       |
+|    and_ln143_3_fu_973_p2           |     |        | and_ln143_3     | and       | auto                     | 0       |
+|    icmp_ln143_8_fu_1005_p2         |     |        | icmp_ln143_8    | setne     | auto                     | 0       |
+|    icmp_ln143_9_fu_1011_p2         |     |        | icmp_ln143_9    | seteq     | auto                     | 0       |
+|    or_ln143_4_fu_1017_p2           |     |        | or_ln143_4      | or        | auto                     | 0       |
+|    and_ln143_4_fu_1023_p2          |     |        | and_ln143_4     | and       | auto                     | 0       |
+|    icmp_ln143_10_fu_1055_p2        |     |        | icmp_ln143_10   | setne     | auto                     | 0       |
+|    icmp_ln143_11_fu_1061_p2        |     |        | icmp_ln143_11   | seteq     | auto                     | 0       |
+|    or_ln143_5_fu_1067_p2           |     |        | or_ln143_5      | or        | auto                     | 0       |
+|    and_ln143_5_fu_1073_p2          |     |        | and_ln143_5     | and       | auto                     | 0       |
+|    icmp_ln143_12_fu_1105_p2        |     |        | icmp_ln143_12   | setne     | auto                     | 0       |
+|    icmp_ln143_13_fu_1111_p2        |     |        | icmp_ln143_13   | seteq     | auto                     | 0       |
+|    or_ln143_6_fu_1117_p2           |     |        | or_ln143_6      | or        | auto                     | 0       |
+|    and_ln143_6_fu_1123_p2          |     |        | and_ln143_6     | and       | auto                     | 0       |
+|    icmp_ln143_14_fu_1155_p2        |     |        | icmp_ln143_14   | setne     | auto                     | 0       |
+|    icmp_ln143_15_fu_1161_p2        |     |        | icmp_ln143_15   | seteq     | auto                     | 0       |
+|    or_ln143_7_fu_1167_p2           |     |        | or_ln143_7      | or        | auto                     | 0       |
+|    and_ln143_7_fu_1173_p2          |     |        | and_ln143_7     | and       | auto                     | 0       |
+|    icmp_ln143_16_fu_1205_p2        |     |        | icmp_ln143_16   | setne     | auto                     | 0       |
+|    icmp_ln143_17_fu_1211_p2        |     |        | icmp_ln143_17   | seteq     | auto                     | 0       |
+|    or_ln143_8_fu_1217_p2           |     |        | or_ln143_8      | or        | auto                     | 0       |
+|    and_ln143_8_fu_1223_p2          |     |        | and_ln143_8     | and       | auto                     | 0       |
+|    icmp_ln143_18_fu_1255_p2        |     |        | icmp_ln143_18   | setne     | auto                     | 0       |
+|    icmp_ln143_19_fu_1261_p2        |     |        | icmp_ln143_19   | seteq     | auto                     | 0       |
+|    or_ln143_9_fu_1267_p2           |     |        | or_ln143_9      | or        | auto                     | 0       |
+|    and_ln143_9_fu_1273_p2          |     |        | and_ln143_9     | and       | auto                     | 0       |
+|    icmp_ln143_20_fu_1305_p2        |     |        | icmp_ln143_20   | setne     | auto                     | 0       |
+|    icmp_ln143_21_fu_1311_p2        |     |        | icmp_ln143_21   | seteq     | auto                     | 0       |
+|    or_ln143_10_fu_1317_p2          |     |        | or_ln143_10     | or        | auto                     | 0       |
+|    and_ln143_10_fu_1323_p2         |     |        | and_ln143_10    | and       | auto                     | 0       |
+|    icmp_ln143_22_fu_1355_p2        |     |        | icmp_ln143_22   | setne     | auto                     | 0       |
+|    icmp_ln143_23_fu_1361_p2        |     |        | icmp_ln143_23   | seteq     | auto                     | 0       |
+|    or_ln143_11_fu_1367_p2          |     |        | or_ln143_11     | or        | auto                     | 0       |
+|    and_ln143_11_fu_1373_p2         |     |        | and_ln143_11    | and       | auto                     | 0       |
+|    icmp_ln143_24_fu_1405_p2        |     |        | icmp_ln143_24   | setne     | auto                     | 0       |
+|    icmp_ln143_25_fu_1411_p2        |     |        | icmp_ln143_25   | seteq     | auto                     | 0       |
+|    or_ln143_12_fu_1417_p2          |     |        | or_ln143_12     | or        | auto                     | 0       |
+|    and_ln143_12_fu_1423_p2         |     |        | and_ln143_12    | and       | auto                     | 0       |
+|    icmp_ln143_26_fu_1455_p2        |     |        | icmp_ln143_26   | setne     | auto                     | 0       |
+|    icmp_ln143_27_fu_1461_p2        |     |        | icmp_ln143_27   | seteq     | auto                     | 0       |
+|    or_ln143_13_fu_1467_p2          |     |        | or_ln143_13     | or        | auto                     | 0       |
+|    and_ln143_13_fu_1473_p2         |     |        | and_ln143_13    | and       | auto                     | 0       |
+|    icmp_ln143_28_fu_1505_p2        |     |        | icmp_ln143_28   | setne     | auto                     | 0       |
+|    icmp_ln143_29_fu_1511_p2        |     |        | icmp_ln143_29   | seteq     | auto                     | 0       |
+|    or_ln143_14_fu_1517_p2          |     |        | or_ln143_14     | or        | auto                     | 0       |
+|    and_ln143_14_fu_1523_p2         |     |        | and_ln143_14    | and       | auto                     | 0       |
+|    icmp_ln143_30_fu_1555_p2        |     |        | icmp_ln143_30   | setne     | auto                     | 0       |
+|    icmp_ln143_31_fu_1561_p2        |     |        | icmp_ln143_31   | seteq     | auto                     | 0       |
+|    or_ln143_15_fu_1567_p2          |     |        | or_ln143_15     | or        | auto                     | 0       |
+|    and_ln143_15_fu_1573_p2         |     |        | and_ln143_15    | and       | auto                     | 0       |
+|    icmp_ln143_32_fu_1605_p2        |     |        | icmp_ln143_32   | setne     | auto                     | 0       |
+|    icmp_ln143_33_fu_1611_p2        |     |        | icmp_ln143_33   | seteq     | auto                     | 0       |
+|    or_ln143_16_fu_1617_p2          |     |        | or_ln143_16     | or        | auto                     | 0       |
+|    and_ln143_16_fu_1623_p2         |     |        | and_ln143_16    | and       | auto                     | 0       |
+|    icmp_ln143_34_fu_1655_p2        |     |        | icmp_ln143_34   | setne     | auto                     | 0       |
+|    icmp_ln143_35_fu_1661_p2        |     |        | icmp_ln143_35   | seteq     | auto                     | 0       |
+|    or_ln143_17_fu_1667_p2          |     |        | or_ln143_17     | or        | auto                     | 0       |
+|    and_ln143_17_fu_1673_p2         |     |        | and_ln143_17    | and       | auto                     | 0       |
+|    icmp_ln143_36_fu_1705_p2        |     |        | icmp_ln143_36   | setne     | auto                     | 0       |
+|    icmp_ln143_37_fu_1711_p2        |     |        | icmp_ln143_37   | seteq     | auto                     | 0       |
+|    or_ln143_18_fu_1717_p2          |     |        | or_ln143_18     | or        | auto                     | 0       |
+|    and_ln143_18_fu_1723_p2         |     |        | and_ln143_18    | and       | auto                     | 0       |
+|    icmp_ln143_38_fu_1755_p2        |     |        | icmp_ln143_38   | setne     | auto                     | 0       |
+|    icmp_ln143_39_fu_1761_p2        |     |        | icmp_ln143_39   | seteq     | auto                     | 0       |
+|    or_ln143_19_fu_1767_p2          |     |        | or_ln143_19     | or        | auto                     | 0       |
+|    and_ln143_19_fu_1773_p2         |     |        | and_ln143_19    | and       | auto                     | 0       |
+|    icmp_ln143_40_fu_1805_p2        |     |        | icmp_ln143_40   | setne     | auto                     | 0       |
+|    icmp_ln143_41_fu_1811_p2        |     |        | icmp_ln143_41   | seteq     | auto                     | 0       |
+|    or_ln143_20_fu_1817_p2          |     |        | or_ln143_20     | or        | auto                     | 0       |
+|    and_ln143_20_fu_1823_p2         |     |        | and_ln143_20    | and       | auto                     | 0       |
+|    icmp_ln143_42_fu_1855_p2        |     |        | icmp_ln143_42   | setne     | auto                     | 0       |
+|    icmp_ln143_43_fu_1861_p2        |     |        | icmp_ln143_43   | seteq     | auto                     | 0       |
+|    or_ln143_21_fu_1867_p2          |     |        | or_ln143_21     | or        | auto                     | 0       |
+|    and_ln143_21_fu_1873_p2         |     |        | and_ln143_21    | and       | auto                     | 0       |
+|    icmp_ln143_44_fu_1905_p2        |     |        | icmp_ln143_44   | setne     | auto                     | 0       |
+|    icmp_ln143_45_fu_1911_p2        |     |        | icmp_ln143_45   | seteq     | auto                     | 0       |
+|    or_ln143_22_fu_1917_p2          |     |        | or_ln143_22     | or        | auto                     | 0       |
+|    and_ln143_22_fu_1923_p2         |     |        | and_ln143_22    | and       | auto                     | 0       |
+|    icmp_ln143_46_fu_1955_p2        |     |        | icmp_ln143_46   | setne     | auto                     | 0       |
+|    icmp_ln143_47_fu_1961_p2        |     |        | icmp_ln143_47   | seteq     | auto                     | 0       |
+|    or_ln143_23_fu_1967_p2          |     |        | or_ln143_23     | or        | auto                     | 0       |
+|    and_ln143_23_fu_1973_p2         |     |        | and_ln143_23    | and       | auto                     | 0       |
+|    icmp_ln143_48_fu_2005_p2        |     |        | icmp_ln143_48   | setne     | auto                     | 0       |
+|    icmp_ln143_49_fu_2011_p2        |     |        | icmp_ln143_49   | seteq     | auto                     | 0       |
+|    or_ln143_24_fu_2017_p2          |     |        | or_ln143_24     | or        | auto                     | 0       |
+|    and_ln143_24_fu_2023_p2         |     |        | and_ln143_24    | and       | auto                     | 0       |
+|    icmp_ln143_50_fu_2055_p2        |     |        | icmp_ln143_50   | setne     | auto                     | 0       |
+|    icmp_ln143_51_fu_2061_p2        |     |        | icmp_ln143_51   | seteq     | auto                     | 0       |
+|    or_ln143_25_fu_2067_p2          |     |        | or_ln143_25     | or        | auto                     | 0       |
+|    and_ln143_25_fu_2073_p2         |     |        | and_ln143_25    | and       | auto                     | 0       |
+|    icmp_ln143_52_fu_2104_p2        |     |        | icmp_ln143_52   | setne     | auto                     | 0       |
+|    icmp_ln143_53_fu_2110_p2        |     |        | icmp_ln143_53   | seteq     | auto                     | 0       |
+|    or_ln143_26_fu_2116_p2          |     |        | or_ln143_26     | or        | auto                     | 0       |
+|    and_ln143_26_fu_2122_p2         |     |        | and_ln143_26    | and       | auto                     | 0       |
+|    select_ln136_fu_829_p3          |     |        | select_ln136    | select    | auto_sel                 | 0       |
+|    select_ln136_1_fu_879_p3        |     |        | select_ln136_1  | select    | auto_sel                 | 0       |
+|    select_ln136_2_fu_929_p3        |     |        | select_ln136_2  | select    | auto_sel                 | 0       |
+|    select_ln136_3_fu_979_p3        |     |        | select_ln136_3  | select    | auto_sel                 | 0       |
+|    select_ln136_4_fu_1029_p3       |     |        | select_ln136_4  | select    | auto_sel                 | 0       |
+|    select_ln136_5_fu_1079_p3       |     |        | select_ln136_5  | select    | auto_sel                 | 0       |
+|    select_ln136_6_fu_1129_p3       |     |        | select_ln136_6  | select    | auto_sel                 | 0       |
+|    select_ln136_7_fu_1179_p3       |     |        | select_ln136_7  | select    | auto_sel                 | 0       |
+|    select_ln136_8_fu_1229_p3       |     |        | select_ln136_8  | select    | auto_sel                 | 0       |
+|    select_ln136_9_fu_1279_p3       |     |        | select_ln136_9  | select    | auto_sel                 | 0       |
+|    select_ln136_10_fu_1329_p3      |     |        | select_ln136_10 | select    | auto_sel                 | 0       |
+|    select_ln136_11_fu_1379_p3      |     |        | select_ln136_11 | select    | auto_sel                 | 0       |
+|    select_ln136_12_fu_1429_p3      |     |        | select_ln136_12 | select    | auto_sel                 | 0       |
+|    select_ln136_13_fu_1479_p3      |     |        | select_ln136_13 | select    | auto_sel                 | 0       |
+|    select_ln136_14_fu_1529_p3      |     |        | select_ln136_14 | select    | auto_sel                 | 0       |
+|    select_ln136_15_fu_1579_p3      |     |        | select_ln136_15 | select    | auto_sel                 | 0       |
+|    select_ln136_16_fu_1629_p3      |     |        | select_ln136_16 | select    | auto_sel                 | 0       |
+|    select_ln136_17_fu_1679_p3      |     |        | select_ln136_17 | select    | auto_sel                 | 0       |
+|    select_ln136_18_fu_1729_p3      |     |        | select_ln136_18 | select    | auto_sel                 | 0       |
+|    select_ln136_19_fu_1779_p3      |     |        | select_ln136_19 | select    | auto_sel                 | 0       |
+|    select_ln136_20_fu_1829_p3      |     |        | select_ln136_20 | select    | auto_sel                 | 0       |
+|    select_ln136_21_fu_1879_p3      |     |        | select_ln136_21 | select    | auto_sel                 | 0       |
+|    select_ln136_22_fu_1929_p3      |     |        | select_ln136_22 | select    | auto_sel                 | 0       |
+|    select_ln136_23_fu_1979_p3      |     |        | select_ln136_23 | select    | auto_sel                 | 0       |
+|    select_ln136_24_fu_2029_p3      |     |        | select_ln136_24 | select    | auto_sel                 | 0       |
+|    select_ln136_25_fu_2079_p3      |     |        | select_ln136_25 | select    | auto_sel                 | 0       |
+|    select_ln136_26_fu_2128_p3      |     |        | select_ln136_26 | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_L2_1             | 0   |        |                 |           |                          |         |
+|    icmp_ln156_fu_2739_p2           |     |        | icmp_ln156      | seteq     | auto                     | 0       |
+|    add_ln156_fu_2745_p2            |     |        | add_ln156       | add       | fabric                   | 0       |
+|    add_ln156_1_fu_2798_p2          |     |        | add_ln156_1     | add       | fabric                   | 0       |
+|    add_ln156_2_fu_2755_p2          |     |        | add_ln156_2     | add       | fabric                   | 0       |
+|    icmp_ln156_1_fu_2761_p2         |     |        | icmp_ln156_1    | seteq     | auto                     | 0       |
+|    select_ln156_fu_2767_p3         |     |        | select_ln156    | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_F2_1             | 0   |        |                 |           |                          |         |
+|    icmp_ln167_fu_527_p2            |     |        | icmp_ln167      | seteq     | auto                     | 0       |
+|    add_ln167_fu_533_p2             |     |        | add_ln167       | add       | fabric                   | 0       |
+|    add_ln167_1_fu_586_p2           |     |        | add_ln167_1     | add       | fabric                   | 0       |
+|    add_ln167_2_fu_543_p2           |     |        | add_ln167_2     | add       | fabric                   | 0       |
+|    icmp_ln167_1_fu_549_p2          |     |        | icmp_ln167_1    | seteq     | auto                     | 0       |
+|    select_ln167_fu_555_p3          |     |        | select_ln167    | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_VITIS_LOOP_173_7 | 0   |        |                 |           |                          |         |
+|    icmp_ln173_fu_557_p2            |     |        | icmp_ln173      | seteq     | auto                     | 0       |
+|    add_ln173_fu_563_p2             |     |        | add_ln173       | add       | fabric                   | 0       |
+|    add_ln173_1_fu_572_p2           |     |        | add_ln173_1     | add       | fabric                   | 0       |
+|    add_ln173_2_fu_623_p2           |     |        | add_ln173_2     | add       | fabric                   | 0       |
+|    icmp_ln173_1_fu_629_p2          |     |        | icmp_ln173_1    | seteq     | auto                     | 0       |
+|    select_ln173_fu_635_p3          |     |        | select_ln173    | select    | auto_sel                 | 0       |
+|  + conv2_Pipeline_S21              | 31  |        |                 |           |                          |         |
+|    icmp_ln179_fu_65005_p2          |     |        | icmp_ln179      | seteq     | auto                     | 0       |
+|    add_ln179_fu_65011_p2           |     |        | add_ln179       | add       | fabric                   | 0       |
+|    empty_fu_65029_p2               |     |        | empty           | sub       | fabric                   | 0       |
+|    grp_fu_65045_p0                 |     |        | empty_44        | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3924      | 1   |        | mul_ln182       | mul       | auto                     | 0       |
+|    urem_16ns_9ns_8_20_1_U3923      |     |        | urem_ln182      | urem      | auto                     | 19      |
+|    sparsemux_311_8_32_1_1_U3955    |     |        | inp_img_2D_991  | sparsemux | compactencoding_dontcare | 0       |
+|    add_ln182_fu_65238_p2           |     |        | add_ln182       | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3925      | 1   |        | mul_ln182_1     | mul       | auto                     | 0       |
+|    add_ln182_1_fu_65422_p2         |     |        | add_ln182_1     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3926      | 1   |        | mul_ln182_2     | mul       | auto                     | 0       |
+|    add_ln182_2_fu_65606_p2         |     |        | add_ln182_2     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3927      | 1   |        | mul_ln182_3     | mul       | auto                     | 0       |
+|    add_ln182_3_fu_65790_p2         |     |        | add_ln182_3     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3928      | 1   |        | mul_ln182_4     | mul       | auto                     | 0       |
+|    add_ln182_4_fu_65974_p2         |     |        | add_ln182_4     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3929      | 1   |        | mul_ln182_5     | mul       | auto                     | 0       |
+|    add_ln182_5_fu_66158_p2         |     |        | add_ln182_5     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3930      | 1   |        | mul_ln182_6     | mul       | auto                     | 0       |
+|    add_ln182_6_fu_66342_p2         |     |        | add_ln182_6     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3931      | 1   |        | mul_ln182_7     | mul       | auto                     | 0       |
+|    add_ln182_7_fu_66526_p2         |     |        | add_ln182_7     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3932      | 1   |        | mul_ln182_8     | mul       | auto                     | 0       |
+|    add_ln182_8_fu_66710_p2         |     |        | add_ln182_8     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3933      | 1   |        | mul_ln182_9     | mul       | auto                     | 0       |
+|    add_ln182_9_fu_66894_p2         |     |        | add_ln182_9     | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3934      | 1   |        | mul_ln182_10    | mul       | auto                     | 0       |
+|    add_ln182_10_fu_67078_p2        |     |        | add_ln182_10    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3935      | 1   |        | mul_ln182_11    | mul       | auto                     | 0       |
+|    add_ln182_11_fu_67262_p2        |     |        | add_ln182_11    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3936      | 1   |        | mul_ln182_12    | mul       | auto                     | 0       |
+|    add_ln182_12_fu_67446_p2        |     |        | add_ln182_12    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3937      | 1   |        | mul_ln182_13    | mul       | auto                     | 0       |
+|    add_ln182_13_fu_67630_p2        |     |        | add_ln182_13    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3938      | 1   |        | mul_ln182_14    | mul       | auto                     | 0       |
+|    add_ln182_14_fu_67814_p2        |     |        | add_ln182_14    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3939      | 1   |        | mul_ln182_15    | mul       | auto                     | 0       |
+|    add_ln182_15_fu_67998_p2        |     |        | add_ln182_15    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3940      | 1   |        | mul_ln182_16    | mul       | auto                     | 0       |
+|    add_ln182_16_fu_68182_p2        |     |        | add_ln182_16    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3941      | 1   |        | mul_ln182_17    | mul       | auto                     | 0       |
+|    add_ln182_17_fu_68366_p2        |     |        | add_ln182_17    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3942      | 1   |        | mul_ln182_18    | mul       | auto                     | 0       |
+|    add_ln182_18_fu_68550_p2        |     |        | add_ln182_18    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3943      | 1   |        | mul_ln182_19    | mul       | auto                     | 0       |
+|    add_ln182_19_fu_68734_p2        |     |        | add_ln182_19    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3944      | 1   |        | mul_ln182_20    | mul       | auto                     | 0       |
+|    add_ln182_20_fu_68918_p2        |     |        | add_ln182_20    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3945      | 1   |        | mul_ln182_21    | mul       | auto                     | 0       |
+|    add_ln182_21_fu_69102_p2        |     |        | add_ln182_21    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3946      | 1   |        | mul_ln182_22    | mul       | auto                     | 0       |
+|    add_ln182_22_fu_69286_p2        |     |        | add_ln182_22    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3947      | 1   |        | mul_ln182_23    | mul       | auto                     | 0       |
+|    add_ln182_23_fu_69470_p2        |     |        | add_ln182_23    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3948      | 1   |        | mul_ln182_24    | mul       | auto                     | 0       |
+|    add_ln182_24_fu_69654_p2        |     |        | add_ln182_24    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3949      | 1   |        | mul_ln182_25    | mul       | auto                     | 0       |
+|    add_ln182_25_fu_69838_p2        |     |        | add_ln182_25    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3950      | 1   |        | mul_ln182_26    | mul       | auto                     | 0       |
+|    add_ln182_26_fu_70022_p2        |     |        | add_ln182_26    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3951      | 1   |        | mul_ln182_27    | mul       | auto                     | 0       |
+|    add_ln182_27_fu_70206_p2        |     |        | add_ln182_27    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3952      | 1   |        | mul_ln182_28    | mul       | auto                     | 0       |
+|    add_ln182_28_fu_70390_p2        |     |        | add_ln182_28    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3953      | 1   |        | mul_ln182_29    | mul       | auto                     | 0       |
+|    add_ln182_29_fu_70574_p2        |     |        | add_ln182_29    | add       | fabric                   | 0       |
+|    mul_16ns_18ns_33_1_1_U3954      | 1   |        | mul_ln182_30    | mul       | auto                     | 0       |
+|    sparsemux_311_8_32_1_1_U3956    |     |        | inp_img_2D_961  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3957    |     |        | inp_img_2D_962  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3958    |     |        | inp_img_2D_963  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3959    |     |        | inp_img_2D_964  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3960    |     |        | inp_img_2D_965  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3961    |     |        | inp_img_2D_966  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3962    |     |        | inp_img_2D_967  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3963    |     |        | inp_img_2D_968  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3964    |     |        | inp_img_2D_969  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3965    |     |        | inp_img_2D_970  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3966    |     |        | inp_img_2D_971  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3967    |     |        | inp_img_2D_972  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3968    |     |        | inp_img_2D_973  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3969    |     |        | inp_img_2D_974  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3970    |     |        | inp_img_2D_975  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3971    |     |        | inp_img_2D_976  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3972    |     |        | inp_img_2D_977  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3973    |     |        | inp_img_2D_978  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3974    |     |        | inp_img_2D_979  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3975    |     |        | inp_img_2D_980  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3976    |     |        | inp_img_2D_981  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3977    |     |        | inp_img_2D_982  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3978    |     |        | inp_img_2D_983  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3979    |     |        | inp_img_2D_984  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3980    |     |        | inp_img_2D_985  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3981    |     |        | inp_img_2D_986  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3982    |     |        | inp_img_2D_987  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3983    |     |        | inp_img_2D_988  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3984    |     |        | inp_img_2D_989  | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_311_8_32_1_1_U3985    |     |        | inp_img_2D_990  | sparsemux | compactencoding_dontcare | 0       |
+|  + conv2_Pipeline_F21              | 4   |        |                 |           |                          |         |
+|    icmp_ln186_fu_1072_p2           |     |        | icmp_ln186      | seteq     | auto                     | 0       |
+|    add_ln186_fu_1078_p2            |     |        | add_ln186       | add       | fabric                   | 0       |
+|    empty_fu_1100_p2                |     |        | empty           | add       | fabric                   | 0       |
+|    empty_46_fu_1110_p2             |     |        | empty_46        | add       | fabric                   | 0       |
+|    sparsemux_11_3_32_1_1_U6064     |     |        | filter_2D_29    | sparsemux | compactencoding_dontcare | 0       |
+|    add_ln189_fu_1144_p2            |     |        | add_ln189       | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U6065      | 1   |        | mul_ln189       | mul       | auto                     | 0       |
+|    add_ln189_1_fu_1179_p2          |     |        | add_ln189_1     | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U6066      | 1   |        | mul_ln189_1     | mul       | auto                     | 0       |
+|    add_ln189_2_fu_1214_p2          |     |        | add_ln189_2     | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U6067      | 1   |        | mul_ln189_2     | mul       | auto                     | 0       |
+|    add_ln189_3_fu_1249_p2          |     |        | add_ln189_3     | add       | fabric                   | 0       |
+|    mul_11ns_13ns_23_1_1_U6068      | 1   |        | mul_ln189_3     | mul       | auto                     | 0       |
+|    sparsemux_11_3_32_1_1_U6069     |     |        | filter_2D_25    | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_11_3_32_1_1_U6070     |     |        | filter_2D_26    | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_11_3_32_1_1_U6071     |     |        | filter_2D_27    | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_11_3_32_1_1_U6072     |     |        | filter_2D_28    | sparsemux | compactencoding_dontcare | 0       |
+|  + conv2_Pipeline_L8_L9            | 0   |        |                 |           |                          |         |
+|    icmp_ln194_fu_11220_p2          |     |        | icmp_ln194      | seteq     | auto                     | 0       |
+|    add_ln194_fu_11226_p2           |     |        | add_ln194       | add       | fabric                   | 0       |
+|    icmp_ln196_fu_11238_p2          |     |        | icmp_ln196      | seteq     | auto                     | 0       |
+|    select_ln194_fu_11244_p3        |     |        | select_ln194    | select    | auto_sel                 | 0       |
+|    add_ln194_1_fu_11252_p2         |     |        | add_ln194_1     | add       | fabric                   | 0       |
+|    select_ln194_1_fu_11258_p3      |     |        | select_ln194_1  | select    | auto_sel                 | 0       |
+|    first_iter_1_fu_32172_p2        |     |        | first_iter_1    | seteq     | auto                     | 0       |
+|    empty_fu_32177_p2               |     |        | empty           | add       | fabric                   | 0       |
+|    sparsemux_55_5_32_1_1_U6160     |     |        | tmp             | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6161     |     |        | tmp_s           | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6162     |     |        | tmp_107         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6163     |     |        | tmp_108         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6164     |     |        | tmp_109         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6165     |     |        | tmp_110         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6166     |     |        | tmp_111         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6167     |     |        | tmp_112         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6168     |     |        | tmp_113         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6169     |     |        | tmp_114         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6170     |     |        | tmp_115         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6171     |     |        | tmp_116         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6172     |     |        | tmp_117         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6173     |     |        | tmp_118         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6174     |     |        | tmp_119         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6175     |     |        | tmp_120         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6176     |     |        | tmp_121         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6177     |     |        | tmp_122         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6178     |     |        | tmp_123         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6179     |     |        | tmp_124         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6180     |     |        | tmp_125         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6181     |     |        | tmp_126         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6182     |     |        | tmp_127         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6183     |     |        | tmp_128         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6184     |     |        | tmp_129         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6185     |     |        | tmp_130         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6186     |     |        | tmp_131         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6187     |     |        | tmp_132         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6188     |     |        | tmp_133         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6189     |     |        | tmp_134         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6190     |     |        | tmp_135         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6191     |     |        | tmp_136         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6192     |     |        | tmp_137         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6193     |     |        | tmp_138         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6194     |     |        | tmp_139         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6195     |     |        | tmp_140         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6196     |     |        | tmp_141         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6197     |     |        | tmp_142         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6198     |     |        | tmp_143         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6199     |     |        | tmp_144         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6200     |     |        | tmp_145         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6201     |     |        | tmp_146         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6202     |     |        | tmp_147         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6203     |     |        | tmp_148         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6204     |     |        | tmp_149         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6205     |     |        | tmp_150         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6206     |     |        | tmp_151         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6207     |     |        | tmp_152         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6208     |     |        | tmp_153         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6209     |     |        | tmp_154         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6210     |     |        | tmp_155         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6211     |     |        | tmp_156         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6212     |     |        | tmp_157         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6213     |     |        | tmp_158         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6214     |     |        | tmp_159         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6215     |     |        | tmp_160         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6216     |     |        | tmp_161         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6217     |     |        | tmp_162         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6218     |     |        | tmp_163         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6219     |     |        | tmp_164         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6220     |     |        | tmp_165         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6221     |     |        | tmp_166         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6222     |     |        | tmp_167         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6223     |     |        | tmp_168         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6224     |     |        | tmp_169         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6225     |     |        | tmp_170         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6226     |     |        | tmp_171         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6227     |     |        | tmp_172         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6228     |     |        | tmp_173         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6229     |     |        | tmp_174         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6230     |     |        | tmp_175         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6231     |     |        | tmp_176         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6232     |     |        | tmp_177         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6233     |     |        | tmp_178         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6234     |     |        | tmp_179         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6235     |     |        | tmp_180         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6236     |     |        | tmp_181         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6237     |     |        | tmp_182         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6238     |     |        | tmp_183         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6239     |     |        | tmp_184         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6240     |     |        | tmp_185         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6241     |     |        | tmp_186         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6242     |     |        | tmp_187         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6243     |     |        | tmp_188         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6244     |     |        | tmp_189         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6245     |     |        | tmp_190         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6246     |     |        | tmp_191         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6247     |     |        | tmp_192         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6248     |     |        | tmp_193         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6249     |     |        | tmp_194         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6250     |     |        | tmp_195         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6251     |     |        | tmp_196         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6252     |     |        | tmp_197         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6253     |     |        | tmp_198         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6254     |     |        | tmp_199         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6255     |     |        | tmp_200         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6256     |     |        | tmp_201         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6257     |     |        | tmp_202         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6258     |     |        | tmp_203         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6259     |     |        | tmp_204         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6260     |     |        | tmp_205         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6261     |     |        | tmp_206         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6262     |     |        | tmp_207         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6263     |     |        | tmp_208         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6264     |     |        | tmp_209         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6265     |     |        | tmp_210         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6266     |     |        | tmp_211         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6267     |     |        | tmp_212         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6268     |     |        | tmp_213         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6269     |     |        | tmp_214         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6270     |     |        | tmp_215         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6271     |     |        | tmp_216         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6272     |     |        | tmp_217         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6273     |     |        | tmp_218         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6274     |     |        | tmp_219         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6275     |     |        | tmp_220         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6276     |     |        | tmp_221         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6277     |     |        | tmp_222         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6278     |     |        | tmp_223         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6279     |     |        | tmp_224         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6280     |     |        | tmp_225         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6281     |     |        | tmp_226         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6282     |     |        | tmp_227         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6283     |     |        | tmp_228         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6284     |     |        | tmp_229         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6285     |     |        | tmp_230         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6286     |     |        | tmp_231         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6287     |     |        | tmp_232         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6288     |     |        | tmp_233         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6289     |     |        | tmp_234         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6290     |     |        | tmp_235         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6291     |     |        | tmp_236         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6292     |     |        | tmp_237         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6293     |     |        | tmp_238         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6294     |     |        | tmp_239         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6295     |     |        | tmp_240         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6296     |     |        | tmp_241         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6297     |     |        | tmp_242         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6298     |     |        | tmp_243         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6299     |     |        | tmp_244         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6300     |     |        | tmp_245         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6301     |     |        | tmp_246         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6302     |     |        | tmp_247         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6303     |     |        | tmp_248         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6304     |     |        | tmp_249         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6305     |     |        | tmp_250         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6306     |     |        | tmp_251         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6307     |     |        | tmp_252         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6308     |     |        | tmp_253         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6309     |     |        | tmp_254         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6310     |     |        | tmp_255         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6311     |     |        | tmp_256         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6312     |     |        | tmp_257         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6313     |     |        | tmp_258         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6314     |     |        | tmp_259         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6315     |     |        | tmp_260         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6316     |     |        | tmp_261         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6317     |     |        | tmp_262         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6318     |     |        | tmp_263         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6319     |     |        | tmp_264         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6320     |     |        | tmp_265         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6321     |     |        | tmp_266         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6322     |     |        | tmp_267         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6323     |     |        | tmp_268         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6324     |     |        | tmp_269         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6325     |     |        | tmp_270         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6326     |     |        | tmp_271         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6327     |     |        | tmp_272         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6328     |     |        | tmp_273         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6329     |     |        | tmp_274         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6330     |     |        | tmp_275         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6331     |     |        | tmp_276         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6332     |     |        | tmp_277         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6333     |     |        | tmp_278         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6334     |     |        | tmp_279         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6335     |     |        | tmp_280         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6336     |     |        | tmp_281         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6337     |     |        | tmp_282         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6338     |     |        | tmp_283         | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_55_5_32_1_1_U6339     |     |        | tmp_284         | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln216_1_fu_32321_p2        |     |        | icmp_ln216_1    | setlt     | auto                     | 0       |
+|    add_ln216_fu_32326_p2           |     |        | add_ln216       | add       | fabric                   | 0       |
+|    tmp_285_fu_32338_p56            |     |        | select_ln216    | select    | auto_sel                 | 0       |
+|    sparsemux_55_5_32_1_1_U6340     |     |        | tmp_285         | sparsemux | compactencoding_dontcare | 0       |
+|    add_ln196_fu_32156_p2           |     |        | add_ln196       | add       | fabric                   | 0       |
+|    icmp_ln196_1_fu_32161_p2        |     |        | icmp_ln196_1    | seteq     | auto                     | 0       |
+|  + conv2_Pipeline_M2               | 0   |        |                 |           |                          |         |
+|    icmp_ln221_fu_733_p2            |     |        | icmp_ln221      | seteq     | auto                     | 0       |
+|    add_ln221_fu_739_p2             |     |        | add_ln221       | add       | fabric                   | 0       |
+|    icmp_ln228_fu_805_p2            |     |        | icmp_ln228      | setne     | auto                     | 0       |
+|    icmp_ln228_1_fu_811_p2          |     |        | icmp_ln228_1    | seteq     | auto                     | 0       |
+|    or_ln228_fu_817_p2              |     |        | or_ln228        | or        | auto                     | 0       |
+|    and_ln228_fu_823_p2             |     |        | and_ln228       | and       | auto                     | 0       |
+|    icmp_ln228_2_fu_855_p2          |     |        | icmp_ln228_2    | setne     | auto                     | 0       |
+|    icmp_ln228_3_fu_861_p2          |     |        | icmp_ln228_3    | seteq     | auto                     | 0       |
+|    or_ln228_1_fu_867_p2            |     |        | or_ln228_1      | or        | auto                     | 0       |
+|    and_ln228_1_fu_873_p2           |     |        | and_ln228_1     | and       | auto                     | 0       |
+|    icmp_ln228_4_fu_905_p2          |     |        | icmp_ln228_4    | setne     | auto                     | 0       |
+|    icmp_ln228_5_fu_911_p2          |     |        | icmp_ln228_5    | seteq     | auto                     | 0       |
+|    or_ln228_2_fu_917_p2            |     |        | or_ln228_2      | or        | auto                     | 0       |
+|    and_ln228_2_fu_923_p2           |     |        | and_ln228_2     | and       | auto                     | 0       |
+|    icmp_ln228_6_fu_955_p2          |     |        | icmp_ln228_6    | setne     | auto                     | 0       |
+|    icmp_ln228_7_fu_961_p2          |     |        | icmp_ln228_7    | seteq     | auto                     | 0       |
+|    or_ln228_3_fu_967_p2            |     |        | or_ln228_3      | or        | auto                     | 0       |
+|    and_ln228_3_fu_973_p2           |     |        | and_ln228_3     | and       | auto                     | 0       |
+|    icmp_ln228_8_fu_1005_p2         |     |        | icmp_ln228_8    | setne     | auto                     | 0       |
+|    icmp_ln228_9_fu_1011_p2         |     |        | icmp_ln228_9    | seteq     | auto                     | 0       |
+|    or_ln228_4_fu_1017_p2           |     |        | or_ln228_4      | or        | auto                     | 0       |
+|    and_ln228_4_fu_1023_p2          |     |        | and_ln228_4     | and       | auto                     | 0       |
+|    icmp_ln228_10_fu_1055_p2        |     |        | icmp_ln228_10   | setne     | auto                     | 0       |
+|    icmp_ln228_11_fu_1061_p2        |     |        | icmp_ln228_11   | seteq     | auto                     | 0       |
+|    or_ln228_5_fu_1067_p2           |     |        | or_ln228_5      | or        | auto                     | 0       |
+|    and_ln228_5_fu_1073_p2          |     |        | and_ln228_5     | and       | auto                     | 0       |
+|    icmp_ln228_12_fu_1105_p2        |     |        | icmp_ln228_12   | setne     | auto                     | 0       |
+|    icmp_ln228_13_fu_1111_p2        |     |        | icmp_ln228_13   | seteq     | auto                     | 0       |
+|    or_ln228_6_fu_1117_p2           |     |        | or_ln228_6      | or        | auto                     | 0       |
+|    and_ln228_6_fu_1123_p2          |     |        | and_ln228_6     | and       | auto                     | 0       |
+|    icmp_ln228_14_fu_1155_p2        |     |        | icmp_ln228_14   | setne     | auto                     | 0       |
+|    icmp_ln228_15_fu_1161_p2        |     |        | icmp_ln228_15   | seteq     | auto                     | 0       |
+|    or_ln228_7_fu_1167_p2           |     |        | or_ln228_7      | or        | auto                     | 0       |
+|    and_ln228_7_fu_1173_p2          |     |        | and_ln228_7     | and       | auto                     | 0       |
+|    icmp_ln228_16_fu_1205_p2        |     |        | icmp_ln228_16   | setne     | auto                     | 0       |
+|    icmp_ln228_17_fu_1211_p2        |     |        | icmp_ln228_17   | seteq     | auto                     | 0       |
+|    or_ln228_8_fu_1217_p2           |     |        | or_ln228_8      | or        | auto                     | 0       |
+|    and_ln228_8_fu_1223_p2          |     |        | and_ln228_8     | and       | auto                     | 0       |
+|    icmp_ln228_18_fu_1255_p2        |     |        | icmp_ln228_18   | setne     | auto                     | 0       |
+|    icmp_ln228_19_fu_1261_p2        |     |        | icmp_ln228_19   | seteq     | auto                     | 0       |
+|    or_ln228_9_fu_1267_p2           |     |        | or_ln228_9      | or        | auto                     | 0       |
+|    and_ln228_9_fu_1273_p2          |     |        | and_ln228_9     | and       | auto                     | 0       |
+|    icmp_ln228_20_fu_1305_p2        |     |        | icmp_ln228_20   | setne     | auto                     | 0       |
+|    icmp_ln228_21_fu_1311_p2        |     |        | icmp_ln228_21   | seteq     | auto                     | 0       |
+|    or_ln228_10_fu_1317_p2          |     |        | or_ln228_10     | or        | auto                     | 0       |
+|    and_ln228_10_fu_1323_p2         |     |        | and_ln228_10    | and       | auto                     | 0       |
+|    icmp_ln228_22_fu_1355_p2        |     |        | icmp_ln228_22   | setne     | auto                     | 0       |
+|    icmp_ln228_23_fu_1361_p2        |     |        | icmp_ln228_23   | seteq     | auto                     | 0       |
+|    or_ln228_11_fu_1367_p2          |     |        | or_ln228_11     | or        | auto                     | 0       |
+|    and_ln228_11_fu_1373_p2         |     |        | and_ln228_11    | and       | auto                     | 0       |
+|    icmp_ln228_24_fu_1405_p2        |     |        | icmp_ln228_24   | setne     | auto                     | 0       |
+|    icmp_ln228_25_fu_1411_p2        |     |        | icmp_ln228_25   | seteq     | auto                     | 0       |
+|    or_ln228_12_fu_1417_p2          |     |        | or_ln228_12     | or        | auto                     | 0       |
+|    and_ln228_12_fu_1423_p2         |     |        | and_ln228_12    | and       | auto                     | 0       |
+|    icmp_ln228_26_fu_1455_p2        |     |        | icmp_ln228_26   | setne     | auto                     | 0       |
+|    icmp_ln228_27_fu_1461_p2        |     |        | icmp_ln228_27   | seteq     | auto                     | 0       |
+|    or_ln228_13_fu_1467_p2          |     |        | or_ln228_13     | or        | auto                     | 0       |
+|    and_ln228_13_fu_1473_p2         |     |        | and_ln228_13    | and       | auto                     | 0       |
+|    icmp_ln228_28_fu_1505_p2        |     |        | icmp_ln228_28   | setne     | auto                     | 0       |
+|    icmp_ln228_29_fu_1511_p2        |     |        | icmp_ln228_29   | seteq     | auto                     | 0       |
+|    or_ln228_14_fu_1517_p2          |     |        | or_ln228_14     | or        | auto                     | 0       |
+|    and_ln228_14_fu_1523_p2         |     |        | and_ln228_14    | and       | auto                     | 0       |
+|    icmp_ln228_30_fu_1555_p2        |     |        | icmp_ln228_30   | setne     | auto                     | 0       |
+|    icmp_ln228_31_fu_1561_p2        |     |        | icmp_ln228_31   | seteq     | auto                     | 0       |
+|    or_ln228_15_fu_1567_p2          |     |        | or_ln228_15     | or        | auto                     | 0       |
+|    and_ln228_15_fu_1573_p2         |     |        | and_ln228_15    | and       | auto                     | 0       |
+|    icmp_ln228_32_fu_1605_p2        |     |        | icmp_ln228_32   | setne     | auto                     | 0       |
+|    icmp_ln228_33_fu_1611_p2        |     |        | icmp_ln228_33   | seteq     | auto                     | 0       |
+|    or_ln228_16_fu_1617_p2          |     |        | or_ln228_16     | or        | auto                     | 0       |
+|    and_ln228_16_fu_1623_p2         |     |        | and_ln228_16    | and       | auto                     | 0       |
+|    icmp_ln228_34_fu_1655_p2        |     |        | icmp_ln228_34   | setne     | auto                     | 0       |
+|    icmp_ln228_35_fu_1661_p2        |     |        | icmp_ln228_35   | seteq     | auto                     | 0       |
+|    or_ln228_17_fu_1667_p2          |     |        | or_ln228_17     | or        | auto                     | 0       |
+|    and_ln228_17_fu_1673_p2         |     |        | and_ln228_17    | and       | auto                     | 0       |
+|    icmp_ln228_36_fu_1705_p2        |     |        | icmp_ln228_36   | setne     | auto                     | 0       |
+|    icmp_ln228_37_fu_1711_p2        |     |        | icmp_ln228_37   | seteq     | auto                     | 0       |
+|    or_ln228_18_fu_1717_p2          |     |        | or_ln228_18     | or        | auto                     | 0       |
+|    and_ln228_18_fu_1723_p2         |     |        | and_ln228_18    | and       | auto                     | 0       |
+|    icmp_ln228_38_fu_1755_p2        |     |        | icmp_ln228_38   | setne     | auto                     | 0       |
+|    icmp_ln228_39_fu_1761_p2        |     |        | icmp_ln228_39   | seteq     | auto                     | 0       |
+|    or_ln228_19_fu_1767_p2          |     |        | or_ln228_19     | or        | auto                     | 0       |
+|    and_ln228_19_fu_1773_p2         |     |        | and_ln228_19    | and       | auto                     | 0       |
+|    icmp_ln228_40_fu_1805_p2        |     |        | icmp_ln228_40   | setne     | auto                     | 0       |
+|    icmp_ln228_41_fu_1811_p2        |     |        | icmp_ln228_41   | seteq     | auto                     | 0       |
+|    or_ln228_20_fu_1817_p2          |     |        | or_ln228_20     | or        | auto                     | 0       |
+|    and_ln228_20_fu_1823_p2         |     |        | and_ln228_20    | and       | auto                     | 0       |
+|    icmp_ln228_42_fu_1855_p2        |     |        | icmp_ln228_42   | setne     | auto                     | 0       |
+|    icmp_ln228_43_fu_1861_p2        |     |        | icmp_ln228_43   | seteq     | auto                     | 0       |
+|    or_ln228_21_fu_1867_p2          |     |        | or_ln228_21     | or        | auto                     | 0       |
+|    and_ln228_21_fu_1873_p2         |     |        | and_ln228_21    | and       | auto                     | 0       |
+|    icmp_ln228_44_fu_1905_p2        |     |        | icmp_ln228_44   | setne     | auto                     | 0       |
+|    icmp_ln228_45_fu_1911_p2        |     |        | icmp_ln228_45   | seteq     | auto                     | 0       |
+|    or_ln228_22_fu_1917_p2          |     |        | or_ln228_22     | or        | auto                     | 0       |
+|    and_ln228_22_fu_1923_p2         |     |        | and_ln228_22    | and       | auto                     | 0       |
+|    icmp_ln228_46_fu_1955_p2        |     |        | icmp_ln228_46   | setne     | auto                     | 0       |
+|    icmp_ln228_47_fu_1961_p2        |     |        | icmp_ln228_47   | seteq     | auto                     | 0       |
+|    or_ln228_23_fu_1967_p2          |     |        | or_ln228_23     | or        | auto                     | 0       |
+|    and_ln228_23_fu_1973_p2         |     |        | and_ln228_23    | and       | auto                     | 0       |
+|    icmp_ln228_48_fu_2005_p2        |     |        | icmp_ln228_48   | setne     | auto                     | 0       |
+|    icmp_ln228_49_fu_2011_p2        |     |        | icmp_ln228_49   | seteq     | auto                     | 0       |
+|    or_ln228_24_fu_2017_p2          |     |        | or_ln228_24     | or        | auto                     | 0       |
+|    and_ln228_24_fu_2023_p2         |     |        | and_ln228_24    | and       | auto                     | 0       |
+|    icmp_ln228_50_fu_2055_p2        |     |        | icmp_ln228_50   | setne     | auto                     | 0       |
+|    icmp_ln228_51_fu_2061_p2        |     |        | icmp_ln228_51   | seteq     | auto                     | 0       |
+|    or_ln228_25_fu_2067_p2          |     |        | or_ln228_25     | or        | auto                     | 0       |
+|    and_ln228_25_fu_2073_p2         |     |        | and_ln228_25    | and       | auto                     | 0       |
+|    icmp_ln228_52_fu_2104_p2        |     |        | icmp_ln228_52   | setne     | auto                     | 0       |
+|    icmp_ln228_53_fu_2110_p2        |     |        | icmp_ln228_53   | seteq     | auto                     | 0       |
+|    or_ln228_26_fu_2116_p2          |     |        | or_ln228_26     | or        | auto                     | 0       |
+|    and_ln228_26_fu_2122_p2         |     |        | and_ln228_26    | and       | auto                     | 0       |
+|    select_ln221_fu_829_p3          |     |        | select_ln221    | select    | auto_sel                 | 0       |
+|    select_ln221_1_fu_879_p3        |     |        | select_ln221_1  | select    | auto_sel                 | 0       |
+|    select_ln221_2_fu_929_p3        |     |        | select_ln221_2  | select    | auto_sel                 | 0       |
+|    select_ln221_3_fu_979_p3        |     |        | select_ln221_3  | select    | auto_sel                 | 0       |
+|    select_ln221_4_fu_1029_p3       |     |        | select_ln221_4  | select    | auto_sel                 | 0       |
+|    select_ln221_5_fu_1079_p3       |     |        | select_ln221_5  | select    | auto_sel                 | 0       |
+|    select_ln221_6_fu_1129_p3       |     |        | select_ln221_6  | select    | auto_sel                 | 0       |
+|    select_ln221_7_fu_1179_p3       |     |        | select_ln221_7  | select    | auto_sel                 | 0       |
+|    select_ln221_8_fu_1229_p3       |     |        | select_ln221_8  | select    | auto_sel                 | 0       |
+|    select_ln221_9_fu_1279_p3       |     |        | select_ln221_9  | select    | auto_sel                 | 0       |
+|    select_ln221_10_fu_1329_p3      |     |        | select_ln221_10 | select    | auto_sel                 | 0       |
+|    select_ln221_11_fu_1379_p3      |     |        | select_ln221_11 | select    | auto_sel                 | 0       |
+|    select_ln221_12_fu_1429_p3      |     |        | select_ln221_12 | select    | auto_sel                 | 0       |
+|    select_ln221_13_fu_1479_p3      |     |        | select_ln221_13 | select    | auto_sel                 | 0       |
+|    select_ln221_14_fu_1529_p3      |     |        | select_ln221_14 | select    | auto_sel                 | 0       |
+|    select_ln221_15_fu_1579_p3      |     |        | select_ln221_15 | select    | auto_sel                 | 0       |
+|    select_ln221_16_fu_1629_p3      |     |        | select_ln221_16 | select    | auto_sel                 | 0       |
+|    select_ln221_17_fu_1679_p3      |     |        | select_ln221_17 | select    | auto_sel                 | 0       |
+|    select_ln221_18_fu_1729_p3      |     |        | select_ln221_18 | select    | auto_sel                 | 0       |
+|    select_ln221_19_fu_1779_p3      |     |        | select_ln221_19 | select    | auto_sel                 | 0       |
+|    select_ln221_20_fu_1829_p3      |     |        | select_ln221_20 | select    | auto_sel                 | 0       |
+|    select_ln221_21_fu_1879_p3      |     |        | select_ln221_21 | select    | auto_sel                 | 0       |
+|    select_ln221_22_fu_1929_p3      |     |        | select_ln221_22 | select    | auto_sel                 | 0       |
+|    select_ln221_23_fu_1979_p3      |     |        | select_ln221_23 | select    | auto_sel                 | 0       |
+|    select_ln221_24_fu_2029_p3      |     |        | select_ln221_24 | select    | auto_sel                 | 0       |
+|    select_ln221_25_fu_2079_p3      |     |        | select_ln221_25 | select    | auto_sel                 | 0       |
+|    select_ln221_26_fu_2128_p3      |     |        | select_ln221_26 | select    | auto_sel                 | 0       |
++------------------------------------+-----+--------+-----------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------------+--------------+-----------+------+------+--------+---------------------+------+---------+------------------+
+| Name                    | Usage        | Type      | BRAM | URAM | Pragma | Variable            | Impl | Latency | Bitwidth, Depth, |
+|                         |              |           |      |      |        |                     |      |         | Banks            |
++-------------------------+--------------+-----------+------+------+--------+---------------------+------+---------+------------------+
+| + conv2                 |              |           | 184  | 0    |        |                     |      |         |                  |
+|   control_s_axi_U       | interface    | s_axilite |      |      |        |                     |      |         |                  |
+|   gmem0_m_axi_U         | interface    | m_axi     | 4    |      |        |                     |      |         |                  |
+|   inp_image_local_U     | ram_1p array |           | 2    |      |        | inp_image_local     | auto | 1       | 32, 298, 1       |
+|   inp_image_local_1_U   | ram_1p array |           | 2    |      |        | inp_image_local_1   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_2_U   | ram_1p array |           | 2    |      |        | inp_image_local_2   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_3_U   | ram_1p array |           | 2    |      |        | inp_image_local_3   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_4_U   | ram_1p array |           | 2    |      |        | inp_image_local_4   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_5_U   | ram_1p array |           | 2    |      |        | inp_image_local_5   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_6_U   | ram_1p array |           | 2    |      |        | inp_image_local_6   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_7_U   | ram_1p array |           | 2    |      |        | inp_image_local_7   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_8_U   | ram_1p array |           | 2    |      |        | inp_image_local_8   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_9_U   | ram_1p array |           | 2    |      |        | inp_image_local_9   | auto | 1       | 32, 298, 1       |
+|   inp_image_local_10_U  | ram_1p array |           | 2    |      |        | inp_image_local_10  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_11_U  | ram_1p array |           | 2    |      |        | inp_image_local_11  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_12_U  | ram_1p array |           | 2    |      |        | inp_image_local_12  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_13_U  | ram_1p array |           | 2    |      |        | inp_image_local_13  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_14_U  | ram_1p array |           | 2    |      |        | inp_image_local_14  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_15_U  | ram_1p array |           | 2    |      |        | inp_image_local_15  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_16_U  | ram_1p array |           | 2    |      |        | inp_image_local_16  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_17_U  | ram_1p array |           | 2    |      |        | inp_image_local_17  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_18_U  | ram_1p array |           | 2    |      |        | inp_image_local_18  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_19_U  | ram_1p array |           | 2    |      |        | inp_image_local_19  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_20_U  | ram_1p array |           | 2    |      |        | inp_image_local_20  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_21_U  | ram_1p array |           | 2    |      |        | inp_image_local_21  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_22_U  | ram_1p array |           | 2    |      |        | inp_image_local_22  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_23_U  | ram_1p array |           | 2    |      |        | inp_image_local_23  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_24_U  | ram_1p array |           | 2    |      |        | inp_image_local_24  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_25_U  | ram_1p array |           | 2    |      |        | inp_image_local_25  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_26_U  | ram_1p array |           | 2    |      |        | inp_image_local_26  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_27_U  | ram_1p array |           | 2    |      |        | inp_image_local_27  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_28_U  | ram_1p array |           | 2    |      |        | inp_image_local_28  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_29_U  | ram_1p array |           | 2    |      |        | inp_image_local_29  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_30_U  | ram_1p array |           | 2    |      |        | inp_image_local_30  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_31_U  | ram_1p array |           | 2    |      |        | inp_image_local_31  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_32_U  | ram_1p array |           | 2    |      |        | inp_image_local_32  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_33_U  | ram_1p array |           | 2    |      |        | inp_image_local_33  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_34_U  | ram_1p array |           | 2    |      |        | inp_image_local_34  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_35_U  | ram_1p array |           | 2    |      |        | inp_image_local_35  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_36_U  | ram_1p array |           | 2    |      |        | inp_image_local_36  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_37_U  | ram_1p array |           | 2    |      |        | inp_image_local_37  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_38_U  | ram_1p array |           | 2    |      |        | inp_image_local_38  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_39_U  | ram_1p array |           | 2    |      |        | inp_image_local_39  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_40_U  | ram_1p array |           | 2    |      |        | inp_image_local_40  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_41_U  | ram_1p array |           | 2    |      |        | inp_image_local_41  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_42_U  | ram_1p array |           | 2    |      |        | inp_image_local_42  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_43_U  | ram_1p array |           | 2    |      |        | inp_image_local_43  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_44_U  | ram_1p array |           | 2    |      |        | inp_image_local_44  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_45_U  | ram_1p array |           | 2    |      |        | inp_image_local_45  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_46_U  | ram_1p array |           | 2    |      |        | inp_image_local_46  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_47_U  | ram_1p array |           | 2    |      |        | inp_image_local_47  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_48_U  | ram_1p array |           | 2    |      |        | inp_image_local_48  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_49_U  | ram_1p array |           | 2    |      |        | inp_image_local_49  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_50_U  | ram_1p array |           | 2    |      |        | inp_image_local_50  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_51_U  | ram_1p array |           | 2    |      |        | inp_image_local_51  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_52_U  | ram_1p array |           | 2    |      |        | inp_image_local_52  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_53_U  | ram_1p array |           | 2    |      |        | inp_image_local_53  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_54_U  | ram_1p array |           | 2    |      |        | inp_image_local_54  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_55_U  | ram_1p array |           | 2    |      |        | inp_image_local_55  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_56_U  | ram_1p array |           | 2    |      |        | inp_image_local_56  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_57_U  | ram_1p array |           | 2    |      |        | inp_image_local_57  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_58_U  | ram_1p array |           | 2    |      |        | inp_image_local_58  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_59_U  | ram_1p array |           | 2    |      |        | inp_image_local_59  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_60_U  | ram_1p array |           | 2    |      |        | inp_image_local_60  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_61_U  | ram_1p array |           | 2    |      |        | inp_image_local_61  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_62_U  | ram_1p array |           | 2    |      |        | inp_image_local_62  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_63_U  | ram_1p array |           | 2    |      |        | inp_image_local_63  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_64_U  | ram_1p array |           | 2    |      |        | inp_image_local_64  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_65_U  | ram_1p array |           | 2    |      |        | inp_image_local_65  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_66_U  | ram_1p array |           | 2    |      |        | inp_image_local_66  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_67_U  | ram_1p array |           | 2    |      |        | inp_image_local_67  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_68_U  | ram_1p array |           | 2    |      |        | inp_image_local_68  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_69_U  | ram_1p array |           | 2    |      |        | inp_image_local_69  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_70_U  | ram_1p array |           | 2    |      |        | inp_image_local_70  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_71_U  | ram_1p array |           | 2    |      |        | inp_image_local_71  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_72_U  | ram_1p array |           | 2    |      |        | inp_image_local_72  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_73_U  | ram_1p array |           | 2    |      |        | inp_image_local_73  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_74_U  | ram_1p array |           | 2    |      |        | inp_image_local_74  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_75_U  | ram_1p array |           | 2    |      |        | inp_image_local_75  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_76_U  | ram_1p array |           | 2    |      |        | inp_image_local_76  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_77_U  | ram_1p array |           | 2    |      |        | inp_image_local_77  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_78_U  | ram_1p array |           | 2    |      |        | inp_image_local_78  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_79_U  | ram_1p array |           | 2    |      |        | inp_image_local_79  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_80_U  | ram_1p array |           | 2    |      |        | inp_image_local_80  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_81_U  | ram_1p array |           | 2    |      |        | inp_image_local_81  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_82_U  | ram_1p array |           | 2    |      |        | inp_image_local_82  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_83_U  | ram_1p array |           | 2    |      |        | inp_image_local_83  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_84_U  | ram_1p array |           | 2    |      |        | inp_image_local_84  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_85_U  | ram_1p array |           | 2    |      |        | inp_image_local_85  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_86_U  | ram_1p array |           | 2    |      |        | inp_image_local_86  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_87_U  | ram_1p array |           | 2    |      |        | inp_image_local_87  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_88_U  | ram_1p array |           | 2    |      |        | inp_image_local_88  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_89_U  | ram_1p array |           | 2    |      |        | inp_image_local_89  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_90_U  | ram_1p array |           | 2    |      |        | inp_image_local_90  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_91_U  | ram_1p array |           | 2    |      |        | inp_image_local_91  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_92_U  | ram_1p array |           | 2    |      |        | inp_image_local_92  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_93_U  | ram_1p array |           | 2    |      |        | inp_image_local_93  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_94_U  | ram_1p array |           | 2    |      |        | inp_image_local_94  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_95_U  | ram_1p array |           | 2    |      |        | inp_image_local_95  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_96_U  | ram_1p array |           | 2    |      |        | inp_image_local_96  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_97_U  | ram_1p array |           | 2    |      |        | inp_image_local_97  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_98_U  | ram_1p array |           | 2    |      |        | inp_image_local_98  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_99_U  | ram_1p array |           | 2    |      |        | inp_image_local_99  | auto | 1       | 32, 298, 1       |
+|   inp_image_local_100_U | ram_1p array |           | 2    |      |        | inp_image_local_100 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_101_U | ram_1p array |           | 2    |      |        | inp_image_local_101 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_102_U | ram_1p array |           | 2    |      |        | inp_image_local_102 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_103_U | ram_1p array |           | 2    |      |        | inp_image_local_103 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_104_U | ram_1p array |           | 2    |      |        | inp_image_local_104 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_105_U | ram_1p array |           | 2    |      |        | inp_image_local_105 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_106_U | ram_1p array |           | 2    |      |        | inp_image_local_106 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_107_U | ram_1p array |           | 2    |      |        | inp_image_local_107 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_108_U | ram_1p array |           | 2    |      |        | inp_image_local_108 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_109_U | ram_1p array |           | 2    |      |        | inp_image_local_109 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_110_U | ram_1p array |           | 2    |      |        | inp_image_local_110 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_111_U | ram_1p array |           | 2    |      |        | inp_image_local_111 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_112_U | ram_1p array |           | 2    |      |        | inp_image_local_112 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_113_U | ram_1p array |           | 2    |      |        | inp_image_local_113 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_114_U | ram_1p array |           | 2    |      |        | inp_image_local_114 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_115_U | ram_1p array |           | 2    |      |        | inp_image_local_115 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_116_U | ram_1p array |           | 2    |      |        | inp_image_local_116 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_117_U | ram_1p array |           | 2    |      |        | inp_image_local_117 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_118_U | ram_1p array |           | 2    |      |        | inp_image_local_118 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_119_U | ram_1p array |           | 2    |      |        | inp_image_local_119 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_120_U | ram_1p array |           | 2    |      |        | inp_image_local_120 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_121_U | ram_1p array |           | 2    |      |        | inp_image_local_121 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_122_U | ram_1p array |           | 2    |      |        | inp_image_local_122 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_123_U | ram_1p array |           | 2    |      |        | inp_image_local_123 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_124_U | ram_1p array |           | 2    |      |        | inp_image_local_124 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_125_U | ram_1p array |           | 2    |      |        | inp_image_local_125 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_126_U | ram_1p array |           | 2    |      |        | inp_image_local_126 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_127_U | ram_1p array |           | 2    |      |        | inp_image_local_127 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_128_U | ram_1p array |           | 2    |      |        | inp_image_local_128 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_129_U | ram_1p array |           | 2    |      |        | inp_image_local_129 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_130_U | ram_1p array |           | 2    |      |        | inp_image_local_130 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_131_U | ram_1p array |           | 2    |      |        | inp_image_local_131 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_132_U | ram_1p array |           | 2    |      |        | inp_image_local_132 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_133_U | ram_1p array |           | 2    |      |        | inp_image_local_133 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_134_U | ram_1p array |           | 2    |      |        | inp_image_local_134 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_135_U | ram_1p array |           | 2    |      |        | inp_image_local_135 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_136_U | ram_1p array |           | 2    |      |        | inp_image_local_136 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_137_U | ram_1p array |           | 2    |      |        | inp_image_local_137 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_138_U | ram_1p array |           | 2    |      |        | inp_image_local_138 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_139_U | ram_1p array |           | 2    |      |        | inp_image_local_139 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_140_U | ram_1p array |           | 2    |      |        | inp_image_local_140 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_141_U | ram_1p array |           | 2    |      |        | inp_image_local_141 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_142_U | ram_1p array |           | 2    |      |        | inp_image_local_142 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_143_U | ram_1p array |           | 2    |      |        | inp_image_local_143 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_144_U | ram_1p array |           | 2    |      |        | inp_image_local_144 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_145_U | ram_1p array |           | 2    |      |        | inp_image_local_145 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_146_U | ram_1p array |           | 2    |      |        | inp_image_local_146 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_147_U | ram_1p array |           | 2    |      |        | inp_image_local_147 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_148_U | ram_1p array |           | 2    |      |        | inp_image_local_148 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_149_U | ram_1p array |           | 2    |      |        | inp_image_local_149 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_150_U | ram_1p array |           | 2    |      |        | inp_image_local_150 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_151_U | ram_1p array |           | 2    |      |        | inp_image_local_151 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_152_U | ram_1p array |           | 2    |      |        | inp_image_local_152 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_153_U | ram_1p array |           | 2    |      |        | inp_image_local_153 | auto | 1       | 32, 298, 1       |
+|   inp_image_local_154_U | ram_1p array |           | 2    |      |        | inp_image_local_154 | auto | 1       | 32, 298, 1       |
+|   filter_local_U        | ram_1p array |           | 1    |      |        | filter_local        | auto | 1       | 32, 48, 1        |
+|   filter_local_1_U      | ram_1p array |           | 2    |      |        | filter_local_1      | auto | 1       | 32, 48, 1        |
+|   filter_local_2_U      | ram_1p array |           | 2    |      |        | filter_local_2      | auto | 1       | 32, 48, 1        |
+|   filter_local_3_U      | ram_1p array |           | 2    |      |        | filter_local_3      | auto | 1       | 32, 48, 1        |
+|   filter_local_4_U      | ram_1p array |           | 2    |      |        | filter_local_4      | auto | 1       | 32, 48, 1        |
+|   filter_local_5_U      | ram_1p array |           | 1    |      |        | filter_local_5      | auto | 1       | 32, 48, 1        |
+|   filter_local_6_U      | ram_1p array |           | 2    |      |        | filter_local_6      | auto | 1       | 32, 48, 1        |
+|   filter_local_7_U      | ram_1p array |           | 2    |      |        | filter_local_7      | auto | 1       | 32, 48, 1        |
+|   filter_local_8_U      | ram_1p array |           | 2    |      |        | filter_local_8      | auto | 1       | 32, 48, 1        |
+|   filter_local_9_U      | ram_1p array |           | 2    |      |        | filter_local_9      | auto | 1       | 32, 48, 1        |
+|   filter_local_10_U     | ram_1p array |           | 1    |      |        | filter_local_10     | auto | 1       | 32, 48, 1        |
+|   filter_local_11_U     | ram_1p array |           | 2    |      |        | filter_local_11     | auto | 1       | 32, 48, 1        |
+|   filter_local_12_U     | ram_1p array |           | 2    |      |        | filter_local_12     | auto | 1       | 32, 48, 1        |
+|   filter_local_13_U     | ram_1p array |           | 2    |      |        | filter_local_13     | auto | 1       | 32, 48, 1        |
+|   filter_local_14_U     | ram_1p array |           | 2    |      |        | filter_local_14     | auto | 1       | 32, 48, 1        |
+|   filter_local_15_U     | ram_1p array |           | 1    |      |        | filter_local_15     | auto | 1       | 32, 48, 1        |
+|   filter_local_16_U     | ram_1p array |           | 2    |      |        | filter_local_16     | auto | 1       | 32, 48, 1        |
+|   filter_local_17_U     | ram_1p array |           | 2    |      |        | filter_local_17     | auto | 1       | 32, 48, 1        |
+|   filter_local_18_U     | ram_1p array |           | 2    |      |        | filter_local_18     | auto | 1       | 32, 48, 1        |
+|   filter_local_19_U     | ram_1p array |           | 2    |      |        | filter_local_19     | auto | 1       | 32, 48, 1        |
+|   filter_local_20_U     | ram_1p array |           | 1    |      |        | filter_local_20     | auto | 1       | 32, 48, 1        |
+|   filter_local_21_U     | ram_1p array |           | 2    |      |        | filter_local_21     | auto | 1       | 32, 48, 1        |
+|   filter_local_22_U     | ram_1p array |           | 2    |      |        | filter_local_22     | auto | 1       | 32, 48, 1        |
+|   filter_local_23_U     | ram_1p array |           | 2    |      |        | filter_local_23     | auto | 1       | 32, 48, 1        |
+|   filter_local_24_U     | ram_1p array |           | 2    |      |        | filter_local_24     | auto | 1       | 32, 48, 1        |
+|   conv_out_U            | ram_1p array |           |      |      |        | conv_out            | auto | 1       | 32, 27, 1        |
+|   conv_out_1_U          | ram_1p array |           |      |      |        | conv_out_1          | auto | 1       | 32, 27, 1        |
+|   conv_out_2_U          | ram_1p array |           |      |      |        | conv_out_2          | auto | 1       | 32, 27, 1        |
+|   conv_out_3_U          | ram_1p array |           |      |      |        | conv_out_3          | auto | 1       | 32, 27, 1        |
+|   conv_out_4_U          | ram_1p array |           |      |      |        | conv_out_4          | auto | 1       | 32, 27, 1        |
+|   conv_out_5_U          | ram_1p array |           |      |      |        | conv_out_5          | auto | 1       | 32, 27, 1        |
+|   conv_out_6_U          | ram_1p array |           |      |      |        | conv_out_6          | auto | 1       | 32, 27, 1        |
+|   conv_out_7_U          | ram_1p array |           |      |      |        | conv_out_7          | auto | 1       | 32, 27, 1        |
+|   conv_out_8_U          | ram_1p array |           |      |      |        | conv_out_8          | auto | 1       | 32, 27, 1        |
+|   conv_out_9_U          | ram_1p array |           |      |      |        | conv_out_9          | auto | 1       | 32, 27, 1        |
+|   conv_out_10_U         | ram_1p array |           |      |      |        | conv_out_10         | auto | 1       | 32, 27, 1        |
+|   conv_out_11_U         | ram_1p array |           |      |      |        | conv_out_11         | auto | 1       | 32, 27, 1        |
+|   conv_out_12_U         | ram_1p array |           |      |      |        | conv_out_12         | auto | 1       | 32, 27, 1        |
+|   conv_out_13_U         | ram_1p array |           |      |      |        | conv_out_13         | auto | 1       | 32, 27, 1        |
+|   conv_out_14_U         | ram_1p array |           |      |      |        | conv_out_14         | auto | 1       | 32, 27, 1        |
+|   conv_out_15_U         | ram_1p array |           |      |      |        | conv_out_15         | auto | 1       | 32, 27, 1        |
+|   conv_out_16_U         | ram_1p array |           |      |      |        | conv_out_16         | auto | 1       | 32, 27, 1        |
+|   conv_out_17_U         | ram_1p array |           |      |      |        | conv_out_17         | auto | 1       | 32, 27, 1        |
+|   conv_out_18_U         | ram_1p array |           |      |      |        | conv_out_18         | auto | 1       | 32, 27, 1        |
+|   conv_out_19_U         | ram_1p array |           |      |      |        | conv_out_19         | auto | 1       | 32, 27, 1        |
+|   conv_out_20_U         | ram_1p array |           |      |      |        | conv_out_20         | auto | 1       | 32, 27, 1        |
+|   conv_out_21_U         | ram_1p array |           |      |      |        | conv_out_21         | auto | 1       | 32, 27, 1        |
+|   conv_out_22_U         | ram_1p array |           |      |      |        | conv_out_22         | auto | 1       | 32, 27, 1        |
+|   conv_out_23_U         | ram_1p array |           |      |      |        | conv_out_23         | auto | 1       | 32, 27, 1        |
+|   conv_out_24_U         | ram_1p array |           |      |      |        | conv_out_24         | auto | 1       | 32, 27, 1        |
+|   conv_out_25_U         | ram_1p array |           |      |      |        | conv_out_25         | auto | 1       | 32, 27, 1        |
+|   conv_out_26_U         | ram_1p array |           |      |      |        | conv_out_26         | auto | 1       | 32, 27, 1        |
++-------------------------+--------------+-----------+------+------+--------+---------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------+
+| Type            | Options                                          | Location                                                                     |
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------+
+| interface       | m_axi port=inp_img offset=slave bundle=gmem0     | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:37 in conv2, inp_img         |
+| interface       | m_axi port=out_img offset=slave bundle=gmem0     | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:38 in conv2, out_img         |
+| interface       | m_axi port=filter offset=slave bundle=gmem0      | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:39 in conv2, filter          |
+| interface       | m_axi port=bias offset=slave bundle=gmem0        | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:40 in conv2, bias            |
+| interface       | s_axilite port=inp_img bundle=control            | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:42 in conv2, inp_img         |
+| interface       | s_axilite port=out_img bundle=control            | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:43 in conv2, out_img         |
+| interface       | s_axilite port=filter bundle=control             | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:44 in conv2, filter          |
+| interface       | s_axilite port=bias bundle=control               | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:45 in conv2, bias            |
+| interface       | s_axilite port=return bundle=control             | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:47 in conv2, return          |
+| array_partition | variable=inp_image_local cyclic factor=155 dim=1 | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:51 in conv2, inp_image_local |
+| array_partition | variable=inp_img_2D complete dim=0               | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:53 in conv2, inp_img_2D      |
+| array_partition | variable=filter_local cyclic factor=25           | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:55 in conv2, filter_local    |
+| array_partition | variable=filter_2D complete dim=0                | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:57 in conv2, filter_2D       |
+| array_partition | variable=window_2D complete dim=0                | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:59 in conv2, window_2D       |
+| array_partition | variable=conv_out cyclic factor=27 dim=1         | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:61 in conv2, conv_out        |
+| array_partition | variable=sh complete dim=0                       | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:63 in conv2, sh              |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:71 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:80 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:86 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:94 in conv2                  |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:100 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:110 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:137 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:158 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:168 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:174 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:180 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:187 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:197 in conv2                 |
+| pipeline        |                                                  | AlexNet-FPGA-implementation/Conv2/src/conv2.cpp:222 in conv2                 |
++-----------------+--------------------------------------------------+------------------------------------------------------------------------------+
+
+

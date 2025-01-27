@@ -1,0 +1,247 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.2 (64-bit)
+Tool Version Limit: 2024.11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-i 
+INFO: [HLS 200-1510] Running: csim_design 
+WARNING: [HLS 200-1998] cannot find relative file path '../../'/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp'' in directory(s): /primary/HLS/Alex_Net/solution /primary/HLS
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:14; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+WARNING: [HLS 200-1998] cannot find relative file path '../../'/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp'' in directory(s): /primary/HLS/Alex_Net/solution /primary/HLS
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.17 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.21 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] Analyzing design file 'AlexNet-FPGA-implementation/Conv1/src/testbench.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'AlexNet-FPGA-implementation/Conv1/src/conv1.cpp' ... 
+WARNING: [HLS 207-5570] unexpected pragma argument 'fmul', expects function/operation (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 26.96 seconds. CPU system time: 6.45 seconds. Elapsed time: 33.46 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 780 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 7,872 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,512 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,421 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,413 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 43,263 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,024 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,024 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,024 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,843 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,843 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,843 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,867 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,831 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,923 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,933 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /primary/HLS/Alex_Net/Conv1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'L14' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:166:6)
+INFO: [HLS 214-291] Loop 'L15' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:168:6)
+INFO: [HLS 214-291] Loop 'L16' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:175:6)
+INFO: [HLS 214-291] Loop 'L17' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:178:6)
+INFO: [HLS 214-291] Loop 'L18' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:187:6)
+INFO: [HLS 214-291] Loop 'L19' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:189:6)
+INFO: [HLS 214-291] Loop 'L20' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:196:6)
+INFO: [HLS 214-291] Loop 'L21' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:198:6)
+INFO: [HLS 214-291] Loop 'L8' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:127:5)
+INFO: [HLS 214-291] Loop 'L9' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:130:5)
+INFO: [HLS 214-291] Loop 'L10' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:138:6)
+INFO: [HLS 214-291] Loop 'L11' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:142:7)
+INFO: [HLS 214-291] Loop 'L12' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:150:6)
+INFO: [HLS 214-291] Loop 'L13' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:152:6)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_216_1' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:216:25)
+INFO: [HLS 214-291] Loop 'L22' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:219:11)
+INFO: [HLS 214-291] Loop 'L23' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:221:11)
+INFO: [HLS 214-291] Loop 'L24' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:228:6)
+INFO: [HLS 214-291] Loop 'L25' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:234:6)
+INFO: [HLS 214-291] Loop 'L26' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:239:6)
+INFO: [HLS 214-291] Loop 'L27' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:245:6)
+INFO: [HLS 214-291] Loop 'L28' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:250:6)
+INFO: [HLS 214-291] Loop 'L29' is marked as complete unroll implied by the pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:256:6)
+INFO: [HLS 214-186] Unrolling loop 'L14' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:166:6) in function 'conv1' completely with a factor of 7 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L15' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:168:6) in function 'conv1' completely with a factor of 4 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L16' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:175:6) in function 'conv1' completely with a factor of 4 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L17' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:178:6) in function 'conv1' completely with a factor of 4 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L18' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:187:6) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L19' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:189:6) in function 'conv1' completely with a factor of 7 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L20' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:196:6) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L21' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:198:6) in function 'conv1' completely with a factor of 4 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L8' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:127:5) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L9' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:130:5) in function 'conv1' completely with a factor of 7 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L10' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:138:6) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L11' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:142:7) in function 'conv1' completely with a factor of 4 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L12' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:150:6) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L13' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:152:6) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_216_1' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:216:25) in function 'conv1' completely with a factor of 3 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L29' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:256:6) in function 'conv1' completely with a factor of 2 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L28' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:250:6) in function 'conv1' completely with a factor of 4 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L27' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:245:6) in function 'conv1' completely with a factor of 8 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L26' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:239:6) in function 'conv1' completely with a factor of 16 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L25' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:234:6) in function 'conv1' completely with a factor of 31 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L24' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:228:6) in function 'conv1' completely with a factor of 61 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L22' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:219:11) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-186] Unrolling loop 'L23' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:221:11) in function 'conv1' completely with a factor of 11 (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:35:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZ5conv1PfS_E12filter_local': Complete partitioning on dimension 1. Complete partitioning on dimension 2. Complete partitioning on dimension 3. Complete partitioning on dimension 4. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:46:0)
+INFO: [HLS 214-248] Applying array_partition to 'window_3D': Complete partitioning on dimension 1. Complete partitioning on dimension 2. Complete partitioning on dimension 3. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:58:12)
+INFO: [HLS 214-248] Applying array_partition to 'line_buffer_3D': Complete partitioning on dimension 2. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-248] Applying array_partition to 'lm': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:71:12)
+INFO: [HLS 214-248] Applying array_partition to 'sum': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:74:11)
+INFO: [HLS 214-248] Applying array_partition to 'sum2': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:76:11)
+INFO: [HLS 214-449] Automatically partitioning array 'line_buffer_3D' dimension 1 completely based on constant index. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'line_buffer_3D_0' due to pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'line_buffer_3D_1' due to pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'line_buffer_3D_2' due to pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-270] Inferring pragma 'array_partition type=complete dim=1' for array 'line_buffer_3D_3' due to pipeline pragma (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-248] Applying array_partition to 'line_buffer_3D_0': Complete partitioning on dimension 1. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-248] Applying array_partition to 'line_buffer_3D_1': Complete partitioning on dimension 1. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-248] Applying array_partition to 'line_buffer_3D_2': Complete partitioning on dimension 1. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-248] Applying array_partition to 'line_buffer_3D_3': Complete partitioning on dimension 1. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:64:11)
+INFO: [HLS 214-115] Multiple burst reads of length 1589 and bit width 32 in loop 'L3'(AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5)
+INFO: [HLS 214-115] Multiple burst reads of length 3 and bit width 32 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122:6)
+INFO: [HLS 214-115] Multiple burst reads of length 7 and bit width 32 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144:44)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 157.78 seconds. CPU system time: 4.58 seconds. Elapsed time: 165.69 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 4.28 seconds. CPU system time: 0.21 seconds. Elapsed time: 5.07 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1.34 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.53 seconds; current allocated memory: 2.073 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv1' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:32:5)...24 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 19.8 seconds. CPU system time: 0.15 seconds. Elapsed time: 20.26 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'L3'(AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5) and 'L4'(AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:95:5) in function 'conv1' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'L2'(AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:91:5) and 'L3'(AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5) in function 'conv1' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'L3' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:93:5) in function 'conv1'.
+INFO: [XFORM 203-541] Flattening a loop nest 'L2' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:91:5) in function 'conv1'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 21.95 seconds. CPU system time: 0.09 seconds. Elapsed time: 22.19 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'conv1' ...
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_L2_L3_L4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln98) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'L2_L3_L4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 12, loop 'L2_L3_L4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.47 seconds. CPU system time: 0.26 seconds. Elapsed time: 2.81 seconds; current allocated memory: 2.073 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_L7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L7'.
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_L7' (loop 'L7'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_2', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) and bus read operation ('gmem_addr_read', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122).
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_L7' (loop 'L7'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_2', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) and bus read operation ('gmem_addr_read', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122).
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_L7' (loop 'L7'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_addr_4_read_6', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) and bus read operation ('gmem_addr_4_read', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144).
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_L7' (loop 'L7'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_addr_4_read_6', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) and bus read operation ('gmem_addr_4_read', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144).
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_L7' (loop 'L7'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus request operation ('gmem_load_req', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) and bus request operation ('empty_32', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122).
+WARNING: [HLS 200-880] The II Violation in module 'conv1_Pipeline_L7' (loop 'L7'): Unable to enforce a carried dependence constraint (II = 43, distance = 1, offset = 1) between bus request operation ('gmem_load_3_req', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:144) and bus request operation ('empty_32', AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122) on port 'gmem' (AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:122).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 44, Depth = 55, loop 'L7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 19.24 seconds. CPU system time: 0.05 seconds. Elapsed time: 19.34 seconds; current allocated memory: 2.073 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.76 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.78 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1_Pipeline_L1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'L1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 56, loop 'L1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.43 seconds. CPU system time: 0.05 seconds. Elapsed time: 2.54 seconds; current allocated memory: 2.073 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.45 seconds. CPU system time: 0.14 seconds. Elapsed time: 3.62 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.67 seconds. CPU system time: 0.15 seconds. Elapsed time: 2.83 seconds; current allocated memory: 2.073 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_L2_L3_L4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_L2_L3_L4' pipeline 'L2_L3_L4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8ns_2ns_8ns_10_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_2ns_19ns_20_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_L2_L3_L4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.43 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.46 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_L7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_L7' pipeline 'L7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv1_Pipeline_L7' is 11616 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage10) & (ap_loop_exit_ready == 1'b1) & (1'b0 == ap_block_pp0_stage10_01001_grp0) & (1'b0 == ap_block_pp0_stage10_subdone_grp0_done_reg) & (icmp_ln114_reg_17662 == 1'd1))
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_32_1_1': 77 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_L7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.43 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.56 seconds; current allocated memory: 2.073 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1_Pipeline_L1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv1_Pipeline_L1' pipeline 'L1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv1_Pipeline_L1' is 24489 from HDL expression: (1'b0 == ap_block_pp0_stage0_11001_grp1)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_4_full_dsp_1': 373 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_3_max_dsp_1': 363 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_193_7_32_1_1': 363 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1_Pipeline_L1'.
+INFO: [RTMG 210-279] Implementing memory 'conv1_conv1_Pipeline_L1_bias_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 15.77 seconds. CPU system time: 0.61 seconds. Elapsed time: 16.97 seconds; current allocated memory: 2.214 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv1/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv1/inp_img' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'conv1/out_img' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'conv1' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'inp_img', 'out_img' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mul_6ns_7ns_12_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8ns_9ns_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv1'.
+INFO: [RTMG 210-278] Implementing memory 'conv1_line_buffer_3D_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.23 seconds. CPU system time: 0.69 seconds. Elapsed time: 13.28 seconds; current allocated memory: 2.420 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.42 seconds. CPU system time: 0.1 seconds. Elapsed time: 1.54 seconds; current allocated memory: 2.432 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 3.59 seconds. CPU system time: 0.09 seconds. Elapsed time: 3.71 seconds; current allocated memory: 2.469 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for conv1.
+INFO: [VLOG 209-307] Generating Verilog RTL for conv1.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:05:18; Allocated memory: 405.246 MB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Alex_Net/Conv1/impl/export.zip
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:01:20; Allocated memory: 8.188 MB.
+INFO: [HLS 200-1510] Running: remove_files AlexNet-FPGA-implementation/Conv1/src/conv1.cpp AlexNet-FPGA-implementation/Conv1/src/conv1.h AlexNet-FPGA-implementation/Conv1/src/testbench.cpp 
+WARNING: [HLS 200-1998] cannot find relative file path '../../'/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp'' in directory(s): /primary/HLS/Alex_Net/solution /primary/HLS
+INFO: [HLS 200-1510] Running: remove_files ../../'/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp' /primary/HLS/AlexNet-FPGA-implementation/Conv1/src/testbench.cpp 
+INFO: [HLS 200-1510] Running: add_files /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp 
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h 
+INFO: [HLS 200-10] Adding design file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/conv2.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file '/primary/HLS/AlexNet-FPGA-implementation/Conv2/src/testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: set_top conv2 
+INFO: [HLS 200-1510] Running: open_solution -reset Conv2 

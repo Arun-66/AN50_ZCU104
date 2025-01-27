@@ -1,0 +1,4 @@
+../AlexNet-FPGA-implementation/Conv1/src/conv1.cpp:36:34: warning: unexpected pragma argument 'fmul', expects function/operation [-Winvalid-hls-pragmas]
+#pragma HLS ALLOCATION instances=fmul limit=130 operation
+                                 ^
+1 warning generated.

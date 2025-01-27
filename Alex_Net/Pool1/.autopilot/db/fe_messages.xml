@@ -1,0 +1,132 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/primary/HLS/AN_script2.tcl:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=pool1" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=inp_img offset=slave bundle=gmem depth = 290400" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out_img offset=slave bundle=gmem depth = 69984" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=inp_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=window_2D complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=right_col_2D complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:41:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=right_col_2D_l complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=line_buffer_2D complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=new_pixels complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:47:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=new_pixels_l complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:59:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="pool1" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:111:6" msg_body="Loop 'L15' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:120:6" msg_body="Loop 'L16' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L16"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:123:6" msg_body="Loop 'L17' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L17"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:132:6" msg_body="Loop 'L18' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L18"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:134:6" msg_body="Loop 'L19' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L19"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:141:6" msg_body="Loop 'L20' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L20"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:143:6" msg_body="Loop 'L21' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L21"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:78:5" msg_body="Loop 'L8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:86:6" msg_body="Loop 'L10' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:88:6" msg_body="Loop 'L11' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:98:6" msg_body="Loop 'L12' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:100:6" msg_body="Loop 'L13' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:152:22" msg_body="Loop 'VITIS_LOOP_152_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_152_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:154:27" msg_body="Loop 'VITIS_LOOP_154_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_154_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L15' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:111:6) in function 'pool1' completely with a factor of 2">
+        <args Factor="2" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:111:6" LoopName="L15"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L16' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:120:6) in function 'pool1' completely with a factor of 2">
+        <args Factor="2" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:120:6" LoopName="L16"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L17' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:123:6) in function 'pool1' completely with a factor of 2">
+        <args Factor="2" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:123:6" LoopName="L17"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L18' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:132:6) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:132:6" LoopName="L18"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L19' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:134:6) in function 'pool1' completely with a factor of 1">
+        <args Factor="1" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:134:6" LoopName="L19"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L20' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:141:6) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:141:6" LoopName="L20"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L21' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:143:6) in function 'pool1' completely with a factor of 2">
+        <args Factor="2" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:143:6" LoopName="L21"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L8' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:78:5) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:78:5" LoopName="L8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L10' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:86:6) in function 'pool1' completely with a factor of 2">
+        <args Factor="2" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:86:6" LoopName="L10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L11' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:88:6) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:88:6" LoopName="L11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L12' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:98:6) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:98:6" LoopName="L12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'L13' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:100:6) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:100:6" LoopName="L13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'VITIS_LOOP_152_2' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:152:22) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:152:22" LoopName="VITIS_LOOP_152_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:26:0" msg_body="Unrolling loop 'VITIS_LOOP_154_3' (AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:154:27) in function 'pool1' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:154:27" LoopName="VITIS_LOOP_154_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Pool1/src/pool1.cpp:42:11" msg_body="Applying array_partition to 'line_buffer_2D': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="line_buffer_2D"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

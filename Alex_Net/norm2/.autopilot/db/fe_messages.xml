@@ -1,0 +1,150 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/primary/HLS/AN_script2.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=norm2" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=inp_img offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out_img offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=inp_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out_img bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=inp_image complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:46:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=sum complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:78:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:81:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:96:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:99:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:111:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:114:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:124:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:127:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="norm2" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:126:6" msg_body="Loop 'L17' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L17"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:113:6" msg_body="Loop 'L14' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:98:6" msg_body="Loop 'L11' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:80:7" msg_body="Loop 'L7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:65:7" msg_body="Loop 'L4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="L4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Unrolling loop 'L17' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:126:6) in function 'norm2' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:126:6" LoopName="L17"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Pipeline directive for loop 'L17' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:126:6) in function 'norm2' has been removed because the loop is unrolled completely">
+        <args LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:126:6" LoopName="L17"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Unrolling loop 'L14' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:113:6) in function 'norm2' completely with a factor of 4">
+        <args Factor="4" LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:113:6" LoopName="L14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Pipeline directive for loop 'L14' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:113:6) in function 'norm2' has been removed because the loop is unrolled completely">
+        <args LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:113:6" LoopName="L14"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Unrolling loop 'L11' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:98:6) in function 'norm2' completely with a factor of 5">
+        <args Factor="5" LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:98:6" LoopName="L11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Pipeline directive for loop 'L11' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:98:6) in function 'norm2' has been removed because the loop is unrolled completely">
+        <args LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:98:6" LoopName="L11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Unrolling loop 'L7' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:80:7) in function 'norm2' completely with a factor of 4">
+        <args Factor="4" LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:80:7" LoopName="L7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Pipeline directive for loop 'L7' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:80:7) in function 'norm2' has been removed because the loop is unrolled completely">
+        <args LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:80:7" LoopName="L7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Unrolling loop 'L4' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:65:7) in function 'norm2' completely with a factor of 3">
+        <args Factor="3" LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:65:7" LoopName="L4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_PIPELINE" msg_id="214-189" msg_severity="WARNING" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Pipeline directive for loop 'L4' (AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:65:7) in function 'norm2' has been removed because the loop is unrolled completely">
+        <args LoopLoc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:65:7" LoopName="L4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::fp_struct(float)' into 'int generic_isinf&lt;float&gt;(float)'">
+        <args Callee="fp_struct&lt;float&gt;::fp_struct(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 283 Column 0" Caller="int generic_isinf&lt;float&gt;(float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h Line 16 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::fp_struct(float)' into 'int generic_isnan&lt;float&gt;(float)'">
+        <args Callee="fp_struct&lt;float&gt;::fp_struct(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 283 Column 0" Caller="int generic_isnan&lt;float&gt;(float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h Line 16 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:322:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::data() const (.62.72.82.115)' into 'fp_struct&lt;float&gt;::to_float() const (.59.69.79.112)'">
+        <args Callee="fp_struct&lt;float&gt;::data() const (.62.72.82.115)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 309 Column 0" Caller="fp_struct&lt;float&gt;::to_float() const (.59.69.79.112)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 322 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::to_float() const (.59.69.79.112)' into 'fp_struct&lt;float&gt;::to_ieee() const'">
+        <args Callee="fp_struct&lt;float&gt;::to_float() const (.59.69.79.112)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 322 Column 0" Caller="fp_struct&lt;float&gt;::to_ieee() const" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 346 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:130:0" msg_body="Inlining function 'void pow_reduce::log_range_reduce&lt;ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 4, 4, 39, 41&gt;(ap_ufixed&lt;39, -(4), (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;, ap_ufixed&lt;41, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)' into 'ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)'">
+        <args Callee="void pow_reduce::log_range_reduce&lt;ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 4, 4, 39, 41&gt;(ap_ufixed&lt;39, -(4), (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;, ap_ufixed&lt;41, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 31 Column 0" Caller="ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 130 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:130:0" msg_body="Inlining function 'void pow_reduce::log_range_reduce&lt;ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 7, 6, 41, 44&gt;(ap_ufixed&lt;41, -(7), (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;, ap_ufixed&lt;44, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)' into 'ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)'">
+        <args Callee="void pow_reduce::log_range_reduce&lt;ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 7, 6, 41, 44&gt;(ap_ufixed&lt;41, -(7), (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;, ap_ufixed&lt;44, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 31 Column 0" Caller="ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 130 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:130:0" msg_body="Inlining function 'void pow_reduce::log_range_reduce&lt;ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 12, 6, 44, 39&gt;(ap_ufixed&lt;44, -(12), (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;, ap_ufixed&lt;39, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)' into 'ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)'">
+        <args Callee="void pow_reduce::log_range_reduce&lt;ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, 12, 6, 44, 39&gt;(ap_ufixed&lt;44, -(12), (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;, ap_ufixed&lt;39, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 31 Column 0" Caller="ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 130 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::fp_struct(float)' into 'float pow_reduce::pow_generic&lt;float&gt;(float, float)'">
+        <args Callee="fp_struct&lt;float&gt;::fp_struct(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 283 Column 0" Caller="float pow_reduce::pow_generic&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 292 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0" msg_body="Inlining function 'fp_struct&lt;float&gt;::expv() const' into 'float pow_reduce::pow_generic&lt;float&gt;(float, float)'">
+        <args Callee="fp_struct&lt;float&gt;::expv() const" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h Line 316 Column 0" Caller="float pow_reduce::pow_generic&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 292 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0" msg_body="Inlining function 'int generic_isinf&lt;float&gt;(float)' into 'float pow_reduce::pow_generic&lt;float&gt;(float, float)'">
+        <args Callee="int generic_isinf&lt;float&gt;(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h Line 16 Column 0" Caller="float pow_reduce::pow_generic&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 292 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0" msg_body="Inlining function 'int generic_isnan&lt;float&gt;(float)' into 'float pow_reduce::pow_generic&lt;float&gt;(float, float)'">
+        <args Callee="int generic_isnan&lt;float&gt;(float)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h Line 16 Column 0" Caller="float pow_reduce::pow_generic&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 292 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0" msg_body="Inlining function 'ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)' into 'float pow_reduce::pow_generic&lt;float&gt;(float, float)'">
+        <args Callee="ap_ufixed&lt;39, -17, (ap_q_mode)5, (ap_o_mode)3, 0&gt; pow_reduce::pow_traits&lt;float&gt;::log_range_reduction&lt;39&gt;(ap_ufixed&lt;39, -4, (ap_q_mode)5, (ap_o_mode)3, 0&gt;, ap_fixed&lt;65, 9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;&amp;)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 130 Column 0" Caller="float pow_reduce::pow_generic&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 292 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0" msg_body="Inlining function 'pow_reduce::pow_traits&lt;float&gt;::exp_Z1P_m_1(ap_ufixed&lt;18, -9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)' into 'float pow_reduce::pow_generic&lt;float&gt;(float, float)'">
+        <args Callee="pow_reduce::pow_traits&lt;float&gt;::exp_Z1P_m_1(ap_ufixed&lt;18, -9, (ap_q_mode)5, (ap_o_mode)3, 0&gt;)" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 156 Column 0" Caller="float pow_reduce::pow_generic&lt;float&gt;(float, float)" Caller-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h Line 292 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:33:0" msg_body="Inlining function 'powf' into 'norm2(float*, float*)'">
+        <args Callee="powf" Callee-DebugLoc="File /wrk/ci/prod/2024.2/hls_product/continuous/495/2024.2/src/shared/hls/clib/hlsmath/src/c/powfloat.cpp Line 7 Column 0" Caller="norm2(float*, float*)" Caller-DebugLoc="File AlexNet-FPGA-implementation/Norm2/src/norm2.cpp Line 33 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="AlexNet-FPGA-implementation/Norm2/src/norm2.cpp:42:11" msg_body="Applying array_partition to 'inp_image': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="inp_image"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

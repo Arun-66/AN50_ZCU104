@@ -1,0 +1,1492 @@
+<profile>
+    <ReportVersion>
+        <Version>2024.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynquplus</ProductFamily>
+        <Part>xczu7ev-ffvc1156-2-i</Part>
+        <TopModelName>pool5</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>68103</Best-caseLatency>
+            <Average-caseLatency>68103</Average-caseLatency>
+            <Worst-caseLatency>68103</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.681 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.681 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.681 ms</Worst-caseRealTimeLatency>
+            <Interval-min>68104</Interval-min>
+            <Interval-max>68104</Interval-max>
+        </SummaryOfOverallLatency>
+        <SummaryOfLoopLatency>
+            <VITIS_LOOP_51_1>
+                <Slack>7.30</Slack>
+                <TripCount>256</TripCount>
+                <Latency>68096</Latency>
+                <AbsoluteTimeLatency>680960</AbsoluteTimeLatency>
+                <IterationLatency>266</IterationLatency>
+                <InstanceList/>
+            </VITIS_LOOP_51_1>
+        </SummaryOfLoopLatency>
+        <SummaryOfViolations>
+            <IssueType>-</IssueType>
+            <ViolationType>-</ViolationType>
+            <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51</SourceLocation>
+            <SummaryOfLoopViolations>
+                <VITIS_LOOP_51_1>
+                    <Name>VITIS_LOOP_51_1</Name>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51</SourceLocation>
+                </VITIS_LOOP_51_1>
+            </SummaryOfLoopViolations>
+        </SummaryOfViolations>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>4</BRAM_18K>
+            <DSP>0</DSP>
+            <FF>4783</FF>
+            <LUT>4237</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>624</BRAM_18K>
+            <DSP>1728</DSP>
+            <FF>460800</FF>
+            <LUT>230400</LUT>
+            <URAM>96</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>scalar</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>1</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>pool5</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>pool5</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>interrupt</name>
+            <Object>pool5</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWVALID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWREADY</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWADDR</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWLEN</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWSIZE</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWBURST</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWLOCK</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWCACHE</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWPROT</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWQOS</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWREGION</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_AWUSER</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WVALID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WREADY</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WDATA</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WSTRB</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WLAST</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_WUSER</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARVALID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARREADY</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARADDR</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>64</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARLEN</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>8</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARSIZE</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARBURST</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARLOCK</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARCACHE</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARPROT</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>3</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARQOS</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARREGION</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_ARUSER</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RVALID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RREADY</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RDATA</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RLAST</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RUSER</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_RRESP</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_BVALID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_BREADY</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_BRESP</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_BID</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>m_axi_gmem_BUSER</name>
+            <Object>gmem</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>m_axi</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="3">
+            <ModuleName>pool5</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_pool5_Pipeline_L4_fu_247</InstName>
+                    <ModuleName>pool5_Pipeline_L4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>247</ID>
+                    <BindInstances>icmp_ln57_fu_435_p2 add_ln57_fu_441_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_pool5_Pipeline_L5_L6_fu_280</InstName>
+                    <ModuleName>pool5_Pipeline_L5_L6</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>280</ID>
+                    <BindInstances>icmp_ln68_fu_693_p2 add_ln68_fu_699_p2 icmp_ln71_fu_714_p2 select_ln71_fu_720_p3 select_ln71_1_fu_728_p3 add_ln68_1_fu_736_p2 select_ln68_fu_742_p3 mul_3ns_6ns_8_1_1_U31 tmp1_fu_980_p2 empty_28_fu_989_p2 empty_29_fu_1006_p2 tmp2_fu_760_p2 empty_30_fu_770_p2 empty_31_fu_788_p2 tmp3_fu_924_p2 tmp4_fu_794_p2 add_ln76_1_fu_955_p2 add_ln76_3_fu_860_p2 icmp_ln76_fu_866_p2 sparsemux_11_4_32_1_1_U32 sparsemux_11_4_32_1_1_U33 icmp_ln156_fu_1263_p2 icmp_ln156_1_fu_1269_p2 or_ln156_fu_1275_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U29 and_ln156_fu_1281_p2 tmp_48_fu_1287_p3 icmp_ln156_2_fu_1341_p2 icmp_ln156_3_fu_1347_p2 or_ln156_1_fu_1353_p2 icmp_ln156_4_fu_1359_p2 icmp_ln156_5_fu_1365_p2 or_ln156_2_fu_1371_p2 and_ln156_1_fu_1377_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U29 and_ln156_2_fu_1383_p2 tmp_49_fu_1389_p3 icmp_ln156_6_fu_1437_p2 icmp_ln156_7_fu_1443_p2 or_ln156_3_fu_1449_p2 icmp_ln156_8_fu_1455_p2 icmp_ln156_9_fu_1461_p2 or_ln156_4_fu_1467_p2 and_ln156_3_fu_1473_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U29 and_ln156_4_fu_1479_p2 tmp_50_fu_1485_p3 icmp_ln156_10_fu_1528_p2 icmp_ln156_11_fu_1534_p2 or_ln156_5_fu_1540_p2 icmp_ln156_12_fu_1546_p2 icmp_ln156_13_fu_1552_p2 or_ln156_6_fu_1558_p2 and_ln156_5_fu_1564_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U29 and_ln156_6_fu_1570_p2 tmp_51_fu_1576_p3 icmp_ln156_14_fu_1619_p2 icmp_ln156_15_fu_1625_p2 or_ln156_7_fu_1631_p2 icmp_ln156_16_fu_1637_p2 icmp_ln156_17_fu_1643_p2 or_ln156_8_fu_1649_p2 and_ln156_7_fu_1655_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U29 and_ln156_8_fu_1661_p2 tmp_52_fu_1667_p3 icmp_ln156_18_fu_1710_p2 icmp_ln156_19_fu_1716_p2 or_ln156_9_fu_1722_p2 icmp_ln156_20_fu_1728_p2 icmp_ln156_21_fu_1734_p2 or_ln156_10_fu_1740_p2 and_ln156_9_fu_1746_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U29 and_ln156_10_fu_1752_p2 tmp_53_fu_1758_p3 icmp_ln156_22_fu_1801_p2 icmp_ln156_23_fu_1807_p2 or_ln156_11_fu_1813_p2 icmp_ln156_24_fu_1819_p2 icmp_ln156_25_fu_1825_p2 or_ln156_12_fu_1831_p2 and_ln156_11_fu_1837_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U30 and_ln156_12_fu_1843_p2 tmp_54_fu_1849_p3 icmp_ln156_26_fu_1892_p2 icmp_ln156_27_fu_1898_p2 or_ln156_13_fu_1904_p2 icmp_ln156_28_fu_1910_p2 icmp_ln156_29_fu_1916_p2 or_ln156_14_fu_1922_p2 and_ln156_13_fu_1928_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U30 and_ln156_14_fu_1934_p2 tmp_55_fu_1940_p3 icmp_ln156_30_fu_1983_p2 icmp_ln156_31_fu_1989_p2 or_ln156_15_fu_1995_p2 icmp_ln156_32_fu_2001_p2 icmp_ln156_33_fu_2007_p2 or_ln156_16_fu_2013_p2 and_ln156_15_fu_2019_p2 fcmp_32ns_32ns_1_2_no_dsp_1_U30 and_ln156_16_fu_2025_p2 tmp_56_fu_2031_p3 add_ln71_fu_892_p2 add_ln71_1_fu_898_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>add_ln51_1_fu_365_p2 add_ln51_2_fu_371_p2 icmp_ln51_fu_377_p2 add_ln51_fu_383_p2 empty_41_fu_393_p2 control_s_axi_U gmem_m_axi_U</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>pool5_Pipeline_L4</Name>
+            <Loops>
+                <L4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16</Best-caseLatency>
+                    <Average-caseLatency>16</Average-caseLatency>
+                    <Worst-caseLatency>16</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.160 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>14</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L4>
+                        <Name>L4</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>13</TripCount>
+                        <Latency>14</Latency>
+                        <AbsoluteTimeLatency>0.140 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L4>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <L4>
+                            <Name>L4</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57</SourceLocation>
+                        </L4>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>467</FF>
+                    <AVAIL_FF>460800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>192</LUT>
+                    <AVAIL_LUT>230400</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>624</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1728</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>96</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L4" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln57_fu_435_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln57" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln57_fu_441_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln57" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pool5_Pipeline_L5_L6</Name>
+            <Loops>
+                <L5_L6/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>237</Best-caseLatency>
+                    <Average-caseLatency>237</Average-caseLatency>
+                    <Worst-caseLatency>237</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.370 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.370 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.370 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>222</PipelineInitiationInterval>
+                    <PipelineType>loop auto-rewind stp (delay=0 clock cycles(s))</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L5_L6>
+                        <Name>L5_L6</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>36</TripCount>
+                        <Latency>235</Latency>
+                        <AbsoluteTimeLatency>2.350 us</AbsoluteTimeLatency>
+                        <PipelineII>6</PipelineII>
+                        <PipelineDepth>26</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L5_L6>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <L5_L6>
+                            <Name>L5_L6</Name>
+                            <IssueType>II Violation</IssueType>
+                            <ViolationType>Resource Limitation</ViolationType>
+                            <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68</SourceLocation>
+                        </L5_L6>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1728</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>2439</FF>
+                    <AVAIL_FF>460800</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2620</LUT>
+                    <AVAIL_LUT>230400</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>624</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>96</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln68_fu_693_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln68" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_fu_699_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln68" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln71_fu_714_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln71" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="select_ln71_fu_720_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln71" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="select_ln71_1_fu_728_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln71_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln68_1_fu_736_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln68_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="select_ln68_fu_742_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln68" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_6ns_8_1_1_U31" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_27" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="tmp1_fu_980_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="empty_28_fu_989_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_28" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="empty_29_fu_1006_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_29" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="tmp2_fu_760_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="empty_30_fu_770_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_30" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="empty_31_fu_788_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_31" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="tmp3_fu_924_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="tmp4_fu_794_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:68" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp4" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln76_1_fu_955_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln76_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln76_3_fu_860_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln76_3" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln76_fu_866_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:76" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln76" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="L5_L6" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_11_4_32_1_1_U32" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114" STORAGESUBTYPE="" URAM="0" VARIABLE="line_buffer_2D_18" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="compactencoding_dontcare" LATENCY="0" LOOP="L5_L6" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_11_4_32_1_1_U33" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:114" STORAGESUBTYPE="" URAM="0" VARIABLE="line_buffer_2D_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_fu_1263_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_1_fu_1269_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_fu_1275_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U29" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_fu_1281_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_48_fu_1287_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_48" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_2_fu_1341_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_3_fu_1347_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_1_fu_1353_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_4_fu_1359_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_5_fu_1365_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_2_fu_1371_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_1_fu_1377_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U29" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_2_fu_1383_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_49_fu_1389_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_49" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_6_fu_1437_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_7_fu_1443_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_3_fu_1449_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_8_fu_1455_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_9_fu_1461_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_4_fu_1467_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_3_fu_1473_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_3" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U29" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_17" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_4_fu_1479_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_4" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_50_fu_1485_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_50" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_10_fu_1528_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_11_fu_1534_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_5_fu_1540_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_12_fu_1546_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_13_fu_1552_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_6_fu_1558_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_5_fu_1564_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_5" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U29" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_20" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_6_fu_1570_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_51_fu_1576_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_51" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_14_fu_1619_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_15_fu_1625_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_7_fu_1631_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_16_fu_1637_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_17_fu_1643_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_17" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_8_fu_1649_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_7_fu_1655_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_7" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U29" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_23" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_8_fu_1661_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_8" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_52_fu_1667_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_52" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_18_fu_1710_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_18" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_19_fu_1716_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_19" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_9_fu_1722_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_20_fu_1728_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_20" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_21_fu_1734_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_21" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_10_fu_1740_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_9_fu_1746_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_9" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U29" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_26" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_10_fu_1752_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_10" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_53_fu_1758_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_53" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_22_fu_1801_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_22" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_23_fu_1807_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_23" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_11_fu_1813_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_24_fu_1819_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_24" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_25_fu_1825_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_25" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_12_fu_1831_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_11_fu_1837_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_11" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U30" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_29" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_12_fu_1843_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_12" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_54_fu_1849_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_54" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_26_fu_1892_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_26" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_27_fu_1898_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_27" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_13_fu_1904_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_28_fu_1910_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_28" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_29_fu_1916_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_29" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_14_fu_1922_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_13_fu_1928_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_13" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U30" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_32" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_14_fu_1934_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_14" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_55_fu_1940_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_55" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_30_fu_1983_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_30" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_31_fu_1989_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_31" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_15_fu_1995_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setne" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="setne" PRAGMA="" RTLNAME="icmp_ln156_32_fu_2001_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_32" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln156_33_fu_2007_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln156_33" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="or" PRAGMA="" RTLNAME="or_ln156_16_fu_2013_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln156_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_15_fu_2019_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_15" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fcmp" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="L5_L6" OPTYPE="fcmp" PRAGMA="" RTLNAME="fcmp_32ns_32ns_1_2_no_dsp_1_U30" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_35" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op and" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="L5_L6" OPTYPE="and" PRAGMA="" RTLNAME="and_ln156_16_fu_2025_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="and_ln156_16" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="L5_L6" OPTYPE="select" PRAGMA="" RTLNAME="tmp_56_fu_2031_p3" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:156" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp_56" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_fu_892_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln71" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L5_L6" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_1_fu_898_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln71_1" VISIBLE="true"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>pool5</Name>
+            <Loops>
+                <VITIS_LOOP_51_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>68103</Best-caseLatency>
+                    <Average-caseLatency>68103</Average-caseLatency>
+                    <Worst-caseLatency>68103</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.681 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.681 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.681 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>68104</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_51_1>
+                        <Name>VITIS_LOOP_51_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>256</TripCount>
+                        <Latency>68096</Latency>
+                        <AbsoluteTimeLatency>0.681 ms</AbsoluteTimeLatency>
+                        <IterationLatency>266</IterationLatency>
+                        <PipelineDepth>266</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_pool5_Pipeline_L4_fu_247</Instance>
+                            <Instance>grp_pool5_Pipeline_L5_L6_fu_280</Instance>
+                        </InstanceList>
+                    </VITIS_LOOP_51_1>
+                </SummaryOfLoopLatency>
+                <SummaryOfViolations>
+                    <IssueType>-</IssueType>
+                    <ViolationType>-</ViolationType>
+                    <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51</SourceLocation>
+                    <SummaryOfLoopViolations>
+                        <VITIS_LOOP_51_1>
+                            <Name>VITIS_LOOP_51_1</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51</SourceLocation>
+                        </VITIS_LOOP_51_1>
+                    </SummaryOfLoopViolations>
+                </SummaryOfViolations>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>4</BRAM_18K>
+                    <AVAIL_BRAM>624</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>1728</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <FF>4783</FF>
+                    <AVAIL_FF>460800</AVAIL_FF>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>4241</LUT>
+                    <AVAIL_LUT>230400</AVAIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>96</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_51_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_1_fu_365_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_51_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_2_fu_371_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51_2" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="VITIS_LOOP_51_1" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln51_fu_377_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln51" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_51_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln51_fu_383_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln51" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_51_1" OPTYPE="add" PRAGMA="" RTLNAME="empty_41_fu_393_p2" SOURCE="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_41" VISIBLE="true"/>
+                <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+                <BindNode BINDTYPE="adapter" BRAM="4" BUNDLEDNAME="gmem" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="inp_img" index="0" direction="inout" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="inout"/>
+                <hwRef type="register" interface="s_axi_control" name="inp_img_1" usage="address" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="inp_img_2" usage="address" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_img" index="1" direction="inout" srcType="float*" srcSize="32">
+            <hwRefs>
+                <hwRef type="interface" interface="m_axi_gmem" name="" usage="data" direction="inout"/>
+                <hwRef type="register" interface="s_axi_control" name="out_img_1" usage="address" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="out_img_2" usage="address" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="6" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_" offsetMasterName="m_axi_gmem">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x00" name="CTRL" access="RW" description="Control signals" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="AP_START" access="RW" description="Control signal Register for 'ap_start'."/>
+                        <field offset="1" width="1" name="AP_DONE" access="R" description="Control signal Register for 'ap_done'."/>
+                        <field offset="2" width="1" name="AP_IDLE" access="R" description="Control signal Register for 'ap_idle'."/>
+                        <field offset="3" width="1" name="AP_READY" access="R" description="Control signal Register for 'ap_ready'."/>
+                        <field offset="4" width="3" name="RESERVED_1" access="R" description="Reserved.  0s on read."/>
+                        <field offset="7" width="1" name="AUTO_RESTART" access="RW" description="Control signal Register for 'auto_restart'."/>
+                        <field offset="8" width="1" name="RESERVED_2" access="R" description="Reserved.  0s on read."/>
+                        <field offset="9" width="1" name="INTERRUPT" access="R" description="Control signal Register for 'interrupt'."/>
+                        <field offset="10" width="22" name="RESERVED_3" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x04" name="GIER" access="RW" description="Global Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="Enable" access="RW" description="Master enable for the device interrupt output to the system interrupt controller: 0 = Disabled, 1 = Enabled"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x08" name="IP_IER" access="RW" description="IP Interrupt Enable Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_EN" access="RW" description="Enable Channel 0 (ap_done) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="1" width="1" name="CHAN1_INT_EN" access="RW" description="Enable Channel 1 (ap_ready) Interrupt.  0 = Disabled, 1 = Enabled."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x0c" name="IP_ISR" access="RW" description="IP Interrupt Status Register" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="CHAN0_INT_ST" access="RTOW" description="Channel 0 (ap_done) Interrupt Status. 0 = No Channel 0 interrupt, 1 = Channel 0 interrupt."/>
+                        <field offset="1" width="1" name="CHAN1_INT_ST" access="RTOW" description="Channel 1 (ap_ready) Interrupt Status. 0 = No Channel 1 interrupt, 1 = Channel 1 interrupt."/>
+                        <field offset="2" width="30" name="RESERVED_0" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x10" name="inp_img_1" access="W" description="Data signal of inp_img" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="inp_img" access="W" description="Bit 31 to 0 of inp_img"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="inp_img_2" access="W" description="Data signal of inp_img" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="inp_img" access="W" description="Bit 63 to 32 of inp_img"/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="out_img_1" access="W" description="Data signal of out_img" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="out_img" access="W" description="Bit 31 to 0 of out_img"/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="out_img_2" access="W" description="Data signal of out_img" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="out_img" access="W" description="Bit 63 to 32 of out_img"/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="inp_img"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="28" argName="out_img"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control:m_axi_gmem</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="interrupt" type="interrupt" busTypeName="interrupt" mode="master" dataWidth="1">
+            <busParams>
+                <busParam busParamName="SENSITIVITY">LEVEL_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="interrupt">INTERRUPT</portMap>
+            </portMaps>
+            <ports>
+                <port>interrupt</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="m_axi_gmem" type="axi4full" busTypeName="aximm" mode="master" dataWidth="32" addrWidth="64" portPrefix="m_axi_gmem_" paramPrefix="C_M_AXI_GMEM_" offsetSlaveName="s_axi_control" preferredUsageValue="MEMORY">
+            <busParams>
+                <busParam busParamName="NUM_READ_OUTSTANDING">16</busParam>
+                <busParam busParamName="NUM_WRITE_OUTSTANDING">16</busParam>
+                <busParam busParamName="MAX_READ_BURST_LENGTH">16</busParam>
+                <busParam busParamName="MAX_WRITE_BURST_LENGTH">16</busParam>
+                <busParam busParamName="MAX_BURST_LENGTH">256</busParam>
+                <busParam busParamName="PROTOCOL">AXI4</busParam>
+                <busParam busParamName="READ_WRITE_MODE">READ_WRITE</busParam>
+                <busParam busParamName="HAS_BURST">0</busParam>
+                <busParam busParamName="SUPPORTS_NARROW_BURST">0</busParam>
+            </busParams>
+            <ports>
+                <port>m_axi_gmem_ARADDR</port>
+                <port>m_axi_gmem_ARBURST</port>
+                <port>m_axi_gmem_ARCACHE</port>
+                <port>m_axi_gmem_ARID</port>
+                <port>m_axi_gmem_ARLEN</port>
+                <port>m_axi_gmem_ARLOCK</port>
+                <port>m_axi_gmem_ARPROT</port>
+                <port>m_axi_gmem_ARQOS</port>
+                <port>m_axi_gmem_ARREADY</port>
+                <port>m_axi_gmem_ARREGION</port>
+                <port>m_axi_gmem_ARSIZE</port>
+                <port>m_axi_gmem_ARUSER</port>
+                <port>m_axi_gmem_ARVALID</port>
+                <port>m_axi_gmem_AWADDR</port>
+                <port>m_axi_gmem_AWBURST</port>
+                <port>m_axi_gmem_AWCACHE</port>
+                <port>m_axi_gmem_AWID</port>
+                <port>m_axi_gmem_AWLEN</port>
+                <port>m_axi_gmem_AWLOCK</port>
+                <port>m_axi_gmem_AWPROT</port>
+                <port>m_axi_gmem_AWQOS</port>
+                <port>m_axi_gmem_AWREADY</port>
+                <port>m_axi_gmem_AWREGION</port>
+                <port>m_axi_gmem_AWSIZE</port>
+                <port>m_axi_gmem_AWUSER</port>
+                <port>m_axi_gmem_AWVALID</port>
+                <port>m_axi_gmem_BID</port>
+                <port>m_axi_gmem_BREADY</port>
+                <port>m_axi_gmem_BRESP</port>
+                <port>m_axi_gmem_BUSER</port>
+                <port>m_axi_gmem_BVALID</port>
+                <port>m_axi_gmem_RDATA</port>
+                <port>m_axi_gmem_RID</port>
+                <port>m_axi_gmem_RLAST</port>
+                <port>m_axi_gmem_RREADY</port>
+                <port>m_axi_gmem_RRESP</port>
+                <port>m_axi_gmem_RUSER</port>
+                <port>m_axi_gmem_RVALID</port>
+                <port>m_axi_gmem_WDATA</port>
+                <port>m_axi_gmem_WID</port>
+                <port>m_axi_gmem_WLAST</port>
+                <port>m_axi_gmem_WREADY</port>
+                <port>m_axi_gmem_WSTRB</port>
+                <port>m_axi_gmem_WUSER</port>
+                <port>m_axi_gmem_WVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0" argName="inp_img"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="inp_img"/>
+                <constraint constraint_type="pragma interface" mode="m_axi" register_option="0" offset="slave" latency="0" num_read_outstanding="16" num_write_outstanding="16" max_read_burst_length="16" max_write_burst_length="16" max_widen_bitwidth="0" channel_id="0" argName="out_img"/>
+                <constraint constraint_type="bitwidth" orig_bitwidth="32" final_bitwidth="32" argName="out_img"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="M_AXI">
+                <table>
+                    <keys size="14">Interface, Read/Write, Data Width (SW-&gt;HW), Address Width, Latency, Offset, Offset Interfaces, Register, Max Widen Bitwidth, Max Read Burst Length, Max Write Burst Length, Num Read Outstanding, Num Write Outstanding, Resource Estimate</keys>
+                    <column name="m_axi_gmem">READ_WRITE, 32 -&gt; 32, 64, 0, slave, s_axi_control, 0, 0, 16, 16, 16, 16, BRAM=4</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Interfaces">
+                <table>
+                    <keys size="6">Interface, Data Width, Address Width, Offset, Register, Data Interface</keys>
+                    <column name="s_axi_control">32, 6, 16, 0, m_axi_gmem</column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table>
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">CTRL, 0x00, 32, RW, Control signals, 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT</column>
+                    <column name="s_axi_control">GIER, 0x04, 32, RW, Global Interrupt Enable Register, 0=Enable</column>
+                    <column name="s_axi_control">IP_IER, 0x08, 32, RW, IP Interrupt Enable Register, 0=CHAN0_INT_EN 1=CHAN1_INT_EN</column>
+                    <column name="s_axi_control">IP_ISR, 0x0c, 32, RW, IP Interrupt Status Register, 0=CHAN0_INT_ST 1=CHAN1_INT_ST</column>
+                    <column name="s_axi_control">inp_img_1, 0x10, 32, W, Data signal of inp_img, </column>
+                    <column name="s_axi_control">inp_img_2, 0x14, 32, W, Data signal of inp_img, </column>
+                    <column name="s_axi_control">out_img_1, 0x1c, 32, W, Data signal of out_img, </column>
+                    <column name="s_axi_control">out_img_2, 0x20, 32, W, Data signal of out_img, </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst_n">reset, ap_rst_n</column>
+                    <column name="interrupt">interrupt, interrupt</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="inp_img">inout, float*</column>
+                    <column name="out_img">inout, float*</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="5">Argument, HW Interface, HW Type, HW Usage, HW Info</keys>
+                    <column name="inp_img">m_axi_gmem, interface, , channel=0</column>
+                    <column name="inp_img">s_axi_control, register, offset, name=inp_img_1 offset=0x10 range=32</column>
+                    <column name="inp_img">s_axi_control, register, offset, name=inp_img_2 offset=0x14 range=32</column>
+                    <column name="out_img">m_axi_gmem, interface, , channel=0</column>
+                    <column name="out_img">s_axi_control, register, offset, name=out_img_1 offset=0x1c range=32</column>
+                    <column name="out_img">s_axi_control, register, offset, name=out_img_2 offset=0x20 range=32</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&amp;url=ug1448-hls-guidance&amp;resourceid=ZZZ.html</ResolutionUrl>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.">
+            <item name="Inferred Burst Summary">
+                <table>
+                    <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
+                    <column name="m_axi_gmem">write, 9216, 32, VITIS_LOOP_51_1, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51:19</column>
+                    <column name="m_axi_gmem">read, 13, 32, L4, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57:5</column>
+                    <column name="m_axi_gmem">read, 3, 32, , </column>
+                    <column name="m_axi_gmem">read, 2, 32, , </column>
+                </table>
+            </item>
+            <item name="All M_AXI Variable Accesses">
+                <table>
+                    <keys size="10">HW Interface, Variable, Access Location, Direction, Burst Status, Length, Loop, Loop Location, Resolution, Problem</keys>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:63:25, read, Widen Fail, , L4, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57:5, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:63:25, read, Fail, , VITIS_LOOP_51_1, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51:19, 214-230, Stride is incompatible</column>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:63:25, read, Inferred, 13, L4, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:57:5, , </column>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91:38, read, Widen Fail, , , , 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:91:38, read, Inferred, 3, L6, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71:5, , </column>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126:39, read, Widen Fail, , , , 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem">inp_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:126:39, read, Inferred, 2, L6, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71:5, , </column>
+                    <column name="m_axi_gmem">out_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:160:53, write, Widen Fail, , L6, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:71:5, 214-353, Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem">out_img, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:160:53, write, Inferred, 9216, VITIS_LOOP_51_1, AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:51:19, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="interface" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:28" status="valid" parentFunction="pool5" variable="inp_img" isDirective="0" options="m_axi port=inp_img offset=slave bundle=gmem depth = 290400"/>
+        <Pragma type="interface" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:29" status="valid" parentFunction="pool5" variable="out_img" isDirective="0" options="m_axi port=out_img offset=slave bundle=gmem depth = 69984"/>
+        <Pragma type="interface" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:31" status="valid" parentFunction="pool5" variable="inp_img" isDirective="0" options="s_axilite port=inp_img bundle=control"/>
+        <Pragma type="interface" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:32" status="valid" parentFunction="pool5" variable="out_img" isDirective="0" options="s_axilite port=out_img bundle=control"/>
+        <Pragma type="interface" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:34" status="valid" parentFunction="pool5" variable="return" isDirective="0" options="s_axilite port=return bundle=control"/>
+        <Pragma type="array_partition" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:37" status="valid" parentFunction="pool5" variable="window_2D" isDirective="0" options="variable=window_2D complete dim=0"/>
+        <Pragma type="array_partition" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:39" status="valid" parentFunction="pool5" variable="right_col_2D" isDirective="0" options="variable=right_col_2D complete dim=0"/>
+        <Pragma type="array_partition" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:41" status="valid" parentFunction="pool5" variable="right_col_2D_l" isDirective="0" options="variable=right_col_2D_l complete dim=0"/>
+        <Pragma type="array_partition" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:43" status="valid" parentFunction="pool5" variable="line_buffer_2D" isDirective="0" options="variable=line_buffer_2D complete dim=0"/>
+        <Pragma type="array_partition" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:45" status="valid" parentFunction="pool5" variable="new_pixels" isDirective="0" options="variable=new_pixels complete dim=0"/>
+        <Pragma type="array_partition" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:47" status="valid" parentFunction="pool5" variable="new_pixels_l" isDirective="0" options="variable=new_pixels_l complete dim=0"/>
+        <Pragma type="pipeline" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:59" status="valid" parentFunction="pool5" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="AlexNet-FPGA-implementation/Pool5/src/pool5.cpp:73" status="valid" parentFunction="pool5" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

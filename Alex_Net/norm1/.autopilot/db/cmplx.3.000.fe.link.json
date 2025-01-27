@@ -1,0 +1,380 @@
+{
+  "0": {
+    "basicblocks": 115,
+    "calls": "2 2 2 2 2 2 2 2 2 2",
+    "file": "norm1.cpp",
+    "fileloc": 31,
+    "instructions": 423,
+    "loads": {
+      "L": 20,
+      "T": 1
+    },
+    "name": "norm1",
+    "stores": {
+      "L": 11,
+      "T": 5
+    },
+    "total_instructions": 186983
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 281,
+    "instructions": 4,
+    "name": "fp_struct",
+    "total_instructions": 4
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 102,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "log_range_reduce<ap_fixed<65, 9, AP_TRN, AP_WRAP, 0>, 4, 4, 39, 41>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1265
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 32,
+    "name": "data",
+    "total_instructions": 279
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 39,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.16",
+    "total_instructions": 273
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "11",
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 18,
+    "loads": {
+      "L": 1
+    },
+    "name": "to_float",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 301
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 16,
+    "instructions": 17,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 273
+  },
+  "15": {
+    "basicblocks": 1,
+    "calls": "14 12 19 18 17 16 21 20 28 22 24 25 26 29 30 31 27 32 33",
+    "file": "powrfloat.pp.cpp",
+    "fileloc": 0,
+    "instructions": 20,
+    "name": "",
+    "total_instructions": 39479
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 232,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.83",
+    "total_instructions": 1089
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 160,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.82",
+    "total_instructions": 1089
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 88,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.18",
+    "total_instructions": 1089
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 62,
+    "instructions": 17,
+    "name": "__cxx_global_var_init.17",
+    "total_instructions": 273
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "powfloat.cpp",
+    "fileloc": 7,
+    "instructions": 2,
+    "name": "powf",
+    "total_instructions": 18656
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 379,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.148",
+    "total_instructions": 1089
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 307,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.84",
+    "total_instructions": 1089
+  },
+  "22": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 529,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.213",
+    "total_instructions": 1089
+  },
+  "23": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 156,
+    "instructions": 40,
+    "name": "exp_Z1P_m_1",
+    "total_instructions": 360
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 604,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.277",
+    "total_instructions": 1089
+  },
+  "25": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 679,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.341",
+    "total_instructions": 1089
+  },
+  "26": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 868,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.428",
+    "total_instructions": 1089
+  },
+  "27": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 2420,
+    "instructions": 33,
+    "name": "__cxx_global_var_init.1268",
+    "total_instructions": 545
+  },
+  "28": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 454,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.149",
+    "total_instructions": 1089
+  },
+  "29": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 1041,
+    "instructions": 65,
+    "name": "__cxx_global_var_init.474",
+    "total_instructions": 1089
+  },
+  "3": {
+    "basicblocks": 71,
+    "calls": "4 4 1 5 5 6 7 7 6 35 35 35 35 35 34 23 35 35 35 35",
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 1064,
+    "loads": {
+      "G": 3,
+      "L": 23
+    },
+    "name": "pow_generic<float>",
+    "stores": {
+      "L": 26
+    },
+    "total_instructions": 18654
+  },
+  "30": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 1115,
+    "instructions": 513,
+    "name": "__cxx_global_var_init.497",
+    "total_instructions": 8705
+  },
+  "31": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 1634,
+    "instructions": 513,
+    "name": "__cxx_global_var_init.1010",
+    "total_instructions": 8705
+  },
+  "32": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 2459,
+    "instructions": 257,
+    "name": "__cxx_global_var_init.1300",
+    "total_instructions": 4353
+  },
+  "33": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow_tables.h",
+    "fileloc": 2726,
+    "instructions": 257,
+    "name": "__cxx_global_var_init.1556",
+    "total_instructions": 4353
+  },
+  "34": {
+    "basicblocks": 1,
+    "calls": "10 9 8",
+    "file": "hls_pow.h",
+    "fileloc": 130,
+    "instructions": 37,
+    "loads": {
+      "L": 3
+    },
+    "name": "log_range_reduction<39>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 4399
+  },
+  "35": {
+    "basicblocks": 1,
+    "calls": "13",
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "name": "to_ieee",
+    "total_instructions": 303
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 55,
+    "loads": {
+      "L": 1
+    },
+    "name": "fp_struct",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 318
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "x_hls_utils.h",
+    "fileloc": 316,
+    "instructions": 8,
+    "name": "expv",
+    "total_instructions": 109
+  },
+  "6": {
+    "basicblocks": 3,
+    "calls": "4",
+    "file": "hls_isinf.h",
+    "fileloc": 16,
+    "instructions": 18,
+    "name": "generic_isinf<float>",
+    "total_instructions": 388
+  },
+  "7": {
+    "basicblocks": 3,
+    "calls": "4",
+    "file": "hls_isnan.h",
+    "fileloc": 16,
+    "instructions": 18,
+    "name": "generic_isnan<float>",
+    "total_instructions": 389
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 89,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "log_range_reduce<ap_fixed<65, 9, AP_TRN, AP_WRAP, 0>, 12, 6, 44, 39>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1240
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 89,
+    "loads": {
+      "G": 1,
+      "L": 1
+    },
+    "name": "log_range_reduce<ap_fixed<65, 9, AP_TRN, AP_WRAP, 0>, 7, 6, 41, 44>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1242
+  }
+}

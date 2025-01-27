@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file Alex_Net/Conv3/impl/export.zip" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-2161]" key="HLS 200-2161" tag="" content="Finished Command export_design Elapsed time: 00:01:15; Allocated memory: 0.000 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: remove_files AlexNet-FPGA-implementation/Conv3/src/conv3.cpp AlexNet-FPGA-implementation/Conv3/src/conv3.h" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: remove_files /primary/HLS/AlexNet-FPGA-implementation/Conv3/src/testbench.cpp" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: add_files /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding design file &apos;/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.cpp&apos; to the project" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: add_files /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding design file &apos;/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/conv4.h&apos; to the project" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: add_files -tb /primary/HLS/AlexNet-FPGA-implementation/Conv4/src/testbench.cpp" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1358" tag="" content="Adding test bench file &apos;/primary/HLS/AlexNet-FPGA-implementation/Conv4/src/testbench.cpp&apos; to the project" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: set_top conv4" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1510]" key="HLS 200-1510" tag="" content="Running: open_solution -reset Conv4" resolution=""/>
+</Messages>

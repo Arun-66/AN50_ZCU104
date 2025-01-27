@@ -1,0 +1,503 @@
+
+
+================================================================
+== Synthesis Summary Report of 'conv5'
+================================================================
++ General Information: 
+    * Date:           Sat Jan 25 18:19:27 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        Alex_Net
+    * Solution:       Conv5 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu7ev-ffvc1156-2-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-------------+---------------+---------------+-----+
+    |               Modules               | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |           |             |               |               |     |
+    |               & Loops               | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|   BRAM    |     DSP     |       FF      |      LUT      | URAM|
+    +-------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-------------+---------------+---------------+-----+
+    |+ conv5                              |     -|  0.00|   739496|  7.395e+06|         -|   739497|      -|        no|  215 (34%)|  2649 (153%)|  613614 (133%)|  430025 (186%)|    -|
+    | + conv5_Pipeline_L1_1               |     -|  0.00|    43203|  4.320e+05|         -|    43203|      -|        no|          -|            -|      132 (~0%)|      225 (~0%)|    -|
+    |  o L1_1                             |     -|  7.30|    43201|  4.320e+05|         3|        1|  43200|       yes|          -|            -|              -|              -|    -|
+    | + conv5_Pipeline_L2_1               |     -|  0.00|    43203|  4.320e+05|         -|    43203|      -|        no|          -|            -|      132 (~0%)|      225 (~0%)|    -|
+    |  o L2_1                             |     -|  7.30|    43201|  4.320e+05|         3|        1|  43200|       yes|          -|            -|              -|              -|    -|
+    | o L4                                |     -|  7.30|   326528|  3.265e+06|      2551|        -|    128|        no|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_F1_1              |     -|  0.00|     1731|  1.731e+04|         -|     1731|      -|        no|          -|            -|       91 (~0%)|      188 (~0%)|    -|
+    |   o F1_1                            |     -|  7.30|     1729|  1.729e+04|         3|        1|   1728|       yes|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_VITIS_LOOP_85_1   |     -|  5.68|      171|  1.710e+03|         -|      171|      -|        no|          -|            -|      5418 (1%)|     1580 (~0%)|    -|
+    |   o VITIS_LOOP_85_1                 |     -|  7.30|      169|  1.690e+03|         1|        1|    169|       yes|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_C1_1              |     -|  0.28|      621|  6.210e+03|         -|      621|      -|        no|          -|            -|   196911 (42%)|    89247 (38%)|    -|
+    |   o C1_1                            |    II|  7.30|      619|  6.190e+03|        47|        3|    192|       yes|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_M1                |     -|  0.00|      177|  1.770e+03|         -|      177|      -|        no|          -|            -|      962 (~0%)|     2218 (~0%)|    -|
+    |   o M1                              |    II|  7.30|      175|  1.750e+03|        20|       13|     13|       yes|          -|            -|              -|              -|    -|
+    | o L7                                |     -|  7.30|   326528|  3.265e+06|      2551|        -|    128|        no|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_F2_1              |     -|  0.00|     1731|  1.731e+04|         -|     1731|      -|        no|          -|            -|       91 (~0%)|      188 (~0%)|    -|
+    |   o F2_1                            |     -|  7.30|     1729|  1.729e+04|         3|        1|   1728|       yes|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_VITIS_LOOP_172_7  |     -|  5.68|      171|  1.710e+03|         -|      171|      -|        no|          -|            -|      5418 (1%)|     1580 (~0%)|    -|
+    |   o VITIS_LOOP_172_7                |     -|  7.30|      169|  1.690e+03|         1|        1|    169|       yes|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_C2_1              |     -|  0.28|      621|  6.210e+03|         -|      621|      -|        no|          -|            -|   196911 (42%)|    89247 (38%)|    -|
+    |   o C2_1                            |    II|  7.30|      619|  6.190e+03|        47|        3|    192|       yes|          -|            -|              -|              -|    -|
+    |  + conv5_Pipeline_M2                |     -|  0.00|      177|  1.770e+03|         -|      177|      -|        no|          -|            -|      962 (~0%)|     2218 (~0%)|    -|
+    |   o M2                              |    II|  7.30|      175|  1.750e+03|        20|       13|     13|       yes|          -|            -|              -|              -|    -|
+    +-------------------------------------+------+------+---------+-----------+----------+---------+-------+----------+-----------+-------------+---------------+---------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+-------------------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Offset Interfaces | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |                   |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+-------------------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | s_axi_control     | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem1 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  |                   | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++-------------+------------+------------+---------------+---------+--------+-------------------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+----------------+
+| Interface     | Data Width | Address Width | Offset | Register | Data Interface |
++---------------+------------+---------------+--------+----------+----------------+
+| s_axi_control | 32         | 6             | 16     | 0        | m_axi_gmem0    |
++---------------+------------+---------------+--------+----------+----------------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | inp_img_1 | 0x10   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | inp_img_2 | 0x14   | 32    | W      | Data signal of inp_img           |                                                                      |
+| s_axi_control | out_img_1 | 0x1c   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | out_img_2 | 0x20   | 32    | W      | Data signal of out_img           |                                                                      |
+| s_axi_control | filter_1  | 0x28   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control | filter_2  | 0x2c   | 32    | W      | Data signal of filter            |                                                                      |
+| s_axi_control | bias_1    | 0x34   | 32    | W      | Data signal of bias              |                                                                      |
+| s_axi_control | bias_2    | 0x38   | 32    | W      | Data signal of bias              |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| inp_img  | inout     | float*   |
+| out_img  | inout     | float*   |
+| filter   | in        | float*   |
+| bias     | in        | float*   |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| inp_img  | m_axi_gmem0   | interface |          | channel=0                           |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_1 offset=0x10 range=32 |
+| inp_img  | s_axi_control | register  | offset   | name=inp_img_2 offset=0x14 range=32 |
+| out_img  | m_axi_gmem0   | interface |          | channel=0                           |
+| out_img  | s_axi_control | register  | offset   | name=out_img_1 offset=0x1c range=32 |
+| out_img  | s_axi_control | register  | offset   | name=out_img_2 offset=0x20 range=32 |
+| filter   | m_axi_gmem1   | interface |          | channel=0                           |
+| filter   | s_axi_control | register  | offset   | name=filter_1 offset=0x28 range=32  |
+| filter   | s_axi_control | register  | offset   | name=filter_2 offset=0x2c range=32  |
+| bias     | m_axi_gmem1   | interface |          | channel=0                           |
+| bias     | s_axi_control | register  | offset   | name=bias_1 offset=0x34 range=32    |
+| bias     | s_axi_control | register  | offset   | name=bias_2 offset=0x38 range=32    |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Loop | Loop Location                                         |
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+| m_axi_gmem0  | read      | 43200  | 32    | L1_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:69:7  |
+| m_axi_gmem0  | write     | 21632  | 32    | L4   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:76:5  |
+| m_axi_gmem0  | read      | 43200  | 32    | L2_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:155:7 |
+| m_axi_gmem0  | write     | 21632  | 32    | L7   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:163:5 |
+| m_axi_gmem1  | read      | 1728   | 32    | F1_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:79:8  |
+| m_axi_gmem1  | read      | 1728   | 32    | F2_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:166:8 |
++--------------+-----------+--------+-------+------+-------------------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                                        | Direction                                                                            | Burst Status | Length | Loop | Loop Location                                         | Resolution | Problem                                                                                                 |
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:72:23  | read                                                                                 | Widen Fail   |        | L1_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:69:7  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:72:23  | read                                                                                 | Inferred     | 43200  | L1_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:69:7  |            |                                                                                                         |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:76:5   | write                                                                                | Widen Fail   |        | M1   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:135:5 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:76:5   | islist write write write write write write write write write write write write write | Inferred     | 21632  | L4   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:76:5  |            |                                                                                                         |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:158:23 | read                                                                                 | Widen Fail   |        | L2_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:155:7 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | inp_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:158:23 | read                                                                                 | Inferred     | 43200  | L2_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:155:7 |            |                                                                                                         |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:163:5  | write                                                                                | Widen Fail   |        | M2   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:220:5 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | out_img  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:163:5  | islist write write write write write write write write write write write write write | Inferred     | 21632  | L7   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:163:5 |            |                                                                                                         |
+| m_axi_gmem1  | filter   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:81:20  | read                                                                                 | Widen Fail   |        | F1_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:79:8  | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | filter   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:81:20  | read                                                                                 | Fail         |        |      |                                                       | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem1  | filter   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:81:20  | read                                                                                 | Inferred     | 1728   | F1_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:79:8  |            |                                                                                                         |
+| m_axi_gmem1  | filter   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:168:20 | read                                                                                 | Widen Fail   |        | F2_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:166:8 | 214-353    | Could not widen since type float size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | filter   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:168:20 | read                                                                                 | Fail         |        |      |                                                       | 214-231    | Access is clobbered by load                                                                             |
+| m_axi_gmem1  | filter   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:168:20 | read                                                                                 | Inferred     | 1728   | F2_1 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:166:8 |            |                                                                                                         |
++--------------+----------+--------------------------------------------------------+--------------------------------------------------------------------------------------+--------------+--------+------+-------------------------------------------------------+------------+---------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+| Name                                   | DSP  | Pragma | Variable          | Op        | Impl                     | Latency |
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+| + conv5                                | 2649 |        |                   |           |                          |         |
+|   add_ln76_1_fu_6889_p2                |      |        | add_ln76_1        | add       | fabric                   | 0       |
+|   icmp_ln76_fu_6895_p2                 |      |        | icmp_ln76         | seteq     | auto                     | 0       |
+|   add_ln76_fu_6901_p2                  |      |        | add_ln76          | add       | fabric                   | 0       |
+|   empty_204_fu_6911_p2                 |      |        | empty_204         | add       | fabric                   | 0       |
+|   empty_207_fu_7846_p2                 |      |        | empty_207         | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4755  |      |        | empty_209         | adapter   | m_axi                    | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4756  |      |        | add_ln155         | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4760  |      |        | empty_210         | adapter   | m_axi                    | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4762  |      |        | add_ln163         | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4190 |      |        | empty_211         | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4537 |      |        | add_ln163_2       | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4612 |      |        | icmp_ln163        | seteq     | auto                     | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4919  |      |        | tmp1              | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4921  |      |        | empty_212         | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4652  |      |        | empty_213         | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4227 |      |        | empty_215         | add       | fabric                   | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4471 |      |        | gmem1_load_1_req  | adapter   | m_axi                    | 0       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U4538 |      |        | gmem1_addr_3_read | adapter   | m_axi                    | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U5044  |      |        | add_ln163_1       | add       | fabric                   | 0       |
+|   fmul_32ns_32ns_32_3_max_dsp_1_U4016  |      |        | empty_217         | adapter   | m_axi                    | 0       |
+|  + conv5_Pipeline_L1_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln69_fu_527_p2                 |      |        | icmp_ln69         | seteq     | auto                     | 0       |
+|    add_ln69_fu_533_p2                  |      |        | add_ln69          | add       | fabric                   | 0       |
+|    add_ln69_1_fu_586_p2                |      |        | add_ln69_1        | add       | fabric                   | 0       |
+|    add_ln69_2_fu_543_p2                |      |        | add_ln69_2        | add       | fabric                   | 0       |
+|    icmp_ln69_1_fu_549_p2               |      |        | icmp_ln69_1       | seteq     | auto                     | 0       |
+|    select_ln69_fu_555_p3               |      |        | select_ln69       | select    | auto_sel                 | 0       |
+|  + conv5_Pipeline_F1_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln79_fu_257_p2                 |      |        | icmp_ln79         | seteq     | auto                     | 0       |
+|    add_ln79_fu_263_p2                  |      |        | add_ln79          | add       | fabric                   | 0       |
+|    add_ln79_1_fu_312_p2                |      |        | add_ln79_1        | add       | fabric                   | 0       |
+|    add_ln79_2_fu_273_p2                |      |        | add_ln79_2        | add       | fabric                   | 0       |
+|    icmp_ln79_1_fu_279_p2               |      |        | icmp_ln79_1       | seteq     | auto                     | 0       |
+|    select_ln79_fu_285_p3               |      |        | select_ln79       | select    | auto_sel                 | 0       |
+|  + conv5_Pipeline_VITIS_LOOP_85_1      | 0    |        |                   |           |                          |         |
+|    icmp_ln85_fu_4768_p2                |      |        | icmp_ln85         | seteq     | auto                     | 0       |
+|    add_ln85_fu_4774_p2                 |      |        | add_ln85          | add       | fabric                   | 0       |
+|  + conv5_Pipeline_C1_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln91_fu_11127_p2               |      |        | icmp_ln91         | seteq     | auto                     | 0       |
+|    add_ln91_fu_11133_p2                |      |        | add_ln91          | add       | fabric                   | 0       |
+|    add_ln96_8_fu_11168_p2              |      |        | add_ln96_8        | add       | fabric                   | 0       |
+|    add_ln96_fu_11205_p2                |      |        | add_ln96          | add       | fabric                   | 0       |
+|    add_ln96_1_fu_11236_p2              |      |        | add_ln96_1        | add       | fabric                   | 0       |
+|    add_ln96_2_fu_11267_p2              |      |        | add_ln96_2        | add       | fabric                   | 0       |
+|    add_ln96_3_fu_11285_p2              |      |        | add_ln96_3        | add       | fabric                   | 0       |
+|    add_ln96_4_fu_11302_p2              |      |        | add_ln96_4        | add       | fabric                   | 0       |
+|    add_ln96_5_fu_11332_p2              |      |        | add_ln96_5        | add       | fabric                   | 0       |
+|    add_ln96_6_fu_11349_p2              |      |        | add_ln96_6        | add       | fabric                   | 0       |
+|    add_ln96_7_fu_11362_p2              |      |        | add_ln96_7        | add       | fabric                   | 0       |
+|  + conv5_Pipeline_M1                   | 0    |        |                   |           |                          |         |
+|    icmp_ln135_fu_1591_p2               |      |        | icmp_ln135        | seteq     | auto                     | 0       |
+|    add_ln135_fu_1597_p2                |      |        | add_ln135         | add       | fabric                   | 0       |
+|    sparsemux_27_4_32_1_1_U1823         |      |        | tmp               | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_fu_2412_p2               |      |        | icmp_ln142        | setne     | auto                     | 0       |
+|    icmp_ln142_1_fu_2418_p2             |      |        | icmp_ln142_1      | seteq     | auto                     | 0       |
+|    or_ln142_fu_2424_p2                 |      |        | or_ln142          | or        | auto                     | 0       |
+|    and_ln142_fu_2430_p2                |      |        | and_ln142         | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1824         |      |        | tmp_1             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_2_fu_2462_p2             |      |        | icmp_ln142_2      | setne     | auto                     | 0       |
+|    icmp_ln142_3_fu_2468_p2             |      |        | icmp_ln142_3      | seteq     | auto                     | 0       |
+|    or_ln142_1_fu_2474_p2               |      |        | or_ln142_1        | or        | auto                     | 0       |
+|    and_ln142_1_fu_2480_p2              |      |        | and_ln142_1       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1825         |      |        | tmp_2             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_4_fu_2512_p2             |      |        | icmp_ln142_4      | setne     | auto                     | 0       |
+|    icmp_ln142_5_fu_2518_p2             |      |        | icmp_ln142_5      | seteq     | auto                     | 0       |
+|    or_ln142_2_fu_2524_p2               |      |        | or_ln142_2        | or        | auto                     | 0       |
+|    and_ln142_2_fu_2530_p2              |      |        | and_ln142_2       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1826         |      |        | tmp_3             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_6_fu_2562_p2             |      |        | icmp_ln142_6      | setne     | auto                     | 0       |
+|    icmp_ln142_7_fu_2568_p2             |      |        | icmp_ln142_7      | seteq     | auto                     | 0       |
+|    or_ln142_3_fu_2574_p2               |      |        | or_ln142_3        | or        | auto                     | 0       |
+|    and_ln142_3_fu_2580_p2              |      |        | and_ln142_3       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1827         |      |        | tmp_4             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_8_fu_2612_p2             |      |        | icmp_ln142_8      | setne     | auto                     | 0       |
+|    icmp_ln142_9_fu_2618_p2             |      |        | icmp_ln142_9      | seteq     | auto                     | 0       |
+|    or_ln142_4_fu_2624_p2               |      |        | or_ln142_4        | or        | auto                     | 0       |
+|    and_ln142_4_fu_2630_p2              |      |        | and_ln142_4       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1828         |      |        | tmp_5             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_10_fu_2662_p2            |      |        | icmp_ln142_10     | setne     | auto                     | 0       |
+|    icmp_ln142_11_fu_2668_p2            |      |        | icmp_ln142_11     | seteq     | auto                     | 0       |
+|    or_ln142_5_fu_2674_p2               |      |        | or_ln142_5        | or        | auto                     | 0       |
+|    and_ln142_5_fu_2680_p2              |      |        | and_ln142_5       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1829         |      |        | tmp_6             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_12_fu_2712_p2            |      |        | icmp_ln142_12     | setne     | auto                     | 0       |
+|    icmp_ln142_13_fu_2718_p2            |      |        | icmp_ln142_13     | seteq     | auto                     | 0       |
+|    or_ln142_6_fu_2724_p2               |      |        | or_ln142_6        | or        | auto                     | 0       |
+|    and_ln142_6_fu_2730_p2              |      |        | and_ln142_6       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1830         |      |        | tmp_7             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_14_fu_2762_p2            |      |        | icmp_ln142_14     | setne     | auto                     | 0       |
+|    icmp_ln142_15_fu_2768_p2            |      |        | icmp_ln142_15     | seteq     | auto                     | 0       |
+|    or_ln142_7_fu_2774_p2               |      |        | or_ln142_7        | or        | auto                     | 0       |
+|    and_ln142_7_fu_2780_p2              |      |        | and_ln142_7       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1831         |      |        | tmp_8             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_16_fu_2812_p2            |      |        | icmp_ln142_16     | setne     | auto                     | 0       |
+|    icmp_ln142_17_fu_2818_p2            |      |        | icmp_ln142_17     | seteq     | auto                     | 0       |
+|    or_ln142_8_fu_2824_p2               |      |        | or_ln142_8        | or        | auto                     | 0       |
+|    and_ln142_8_fu_2830_p2              |      |        | and_ln142_8       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1832         |      |        | tmp_9             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_18_fu_2862_p2            |      |        | icmp_ln142_18     | setne     | auto                     | 0       |
+|    icmp_ln142_19_fu_2868_p2            |      |        | icmp_ln142_19     | seteq     | auto                     | 0       |
+|    or_ln142_9_fu_2874_p2               |      |        | or_ln142_9        | or        | auto                     | 0       |
+|    and_ln142_9_fu_2880_p2              |      |        | and_ln142_9       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1833         |      |        | tmp_s             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_20_fu_2912_p2            |      |        | icmp_ln142_20     | setne     | auto                     | 0       |
+|    icmp_ln142_21_fu_2918_p2            |      |        | icmp_ln142_21     | seteq     | auto                     | 0       |
+|    or_ln142_10_fu_2924_p2              |      |        | or_ln142_10       | or        | auto                     | 0       |
+|    and_ln142_10_fu_2930_p2             |      |        | and_ln142_10      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1834         |      |        | tmp_10            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_22_fu_2962_p2            |      |        | icmp_ln142_22     | setne     | auto                     | 0       |
+|    icmp_ln142_23_fu_2968_p2            |      |        | icmp_ln142_23     | seteq     | auto                     | 0       |
+|    or_ln142_11_fu_2974_p2              |      |        | or_ln142_11       | or        | auto                     | 0       |
+|    and_ln142_11_fu_2980_p2             |      |        | and_ln142_11      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U1835         |      |        | tmp_11            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln142_24_fu_3011_p2            |      |        | icmp_ln142_24     | setne     | auto                     | 0       |
+|    icmp_ln142_25_fu_3017_p2            |      |        | icmp_ln142_25     | seteq     | auto                     | 0       |
+|    or_ln142_12_fu_3023_p2              |      |        | or_ln142_12       | or        | auto                     | 0       |
+|    and_ln142_12_fu_3029_p2             |      |        | and_ln142_12      | and       | auto                     | 0       |
+|    select_ln135_fu_2436_p3             |      |        | select_ln135      | select    | auto_sel                 | 0       |
+|    select_ln135_1_fu_2486_p3           |      |        | select_ln135_1    | select    | auto_sel                 | 0       |
+|    select_ln135_2_fu_2536_p3           |      |        | select_ln135_2    | select    | auto_sel                 | 0       |
+|    select_ln135_3_fu_2586_p3           |      |        | select_ln135_3    | select    | auto_sel                 | 0       |
+|    select_ln135_4_fu_2636_p3           |      |        | select_ln135_4    | select    | auto_sel                 | 0       |
+|    select_ln135_5_fu_2686_p3           |      |        | select_ln135_5    | select    | auto_sel                 | 0       |
+|    select_ln135_6_fu_2736_p3           |      |        | select_ln135_6    | select    | auto_sel                 | 0       |
+|    select_ln135_7_fu_2786_p3           |      |        | select_ln135_7    | select    | auto_sel                 | 0       |
+|    select_ln135_8_fu_2836_p3           |      |        | select_ln135_8    | select    | auto_sel                 | 0       |
+|    select_ln135_9_fu_2886_p3           |      |        | select_ln135_9    | select    | auto_sel                 | 0       |
+|    select_ln135_10_fu_2936_p3          |      |        | select_ln135_10   | select    | auto_sel                 | 0       |
+|    select_ln135_11_fu_2986_p3          |      |        | select_ln135_11   | select    | auto_sel                 | 0       |
+|    select_ln135_12_fu_3035_p3          |      |        | select_ln135_12   | select    | auto_sel                 | 0       |
+|  + conv5_Pipeline_L2_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln155_fu_527_p2                |      |        | icmp_ln155        | seteq     | auto                     | 0       |
+|    add_ln155_fu_533_p2                 |      |        | add_ln155         | add       | fabric                   | 0       |
+|    add_ln155_1_fu_586_p2               |      |        | add_ln155_1       | add       | fabric                   | 0       |
+|    add_ln155_2_fu_543_p2               |      |        | add_ln155_2       | add       | fabric                   | 0       |
+|    icmp_ln155_1_fu_549_p2              |      |        | icmp_ln155_1      | seteq     | auto                     | 0       |
+|    select_ln155_fu_555_p3              |      |        | select_ln155      | select    | auto_sel                 | 0       |
+|  + conv5_Pipeline_F2_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln166_fu_257_p2                |      |        | icmp_ln166        | seteq     | auto                     | 0       |
+|    add_ln166_fu_263_p2                 |      |        | add_ln166         | add       | fabric                   | 0       |
+|    add_ln166_1_fu_312_p2               |      |        | add_ln166_1       | add       | fabric                   | 0       |
+|    add_ln166_2_fu_273_p2               |      |        | add_ln166_2       | add       | fabric                   | 0       |
+|    icmp_ln166_1_fu_279_p2              |      |        | icmp_ln166_1      | seteq     | auto                     | 0       |
+|    select_ln166_fu_285_p3              |      |        | select_ln166      | select    | auto_sel                 | 0       |
+|  + conv5_Pipeline_VITIS_LOOP_172_7     | 0    |        |                   |           |                          |         |
+|    icmp_ln172_fu_4768_p2               |      |        | icmp_ln172        | seteq     | auto                     | 0       |
+|    add_ln172_fu_4774_p2                |      |        | add_ln172         | add       | fabric                   | 0       |
+|  + conv5_Pipeline_C2_1                 | 0    |        |                   |           |                          |         |
+|    icmp_ln176_fu_11127_p2              |      |        | icmp_ln176        | seteq     | auto                     | 0       |
+|    add_ln176_fu_11133_p2               |      |        | add_ln176         | add       | fabric                   | 0       |
+|    add_ln180_8_fu_11168_p2             |      |        | add_ln180_8       | add       | fabric                   | 0       |
+|    add_ln180_fu_11205_p2               |      |        | add_ln180         | add       | fabric                   | 0       |
+|    add_ln180_1_fu_11236_p2             |      |        | add_ln180_1       | add       | fabric                   | 0       |
+|    add_ln180_2_fu_11267_p2             |      |        | add_ln180_2       | add       | fabric                   | 0       |
+|    add_ln180_3_fu_11285_p2             |      |        | add_ln180_3       | add       | fabric                   | 0       |
+|    add_ln180_4_fu_11302_p2             |      |        | add_ln180_4       | add       | fabric                   | 0       |
+|    add_ln180_5_fu_11332_p2             |      |        | add_ln180_5       | add       | fabric                   | 0       |
+|    add_ln180_6_fu_11349_p2             |      |        | add_ln180_6       | add       | fabric                   | 0       |
+|    add_ln180_7_fu_11362_p2             |      |        | add_ln180_7       | add       | fabric                   | 0       |
+|  + conv5_Pipeline_M2                   | 0    |        |                   |           |                          |         |
+|    icmp_ln220_fu_1591_p2               |      |        | icmp_ln220        | seteq     | auto                     | 0       |
+|    add_ln220_fu_1597_p2                |      |        | add_ln220         | add       | fabric                   | 0       |
+|    sparsemux_27_4_32_1_1_U3830         |      |        | tmp_s             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_fu_2412_p2               |      |        | icmp_ln227        | setne     | auto                     | 0       |
+|    icmp_ln227_1_fu_2418_p2             |      |        | icmp_ln227_1      | seteq     | auto                     | 0       |
+|    or_ln227_fu_2424_p2                 |      |        | or_ln227          | or        | auto                     | 0       |
+|    and_ln227_fu_2430_p2                |      |        | and_ln227         | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3831         |      |        | tmp_3             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_2_fu_2462_p2             |      |        | icmp_ln227_2      | setne     | auto                     | 0       |
+|    icmp_ln227_3_fu_2468_p2             |      |        | icmp_ln227_3      | seteq     | auto                     | 0       |
+|    or_ln227_1_fu_2474_p2               |      |        | or_ln227_1        | or        | auto                     | 0       |
+|    and_ln227_1_fu_2480_p2              |      |        | and_ln227_1       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3832         |      |        | tmp_6             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_4_fu_2512_p2             |      |        | icmp_ln227_4      | setne     | auto                     | 0       |
+|    icmp_ln227_5_fu_2518_p2             |      |        | icmp_ln227_5      | seteq     | auto                     | 0       |
+|    or_ln227_2_fu_2524_p2               |      |        | or_ln227_2        | or        | auto                     | 0       |
+|    and_ln227_2_fu_2530_p2              |      |        | and_ln227_2       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3833         |      |        | tmp_9             | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_6_fu_2562_p2             |      |        | icmp_ln227_6      | setne     | auto                     | 0       |
+|    icmp_ln227_7_fu_2568_p2             |      |        | icmp_ln227_7      | seteq     | auto                     | 0       |
+|    or_ln227_3_fu_2574_p2               |      |        | or_ln227_3        | or        | auto                     | 0       |
+|    and_ln227_3_fu_2580_p2              |      |        | and_ln227_3       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3834         |      |        | tmp_12            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_8_fu_2612_p2             |      |        | icmp_ln227_8      | setne     | auto                     | 0       |
+|    icmp_ln227_9_fu_2618_p2             |      |        | icmp_ln227_9      | seteq     | auto                     | 0       |
+|    or_ln227_4_fu_2624_p2               |      |        | or_ln227_4        | or        | auto                     | 0       |
+|    and_ln227_4_fu_2630_p2              |      |        | and_ln227_4       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3835         |      |        | tmp_15            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_10_fu_2662_p2            |      |        | icmp_ln227_10     | setne     | auto                     | 0       |
+|    icmp_ln227_11_fu_2668_p2            |      |        | icmp_ln227_11     | seteq     | auto                     | 0       |
+|    or_ln227_5_fu_2674_p2               |      |        | or_ln227_5        | or        | auto                     | 0       |
+|    and_ln227_5_fu_2680_p2              |      |        | and_ln227_5       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3836         |      |        | tmp_18            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_12_fu_2712_p2            |      |        | icmp_ln227_12     | setne     | auto                     | 0       |
+|    icmp_ln227_13_fu_2718_p2            |      |        | icmp_ln227_13     | seteq     | auto                     | 0       |
+|    or_ln227_6_fu_2724_p2               |      |        | or_ln227_6        | or        | auto                     | 0       |
+|    and_ln227_6_fu_2730_p2              |      |        | and_ln227_6       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3837         |      |        | tmp_19            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_14_fu_2762_p2            |      |        | icmp_ln227_14     | setne     | auto                     | 0       |
+|    icmp_ln227_15_fu_2768_p2            |      |        | icmp_ln227_15     | seteq     | auto                     | 0       |
+|    or_ln227_7_fu_2774_p2               |      |        | or_ln227_7        | or        | auto                     | 0       |
+|    and_ln227_7_fu_2780_p2              |      |        | and_ln227_7       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3838         |      |        | tmp_20            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_16_fu_2812_p2            |      |        | icmp_ln227_16     | setne     | auto                     | 0       |
+|    icmp_ln227_17_fu_2818_p2            |      |        | icmp_ln227_17     | seteq     | auto                     | 0       |
+|    or_ln227_8_fu_2824_p2               |      |        | or_ln227_8        | or        | auto                     | 0       |
+|    and_ln227_8_fu_2830_p2              |      |        | and_ln227_8       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3839         |      |        | tmp_21            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_18_fu_2862_p2            |      |        | icmp_ln227_18     | setne     | auto                     | 0       |
+|    icmp_ln227_19_fu_2868_p2            |      |        | icmp_ln227_19     | seteq     | auto                     | 0       |
+|    or_ln227_9_fu_2874_p2               |      |        | or_ln227_9        | or        | auto                     | 0       |
+|    and_ln227_9_fu_2880_p2              |      |        | and_ln227_9       | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3840         |      |        | tmp_22            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_20_fu_2912_p2            |      |        | icmp_ln227_20     | setne     | auto                     | 0       |
+|    icmp_ln227_21_fu_2918_p2            |      |        | icmp_ln227_21     | seteq     | auto                     | 0       |
+|    or_ln227_10_fu_2924_p2              |      |        | or_ln227_10       | or        | auto                     | 0       |
+|    and_ln227_10_fu_2930_p2             |      |        | and_ln227_10      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3841         |      |        | tmp_23            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_22_fu_2962_p2            |      |        | icmp_ln227_22     | setne     | auto                     | 0       |
+|    icmp_ln227_23_fu_2968_p2            |      |        | icmp_ln227_23     | seteq     | auto                     | 0       |
+|    or_ln227_11_fu_2974_p2              |      |        | or_ln227_11       | or        | auto                     | 0       |
+|    and_ln227_11_fu_2980_p2             |      |        | and_ln227_11      | and       | auto                     | 0       |
+|    sparsemux_27_4_32_1_1_U3842         |      |        | tmp_24            | sparsemux | compactencoding_dontcare | 0       |
+|    icmp_ln227_24_fu_3011_p2            |      |        | icmp_ln227_24     | setne     | auto                     | 0       |
+|    icmp_ln227_25_fu_3017_p2            |      |        | icmp_ln227_25     | seteq     | auto                     | 0       |
+|    or_ln227_12_fu_3023_p2              |      |        | or_ln227_12       | or        | auto                     | 0       |
+|    and_ln227_12_fu_3029_p2             |      |        | and_ln227_12      | and       | auto                     | 0       |
+|    select_ln220_fu_2436_p3             |      |        | select_ln220      | select    | auto_sel                 | 0       |
+|    select_ln220_1_fu_2486_p3           |      |        | select_ln220_1    | select    | auto_sel                 | 0       |
+|    select_ln220_2_fu_2536_p3           |      |        | select_ln220_2    | select    | auto_sel                 | 0       |
+|    select_ln220_3_fu_2586_p3           |      |        | select_ln220_3    | select    | auto_sel                 | 0       |
+|    select_ln220_4_fu_2636_p3           |      |        | select_ln220_4    | select    | auto_sel                 | 0       |
+|    select_ln220_5_fu_2686_p3           |      |        | select_ln220_5    | select    | auto_sel                 | 0       |
+|    select_ln220_6_fu_2736_p3           |      |        | select_ln220_6    | select    | auto_sel                 | 0       |
+|    select_ln220_7_fu_2786_p3           |      |        | select_ln220_7    | select    | auto_sel                 | 0       |
+|    select_ln220_8_fu_2836_p3           |      |        | select_ln220_8    | select    | auto_sel                 | 0       |
+|    select_ln220_9_fu_2886_p3           |      |        | select_ln220_9    | select    | auto_sel                 | 0       |
+|    select_ln220_10_fu_2936_p3          |      |        | select_ln220_10   | select    | auto_sel                 | 0       |
+|    select_ln220_11_fu_2986_p3          |      |        | select_ln220_11   | select    | auto_sel                 | 0       |
+|    select_ln220_12_fu_3035_p3          |      |        | select_ln220_12   | select    | auto_sel                 | 0       |
++----------------------------------------+------+--------+-------------------+-----------+--------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++------------------------+--------------+-----------+------+------+--------+--------------------+------+---------+------------------+
+| Name                   | Usage        | Type      | BRAM | URAM | Pragma | Variable           | Impl | Latency | Bitwidth, Depth, |
+|                        |              |           |      |      |        |                    |      |         | Banks            |
++------------------------+--------------+-----------+------+------+--------+--------------------+------+---------+------------------+
+| + conv5                |              |           | 215  | 0    |        |                    |      |         |                  |
+|   control_s_axi_U      | interface    | s_axilite |      |      |        |                    |      |         |                  |
+|   gmem0_m_axi_U        | interface    | m_axi     | 4    |      |        |                    |      |         |                  |
+|   gmem1_m_axi_U        | interface    | m_axi     | 2    |      |        |                    |      |         |                  |
+|   inp_image_local_U    | rom_np array |           | 4    |      |        | inp_image_local    | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_1_U  | rom_np array |           | 4    |      |        | inp_image_local_1  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_2_U  | rom_np array |           | 4    |      |        | inp_image_local_2  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_3_U  | rom_np array |           | 4    |      |        | inp_image_local_3  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_4_U  | rom_np array |           | 4    |      |        | inp_image_local_4  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_5_U  | rom_np array |           | 4    |      |        | inp_image_local_5  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_6_U  | rom_np array |           | 4    |      |        | inp_image_local_6  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_7_U  | rom_np array |           | 4    |      |        | inp_image_local_7  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_8_U  | rom_np array |           | 4    |      |        | inp_image_local_8  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_9_U  | rom_np array |           | 4    |      |        | inp_image_local_9  | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_10_U | rom_np array |           | 4    |      |        | inp_image_local_10 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_11_U | rom_np array |           | 4    |      |        | inp_image_local_11 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_12_U | rom_np array |           | 4    |      |        | inp_image_local_12 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_13_U | rom_np array |           | 4    |      |        | inp_image_local_13 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_14_U | rom_np array |           | 4    |      |        | inp_image_local_14 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_15_U | rom_np array |           | 4    |      |        | inp_image_local_15 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_16_U | rom_np array |           | 4    |      |        | inp_image_local_16 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_17_U | rom_np array |           | 4    |      |        | inp_image_local_17 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_18_U | rom_np array |           | 4    |      |        | inp_image_local_18 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_19_U | rom_np array |           | 4    |      |        | inp_image_local_19 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_20_U | rom_np array |           | 4    |      |        | inp_image_local_20 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_21_U | rom_np array |           | 4    |      |        | inp_image_local_21 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_22_U | rom_np array |           | 4    |      |        | inp_image_local_22 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_23_U | rom_np array |           | 4    |      |        | inp_image_local_23 | auto | 1       | 32, 1728, 1      |
+|   inp_image_local_24_U | rom_np array |           | 4    |      |        | inp_image_local_24 | auto | 1       | 32, 1728, 1      |
+|   filter_local_U       | ram_1p array |           | 2    |      |        | filter_local       | auto | 1       | 32, 192, 1       |
+|   filter_local_1_U     | ram_1p array |           | 2    |      |        | filter_local_1     | auto | 1       | 32, 192, 1       |
+|   filter_local_2_U     | ram_1p array |           | 2    |      |        | filter_local_2     | auto | 1       | 32, 192, 1       |
+|   filter_local_3_U     | ram_1p array |           | 2    |      |        | filter_local_3     | auto | 1       | 32, 192, 1       |
+|   filter_local_4_U     | ram_1p array |           | 2    |      |        | filter_local_4     | auto | 1       | 32, 192, 1       |
+|   filter_local_5_U     | ram_1p array |           | 2    |      |        | filter_local_5     | auto | 1       | 32, 192, 1       |
+|   filter_local_6_U     | ram_1p array |           | 2    |      |        | filter_local_6     | auto | 1       | 32, 192, 1       |
+|   filter_local_7_U     | ram_1p array |           | 2    |      |        | filter_local_7     | auto | 1       | 32, 192, 1       |
+|   filter_local_8_U     | ram_1p array |           | 2    |      |        | filter_local_8     | auto | 1       | 32, 192, 1       |
++------------------------+--------------+-----------+------+------+--------+--------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------------------+------------------------------------------------------------------------------+
+| Type            | Options                                      | Location                                                                     |
++-----------------+----------------------------------------------+------------------------------------------------------------------------------+
+| interface       | m_axi port=inp_img offset=slave bundle=gmem0 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:37 in conv5, inp_img         |
+| interface       | m_axi port=out_img offset=slave bundle=gmem0 | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:38 in conv5, out_img         |
+| interface       | m_axi port=filter offset=slave bundle=gmem1  | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:39 in conv5, filter          |
+| interface       | m_axi port=bias offset=slave bundle=gmem1    | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:40 in conv5, bias            |
+| interface       | s_axilite port=inp_img bundle=control        | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:42 in conv5, inp_img         |
+| interface       | s_axilite port=out_img bundle=control        | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:43 in conv5, out_img         |
+| interface       | s_axilite port=filter bundle=control         | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:44 in conv5, filter          |
+| interface       | s_axilite port=bias bundle=control           | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:45 in conv5, bias            |
+| interface       | s_axilite port=return bundle=control         | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:47 in conv5, return          |
+| array_partition | variable=inp_image_local cyclic factor=25    | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:51 in conv5, inp_image_local |
+| array_partition | variable=inp_img_2D complete dim=0           | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:53 in conv5, inp_img_2D      |
+| array_partition | variable=filter_local cyclic factor=9        | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:55 in conv5, filter_local    |
+| array_partition | variable=filter_2D complete dim=0            | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:57 in conv5, filter_2D       |
+| array_partition | variable=window_2D complete dim=0            | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:59 in conv5, window_2D       |
+| array_partition | variable=conv_out cyclic factor=169 dim=1    | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:61 in conv5, conv_out        |
+| array_partition | variable=sh complete dim=0                   | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:63 in conv5, sh              |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:71 in conv5                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:80 in conv5                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:86 in conv5                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:92 in conv5                  |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:118 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:136 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:157 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:167 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:173 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:177 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:194 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:205 in conv5                 |
+| pipeline        |                                              | AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:221 in conv5                 |
++-----------------+----------------------------------------------+------------------------------------------------------------------------------+
+
+

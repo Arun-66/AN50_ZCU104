@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 68,
+    "calls": "",
+    "file": "pool5.cpp",
+    "fileloc": 25,
+    "instructions": 307,
+    "loads": {
+      "L": 15,
+      "T": 11
+    },
+    "name": "pool5",
+    "stores": {
+      "L": 58,
+      "T": 1
+    },
+    "total_instructions": 307
+  }
+}

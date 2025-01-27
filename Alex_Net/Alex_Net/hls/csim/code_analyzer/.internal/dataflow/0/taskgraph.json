@@ -1,0 +1,3846 @@
+[
+    {
+        "name": "_Z5conv1PfS_",
+        "df_function": "%F226",
+        "df_type": "Function",
+        "project": "SLX",
+        "processes": {
+            "1": {
+                "id": "1",
+                "name": "Artificial<Start>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 32,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 279,
+                        "column": 1
+                    }
+                },
+                "display_name": "<START>",
+                "kind": "start"
+            },
+            "2": {
+                "id": "2",
+                "name": "Artificial<End>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 32,
+                        "column": 1
+                    },
+                    "end_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 279,
+                        "column": 1
+                    }
+                },
+                "display_name": "<END>",
+                "kind": "end"
+            },
+            "3": {
+                "id": "3",
+                "name": "Region<OutlineCall(R2 conv1) BB 'codeRepl' [Atomic] 'Outline_T3_F226_R2_Atomic'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 46,
+                        "column": 3
+                    },
+                    "end_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 55,
+                        "column": 25
+                    }
+                },
+                "display_name": "Process 1",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 46,
+                                    "column": 18
+                                },
+                                "id": "VId_21_[?(?,11616)][?(?,3872)][?(?,352)][?(?,32)]",
+                                "name": "filter_local[*][*][*][*]",
+                                "display_name": "const DataType filter_local[96][3][11][11]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 46,
+                                        "column": 18
+                                    },
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 53,
+                                    "column": 18
+                                },
+                                "id": "VId_22_[?(?,32)]",
+                                "name": "bias[*]",
+                                "display_name": "const DataType bias[96]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "is_exact": false,
+                                        "is_empty": false
+                                    },
+                                    "instr": "call",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 53,
+                                        "column": 18
+                                    },
+                                    "exec_count": 1
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 4
+                },
+                "subregions": [
+                    {
+                        "id": "%F227_R2",
+                        "description": "<atomic 'entry_iso0'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 46,
+                                "column": 3
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 55,
+                                "column": 25
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": []
+            },
+            "4": {
+                "id": "4",
+                "name": "Region<OutlineCall(R3 conv1) BB 'codeRepl1' [Loop] 'Outline_T4_F226_R3_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 91,
+                        "column": 7
+                    },
+                    "end_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 102,
+                        "column": 7
+                    }
+                },
+                "display_name": "L2",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 32,
+                                    "column": 0
+                                },
+                                "id": "VId_19_[?(?,32)]dc",
+                                "name": "inp_img[*]",
+                                "display_name": "DataType inp_img[154587]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 418588,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 98,
+                                        "column": 38
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 4767
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 64,
+                                    "column": 12
+                                },
+                                "id": "VId_27_[?(?,79904)][?(?,7264)][?(?,32)]",
+                                "name": "line_buffer_3D[*][*][*]",
+                                "display_name": "DataType line_buffer_3D[3][11][227]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 3632,
+                                                "end": 29964,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 98,
+                                        "column": 36
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 4767
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 4811
+                },
+                "subregions": [
+                    {
+                        "id": "%F228_R2",
+                        "description": "<loop 'L2'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 91,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 102,
+                                "column": 7
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L31",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 91,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 102,
+                                "column": 7
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L32",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 93,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 101,
+                                "column": 8
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L33",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 95,
+                                "column": 11
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 100,
+                                "column": 12
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 4809,
+                            "max": 4809
+                        },
+                        "ii": {
+                            "min": 1603,
+                            "max": 1603
+                        },
+                        "effective_tc": {
+                            "min": 3,
+                            "max": 3
+                        },
+                        "tc": {
+                            "min": 3,
+                            "max": 3
+                        },
+                        "ureg_id": "%L31",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 91,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 102,
+                                "column": 7
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1603,
+                            "max": 1603
+                        },
+                        "ii": {
+                            "min": 229,
+                            "max": 229
+                        },
+                        "effective_tc": {
+                            "min": 7,
+                            "max": 7
+                        },
+                        "tc": {
+                            "min": 7,
+                            "max": 7
+                        },
+                        "ureg_id": "%L32",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 93,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 101,
+                                "column": 8
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 227,
+                            "max": 227
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 227,
+                            "max": 227
+                        },
+                        "tc": {
+                            "min": 227,
+                            "max": 227
+                        },
+                        "ureg_id": "%L33",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 95,
+                                "column": 11
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 100,
+                                "column": 12
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "line_buffer_3D",
+                                    "display_name": "line_buffer_3D",
+                                    "id": "55",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 64,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "5": {
+                "id": "5",
+                "name": "Region<OutlineCall(R4 conv1) BB 'codeRepl2' [Loop] 'Outline_T5_F226_R37_Loop'>",
+                "src_range": {
+                    "start_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 107,
+                        "column": 8
+                    },
+                    "end_loc": {
+                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                        "line": 278,
+                        "column": 7
+                    }
+                },
+                "display_name": "L5",
+                "io_signatures": {
+                    "has_unresolved_accesses": false,
+                    "accesses": [
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 64,
+                                    "column": 12
+                                },
+                                "id": "VId_27_[?(?,79904)][?(?,7264)][?(?,32)]",
+                                "name": "line_buffer_3D[*][*][*]",
+                                "display_name": "DataType line_buffer_3D[3][11][227]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 3632,
+                                                "end": 29100,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 132,
+                                        "column": 78
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 698775
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 3660,
+                                                "end": 29964,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 170,
+                                        "column": 93
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 254100
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 25468,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 132,
+                                        "column": 76
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 698775
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 6356,
+                                                "end": 29100,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 145,
+                                        "column": 111
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 28,
+                                                "end": 26332,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 170,
+                                        "column": 91
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 254100
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 6384,
+                                                "end": 29964,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 182,
+                                        "column": 127
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 145200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 62,
+                                    "column": 12
+                                },
+                                "id": "VId_26_[?(?,3872)][?(?,352)][?(?,32)]",
+                                "name": "right_col_3D_l[*][*][*]",
+                                "display_name": "DataType right_col_3D_l[3][11][11]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1452,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 154,
+                                        "column": 43
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1098075
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1276,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 132,
+                                        "column": 46
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 698775
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 308,
+                                                "end": 1452,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 145,
+                                        "column": 63
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 32,
+                                    "column": 0
+                                },
+                                "id": "VId_19_[?(?,32)]dc",
+                                "name": "inp_img[*]",
+                                "display_name": "DataType inp_img[154587]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 6356,
+                                                "end": 618348,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 144,
+                                        "column": 44
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 6384,
+                                                "end": 618348,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 181,
+                                        "column": 45
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 145200
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 0
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 68,
+                                    "column": 12
+                                },
+                                "id": "VId_29_[?(?,1408)][?(?,352)][?(?,32)]",
+                                "name": "new_pixels_l[*][*][*]",
+                                "display_name": "DataType new_pixels_l[3][4][11]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 528,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 145,
+                                        "column": 113
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 528,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 144,
+                                        "column": 42
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 58,
+                                    "column": 12
+                                },
+                                "id": "VId_24_[?(?,3872)][?(?,352)][?(?,32)]",
+                                "name": "window_3D[*][*][*]",
+                                "display_name": "DataType window_3D[3][11][11]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 16,
+                                                "end": 1452,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 191,
+                                        "column": 46
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 698775
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1452,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 223,
+                                        "column": 43
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 105415200
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1452,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 154,
+                                        "column": 41
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1098075
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1436,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 191,
+                                        "column": 44
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 698775
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 28,
+                                                "end": 1452,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 200,
+                                        "column": 63
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 60,
+                                    "column": 12
+                                },
+                                "id": "VId_25_[?(?,1408)][?(?,128)][?(?,32)]",
+                                "name": "right_col_3D[*][*][*]",
+                                "display_name": "DataType right_col_3D[3][11][4]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 528,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 200,
+                                        "column": 65
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 399300
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 464,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 170,
+                                        "column": 46
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 254100
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 112,
+                                                "end": 528,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 182,
+                                        "column": 64
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 145200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 66,
+                                    "column": 12
+                                },
+                                "id": "VId_28_[?(?,512)][?(?,128)][?(?,32)]",
+                                "name": "new_pixels[*][*][*]",
+                                "display_name": "DataType new_pixels[3][4][4]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 192,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 182,
+                                        "column": 129
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 145200
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 192,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 181,
+                                        "column": 43
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 145200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 53,
+                                    "column": 18
+                                },
+                                "id": "VId_22_[?(?,32)]",
+                                "name": "bias[*]",
+                                "display_name": "const DataType bias[96]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 384,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 267,
+                                        "column": 112
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 290400
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 84,
+                                    "column": 12
+                                },
+                                "id": "VId_37_[?(?,64)][?(?,32)]",
+                                "name": "sum6[*][*]",
+                                "display_name": "DataType sum6[3][2]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 20,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 261,
+                                        "column": 22
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 871200
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 4,
+                                                "end": 24,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 261,
+                                        "column": 38
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 871200
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 24,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 259,
+                                        "column": 26
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1742400
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 46,
+                                    "column": 18
+                                },
+                                "id": "VId_21_[?(?,11616)][?(?,3872)][?(?,352)][?(?,32)]",
+                                "name": "filter_local[*][*][*][*]",
+                                "display_name": "const DataType filter_local[96][3][11][11]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 139392,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 223,
+                                        "column": 67
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 105415200
+                                }
+                            ],
+                            "writes": [],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 71,
+                                    "column": 12
+                                },
+                                "id": "VId_31_[?(?,3904)][?(?,32)]",
+                                "name": "lm[*][*]",
+                                "display_name": "DataType lm[3][122]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1220,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 230,
+                                        "column": 24
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 53143200
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1952,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 230,
+                                        "column": 36
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 53143200
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1460,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 223,
+                                        "column": 40
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 105415200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 74,
+                                    "column": 12
+                                },
+                                "id": "VId_32_[?(?,1984)][?(?,32)]",
+                                "name": "sum[*][*]",
+                                "display_name": "DataType sum[3][62]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 620,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 236,
+                                        "column": 37
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 27007200
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 992,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 236,
+                                        "column": 52
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 27007200
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 740,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 230,
+                                        "column": 23
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 53143200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 76,
+                                    "column": 12
+                                },
+                                "id": "VId_33_[?(?,1024)][?(?,32)]",
+                                "name": "sum2[*][*]",
+                                "display_name": "DataType sum2[3][32]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 320,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 241,
+                                        "column": 23
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 13939200
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 512,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 241,
+                                        "column": 39
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 13939200
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 380,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 236,
+                                        "column": 35
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 27007200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 78,
+                                    "column": 12
+                                },
+                                "id": "VId_34_[?(?,544)][?(?,32)]",
+                                "name": "sum3[*][*]",
+                                "display_name": "DataType sum3[3][17]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 168,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 247,
+                                        "column": 33
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 6969600
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 268,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 247,
+                                        "column": 49
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 6969600
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 200,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 241,
+                                        "column": 21
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 13939200
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 80,
+                                    "column": 12
+                                },
+                                "id": "VId_35_[?(?,288)][?(?,32)]",
+                                "name": "sum4[*][*]",
+                                "display_name": "DataType sum4[3][9]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 88,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 253,
+                                        "column": 34
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 3484800
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 140,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 253,
+                                        "column": 50
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 3484800
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 104,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 247,
+                                        "column": 31
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 6969600
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 82,
+                                    "column": 12
+                                },
+                                "id": "VId_36_[?(?,128)][?(?,32)]",
+                                "name": "sum5[*][*]",
+                                "display_name": "DataType sum5[3][4]"
+                            },
+                            "reads": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 40,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 259,
+                                        "column": 28
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1742400
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 64,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "load",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 259,
+                                        "column": 44
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 1742400
+                                }
+                            ],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 48,
+                                                "is_exact": true
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 253,
+                                        "column": 32
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 3484800
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false
+                        },
+                        {
+                            "variable": {
+                                "location": {
+                                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                    "line": 33,
+                                    "column": 0
+                                },
+                                "id": "VId_20_[?(?,32)]dc",
+                                "name": "out_img[*]",
+                                "display_name": "DataType out_img[290400]"
+                            },
+                            "reads": [],
+                            "writes": [
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1161600,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 271,
+                                        "column": 142
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 290400
+                                },
+                                {
+                                    "access_kind": "Ptr",
+                                    "range": {
+                                        "ranges": [
+                                            {
+                                                "start": 0,
+                                                "end": 1161600,
+                                                "is_exact": false
+                                            }
+                                        ]
+                                    },
+                                    "instr": "store",
+                                    "src_loc": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 274,
+                                        "column": 142
+                                    },
+                                    "access_type": "float",
+                                    "access_bit_width": 32,
+                                    "exec_count": 290400
+                                }
+                            ],
+                            "kind": "Ptr",
+                            "has_alias": false,
+                            "arg_idx": 1
+                        }
+                    ]
+                },
+                "metrics": {
+                    "initiation_interval": 54852327
+                },
+                "subregions": [
+                    {
+                        "id": "%F229_R2",
+                        "description": "<loop 'L5'>",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 107,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 278,
+                                "column": 7
+                            }
+                        }
+                    }
+                ],
+                "subdataflow": [
+                    {
+                        "id": "%L4",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 107,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 278,
+                                "column": 7
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L5",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 110,
+                                "column": 12
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 277,
+                                "column": 11
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L6",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 114,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 205,
+                                "column": 2
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L15",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 127,
+                                "column": 15
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 134,
+                                "column": 11
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L16",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 130,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 133,
+                                "column": 17
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L17",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 138,
+                                "column": 16
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 147,
+                                "column": 6
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L18",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 142,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 146,
+                                "column": 18
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L19",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 150,
+                                "column": 19
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 156,
+                                "column": 17
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L20",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 152,
+                                "column": 20
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 155,
+                                "column": 18
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L7",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 166,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 172,
+                                "column": 21
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L8",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 168,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 171,
+                                "column": 22
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L9",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 175,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 184,
+                                "column": 20
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L10",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 178,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 183,
+                                "column": 21
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L11",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 187,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 193,
+                                "column": 20
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L12",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 189,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 192,
+                                "column": 21
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L13",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 196,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 202,
+                                "column": 20
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L14",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 198,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 201,
+                                "column": 21
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L21",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 212,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 275,
+                                "column": 6
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L22",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 216,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 263,
+                                "column": 4
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L23",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 219,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 225,
+                                "column": 24
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L24",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 221,
+                                "column": 25
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 224,
+                                "column": 12
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L25",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 228,
+                                "column": 13
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 231,
+                                "column": 21
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L26",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 234,
+                                "column": 13
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 237,
+                                "column": 22
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L27",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 239,
+                                "column": 12
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 242,
+                                "column": 9
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L28",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 245,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 248,
+                                "column": 13
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L29",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 250,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 254,
+                                "column": 13
+                            }
+                        }
+                    },
+                    {
+                        "id": "%L30",
+                        "region_type": "Loop",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 256,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 260,
+                                "column": 12
+                            }
+                        }
+                    }
+                ],
+                "guidance": [
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 54852325,
+                            "max": 54852325
+                        },
+                        "ii": {
+                            "min": 997315,
+                            "max": 997315
+                        },
+                        "effective_tc": {
+                            "min": 55,
+                            "max": 55
+                        },
+                        "tc": {
+                            "min": 55,
+                            "max": 55
+                        },
+                        "ureg_id": "%L4",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 107,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 278,
+                                "column": 7
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 4,
+                                    "max": 4
+                                },
+                                "variables": [
+                                    {
+                                        "name": "i26 = load arrayidx45",
+                                        "display_name": "line_buffer_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 132,
+                                            "column": 78
+                                        }
+                                    },
+                                    {
+                                        "name": "store i26, arrayidx51",
+                                        "display_name": "line_buffer_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 132,
+                                            "column": 76
+                                        }
+                                    },
+                                    {
+                                        "name": "i77 = load arrayidx153",
+                                        "display_name": "line_buffer_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 170,
+                                            "column": 93
+                                        }
+                                    },
+                                    {
+                                        "name": "store i77, arrayidx161",
+                                        "display_name": "line_buffer_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 170,
+                                            "column": 91
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variables": [
+                                    {
+                                        "name": "i117 = load arrayidx240",
+                                        "display_name": "window_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 191,
+                                            "column": 46
+                                        }
+                                    },
+                                    {
+                                        "name": "store i117, arrayidx246",
+                                        "display_name": "window_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 191,
+                                            "column": 44
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 997315,
+                            "max": 997315
+                        },
+                        "ii": {
+                            "min": 18133,
+                            "max": 18133
+                        },
+                        "effective_tc": {
+                            "min": 55,
+                            "max": 55
+                        },
+                        "tc": {
+                            "min": 55,
+                            "max": 55
+                        },
+                        "ureg_id": "%L5",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 110,
+                                "column": 12
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 277,
+                                "column": 11
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variables": [
+                                    {
+                                        "name": "i26 = load arrayidx45",
+                                        "display_name": "line_buffer_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 132,
+                                            "column": 78
+                                        }
+                                    },
+                                    {
+                                        "name": "store i26, arrayidx51",
+                                        "display_name": "line_buffer_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 132,
+                                            "column": 76
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variables": [
+                                    {
+                                        "name": "i117 = load arrayidx240",
+                                        "display_name": "window_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 191,
+                                            "column": 46
+                                        }
+                                    },
+                                    {
+                                        "name": "store i117, arrayidx246",
+                                        "display_name": "window_3D[*][*][*]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 191,
+                                            "column": 44
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 495,
+                            "max": 495
+                        },
+                        "ii": {
+                            "min": 165,
+                            "max": 165
+                        },
+                        "effective_tc": {
+                            "min": 3,
+                            "max": 3
+                        },
+                        "tc": {
+                            "min": 3,
+                            "max": 3
+                        },
+                        "ureg_id": "%L6",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 114,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 205,
+                                "column": 2
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 270,
+                                    "max": 270
+                                },
+                                "ii_lower_bound": {
+                                    "min": 135,
+                                    "max": 135
+                                },
+                                "variable": {
+                                    "name": "line_buffer_3D",
+                                    "display_name": "line_buffer_3D",
+                                    "id": "56",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 64,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "right_col_3D_l",
+                                    "display_name": "right_col_3D_l",
+                                    "id": "57",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 62,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "new_pixels_l",
+                                    "display_name": "new_pixels_l",
+                                    "id": "59",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 68,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 3,
+                                    "max": 3
+                                },
+                                "ii_lower_bound": {
+                                    "min": 3,
+                                    "max": 3
+                                },
+                                "variable": {
+                                    "name": "window_3D",
+                                    "display_name": "window_3D",
+                                    "id": "60",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 58,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "right_col_3D",
+                                    "display_name": "right_col_3D",
+                                    "id": "61",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 60,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "new_pixels",
+                                    "display_name": "new_pixels",
+                                    "id": "62",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 66,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L15",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 127,
+                                "column": 15
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 134,
+                                "column": 11
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 7,
+                            "max": 7
+                        },
+                        "ureg_id": "%L16",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 130,
+                                "column": 8
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 133,
+                                "column": 17
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L17",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 138,
+                                "column": 16
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 147,
+                                "column": 6
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "ureg_id": "%L18",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 142,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 146,
+                                "column": 18
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L19",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 150,
+                                "column": 19
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 156,
+                                "column": 17
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L20",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 152,
+                                "column": 20
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 155,
+                                "column": 18
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 7,
+                            "max": 7
+                        },
+                        "ureg_id": "%L7",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 166,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 172,
+                                "column": 21
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "ureg_id": "%L8",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 168,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 171,
+                                "column": 22
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "ureg_id": "%L9",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 175,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 184,
+                                "column": 20
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "ureg_id": "%L10",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 178,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 183,
+                                "column": 21
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L11",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 187,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 193,
+                                "column": 20
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 7,
+                            "max": 7
+                        },
+                        "ureg_id": "%L12",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 189,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 192,
+                                "column": 21
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L13",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 196,
+                                "column": 22
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 202,
+                                "column": 20
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "ureg_id": "%L14",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 198,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 201,
+                                "column": 21
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 17568,
+                            "max": 17568
+                        },
+                        "ii": {
+                            "min": 183,
+                            "max": 183
+                        },
+                        "effective_tc": {
+                            "min": 96,
+                            "max": 96
+                        },
+                        "tc": {
+                            "min": 96,
+                            "max": 96
+                        },
+                        "ureg_id": "%L21",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 212,
+                                "column": 17
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 275,
+                                "column": 6
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "window_3D",
+                                    "display_name": "window_3D",
+                                    "id": "60",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 58,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "ii_lower_bound": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "variable": {
+                                    "name": "bias",
+                                    "display_name": "bias",
+                                    "id": "65",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 53,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "sum6",
+                                    "display_name": "sum6",
+                                    "id": "66",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 84,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 363,
+                                    "max": 363
+                                },
+                                "ii_lower_bound": {
+                                    "min": 182,
+                                    "max": 182
+                                },
+                                "variable": {
+                                    "name": "filter_local",
+                                    "display_name": "filter_local",
+                                    "id": "68",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 46,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "lm",
+                                    "display_name": "lm",
+                                    "id": "69",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 71,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "sum",
+                                    "display_name": "sum",
+                                    "id": "70",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 74,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "sum2",
+                                    "display_name": "sum2",
+                                    "id": "71",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 76,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "required_ports": {
+                                    "min": 32,
+                                    "max": 32
+                                },
+                                "ii_lower_bound": {
+                                    "min": 16,
+                                    "max": 16
+                                },
+                                "variable": {
+                                    "name": "sum3",
+                                    "display_name": "sum3",
+                                    "id": "72",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 78,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "sum4",
+                                    "display_name": "sum4",
+                                    "id": "73",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 80,
+                                        "column": 0
+                                    }
+                                }
+                            },
+                            {
+                                "type": "MemPortContention",
+                                "available_ports": {
+                                    "min": 1,
+                                    "max": 1
+                                },
+                                "required_ports": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "ii_lower_bound": {
+                                    "min": 2,
+                                    "max": 2
+                                },
+                                "variable": {
+                                    "name": "sum5",
+                                    "display_name": "sum5",
+                                    "id": "74",
+                                    "location": {
+                                        "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                        "line": 82,
+                                        "column": 0
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 56,
+                            "max": 56
+                        },
+                        "ii": {
+                            "min": 56,
+                            "max": 56
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 3,
+                            "max": 3
+                        },
+                        "ureg_id": "%L22",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 216,
+                                "column": 7
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 263,
+                                "column": 4
+                            }
+                        },
+                        "details": [
+                            {
+                                "type": "CyclicDependence",
+                                "ii_lower_bound": {
+                                    "min": 4,
+                                    "max": 4
+                                },
+                                "variables": [
+                                    {
+                                        "name": "i22335 [phi]",
+                                        "id": "<unknown>"
+                                    },
+                                    {
+                                        "name": "add466 [fadd]",
+                                        "id": "<unknown>",
+                                        "location": {
+                                            "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                            "line": 262,
+                                            "column": 46
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L23",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 219,
+                                "column": 23
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 225,
+                                "column": 24
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 11,
+                            "max": 11
+                        },
+                        "ureg_id": "%L24",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 221,
+                                "column": 25
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 224,
+                                "column": 12
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 61,
+                            "max": 61
+                        },
+                        "ureg_id": "%L25",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 228,
+                                "column": 13
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 231,
+                                "column": 21
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 31,
+                            "max": 31
+                        },
+                        "ureg_id": "%L26",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 234,
+                                "column": 13
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 237,
+                                "column": 22
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 16,
+                            "max": 16
+                        },
+                        "ureg_id": "%L27",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 239,
+                                "column": 12
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 242,
+                                "column": 9
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 8,
+                            "max": 8
+                        },
+                        "ureg_id": "%L28",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 245,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 248,
+                                "column": 13
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 4,
+                            "max": 4
+                        },
+                        "ureg_id": "%L29",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 250,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 254,
+                                "column": 13
+                            }
+                        },
+                        "details": []
+                    },
+                    {
+                        "type": "LoopGuidance",
+                        "ti": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "ii": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "effective_tc": {
+                            "min": 1,
+                            "max": 1
+                        },
+                        "tc": {
+                            "min": 2,
+                            "max": 2
+                        },
+                        "ureg_id": "%L30",
+                        "src_range": {
+                            "start_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 256,
+                                "column": 14
+                            },
+                            "end_loc": {
+                                "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                                "line": 260,
+                                "column": 12
+                            }
+                        },
+                        "details": []
+                    }
+                ]
+            }
+        },
+        "channels": {
+            "inp_img[*]_RAW_1_4_#0": {
+                "name": "inp_img[*]_RAW_1_4_#0",
+                "variable_id": "VId_19_[?(?,32)]dc",
+                "variable_name": "inp_img[*]",
+                "declaration": "DataType inp_img[154587]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 32,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 152544,
+                    "channel_rate": 2.7809941408684447E-3
+                },
+                "source": "1",
+                "sink": "4"
+            },
+            "filter_local[*][*][*][*]_RAW_3_5_#1": {
+                "name": "filter_local[*][*][*][*]_RAW_3_5_#1",
+                "variable_id": "VId_21_[?(?,11616)][?(?,3872)][?(?,352)][?(?,32)]",
+                "variable_name": "filter_local[*][*][*][*]",
+                "declaration": "const DataType filter_local[96][3][11][11]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 46,
+                    "column": 18
+                },
+                "metrics": {
+                    "volume": 3373286400,
+                    "channel_rate": 6.149759881654611E1
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "bias[*]_RAW_3_5_#2": {
+                "name": "bias[*]_RAW_3_5_#2",
+                "variable_id": "VId_22_[?(?,32)]",
+                "variable_name": "bias[*]",
+                "declaration": "const DataType bias[96]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 53,
+                    "column": 18
+                },
+                "metrics": {
+                    "volume": 9292800,
+                    "channel_rate": 1.6941487277285427E-1
+                },
+                "source": "3",
+                "sink": "5"
+            },
+            "line_buffer_3D[*][*][*]_RAW_4_5_#3": {
+                "name": "line_buffer_3D[*][*][*]_RAW_4_5_#3",
+                "variable_id": "VId_27_[?(?,79904)][?(?,7264)][?(?,32)]",
+                "variable_name": "line_buffer_3D[*][*][*]",
+                "declaration": "DataType line_buffer_3D[3][11][227]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 64,
+                    "column": 12
+                },
+                "metrics": {
+                    "volume": 30492000,
+                    "channel_rate": 5.558925512859281E-1
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "line_buffer_3D[*][*][*]_WAW_4_5_#4": {
+                "name": "line_buffer_3D[*][*][*]_WAW_4_5_#4",
+                "variable_id": "VId_27_[?(?,79904)][?(?,7264)][?(?,32)]",
+                "variable_name": "line_buffer_3D[*][*][*]",
+                "declaration": "DataType line_buffer_3D[3][11][227]",
+                "kind": "Ptr",
+                "dependence": "WAW",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 64,
+                    "column": 12
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "inp_img[*]_RAR_4_5_#5": {
+                "name": "inp_img[*]_RAR_4_5_#5",
+                "variable_id": "VId_19_[?(?,32)]dc",
+                "variable_name": "inp_img[*]",
+                "declaration": "DataType inp_img[154587]",
+                "kind": "Ptr",
+                "dependence": "RAR",
+                "channel_width": 0,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 32,
+                    "column": 0
+                },
+                "source": "4",
+                "sink": "5"
+            },
+            "out_img[*]_RAW_5_2_#6": {
+                "name": "out_img[*]_RAW_5_2_#6",
+                "variable_id": "VId_20_[?(?,32)]dc",
+                "variable_name": "out_img[*]",
+                "declaration": "DataType out_img[290400]",
+                "kind": "Ptr",
+                "dependence": "RAW",
+                "channel_width": 32,
+                "src_loc": {
+                    "file": "/primary/HLS/AlexNet-FPGA-implementation/Conv1/src/conv1.cpp",
+                    "line": 33,
+                    "column": 0
+                },
+                "metrics": {
+                    "volume": 18585600,
+                    "channel_rate": 3.3882974554570855E-1
+                },
+                "source": "5",
+                "sink": "2"
+            }
+        },
+        "control": [
+            {
+                "source": "3",
+                "sink": "4"
+            },
+            {
+                "source": "4",
+                "sink": "5"
+            },
+            {
+                "source": "1",
+                "sink": "3"
+            },
+            {
+                "source": "5",
+                "sink": "2"
+            }
+        ]
+    }
+]

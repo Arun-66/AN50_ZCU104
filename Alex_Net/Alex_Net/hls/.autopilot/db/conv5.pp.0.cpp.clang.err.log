@@ -1,0 +1,88 @@
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=m_axi port=inp_img offset=slave bundle=gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=inp_img offset=slave bundle=gmem0
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:38:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=m_axi port=out_img offset=slave bundle=gmem0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=out_img offset=slave bundle=gmem0
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:39:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=m_axi port=filter offset=slave bundle=gmem1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=filter offset=slave bundle=gmem1
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:40:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=m_axi port=bias offset=slave bundle=gmem1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=bias offset=slave bundle=gmem1
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:42:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=s_axilite port=inp_img bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=inp_img bundle=control
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:43:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=s_axilite port=out_img bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=out_img bundle=control
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:44:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=s_axilite port=filter bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=filter bundle=control
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:45:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=s_axilite port=bias bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=bias bundle=control
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:47:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:51:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=inp_image_local cyclic factor=25_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=inp_image_local cyclic factor=25
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:53:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=inp_img_2D complete dim=0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=inp_img_2D complete dim=0
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:55:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=filter_local cyclic factor=9_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=filter_local cyclic factor=9
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:57:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=filter_2D complete dim=0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=filter_2D complete dim=0
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:59:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=window_2D complete dim=0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=window_2D complete dim=0
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:61:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=conv_out cyclic factor=169 dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=conv_out cyclic factor=169 dim=1
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:63:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=variable=sh complete dim=0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=sh complete dim=0
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:71:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:80:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:86:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:92:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:118:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:136:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:173:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:177:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:194:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:205:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+../AlexNet-FPGA-implementation/Conv5/src/conv5.cpp:221:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=conv5_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+29 warnings generated.
